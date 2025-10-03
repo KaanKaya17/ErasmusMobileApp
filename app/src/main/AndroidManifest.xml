@@ -12,6 +12,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BlueSteps">
         <activity
+            android:name=".UserProfile"
+            android:exported="false" />
+        <activity
+            android:name=".GameQuiz"
+            android:exported="false" />
+        <activity
+            android:name=".GameMatching"
+            android:exported="false" />
+        <activity
+            android:name=".GamesMainPage"
+            android:exported="false" />
+        <activity
+            android:name=".Badges"
+            android:exported="false" />
+        <activity
+            android:name=".EducationSeaAnimals"
+            android:exported="false" />
+        <activity
+            android:name=".EducationSeas"
+            android:exported="false" />
+        <activity
+            android:name=".EducationMainPage"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
