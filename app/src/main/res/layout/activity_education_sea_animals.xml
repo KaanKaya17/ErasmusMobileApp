@@ -7,4 +7,17 @@
     android:layout_height="match_parent"
     tools:context=".EducationSeaAnimals">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="wrap_content"
+            style="@style/MyButtonStyle"
+            android:text="Animal Template"
+            android:onClick="btnAnimalTemplate"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

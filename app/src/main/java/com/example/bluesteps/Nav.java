@@ -135,6 +135,36 @@ public class Nav {
 
     // --- Game Main Page End ---
 
+    // --- Animals Template ---
+
+    public static void goToAnimalsTemplate(View view){
+        if (view != null && view.getContext() != null) {
+            Intent intent = new Intent(view.getContext(), EducationAnimalsTemplate.class);
+            view.getContext().startActivity(intent);
+        }
+    }
+
+    public static void goToAnimalsTemplate(Context context){
+        startActivitySafely(context, EducationAnimalsTemplate.class);
+    }
+
+    // --- Animals Template End ---
+
+    // --- Seas Template ---
+
+    public static void goToSeasTemplate(View view){
+        if (view != null && view.getContext() != null) {
+            Intent intent = new Intent(view.getContext(), EducationSeasTemplate.class);
+            view.getContext().startActivity(intent);
+        }
+    }
+
+    public static void goToSeasTemplate(Context context){
+        startActivitySafely(context, EducationSeasTemplate.class);
+    }
+
+    // --- Seas Template End ---
+
 
 
 
