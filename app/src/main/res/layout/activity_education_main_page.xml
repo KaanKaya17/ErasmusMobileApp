@@ -7,4 +7,26 @@
     android:layout_height="match_parent"
     tools:context=".EducationMainPage">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/MyButtonStyle"
+            android:onClick="btnEducationAnimals"
+            android:text="Animals"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/MyButtonStyle"
+            android:onClick="btnEducationSeas"
+            android:text="Seas"/>
+
+    </LinearLayout>
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

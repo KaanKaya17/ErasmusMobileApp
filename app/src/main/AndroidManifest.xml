@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BlueSteps">
         <activity
+            android:name=".AboutUs"
+            android:exported="false" />
+        <activity
             android:name=".UserProfile"
             android:exported="false" />
         <activity

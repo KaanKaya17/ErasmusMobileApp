@@ -7,4 +7,24 @@
     android:layout_height="match_parent"
     tools:context=".GamesMainPage">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/MyButtonStyle"
+            android:onClick="btnQuiz"
+            android:text="Quiz Game"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/MyButtonStyle"
+            android:onClick="btnMatching"
+            android:text="Matching Game"/>
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
