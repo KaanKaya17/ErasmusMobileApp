@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BlueSteps">
         <activity
+            android:name=".EducationCountrySeas"
+            android:exported="false" />
+        <activity
+            android:name=".EducationCountryAnimals"
+            android:exported="false" />
+        <activity
             android:name=".EducationSeasTemplate"
             android:exported="false" />
         <activity
