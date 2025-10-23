@@ -26,6 +26,6 @@ public class EducationMainPage extends AppCompatActivity {
         Nav.goToEducationAnimals(view);
     }
     public void btnEducationSeas(View view){
-        Nav.goToEducationAnimals(view);
+        Nav.goToSeasTemplate(view);
     }
 }
