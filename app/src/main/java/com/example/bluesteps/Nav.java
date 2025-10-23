@@ -15,6 +15,12 @@ public class Nav {
         }
     }
 
+    public static void goToHomePage(View view){
+        if(view != null && view.getContext() != null){
+            Intent intent = new Intent(view.getContext(), MainActivity.class);
+            view.getContext().startActivity(intent);
+        }
+    }
     public static void goToMainPage(View view){
         if (view != null && view.getContext() != null) {
             Intent intent = new Intent(view.getContext(), MainActivity.class);
@@ -69,6 +75,10 @@ public class Nav {
     }
     public static void goToMainPage(Context context){
         startActivitySafely(context, EducationMainPage.class);
+    }
+
+    public static void goToHomePage(Context context){
+        startActivitySafely(context,MainActivity.class);
     }
 
     public static void goToQuizPage(Context context){

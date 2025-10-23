@@ -50,4 +50,11 @@ public class MainActivity extends AppCompatActivity {
         Nav.goToAboutUs(view);
     }
 
+    public void navHomePage(View view){
+        Nav.goToHomePage(view);
+    }
+
+    public void goToEducation(View view){
+        Nav.goToEducation(view);
+    }
 }

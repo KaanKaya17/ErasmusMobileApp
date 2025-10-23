@@ -43,6 +43,12 @@ public class EducationSeaAnimals extends AppCompatActivity {
         });
     }
 
+    public void navHomePage(View view){
+        Nav.goToHomePage(view);
+    }
+    public void goToEducation(View view){
+        Nav.goToEducation(view);
+    }
     public void btnAnimalTemplate(View view){
         Nav.goToAnimalsTemplate(view);
     }

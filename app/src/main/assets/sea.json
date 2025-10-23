@@ -1,0 +1,34 @@
+[
+  {
+    "sea_name": "Test",
+    "area": "Test",
+    "max_depth": 0,
+    "location": "Test",
+    "main_fishes": [
+      "Test",
+      "Test"
+    ],
+    "main_species": [
+      "Test",
+      "Test"
+    ],
+    "temperature_range": "Test",
+    "salinity": "Test",
+    "currents": "Test",
+    "ecosystem": "Test",
+    "coastline_features": "Test",
+    "important_ports": [
+      "Test",
+      "Test"
+    ],
+    "economic_activities": [
+      "Test",
+      "Test"
+    ],
+    "description": "Test",
+    "image_paths": [
+      "Test",
+      "Test"
+    ]
+  }
+]

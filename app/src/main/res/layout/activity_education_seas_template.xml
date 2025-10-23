@@ -7,5 +7,399 @@
     android:layout_height="match_parent"
     tools:context=".EducationSeasTemplate">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_marginBottom="75dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="7dp"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:scaleType="fitCenter"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                tools:ignore="MissingConstraints" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/sea_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="36dp"
+                android:text="Sea Name"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="10dp"
+                android:background="#000000">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    android:orientation="vertical"
+                    android:background="#ffffff">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:textAlignment="center"
+                        android:layout_height="wrap_content"
+                        android:text="Max Depth" />
+
+                    <TextView
+                        android:id="@+id/sea_max_depth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textSize="17sp"
+                        android:text="40 cm" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="#ffffff">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="Salinity" />
+
+                    <TextView
+                        android:id="@+id/sea_salinity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textSize="17sp"
+                        android:text="40 cm" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="3dp"
+                    android:orientation="vertical"
+                    android:background="#ffffff">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="Tempature Range" />
+
+                    <TextView
+                        android:id="@+id/sea_tempature_range"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textSize="17sp"
+                        android:text="40 cm" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="Area"
+                        android:textSize="18dp"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:layout_height="match_parent"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="Line"
+                        android:textSize="18dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_height="match_parent"/>
+
+                    <TextView
+                        android:id="@+id/sea_area"
+                        android:layout_width="match_parent"
+                        android:text="Value"
+                        android:layout_weight="1"
+                        android:textSize="18dp"
+                        android:gravity="end"
+                        android:layout_height="match_parent"/>
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="Main Fishes"
+                    android:textSize="20dp"
+                    android:textColor="#000000"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:padding="10dp"
+                    android:background="#000000">
+
+
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:padding="3dp"
+                        android:orientation="vertical"
+                        android:background="#ffffff">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:padding="6dp"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="textStart"
+                            android:text="İstavrit" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:padding="3dp"
+                        android:orientation="vertical"
+                        android:background="#ffffff">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:padding="6dp"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="textStart"
+                            android:text="Sardalya" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/sea_main_fishes_description"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:textSize="18dp"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem Ipsum is a big huge light weight
+                    test some little testing idk what to say but im doing hey!!!"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textSize="20dp"
+                    android:textColor="#000000"
+                    android:layout_marginBottom="15dp"
+                    android:text="Description"/>
+
+                <TextView
+                    android:id="@+id/sea_description"
+                    android:layout_width="match_parent"
+                    android:textSize="18dp"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem Ipsum is a big huge light weight test some little testing idk what to say but im doing hey!!!This is a description test part idk what to say in here butit's just a test rn"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textSize="20dp"
+                    android:textColor="#000000"
+                    android:layout_marginBottom="15dp"
+                    android:text="Ecosystem"/>
+
+                <TextView
+                    android:id="@+id/sea_ecosystem"
+                    android:layout_width="match_parent"
+                    android:textSize="18dp"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem Ipsum is a big huge light weight test some little testing idk what to say but im doing hey!!!This is a description test part idk what to say in here butit's just a test rn"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textSize="20dp"
+                    android:textColor="#000000"
+                    android:layout_marginBottom="15dp"
+                    android:text="Economic Activities"/>
+
+                <TextView
+                    android:id="@+id/sea_economic_activities"
+                    android:layout_width="match_parent"
+                    android:textSize="18dp"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem Ipsum is a big huge light weight test some little testing idk what to say but im doing hey!!!This is a description test part idk what to say in here butit's just a test rn"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottom_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="#A9A9A9"
+        android:weightSum="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:clickable="true"
+            android:onClick="navHomePage"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/mainpage"
+                android:contentDescription="Anasayfa"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Anasayfa"
+                android:textSize="12sp"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/mainpage"
+                android:contentDescription="Rozetler"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rozetler"
+                android:textSize="12sp"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:onClick="goToEducation"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/mainpage"
+                android:contentDescription="Eğitimler"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eğitimler"
+                android:textSize="12sp"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/mainpage"
+                android:contentDescription="Profil"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profil"
+                android:textSize="12sp"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="37dp"
+        app:cardElevation="8dp"      app:cardBackgroundColor="@android:color/white" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/center_logo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo" android:scaleType="fitCenter"
+            android:contentDescription="Merkez Logo"/>
+
+    </androidx.cardview.widget.CardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
