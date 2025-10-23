@@ -32,6 +32,7 @@
 
             </LinearLayout>
             <TextView
+                android:id="@+id/fish_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -62,6 +63,7 @@
                         android:text="Max Size" />
 
                     <TextView
+                        android:id="@+id/max_size"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
@@ -86,6 +88,7 @@
                         android:text="Max Weight" />
 
                     <TextView
+                        android:id="@+id/max_weight"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
@@ -108,6 +111,7 @@
                         android:text="Max Depth" />
 
                     <TextView
+                        android:id="@+id/max_depth"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
@@ -129,6 +133,7 @@
                     android:layout_marginTop="18dp"
                     android:layout_height="wrap_content"/>
                 <TextView
+                    android:id="@+id/other_names"
                     android:layout_width="match_parent"
                     android:text="BıdıBıdı Fish"
                     android:textSize="18dp"
@@ -165,6 +170,7 @@
                         android:layout_height="match_parent"/>
 
                     <TextView
+                        android:id="@+id/fish_colors"
                         android:layout_width="match_parent"
                         android:text="Value"
                         android:layout_weight="1"
@@ -199,6 +205,7 @@
                         android:layout_height="match_parent"/>
 
                     <TextView
+                        android:id="@+id/fish_family"
                         android:layout_width="match_parent"
                         android:text="Value"
                         android:layout_weight="1"
@@ -233,6 +240,7 @@
                         android:layout_height="match_parent"/>
 
                     <TextView
+                        android:id="@+id/fish_habitat"
                         android:layout_width="match_parent"
                         android:text="Value"
                         android:layout_weight="1"
@@ -267,6 +275,7 @@
                         android:layout_height="match_parent"/>
 
                     <TextView
+                        android:id="@+id/fish_poisonous"
                         android:layout_width="match_parent"
                         android:text="Value"
                         android:layout_weight="1"
@@ -301,6 +310,7 @@
                         android:layout_height="match_parent"/>
 
                     <TextView
+                        android:id="@+id/fish_edible"
                         android:layout_width="match_parent"
                         android:text="Value"
                         android:layout_weight="1"
@@ -335,6 +345,7 @@
                         android:layout_height="match_parent"/>
 
                     <TextView
+                        android:id="@+id/fish_danger"
                         android:layout_width="match_parent"
                         android:text="Value"
                         android:layout_weight="1"
@@ -369,6 +380,7 @@
                         android:layout_height="match_parent"/>
 
                     <TextView
+                        android:id="@+id/fish_social_behaviour"
                         android:layout_width="match_parent"
                         android:text="Value"
                         android:layout_weight="1"
@@ -420,6 +432,7 @@
                 </LinearLayout>
 
                 <TextView
+                    android:id="@+id/fish_location_description"
                     android:layout_width="match_parent"
                     android:layout_marginTop="15dp"
                     android:textSize="18dp"
@@ -437,6 +450,7 @@
                     android:text="Description"/>
 
                 <TextView
+                    android:id="@+id/fish_description"
                     android:layout_width="match_parent"
                     android:textSize="18dp"
                     android:layout_height="wrap_content"
@@ -452,6 +466,7 @@
                     android:text="Distribution and Habitat"/>
 
                 <TextView
+                    android:id="@+id/fish_distribution_habitat"
                     android:layout_width="match_parent"
                     android:textSize="18dp"
                     android:layout_height="wrap_content"
