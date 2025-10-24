@@ -173,7 +173,7 @@
                     android:layout_height="wrap_content"
                     android:clickable="true"
                     android:layout_margin="7dp"
-                    android:onClick="btnGames"
+                    android:onClick="btnQuiz"
                     android:padding="16dp"
                     android:orientation="vertical"
                     android:background="@drawable/card">

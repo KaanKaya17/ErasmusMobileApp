@@ -72,12 +72,16 @@ public class EducationSeaAnimals extends AppCompatActivity {
 
     public JSONObject searchFishByName(String name) {
         try {
-            JSONArray fishArray = loadFishJson();
-            if (fishArray != null) {
-                for (int i = 0; i < fishArray.length(); i++) {
-                    JSONObject fish = fishArray.getJSONObject(i);
-                    if (fish.getString("fish_name").equalsIgnoreCase(name)) {
-                        return fish; // eşleşen balık bulundu
+            JSONArray countriesArray = loadFishJson();
+            if (countriesArray != null) {
+                for (int i = 0; i < countriesArray.length(); i++) {
+                    JSONObject countryObj = countriesArray.getJSONObject(i);
+                    JSONArray fishArray = countryObj.getJSONArray("fish");
+                    for (int j = 0; j < fishArray.length(); j++) {
+                        JSONObject fish = fishArray.getJSONObject(j);
+                        if (fish.getString("fish_name").equalsIgnoreCase(name)) {
+                            return fish; // eşleşen balık bulundu
+                        }
                     }
                 }
             }
@@ -103,12 +107,12 @@ public class EducationSeaAnimals extends AppCompatActivity {
         TextView textViewFishPoisonous = findViewById(R.id.fish_poisonous);
         TextView textViewFishSocialBehaviour = findViewById(R.id.fish_social_behaviour);
 
-        JSONObject fish = searchFishByName("Test");
+        JSONObject fish = searchFishByName("Hamsi (Anchovy)");
         if (fish != null) {
             try {
                 // Data
                 String fishName = fish.getString("fish_name");
-                int maxWeight = fish.getInt("max_weight");
+                double maxWeight = fish.getDouble("max_weight"); // artık double
                 int maxSize = fish.getInt("max_size");
                 int maxDepth = fish.getInt("max_depth");
                 String family = fish.getString("family");
@@ -155,6 +159,7 @@ public class EducationSeaAnimals extends AppCompatActivity {
             return false;
         }
     }
+
 
 
 
