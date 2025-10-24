@@ -17,9 +17,9 @@
         "social_behaviour": "sürü halinde göç eder",
         "locations": ["Karadeniz", "Marmara Denizi"],
         "locations_description": "Karadeniz kıyılarında yoğun, göç eden sürüler halinde.",
-        "description": "Türkiye’de özellikle Karadeniz’de en çok tüketilen küçük yağlı balıklardan biri.[oaicite:0]{index=0}",
+        "description": "Türkiye’de özellikle Karadeniz’de en çok tüketilen küçük yağlı balıklardan biri.",
         "distribution_habitat": "Kıyı bölgeleri, açık deniz göç yolları, özellikle serin ve besince zengin sularda.",
-        "image_paths": ["images/hamsi1.png","images/hamsi2.png"]
+        "image_paths": ["https://drive.google.com/uc?export=view&id=1pHXHM179a8zu6XR9cS3tHqokq0wa0gWf", "https://drive.google.com/uc?export=view&id=1zqZFDOT8keqhheRJJqjuezqUDpQ1wyah"]
       },
       {
         "fish_name": "Levrek (European Sea Bass)",

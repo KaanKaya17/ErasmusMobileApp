@@ -1,7 +1,6 @@
 package com.example.bluesteps;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -11,13 +10,17 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.bumptech.glide.Glide;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
 
 public class EducationSeaAnimals extends AppCompatActivity {
 
@@ -26,16 +29,15 @@ public class EducationSeaAnimals extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_education_sea_animals);
-        loadJSONDataToPage();
-        int[] images = {
-                R.drawable.badges,
-                R.drawable.profile,
-                R.drawable.aboutus
-        };
 
-        ViewPager2 viewPager = findViewById(R.id.viewPager);
-        ImageAdapter adapter = new ImageAdapter(this, images);
-        viewPager.setAdapter(adapter);
+        // JSON verisini yükle
+        if (loadJSONDataToPage()) {
+            JSONObject fish = searchFishByName("Hamsi (Anchovy)");
+            if (fish != null) {
+                loadFishImagesToViewPager(fish);
+            }
+        }
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -43,16 +45,7 @@ public class EducationSeaAnimals extends AppCompatActivity {
         });
     }
 
-    public void navHomePage(View view){
-        Nav.goToHomePage(view);
-    }
-    public void goToEducation(View view){
-        Nav.goToEducation(view);
-    }
-    public void btnAnimalTemplate(View view){
-        Nav.goToAnimalsTemplate(view);
-    }
-
+    // 🔹 JSON'u oku
     public JSONArray loadFishJson() {
         try {
             InputStream is = getAssets().open("fish.json");
@@ -60,16 +53,15 @@ public class EducationSeaAnimals extends AppCompatActivity {
             byte[] buffer = new byte[size];
             is.read(buffer);
             is.close();
-
-            String json = new String(buffer, "UTF-8");
+            String json = new String(buffer, StandardCharsets.UTF_8);
             return new JSONArray(json);
-
         } catch (IOException | JSONException e) {
             e.printStackTrace();
             return null;
         }
     }
 
+    // 🔹 Belirli balığı isme göre bul
     public JSONObject searchFishByName(String name) {
         try {
             JSONArray countriesArray = loadFishJson();
@@ -80,7 +72,7 @@ public class EducationSeaAnimals extends AppCompatActivity {
                     for (int j = 0; j < fishArray.length(); j++) {
                         JSONObject fish = fishArray.getJSONObject(j);
                         if (fish.getString("fish_name").equalsIgnoreCase(name)) {
-                            return fish; // eşleşen balık bulundu
+                            return fish;
                         }
                     }
                 }
@@ -88,9 +80,10 @@ public class EducationSeaAnimals extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        return null; // eşleşme yoksa
+        return null;
     }
 
+    // 🔹 Sayfadaki bilgileri doldur
     public boolean loadJSONDataToPage() {
         TextView textViewFishName = findViewById(R.id.fish_name);
         TextView textViewFishMaxWeight = findViewById(R.id.max_weight);
@@ -110,58 +103,51 @@ public class EducationSeaAnimals extends AppCompatActivity {
         JSONObject fish = searchFishByName("Hamsi (Anchovy)");
         if (fish != null) {
             try {
-                // Data
-                String fishName = fish.getString("fish_name");
-                double maxWeight = fish.getDouble("max_weight"); // artık double
-                int maxSize = fish.getInt("max_size");
-                int maxDepth = fish.getInt("max_depth");
-                String family = fish.getString("family");
-                String habitat = fish.getString("habitat");
-                String edible = fish.getString("edible");
-                String description = fish.getString("description");
-                String distributionHabitat = fish.getString("distribution_habitat");
-                String locationDescription = fish.getString("locations_description");
-                String socialBehaviour = fish.getString("social_behaviour");
-                String poisonous = fish.getString("poisonous");
-                boolean dangerToHuman = fish.getBoolean("danger_to_human");
+                textViewFishName.setText(fish.getString("fish_name"));
+                textViewFishMaxWeight.setText(String.valueOf(fish.getDouble("max_weight")));
+                textViewFishMaxSize.setText(String.valueOf(fish.getInt("max_size")));
+                textViewFishMaxDepth.setText(String.valueOf(fish.getInt("max_depth")));
+                textViewFishFamily.setText(fish.getString("family"));
+                textViewFishHabitat.setText(fish.getString("habitat"));
+                textViewFishEdible.setText(fish.getString("edible"));
+                textViewFishDescription.setText(fish.getString("description"));
+                textViewFishDistributionHabitat.setText(fish.getString("distribution_habitat"));
+                textViewFishLocationDescription.setText(fish.getString("locations_description"));
+                textViewFishSocialBehaviour.setText(fish.getString("social_behaviour"));
+                textViewFishPoisonous.setText(fish.getString("poisonous"));
+                textViewFishDanger.setText(fish.getBoolean("danger_to_human") ? "Tehlikeli" : "Tehlikesiz");
 
-                // Data Arrays
                 JSONArray colorsArray = fish.getJSONArray("colors");
                 StringBuilder colors = new StringBuilder();
                 for (int i = 0; i < colorsArray.length(); i++) {
                     colors.append(colorsArray.getString(i));
                     if (i != colorsArray.length() - 1) colors.append(", ");
                 }
-
-                // TextViews
-                textViewFishName.setText(fishName);
-                textViewFishEdible.setText(edible);
-                textViewFishMaxWeight.setText(String.valueOf(maxWeight));
-                textViewFishMaxSize.setText(String.valueOf(maxSize));
-                textViewFishMaxDepth.setText(String.valueOf(maxDepth));
                 textViewFishColors.setText(colors.toString());
-                textViewFishDanger.setText(dangerToHuman ? "Tehlikeli" : "Tehlikesiz");
-                textViewFishDescription.setText(description);
-                textViewFishFamily.setText(family);
-                textViewFishDistributionHabitat.setText(distributionHabitat);
-                textViewFishHabitat.setText(habitat);
-                textViewFishLocationDescription.setText(locationDescription);
-                textViewFishPoisonous.setText(poisonous);
-                textViewFishSocialBehaviour.setText(socialBehaviour);
-
                 return true;
-
             } catch (JSONException e) {
                 e.printStackTrace();
-                return false;
             }
-        } else {
-            return false;
         }
+        return false;
     }
 
+    // 🔹 Drive linklerini ViewPager2’ye yükle
+    private void loadFishImagesToViewPager(JSONObject fish) {
+        try {
+            JSONArray imagesArray = fish.getJSONArray("image_paths");
+            List<String> imageUrls = new ArrayList<>();
 
+            for (int i = 0; i < imagesArray.length(); i++) {
+                imageUrls.add(imagesArray.getString(i));
+            }
 
+            ViewPager2 viewPager = findViewById(R.id.viewPager);
+            RemoteImageAdapter adapter = new RemoteImageAdapter(this, imageUrls);
+            viewPager.setAdapter(adapter);
 
-
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
 }
