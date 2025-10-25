@@ -126,40 +126,43 @@
                 android:orientation="vertical"
                 android:layout_height="wrap_content">
 
+
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
                     android:layout_marginTop="3dp"
                     android:layout_marginBottom="3dp"
-                    android:gravity="center_horizontal"
+                    android:gravity="center_vertical"
                     android:layout_height="wrap_content">
 
+                    <!-- Soldaki TextView sadece yazı kadar -->
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:text="Area"
-                        android:textSize="18dp"
-                        android:layout_weight="1"
+                        android:textSize="18sp"
                         android:gravity="start"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="wrap_content"/>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:text="Line"
-                        android:textSize="18dp"
+                    <!-- Ortadaki çizgi, TextView’ler arasındaki boşluğu dolduruyor -->
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
                         android:layout_weight="1"
-                        android:gravity="center"
-                        android:layout_height="match_parent"/>
+                        android:background="#000000"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"/>
 
+                    <!-- Sağdaki TextView -->
                     <TextView
                         android:id="@+id/sea_area"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:text="Value"
-                        android:layout_weight="1"
-                        android:textSize="18dp"
+                        android:textSize="18sp"
                         android:gravity="end"
-                        android:layout_height="match_parent"/>
-
+                        android:layout_height="wrap_content"/>
                 </LinearLayout>
+
 
 
 
@@ -180,6 +183,7 @@
                     android:layout_height="wrap_content"/>
 
                 <LinearLayout
+                    android:id="@+id/main_fishes_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -190,6 +194,7 @@
 
 
                     <LinearLayout
+                        android:id="@+id/main_fishes_container"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:layout_width="match_parent"
@@ -203,24 +208,6 @@
                             android:layout_height="wrap_content"
                             android:textAlignment="textStart"
                             android:text="İstavrit" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_marginTop="10dp"
-                        android:layout_width="match_parent"
-                        android:padding="3dp"
-                        android:orientation="vertical"
-                        android:background="#ffffff">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:padding="6dp"
-                            android:layout_height="wrap_content"
-                            android:textAlignment="textStart"
-                            android:text="Sardalya" />
 
                     </LinearLayout>
 

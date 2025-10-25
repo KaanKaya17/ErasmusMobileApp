@@ -1,6 +1,8 @@
 package com.example.bluesteps;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -123,6 +125,55 @@ public class EducationAnimalsTemplate extends AppCompatActivity {
                     if (i != colorsArray.length() - 1) colors.append(", ");
                 }
                 textViewFishColors.setText(colors.toString());
+
+
+                JSONArray locationsArray = fish.optJSONArray("locations");
+                if (locationsArray != null) {
+                    LinearLayout locationsLayout = findViewById(R.id.fish_locations); // veya uygun container id
+                    locationsLayout.removeAllViews(); // önceki içerikleri temizle
+
+                    for (int i = 0; i < locationsArray.length(); i++) {
+                        String locationName = locationsArray.optString(i, "");
+
+                        // Ana siyah LinearLayout
+                        LinearLayout locationLayout = new LinearLayout(this);
+                        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
+                                LinearLayout.LayoutParams.MATCH_PARENT,
+                                LinearLayout.LayoutParams.WRAP_CONTENT
+                        );
+                        layoutParams.setMargins(0, 5, 0, 5);
+                        locationLayout.setLayoutParams(layoutParams);
+                        locationLayout.setOrientation(LinearLayout.VERTICAL);
+                        locationLayout.setPadding(10, 10, 10, 10);
+                        locationLayout.setBackgroundColor(0xFF000000); // siyah
+
+                        // İç beyaz container
+                        LinearLayout textContainer = new LinearLayout(this);
+                        textContainer.setLayoutParams(new LinearLayout.LayoutParams(
+                                LinearLayout.LayoutParams.MATCH_PARENT,
+                                LinearLayout.LayoutParams.WRAP_CONTENT,
+                                1.0f
+                        ));
+                        textContainer.setOrientation(LinearLayout.VERTICAL);
+                        textContainer.setPadding(3, 3, 3, 3);
+                        textContainer.setBackgroundColor(0xFFFFFFFF); // beyaz
+
+                        TextView locationTextView = new TextView(this);
+                        locationTextView.setLayoutParams(new LinearLayout.LayoutParams(
+                                LinearLayout.LayoutParams.MATCH_PARENT,
+                                LinearLayout.LayoutParams.WRAP_CONTENT
+                        ));
+                        locationTextView.setPadding(6, 6, 6, 6);
+                        locationTextView.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_START);
+                        locationTextView.setText(locationName);
+
+                        textContainer.addView(locationTextView);
+                        locationLayout.addView(textContainer);
+                        locationsLayout.addView(locationLayout);
+                    }
+                }
+
+
                 return true;
             } catch (JSONException e) {
                 e.printStackTrace();

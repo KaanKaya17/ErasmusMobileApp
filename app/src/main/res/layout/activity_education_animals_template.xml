@@ -37,6 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
+                android:textStyle="bold"
                 android:textSize="36dp"
                 android:text="Fish Name"/>
 
@@ -46,20 +47,22 @@
                 android:orientation="horizontal"
                 android:gravity="center"
                 android:padding="10dp"
-                android:background="#000000">
+                android:background="@drawable/rounded_box">
 
+                <!-- Max Size kutusu -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="3dp"
                     android:orientation="vertical"
-                    android:background="#ffffff">
+                    android:background="#000000">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:textAlignment="center"
                         android:layout_height="wrap_content"
+                        android:textColor="#ffffff"
                         android:text="Max Size" />
 
                     <TextView
@@ -68,23 +71,32 @@
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
                         android:textSize="17sp"
+                        android:textColor="#ffffff"
                         android:text="40 cm" />
                 </LinearLayout>
 
+                <!-- Dikey çizgi -->
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"/>
 
+                <!-- Max Weight kutusu -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="3dp"
                     android:orientation="vertical"
-                    android:layout_marginHorizontal="10dp"
-                    android:background="#ffffff">
+                    android:background="#000000">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
+                        android:textColor="#ffffff"
                         android:text="Max Weight" />
 
                     <TextView
@@ -92,26 +104,38 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
+                        android:textColor="#ffffff"
                         android:textSize="17sp"
                         android:text="40 cm" />
                 </LinearLayout>
 
+                <!-- Dikey çizgi -->
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"/>
+
+                <!-- Max Depth kutusu -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="3dp"
                     android:orientation="vertical"
-                    android:background="#ffffff">
+                    android:background="#000000">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textColor="#ffffff"
                         android:textAlignment="center"
                         android:text="Max Depth" />
 
                     <TextView
                         android:id="@+id/max_depth"
+                        android:textColor="#ffffff"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
@@ -120,6 +144,8 @@
                 </LinearLayout>
 
             </LinearLayout>
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -145,250 +171,237 @@
                 android:orientation="vertical"
                 android:layout_height="wrap_content">
 
+                <!-- Colors -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
                     android:layout_marginTop="3dp"
                     android:layout_marginBottom="3dp"
-                    android:gravity="center_horizontal"
+                    android:gravity="center_vertical"
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:text="Colors"
-                        android:textSize="18dp"
-                        android:layout_weight="1"
+                        android:textSize="18sp"
                         android:gravity="start"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="wrap_content"/>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:text="Line"
-                        android:textSize="18dp"
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
                         android:layout_weight="1"
-                        android:gravity="center"
-                        android:layout_height="match_parent"/>
+                        android:background="#000000"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"/>
 
                     <TextView
                         android:id="@+id/fish_colors"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:text="Value"
-                        android:layout_weight="1"
-                        android:textSize="18dp"
+                        android:textSize="18sp"
                         android:gravity="end"
-                        android:layout_height="match_parent"/>
-
+                        android:layout_height="wrap_content"/>
                 </LinearLayout>
 
+                <!-- Family -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
                     android:layout_marginTop="3dp"
                     android:layout_marginBottom="3dp"
-                    android:gravity="center_horizontal"
+                    android:gravity="center_vertical"
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:text="Family"
-                        android:textSize="18dp"
-                        android:layout_weight="1"
+                        android:textSize="18sp"
                         android:gravity="start"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="wrap_content"/>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:text="Line"
-                        android:textSize="18dp"
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
                         android:layout_weight="1"
-                        android:gravity="center"
-                        android:layout_height="match_parent"/>
+                        android:background="#000000"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"/>
 
                     <TextView
                         android:id="@+id/fish_family"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:text="Value"
-                        android:layout_weight="1"
-                        android:textSize="18dp"
+                        android:textSize="18sp"
                         android:gravity="end"
-                        android:layout_height="match_parent"/>
-
+                        android:layout_height="wrap_content"/>
                 </LinearLayout>
 
+                <!-- Habitat -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
                     android:layout_marginTop="3dp"
                     android:layout_marginBottom="3dp"
-                    android:gravity="center_horizontal"
+                    android:gravity="center_vertical"
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:text="Habitat"
-                        android:textSize="18dp"
-                        android:layout_weight="1"
+                        android:textSize="18sp"
                         android:gravity="start"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="wrap_content"/>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:text="Line"
-                        android:textSize="18dp"
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
                         android:layout_weight="1"
-                        android:gravity="center"
-                        android:layout_height="match_parent"/>
+                        android:background="#000000"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"/>
 
                     <TextView
                         android:id="@+id/fish_habitat"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:text="Value"
-                        android:layout_weight="1"
-                        android:textSize="18dp"
+                        android:textSize="18sp"
                         android:gravity="end"
-                        android:layout_height="match_parent"/>
-
+                        android:layout_height="wrap_content"/>
                 </LinearLayout>
 
+                <!-- Poisonous -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
                     android:layout_marginTop="3dp"
                     android:layout_marginBottom="3dp"
-                    android:gravity="center_horizontal"
+                    android:gravity="center_vertical"
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:text="Poisonous"
-                        android:textSize="18dp"
-                        android:layout_weight="1"
+                        android:textSize="18sp"
                         android:gravity="start"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="wrap_content"/>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:text="Line"
-                        android:textSize="18dp"
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
                         android:layout_weight="1"
-                        android:gravity="center"
-                        android:layout_height="match_parent"/>
+                        android:background="#000000"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"/>
 
                     <TextView
                         android:id="@+id/fish_poisonous"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:text="Value"
-                        android:layout_weight="1"
-                        android:textSize="18dp"
+                        android:textSize="18sp"
                         android:gravity="end"
-                        android:layout_height="match_parent"/>
-
+                        android:layout_height="wrap_content"/>
                 </LinearLayout>
 
+                <!-- Edible -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
                     android:layout_marginTop="3dp"
                     android:layout_marginBottom="3dp"
-                    android:gravity="center_horizontal"
+                    android:gravity="center_vertical"
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:text="Edible"
-                        android:textSize="18dp"
-                        android:layout_weight="1"
+                        android:textSize="18sp"
                         android:gravity="start"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="wrap_content"/>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:text="Line"
-                        android:textSize="18dp"
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
                         android:layout_weight="1"
-                        android:gravity="center"
-                        android:layout_height="match_parent"/>
+                        android:background="#000000"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"/>
 
                     <TextView
                         android:id="@+id/fish_edible"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:text="Value"
-                        android:layout_weight="1"
-                        android:textSize="18dp"
+                        android:textSize="18sp"
                         android:gravity="end"
-                        android:layout_height="match_parent"/>
-
+                        android:layout_height="wrap_content"/>
                 </LinearLayout>
 
+                <!-- Danger To Human -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
                     android:layout_marginTop="3dp"
                     android:layout_marginBottom="3dp"
-                    android:gravity="center_horizontal"
+                    android:gravity="center_vertical"
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:text="Danger To Human"
-                        android:textSize="18dp"
-                        android:layout_weight="1"
+                        android:textSize="18sp"
                         android:gravity="start"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="wrap_content"/>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:text="Line"
-                        android:textSize="18dp"
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
                         android:layout_weight="1"
-                        android:gravity="center"
-                        android:layout_height="match_parent"/>
+                        android:background="#000000"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"/>
 
                     <TextView
                         android:id="@+id/fish_danger"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:text="Value"
-                        android:layout_weight="1"
-                        android:textSize="18dp"
+                        android:textSize="18sp"
                         android:gravity="end"
-                        android:layout_height="match_parent"/>
-
+                        android:layout_height="wrap_content"/>
                 </LinearLayout>
 
+                <!-- Social Behaviour -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
                     android:layout_marginTop="3dp"
                     android:layout_marginBottom="3dp"
-                    android:gravity="center_horizontal"
+                    android:gravity="center_vertical"
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:text="Social Behaviour"
-                        android:textSize="18dp"
-                        android:layout_weight="1"
+                        android:textSize="18sp"
                         android:gravity="start"
-                        android:layout_height="match_parent"/>
+                        android:layout_height="wrap_content"/>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:text="Line"
-                        android:textSize="18dp"
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
                         android:layout_weight="1"
-                        android:gravity="center"
-                        android:layout_height="match_parent"/>
+                        android:background="#000000"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"/>
 
                     <TextView
                         android:id="@+id/fish_social_behaviour"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:text="Value"
-                        android:layout_weight="1"
-                        android:textSize="18dp"
+                        android:textSize="18sp"
                         android:gravity="end"
-                        android:layout_height="match_parent"/>
-
+                        android:layout_height="wrap_content"/>
                 </LinearLayout>
+
 
             </LinearLayout>
             <LinearLayout
@@ -407,6 +420,7 @@
                     android:textColor="#000000"
                     android:layout_height="wrap_content"/>
                 <LinearLayout
+                    android:id="@+id/fish_locations"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"

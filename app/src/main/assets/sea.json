@@ -1,5 +1,6 @@
 [
   {
+    "id": 0,
     "sea_name": "Mediterranean Sea (Turkey Coast)",
     "area": "2,500,000 km² (total Mediterranean Sea)",
     "max_depth": 5267,
@@ -38,6 +39,7 @@
     ]
   },
   {
+    "id": 1,
     "sea_name": "Aegean Sea (Turkey, Greece Coast)",
     "area": "214,000 km²",
     "max_depth": 3543,
@@ -76,6 +78,7 @@
     ]
   },
   {
+    "id": 2,
     "sea_name": "Black Sea (Turkey, Bulgaria Coast)",
     "area": "436,000 km²",
     "max_depth": 2212,
@@ -109,11 +112,12 @@
     ],
     "description": "The Black Sea is unique due to its low salinity and anoxic deep layers. Anchovy fisheries are especially important for the regional economy.",
     "image_paths": [
-      "images/blacksea_1.webp",
+      "https://drive.usercontent.google.com/download?id=1H5yw63uKr0lomlEqY-oU2BEU2ehvJhA5&export=view&authuser=0",
       "images/blacksea_2.webp"
     ]
   },
   {
+    "id": 3,
     "sea_name": "Atlantic Ocean (Portugal Coast)",
     "area": "Open Atlantic off western Portugal",
     "max_depth": 8486,
