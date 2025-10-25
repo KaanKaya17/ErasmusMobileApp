@@ -3,6 +3,7 @@
     "country": "Türkiye",
     "fish": [
       {
+        "id": 0,
         "fish_name": "Hamsi (Anchovy)",
         "max_size": 20,
         "max_weight": 0.2,
@@ -22,6 +23,7 @@
         "image_paths": ["https://drive.google.com/uc?export=view&id=1pHXHM179a8zu6XR9cS3tHqokq0wa0gWf", "https://drive.google.com/uc?export=view&id=1zqZFDOT8keqhheRJJqjuezqUDpQ1wyah"]
       },
       {
+        "id": 1,
         "fish_name": "Levrek (European Sea Bass)",
         "max_size": 100,
         "max_weight": 12,
@@ -41,6 +43,7 @@
         "image_paths": ["images/levrek1.png","images/levrek2.png"]
       },
       {
+        "id": 3,
         "fish_name": "Palamut (Bonito)",
         "max_size": 90,
         "max_weight": 6,
@@ -65,6 +68,7 @@
     "country": "Bulgaristan",
     "fish": [
       {
+        "id": 4,
         "fish_name": "Common Carp (Cyprinus carpio)",
         "max_size": 120,
         "max_weight": 30,
@@ -81,9 +85,10 @@
         "locations_description": "Bulgaristan’da su ürünleri ve balıkçılık açısından yaygın tatlı su türlerinden biridir.",
         "description": "Bulgaristan tatlı sularında yaygın olarak bulunan ve tüketilen büyük bir tatlı su balığıdır.",
         "distribution_habitat": "Yavaş akan nehirler, göller, rezervuarlar, bitki örtüsü zengin kıyılar.",
-        "image_paths": ["images/carp_bg1.png","images/carp_bg2.png"]
+        "image_paths": ["https://drive.google.com/uc?export=view&id=1pHXHM179a8zu6XR9cS3tHqokq0wa0gWf", "https://drive.google.com/uc?export=view&id=1zqZFDOT8keqhheRJJqjuezqUDpQ1wyah"]
       },
       {
+        "id": 5,
         "fish_name": "Mackerel (Scomber scombrus)",
         "max_size": 60,
         "max_weight": 2,
@@ -103,6 +108,7 @@
         "image_paths": ["images/mackerel_bg1.png","images/mackerel_bg2.png"]
       },
       {
+        "id": 6,
         "fish_name": "Black Sea Turbot (Psetta maxima maeotica)",
         "max_size": 70,
         "max_weight": 5,
@@ -127,6 +133,7 @@
     "country": "Yunanistan",
     "fish": [
       {
+        "id": 7,
         "fish_name": "Gilthead Bream (Sparus aurata)",
         "max_size": 70,
         "max_weight": 7,
@@ -146,6 +153,7 @@
         "image_paths": ["images/gilthead1.png","images/gilthead2.png"]
       },
       {
+        "id": 8,
         "fish_name": "European Sea Bass (Dicentrarchus labrax)",
         "max_size": 100,
         "max_weight": 12,
@@ -165,6 +173,7 @@
         "image_paths": ["images/sea_bass_gr1.png","images/sea_bass_gr2.png"]
       },
       {
+        "id": 9,
         "fish_name": "Mediterranean Parrotfish (Sparisoma cretense)",
         "max_size": 50,
         "max_weight": 3,
@@ -189,6 +198,7 @@
     "country": "Portekiz",
     "fish": [
       {
+        "id": 10,
         "fish_name": "Sardine (Sardinha)",
         "max_size": 30,
         "max_weight": 0.3,
@@ -208,6 +218,7 @@
         "image_paths": ["images/sardine_pt1.png","images/sardine_pt2.png"]
       },
       {
+        "id": 11,
         "fish_name": "Gilthead Bream (Dourada / Gilthead Bream)",
         "max_size": 60,
         "max_weight": 5,
@@ -227,6 +238,7 @@
         "image_paths": ["images/dourada_pt1.png","images/dourada_pt2.png"]
       },
       {
+        "id": 12,
         "fish_name": "European Seabass (Robalo)",
         "max_size": 100,
         "max_weight": 12,

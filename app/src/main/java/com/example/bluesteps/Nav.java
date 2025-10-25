@@ -107,6 +107,7 @@ public class Nav {
     public static void goToEducationAnimals(View view){
         if (view != null && view.getContext() != null) {
             Intent intent = new Intent(view.getContext(), EducationSeaAnimals.class);
+            intent.putExtra("fish_id",3);
             view.getContext().startActivity(intent);
         }
     }
@@ -159,6 +160,7 @@ public class Nav {
     }
 
     // --- Animals Template End ---
+
 
     // --- Seas Template ---
 
