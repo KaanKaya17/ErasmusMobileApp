@@ -290,21 +290,30 @@
                     android:textColor="#ffffff"
                     android:layout_height="wrap_content"/>
 
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
-                    android:text="Start A New Quiz"
-                    android:clickable="true"
-                    android:onClick="btnQuiz"
-                    android:textSize="18dp"
+                    android:padding="7dp"
+                    android:background="@drawable/roundex_box_white"
                     android:layout_marginTop="10dp"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Start A New Quiz"
+                        android:clickable="true"
+                        android:onClick="btnQuiz"
+                        android:textSize="18dp"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
 
             </LinearLayout>
         </LinearLayout>
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <LinearLayout
                 android:id="@+id/parentLayout"

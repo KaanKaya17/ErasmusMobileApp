@@ -1,11 +1,13 @@
 package com.example.bluesteps;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -77,6 +79,21 @@ public class EducationCountrySeas extends AppCompatActivity {
                 // Ana satır layout
                 LinearLayout countryRow = new LinearLayout(context);
                 countryRow.setOrientation(LinearLayout.HORIZONTAL);
+                countryRow.setId(i);
+                countryRow.setTag("sea_" + i);
+                countryRow.setOnClickListener(v -> {
+                    int viewId = v.getId();
+                    String tag = (String) v.getTag();
+                    /*
+                    Toast.makeText(getApplicationContext(),
+                            "ID: " + viewId + " | Tag: " + tag + " tıklandı!",
+                            Toast.LENGTH_SHORT).show();
+
+                     */
+                    Intent intent = new Intent(getApplicationContext(), EducationSeas.class);
+                    intent.putExtra("countryName",countryName);
+                    startActivity(intent);
+                });
                 countryRow.setPadding(0, 20, 0, 20);
 
                 // Ülke resmi
