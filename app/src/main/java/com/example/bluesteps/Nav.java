@@ -63,6 +63,13 @@ public class Nav {
         }
     }
 
+    public static void goToEducationCountrySeas(View view){
+        if (view != null && view.getContext() != null) {
+            Intent intent = new Intent(view.getContext(), EducationCountrySeas.class);
+            view.getContext().startActivity(intent);
+        }
+    }
+
     // --- Context üzerinden geçiş ---
     public static void goToUserProfile(Context context){
         startActivitySafely(context, UserProfile.class);
@@ -75,6 +82,10 @@ public class Nav {
     }
     public static void goToMainPage(Context context){
         startActivitySafely(context, EducationMainPage.class);
+    }
+
+    public static void goToEducationCountrySeas(Context context){
+        startActivitySafely(context, EducationCountrySeas.class);
     }
 
     public static void goToHomePage(Context context){

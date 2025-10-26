@@ -156,7 +156,7 @@ public class EducationAnimalsTemplate extends AppCompatActivity {
                         ));
                         textContainer.setOrientation(LinearLayout.VERTICAL);
                         textContainer.setPadding(3, 3, 3, 3);
-                        textContainer.setBackgroundColor(0xFFFFFFFF); // beyaz
+                        textContainer.setBackgroundResource(R.drawable.roundex_box_white); // burada eklendi
 
                         TextView locationTextView = new TextView(this);
                         locationTextView.setLayoutParams(new LinearLayout.LayoutParams(

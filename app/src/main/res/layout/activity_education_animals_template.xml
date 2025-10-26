@@ -56,7 +56,7 @@
                     android:layout_weight="1"
                     android:padding="3dp"
                     android:orientation="vertical"
-                    android:background="#000000">
+                    android:background="#A0A0A0">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -90,7 +90,7 @@
                     android:layout_weight="1"
                     android:padding="3dp"
                     android:orientation="vertical"
-                    android:background="#000000">
+                    android:background="#A0A0A0">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -124,7 +124,7 @@
                     android:layout_weight="1"
                     android:padding="3dp"
                     android:orientation="vertical"
-                    android:background="#000000">
+                    android:background="#A0A0A0">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -197,11 +197,13 @@
 
                     <TextView
                         android:id="@+id/fish_colors"
-                        android:layout_width="wrap_content"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
                         android:text="Value"
                         android:textSize="18sp"
-                        android:gravity="end"
-                        android:layout_height="wrap_content"/>
+                        android:textAlignment="textStart"
+                        android:ellipsize="end" />
+
                 </LinearLayout>
 
                 <!-- Family -->
@@ -230,11 +232,13 @@
 
                     <TextView
                         android:id="@+id/fish_family"
-                        android:layout_width="wrap_content"
+                        android:layout_width="150dp"
+                        android:ellipsize="end"
+                        android:textAlignment="textStart"
                         android:text="Value"
                         android:textSize="18sp"
-                        android:gravity="end"
                         android:layout_height="wrap_content"/>
+
                 </LinearLayout>
 
                 <!-- Habitat -->
@@ -263,10 +267,11 @@
 
                     <TextView
                         android:id="@+id/fish_habitat"
-                        android:layout_width="wrap_content"
+                        android:layout_width="150dp"
+                        android:ellipsize="end"
+                        android:textAlignment="textStart"
                         android:text="Value"
                         android:textSize="18sp"
-                        android:gravity="end"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
 
@@ -296,10 +301,11 @@
 
                     <TextView
                         android:id="@+id/fish_poisonous"
-                        android:layout_width="wrap_content"
+                        android:layout_width="150dp"
+                        android:ellipsize="end"
+                        android:textAlignment="textStart"
                         android:text="Value"
                         android:textSize="18sp"
-                        android:gravity="end"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
 
@@ -329,10 +335,11 @@
 
                     <TextView
                         android:id="@+id/fish_edible"
-                        android:layout_width="wrap_content"
+                        android:layout_width="150dp"
+                        android:ellipsize="end"
+                        android:textAlignment="textStart"
                         android:text="Value"
                         android:textSize="18sp"
-                        android:gravity="end"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
 
@@ -362,10 +369,11 @@
 
                     <TextView
                         android:id="@+id/fish_danger"
-                        android:layout_width="wrap_content"
+                        android:layout_width="150dp"
+                        android:ellipsize="end"
+                        android:textAlignment="textStart"
                         android:text="Value"
                         android:textSize="18sp"
-                        android:gravity="end"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
 
@@ -395,10 +403,11 @@
 
                     <TextView
                         android:id="@+id/fish_social_behaviour"
-                        android:layout_width="wrap_content"
+                        android:layout_width="150dp"
+                        android:ellipsize="end"
+                        android:textAlignment="textStart"
                         android:text="Value"
                         android:textSize="18sp"
-                        android:gravity="end"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
 
@@ -427,7 +436,7 @@
                     android:gravity="center"
                     android:layout_marginTop="5dp"
                     android:padding="10dp"
-                    android:background="#000000">
+                    android:background="@drawable/rounded_box">
 
 
                     <LinearLayout
@@ -436,7 +445,7 @@
                         android:layout_width="match_parent"
                         android:padding="3dp"
                         android:orientation="vertical"
-                        android:background="#ffffff">
+                        android:background="@drawable/roundex_box_white">
 
                         <TextView
                             android:layout_width="match_parent"

@@ -57,4 +57,8 @@ public class MainActivity extends AppCompatActivity {
     public void goToEducation(View view){
         Nav.goToEducation(view);
     }
+
+    public void btnTest(View view){
+        Nav.goToEducationCountrySeas(view);
+    }
 }

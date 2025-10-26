@@ -13,12 +13,6 @@
         android:padding="7dp"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:text="Question Type"
-            android:textSize="18dp"
-            android:layout_marginBottom="18dp"
-            android:layout_height="wrap_content"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,7 +26,7 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:text="Question 1 of 5"
+                    android:text="Question 1 of 10"
                     android:layout_weight="1"
                     android:textSize="18dp"
                     android:gravity="start"
@@ -69,6 +63,7 @@
 
                 <TextView
                     android:id="@+id/question"
+                    android:textSize="18dp"
                     android:layout_width="match_parent"
                     android:text="Lorem Ipsum like a huge thing in our live but i dont know what to say bla bla like a question ?"
                     android:layout_height="wrap_content"/>
@@ -81,7 +76,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:background="#5B5B5B"
+                        android:background="@drawable/quiz_game_rounded"
                         android:layout_marginBottom="10dp"
                         android:clickable="true"
                         android:onClick="quizGameAnswer1"
@@ -119,7 +114,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:background="#5B5B5B"
+                        android:background="@drawable/quiz_game_rounded"
                         android:layout_marginBottom="10dp"
                         android:clickable="true"
                         android:onClick="quizGameAnswer2"
@@ -157,7 +152,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:background="#5B5B5B"
+                        android:background="@drawable/quiz_game_rounded"
                         android:clickable="true"
                         android:onClick="quizGameAnswer3"
                         android:padding="7dp"
@@ -195,7 +190,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:background="#5B5B5B"
+                        android:background="@drawable/quiz_game_rounded"
                         android:clickable="true"
                         android:onClick="quizGameAnswer4"
                         android:layout_marginBottom="10dp"

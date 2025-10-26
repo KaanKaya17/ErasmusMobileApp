@@ -176,4 +176,5 @@ public class EducationMainPage extends AppCompatActivity {
     public void btnEducationSeas(View view){
         Nav.goToSeasTemplate(view);
     }
+
 }
