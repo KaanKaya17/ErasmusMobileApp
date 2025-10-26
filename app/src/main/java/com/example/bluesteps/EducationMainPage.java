@@ -91,7 +91,8 @@ public class EducationMainPage extends AppCompatActivity {
 
                         // --- Kart oluştur ---
                         LinearLayout card = new LinearLayout(this);
-                        card.setOrientation(LinearLayout.VERTICAL);
+                        card.setOrientation(LinearLayout.HORIZONTAL);
+                        card.setGravity(Gravity.CENTER_HORIZONTAL);
                         card.setClickable(true);
                         card.setPadding(16, 16, 16, 16);
                         card.setBackgroundResource(R.drawable.card);
@@ -126,8 +127,8 @@ public class EducationMainPage extends AppCompatActivity {
                         ImageView imageView = new ImageView(this);
                         imageView.setImageResource(R.drawable.quiz);
                         LinearLayout.LayoutParams imageParams = new LinearLayout.LayoutParams(
-                                LinearLayout.LayoutParams.WRAP_CONTENT,
-                                LinearLayout.LayoutParams.WRAP_CONTENT
+                                100,
+                                100
                         );
                         imageParams.setMargins(0, 0, 0, 10);
                         imageView.setLayoutParams(imageParams);
@@ -144,7 +145,7 @@ public class EducationMainPage extends AppCompatActivity {
                         innerLayout.setGravity(Gravity.CENTER);
                         innerLayout.setLayoutParams(new LinearLayout.LayoutParams(
                                 LinearLayout.LayoutParams.MATCH_PARENT,
-                                LinearLayout.LayoutParams.WRAP_CONTENT
+                                LinearLayout.LayoutParams.MATCH_PARENT
                         ));
                         innerLayout.addView(textView);
 

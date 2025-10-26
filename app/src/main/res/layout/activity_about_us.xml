@@ -21,29 +21,27 @@
             <TextView
                 android:layout_width="match_parent"
                 android:text="About Our Project"
-                android:textStyle="bold"
+                style="@style/TextViewTitle"
                 android:layout_marginBottom="15dp"
-                android:textSize="30dp"
                 android:layout_height="wrap_content"/>
 
             <TextView
                 android:layout_width="match_parent"
-                android:textSize="18dp"
+                style="@style/TextViewBody"
                 android:text="The BlueSteps mobile app was developed as part of the We BLUE Erasmus+ project. The app aims to provide information about marine life and the seas in Turkey, Portugal, Greece, and Bulgaria, which are participating in the project."
                 android:layout_height="wrap_content"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:text="Benefits We Provide to Users"
-                android:textStyle="bold"
+                style="@style/TextViewTitle"
                 android:layout_marginBottom="15dp"
                 android:layout_marginTop="25dp"
-                android:textSize="30dp"
                 android:layout_height="wrap_content"/>
 
             <TextView
                 android:layout_width="match_parent"
-                android:textSize="18dp"
+                style="@style/TextViewBody"
                 android:text="As you navigate the app, you can learn about marine life and the sea. We provide information on topics such as what threatens them and how we can protect them. We aim to apply this information to people's daily lives. Today, our seas are becoming increasingly polluted, posing a serious threat to marine life and leading to extinction. As humans, we must protect our nature by protecting our seas and these creatures."
                 android:layout_height="wrap_content"/>
 

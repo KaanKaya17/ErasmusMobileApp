@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:textSize="36dp"
+                style="@style/TextViewTitle"
                 android:text="Sea Name"/>
 
             <LinearLayout
@@ -46,7 +46,7 @@
                 android:orientation="horizontal"
                 android:gravity="center"
                 android:padding="10dp"
-                android:background="#000000">
+                android:background="@drawable/rounded_box">
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -54,7 +54,7 @@
                     android:layout_weight="1"
                     android:padding="3dp"
                     android:orientation="vertical"
-                    android:background="#ffffff">
+                    android:background="#A0A0A0">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -71,6 +71,12 @@
                         android:text="40 cm" />
                 </LinearLayout>
 
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"/>
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -79,7 +85,7 @@
                     android:padding="3dp"
                     android:orientation="vertical"
                     android:layout_marginHorizontal="10dp"
-                    android:background="#ffffff">
+                    android:background="#A0A0A0">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -96,19 +102,26 @@
                         android:text="40 cm" />
                 </LinearLayout>
 
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"/>
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="3dp"
                     android:orientation="vertical"
-                    android:background="#ffffff">
+                    android:background="#A0A0A0">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
-                        android:text="Tempature Range" />
+                        android:text="Tempature" />
 
                     <TextView
                         android:id="@+id/sea_tempature_range"
@@ -140,7 +153,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:text="Area"
-                        android:textSize="18sp"
+                        style="@style/TextViewBody"
                         android:gravity="start"
                         android:layout_height="wrap_content"/>
 
@@ -158,7 +171,7 @@
                         android:id="@+id/sea_area"
                         android:layout_width="wrap_content"
                         android:text="Value"
-                        android:textSize="18sp"
+                        style="@style/TextViewBody"
                         android:gravity="end"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
@@ -178,7 +191,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:text="Main Fishes"
-                    android:textSize="20dp"
+                    style="@style/TextViewSubtitle"
                     android:textColor="#000000"
                     android:layout_height="wrap_content"/>
 
@@ -217,24 +230,22 @@
                     android:id="@+id/sea_main_fishes_description"
                     android:layout_width="match_parent"
                     android:layout_marginTop="15dp"
-                    android:textSize="18dp"
+                    style="@style/TextViewBody"
                     android:layout_height="wrap_content"
-                    android:text="Lorem Ipsum is a big huge light weight
-                    test some little testing idk what to say but im doing hey!!!"/>
+                    android:text="Lorem Ipsum is a big huge light weight test some little testing idk what to say but im doing hey!!!"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:textSize="20dp"
-                    android:textColor="#000000"
+                    style="@style/TextViewSubtitle"
                     android:layout_marginBottom="15dp"
                     android:text="Description"/>
 
                 <TextView
                     android:id="@+id/sea_description"
                     android:layout_width="match_parent"
-                    android:textSize="18dp"
+                    style="@style/TextViewBody"
                     android:layout_height="wrap_content"
                     android:text="Lorem Ipsum is a big huge light weight test some little testing idk what to say but im doing hey!!!This is a description test part idk what to say in here butit's just a test rn"/>
 
@@ -242,15 +253,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:textSize="20dp"
-                    android:textColor="#000000"
+                    style="@style/TextViewSubtitle"
                     android:layout_marginBottom="15dp"
                     android:text="Ecosystem"/>
 
                 <TextView
                     android:id="@+id/sea_ecosystem"
                     android:layout_width="match_parent"
-                    android:textSize="18dp"
+                    style="@style/TextViewBody"
                     android:layout_height="wrap_content"
                     android:text="Lorem Ipsum is a big huge light weight test some little testing idk what to say but im doing hey!!!This is a description test part idk what to say in here butit's just a test rn"/>
 
@@ -258,15 +268,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:textSize="20dp"
-                    android:textColor="#000000"
+                    style="@style/TextViewSubtitle"
                     android:layout_marginBottom="15dp"
                     android:text="Economic Activities"/>
 
                 <TextView
                     android:id="@+id/sea_economic_activities"
                     android:layout_width="match_parent"
-                    android:textSize="18dp"
+                    style="@style/TextViewBody"
                     android:layout_height="wrap_content"
                     android:text="Lorem Ipsum is a big huge light weight test some little testing idk what to say but im doing hey!!!This is a description test part idk what to say in here butit's just a test rn"/>
             </LinearLayout>

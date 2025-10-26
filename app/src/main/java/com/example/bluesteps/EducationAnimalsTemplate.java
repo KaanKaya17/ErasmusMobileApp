@@ -1,6 +1,7 @@
 package com.example.bluesteps;
 
 import android.os.Bundle;
+import android.view.ContextThemeWrapper;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -158,7 +159,7 @@ public class EducationAnimalsTemplate extends AppCompatActivity {
                         textContainer.setPadding(3, 3, 3, 3);
                         textContainer.setBackgroundResource(R.drawable.roundex_box_white); // burada eklendi
 
-                        TextView locationTextView = new TextView(this);
+                        TextView locationTextView = new TextView(new ContextThemeWrapper(this, R.style.TextViewBody));
                         locationTextView.setLayoutParams(new LinearLayout.LayoutParams(
                                 LinearLayout.LayoutParams.MATCH_PARENT,
                                 LinearLayout.LayoutParams.WRAP_CONTENT

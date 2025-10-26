@@ -28,14 +28,14 @@
                     android:layout_width="match_parent"
                     android:text="Question 1 of 10"
                     android:layout_weight="1"
-                    android:textSize="18dp"
+                    style="@style/TextViewSubtitle"
                     android:gravity="start"
                     android:layout_height="wrap_content"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:text="%0"
                     android:layout_weight="1"
-                    android:textSize="18dp"
+                    style="@style/TextViewSubtitle"
                     android:gravity="end"
                     android:layout_height="wrap_content"/>
 
@@ -63,7 +63,7 @@
 
                 <TextView
                     android:id="@+id/question"
-                    android:textSize="18dp"
+                    style="@style/TextViewBody"
                     android:layout_width="match_parent"
                     android:text="Lorem Ipsum like a huge thing in our live but i dont know what to say bla bla like a question ?"
                     android:layout_height="wrap_content"/>
@@ -99,6 +99,7 @@
                             <TextView
                                 android:id="@+id/answer1"
                                 android:layout_width="wrap_content"
+                                style="@style/TextViewSubtitle"
                                 android:text="Test Test"
                                 android:layout_height="wrap_content"/>
 
@@ -138,6 +139,7 @@
                                 android:id="@+id/answer2"
                                 android:layout_width="wrap_content"
                                 android:text="Test Test"
+                                style="@style/TextViewSubtitle"
                                 android:layout_height="wrap_content"/>
 
                             <TextView
@@ -176,6 +178,7 @@
                                 android:id="@+id/answer3"
                                 android:layout_width="wrap_content"
                                 android:text="Test Test"
+                                style="@style/TextViewSubtitle"
                                 android:layout_height="wrap_content"/>
 
                             <TextView
@@ -213,6 +216,7 @@
                             <TextView
                                 android:id="@+id/answer4"
                                 android:layout_width="wrap_content"
+                                style="@style/TextViewSubtitle"
                                 android:text="Test Test"
                                 android:layout_height="wrap_content"/>
 

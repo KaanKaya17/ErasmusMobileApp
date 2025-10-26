@@ -1,6 +1,7 @@
 package com.example.bluesteps;
 
 import android.os.Bundle;
+import android.view.ContextThemeWrapper;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -173,7 +174,7 @@ public class EducationSeasTemplate extends AppCompatActivity {
                     textContainer.setPadding(3, 3, 3, 3);
                     textContainer.setBackgroundColor(0xFFFFFFFF); // #ffffff
 
-                    TextView fishTextView = new TextView(this);
+                    TextView fishTextView = new TextView(new ContextThemeWrapper(this, R.style.TextViewBody));
                     fishTextView.setLayoutParams(new LinearLayout.LayoutParams(
                             LinearLayout.LayoutParams.MATCH_PARENT,
                             LinearLayout.LayoutParams.WRAP_CONTENT
