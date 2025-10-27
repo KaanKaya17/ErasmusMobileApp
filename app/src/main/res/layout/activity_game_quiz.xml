@@ -7,6 +7,153 @@
     android:layout_height="match_parent"
     tools:context=".GameQuiz">
 
+    <FrameLayout
+        android:id="@+id/root_layout"
+        android:padding="20dp"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000">>
+
+        <LinearLayout
+            android:id="@+id/answer_card"
+            android:layout_width="match_parent"
+            android:padding="16dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/roundex_box_white"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="30dp"
+                    app:cardCornerRadius="37dp"
+                    app:cardElevation="8dp"      app:cardBackgroundColor="@android:color/white" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <ImageView
+                        android:id="@+id/answerStatusImage"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/logo" android:scaleType="fitCenter"
+                        android:contentDescription="Merkez Logo"/>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/answerStatusText"
+                android:layout_width="match_parent"
+                android:textAlignment="center"
+                style="@style/TextViewTitle"
+                android:layout_marginBottom="30dp"
+                android:text="Right answer - you're on a rool"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/quiz_game_rounded"
+                android:layout_marginBottom="10dp"
+                android:padding="7dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:src="@drawable/badges"
+                    android:layout_marginRight="15dp"
+                    android:layout_height="match_parent"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="start"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/answerStatusQuestionText"
+                        android:layout_width="wrap_content"
+                        android:text="Test Test"
+                        style="@style/TextViewSubtitle"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="Test Test"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="end"
+                    android:layout_height="match_parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        app:cardCornerRadius="37dp"
+                        app:cardElevation="8dp"      app:cardBackgroundColor="@android:color/white" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <ImageView
+                            android:id="@+id/answerStatusImage2"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/logo" android:scaleType="fitCenter"
+                            android:contentDescription="Merkez Logo"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/questionDescription"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                style="@style/TextViewBody"
+                android:textAlignment="center"
+                android:text="Description"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:id="@+id/nextQuestionBtn"
+                android:layout_width="match_parent"
+                android:clickable="true"
+                android:onClick="showNextQuestion"
+                android:background="@drawable/rounded_box"
+                android:layout_marginTop="15dp"
+                android:padding="6dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:text="Next Question"
+                    android:textAlignment="center"
+                    style="@style/TextViewTitle"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"

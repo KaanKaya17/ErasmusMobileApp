@@ -12,10 +12,12 @@
         android:padding="20dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#ffffff">>
+        android:background="#80000000">>
 
         <LinearLayout
+            android:id="@+id/answer_card"
             android:layout_width="match_parent"
+            android:layout_gravity="center"
             android:padding="16dp"
             android:orientation="vertical"
             android:gravity="center"
@@ -128,6 +130,7 @@
                 android:layout_height="wrap_content"/>
 
             <LinearLayout
+                android:id="@+id/nextQuestionBtn"
                 android:layout_width="match_parent"
                 android:background="@drawable/rounded_box"
                 android:layout_marginTop="15dp"
@@ -147,5 +150,7 @@
 
         </LinearLayout>
     </FrameLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

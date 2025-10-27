@@ -34,11 +34,15 @@ public class GameQuiz extends AppCompatActivity {
     int userSelectedIndex = 0;
     int correctAnswerIndex = 0;
 
+    String randomQuestionCorrectAnswer = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_game_quiz);
+
+        //showAnswerStatus(true,"Test");
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -50,13 +54,41 @@ public class GameQuiz extends AppCompatActivity {
     }
 
     // Örnek bir method, butona tıklandığında çağırabilirsin
+    public void showAnswerStatus(boolean status, String description){
+        FrameLayout root_layout = findViewById(R.id.root_layout);
+        root_layout.setVisibility(View.VISIBLE);
+        root_layout.bringToFront();
 
-    public void showAnswerStatus(boolean status, String answerDescription){
+        String trueStatusText = "Right Answer - Good Job!";
+        String falseStatusText = "False Answer - Nice Guess";
+        String questionDescriptionText = description;
 
+        ImageView answerStatusImage = findViewById(R.id.answerStatusImage);
+        ImageView answerStatusImage2 = findViewById(R.id.answerStatusImage2);
+
+        TextView answerStatusText = findViewById(R.id.answerStatusText);
+        TextView answerStatusQuestionText = findViewById(R.id.answerStatusQuestionText);
+        TextView questionDescription = findViewById(R.id.questionDescription);
+
+        if(status == true){
+            answerStatusText.setText(trueStatusText);
+            answerStatusImage.setImageResource(R.drawable.correct);
+            answerStatusImage2.setImageResource(R.drawable.correct);
+            questionDescription.setText(questionDescriptionText);
+        }
+        else {
+            answerStatusText.setText(falseStatusText);
+            answerStatusImage.setImageResource(R.drawable.wrong);
+            answerStatusImage2.setImageResource(R.drawable.wrong);
+            questionDescription.setText(questionDescriptionText);
+        }
+        answerStatusQuestionText.setText(randomQuestionCorrectAnswer);
     }
-
-
-
+    public void showNextQuestion(View view){
+        showRandomQuestion();
+        FrameLayout root_layout = findViewById(R.id.root_layout);
+        root_layout.setVisibility(View.INVISIBLE);
+    }
 
     public boolean isUserAnswerCorrect(int answerIndex,int correctIndex){
         return answerIndex == correctIndex;
@@ -107,6 +139,8 @@ public class GameQuiz extends AppCompatActivity {
             JSONArray answers = questionObj.getJSONArray("answers");
             correctAnswerIndex = questionObj.getInt("correct_answer_index");
 
+            randomQuestionCorrectAnswer = answers.getString(correctAnswerIndex);
+
             // TextView'lere yazdır
             TextView textviewQuestion = findViewById(R.id.question);
             TextView textviewAnswer1 = findViewById(R.id.answer1);
@@ -133,33 +167,35 @@ public class GameQuiz extends AppCompatActivity {
 
     public void quizGameAnswer1(View view){
         userSelectedIndex = 0;
-        checkAnswerAndShowNext();
+        showAnswerStatus(checkAnswerAndShowNext(),"Test Test");
     }
 
     public void quizGameAnswer2(View view){
         userSelectedIndex = 1;
-        checkAnswerAndShowNext();
+        showAnswerStatus(checkAnswerAndShowNext(),"Test Test");
     }
 
     public void quizGameAnswer3(View view){
         userSelectedIndex = 2;
-        checkAnswerAndShowNext();
+        showAnswerStatus(checkAnswerAndShowNext(),"Test Test");
     }
 
     public void quizGameAnswer4(View view){
         userSelectedIndex = 3;
-        checkAnswerAndShowNext();
+        showAnswerStatus(checkAnswerAndShowNext(),"Test Test");
     }
 
 
 
     // Ortak metod: doğruysa yeni soruyu göster
-    private void checkAnswerAndShowNext() {
+    private boolean checkAnswerAndShowNext() {
         if(isUserAnswerCorrect(userSelectedIndex, correctAnswerIndex)){
             Toast.makeText(this, "Doğru!", Toast.LENGTH_SHORT).show();
-            showRandomQuestion(); // Yeni soruyu göster
+            //showRandomQuestion(); // Yeni soruyu göster
+            return true;
         } else {
             Toast.makeText(this, "Yanlış, tekrar dene!", Toast.LENGTH_SHORT).show();
+            return false;
         }
     }
 
