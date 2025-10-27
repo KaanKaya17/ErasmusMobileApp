@@ -180,12 +180,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void btnBadges(View view){
-        Nav.goToBadgesPage(view);
-    }
-    public void btnGames(View view){
-        Nav.goToGamePage(view);
-    }
     public void btnEducation(View view){
         Nav.goToEducation(view);
     }
@@ -195,20 +189,21 @@ public class MainActivity extends AppCompatActivity {
     public void btnMainPage(View view){
         Nav.goToMainPage(view);
     }
-    public void btnUserProfile(View view){
-        Nav.goToUserProfile(view);
-    }
     public void btnAboutUs(View view){
         Nav.goToAboutUs(view);
     }
 
     public void navHomePage(View view){
-        Nav.goToHomePage(view);
+        if(this.getClass() != MainActivity.class){
+            Nav.goToHomePage(view);
+        }
     }
 
     public void goToEducation(View view){
         Nav.goToEducation(view);
     }
+
+
 
     public void btnEducationAnimalsCreatures(View view){
         Intent intent = new Intent(this, EducationSeas.class);
@@ -228,4 +223,5 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("type","other");
         startActivity(intent);
     }
+
 }

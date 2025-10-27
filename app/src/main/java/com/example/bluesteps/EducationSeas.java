@@ -334,46 +334,44 @@ public class EducationSeas extends AppCompatActivity {
     public void btnEducation(View view){
         Nav.goToEducation(view);
     }
+    public void goToEducationSeas(String type, String country){
+        String currentType = getIntent().getStringExtra("type");
+        String currentCountry = getIntent().getStringExtra("countryName");
+
+        // Eğer aynı filtre ve ülke ise çık
+        if (type.equals(currentType) && country.equals(currentCountry)) {
+            //Toast.makeText(this, "Zaten bu filtre gösteriliyor", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Farklı filtre/ülke ise Activity aç
+        Intent intent = new Intent(this, EducationSeas.class);
+        intent.putExtra("type", type);
+        intent.putExtra("countryName", country);
+        startActivity(intent);
+    }
+
     public void countryAllFishes(View view){
-        Intent intent = new Intent(this, EducationSeas.class);
-        intent.putExtra("animalsTypeTextview","Fishes");
-        intent.putExtra("type", "fish"); // JSON’daki type değerine göre küçük harfle olmalı
         String countryName = getIntent().getStringExtra("countryName");
-        if(countryName != null){
-            intent.putExtra("countryName", countryName);
-            startActivity(intent);
-        }
-        else {
-            intent.putExtra("countryName", "Türkiye");
-            startActivity(intent);
-        }
+        if (countryName == null) countryName = "Türkiye";
+
+        goToEducationSeas("fish", countryName);
     }
+
     public void countryAllCreatures(View view){
-        Intent intent = new Intent(this, EducationSeas.class);
-        intent.putExtra("type", "creature"); // JSON’daki type değerine göre küçük harfle olmalı
         String countryName = getIntent().getStringExtra("countryName");
-        if(countryName != null){
-            intent.putExtra("countryName", countryName);
-            startActivity(intent);
-        }
-        else {
-            intent.putExtra("countryName", "Türkiye");
-            startActivity(intent);
-        }
+        if (countryName == null) countryName = "Türkiye";
+
+        goToEducationSeas("creature", countryName);
     }
+
     public void countryAllOther(View view){
-        Intent intent = new Intent(this, EducationSeas.class);
-        intent.putExtra("type", "other"); // JSON’daki type değerine göre küçük harfle olmalı
         String countryName = getIntent().getStringExtra("countryName");
-        if(countryName != null){
-            intent.putExtra("countryName", countryName);
-            startActivity(intent);
-        }
-        else {
-            intent.putExtra("countryName", "Türkiye");
-            startActivity(intent);
-        }
+        if (countryName == null) countryName = "Türkiye";
+
+        goToEducationSeas("other", countryName);
     }
+
 
 
 

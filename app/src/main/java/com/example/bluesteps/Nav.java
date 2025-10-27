@@ -35,20 +35,6 @@ public class Nav {
         }
     }
 
-    public static void goToBadgesPage(View view){
-        if (view != null && view.getContext() != null) {
-            Intent intent = new Intent(view.getContext(), Badges.class);
-            view.getContext().startActivity(intent);
-        }
-    }
-
-    public static void goToGamePage(View view){
-        if (view != null && view.getContext() != null) {
-            Intent intent = new Intent(view.getContext(), GamesMainPage.class);
-            view.getContext().startActivity(intent);
-        }
-    }
-
     public static void goToAboutUs(View view){
         if (view != null && view.getContext() != null) {
             Intent intent = new Intent(view.getContext(), AboutUs.class);
@@ -56,12 +42,6 @@ public class Nav {
         }
     }
 
-    public static void goToUserProfile(View view){
-        if (view != null && view.getContext() != null) {
-            Intent intent = new Intent(view.getContext(), UserProfile.class);
-            view.getContext().startActivity(intent);
-        }
-    }
 
     public static void goToEducationCountrySeas(View view){
         if (view != null && view.getContext() != null) {
@@ -71,9 +51,6 @@ public class Nav {
     }
 
     // --- Context üzerinden geçiş ---
-    public static void goToUserProfile(Context context){
-        startActivitySafely(context, UserProfile.class);
-    }
     public static void goToAboutUs(Context context){
         startActivitySafely(context, AboutUs.class);
     }
@@ -96,13 +73,7 @@ public class Nav {
         startActivitySafely(context, GameQuiz.class);
     }
 
-    public static void goToBadgesPage(Context context){
-        startActivitySafely(context, Badges.class);
-    }
 
-    public static void goToGamePage(Context context){
-        startActivitySafely(context, GamesMainPage.class);
-    }
     // --- Main Page End ---
 
 

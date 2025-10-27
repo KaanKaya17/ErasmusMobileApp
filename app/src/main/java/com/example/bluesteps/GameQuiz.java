@@ -1,12 +1,20 @@
 package com.example.bluesteps;
 
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -31,6 +39,7 @@ public class GameQuiz extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_game_quiz);
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -39,6 +48,13 @@ public class GameQuiz extends AppCompatActivity {
 
         showRandomQuestion();
     }
+
+    // Örnek bir method, butona tıklandığında çağırabilirsin
+
+    public void showAnswerStatus(boolean status, String answerDescription){
+
+    }
+
 
 
 
@@ -135,6 +151,8 @@ public class GameQuiz extends AppCompatActivity {
         checkAnswerAndShowNext();
     }
 
+
+
     // Ortak metod: doğruysa yeni soruyu göster
     private void checkAnswerAndShowNext() {
         if(isUserAnswerCorrect(userSelectedIndex, correctAnswerIndex)){
@@ -150,5 +168,8 @@ public class GameQuiz extends AppCompatActivity {
     }
     public void goToEducation(View view){
         Nav.goToEducation(view);
+    }
+    public void btnAboutUs(View view){
+        Nav.goToAboutUs(view);
     }
 }

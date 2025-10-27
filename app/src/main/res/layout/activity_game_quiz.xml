@@ -238,6 +238,7 @@
 
     </LinearLayout>
 
+
     <LinearLayout
         android:id="@+id/bottom_bar_container"
         android:layout_width="match_parent"
@@ -319,17 +320,19 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:clickable="true"
+            android:onClick="btnAboutUs"
             android:orientation="vertical"
             android:gravity="center">
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/mainpage"
-                android:contentDescription="Profil"/>
+                android:contentDescription="Hakkımızda"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Profil"
+                android:text="Hakkımızda"
                 android:textSize="12sp"
                 android:textColor="@android:color/black"/>
         </LinearLayout>

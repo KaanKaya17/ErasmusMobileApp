@@ -173,7 +173,9 @@ public class EducationMainPage extends AppCompatActivity {
         Nav.goToHomePage(view);
     }
     public void navEducation(View view){
-        Nav.goToEducation(view);
+        if(this.getClass() != EducationMainPage.class){
+            Nav.goToEducation(view);
+        }
     }
     public void btnEducationSeas(View view){
         Nav.goToSeasTemplate(view);

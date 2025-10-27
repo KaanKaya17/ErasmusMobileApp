@@ -38,4 +38,7 @@ public class EducationCountrySeas extends AppCompatActivity {
         });
     }
 
+    public void btnAboutUs(View view){
+        Nav.goToAboutUs(view);
+    }
 }

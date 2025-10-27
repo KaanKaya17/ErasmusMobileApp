@@ -29,4 +29,9 @@ public class AboutUs extends AppCompatActivity {
     public void goToEducation(View view){
         Nav.goToEducation(view);
     }
+    public void btnAboutUs(View view){
+        if(this.getClass() != AboutUs.class){
+            Nav.goToAboutUs(view);
+        }
+    }
 }

@@ -216,4 +216,7 @@ public class EducationSeasTemplate extends AppCompatActivity {
     public void goToEducation(View view){
         Nav.goToEducation(view);
     }
+    public void btnAboutUs(View view){
+        Nav.goToAboutUs(view);
+    }
 }

@@ -206,7 +206,9 @@ public class EducationAnimalsTemplate extends AppCompatActivity {
         Intent intent = new Intent(this, EducationMainPage.class);
         startActivity(intent);
     }
-
+    public void btnAboutUs(View view){
+        Nav.goToAboutUs(view);
+    }
     public void navHomePage(View view){
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
