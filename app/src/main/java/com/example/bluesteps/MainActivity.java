@@ -74,10 +74,17 @@ public class MainActivity extends AppCompatActivity {
 
                 // "fish" dizisi varsa uzunluğunu al, yoksa 0 ver
                 int fishCount = 0;
-                if (countryObj.has("fish") && !countryObj.isNull("fish")) {
-                    JSONArray fishArray = countryObj.getJSONArray("fish");
-                    fishCount = fishArray.length();
+                int creatureCount = 0;
+                if (countryObj.has("animals") && !countryObj.isNull("animals")) {
+                    JSONArray animalsArray = countryObj.getJSONArray("animals");
+                    for (int j = 0; j < animalsArray.length(); j++) {
+                        JSONObject animal = animalsArray.getJSONObject(j);
+                        String type = animal.optString("type", "");
+                        if (type.equalsIgnoreCase("fish")) fishCount++;
+                        else if (type.equalsIgnoreCase("creature")) creatureCount++;
+                    }
                 }
+
 
                 // Ana satır layout
                 LinearLayout countryRow = new LinearLayout(context);
@@ -128,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
 
                 // Canlı sayısı
                 TextView creatureText = new TextView(context);
-                creatureText.setText("0 Creatures");
+                creatureText.setText(creatureCount + " Creatures");
                 creatureText.setTextColor(0xFF000000);
 
                 // Ayırıcı çizgi
@@ -188,14 +195,22 @@ public class MainActivity extends AppCompatActivity {
         Nav.goToEducation(view);
     }
 
-    public void btnEducationSeas(View view){
+    public void btnEducationAnimalsCreatures(View view){
         Intent intent = new Intent(this, EducationSeas.class);
+        intent.putExtra("type","creature");
         startActivity(intent);
-        intent.putExtra("categories",false);
-
     }
 
-    public void btnTest(View view){
-        Nav.goToEducationCountrySeas(view);
+    public void btnEducationSeas(View view){
+        Intent intent = new Intent(this, EducationSeas.class);
+        //intent.putExtra("categories",false);
+        intent.putExtra("type","fish");
+        startActivity(intent);
+    }
+
+    public void btnEducationAnimalsOther(View view){
+        Intent intent = new Intent(this, EducationSeas.class);
+        intent.putExtra("type","other");
+        startActivity(intent);
     }
 }

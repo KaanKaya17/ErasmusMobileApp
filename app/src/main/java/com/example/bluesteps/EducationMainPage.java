@@ -69,14 +69,14 @@ public class EducationMainPage extends AppCompatActivity {
                 // Ülkeleri gez
                 for (int i = 0; i < countryArray.length(); i++) {
                     JSONObject countryObject = countryArray.getJSONObject(i);
-                    JSONArray fishArray = countryObject.getJSONArray("fish");
+                    JSONArray fishArray = countryObject.getJSONArray("animals");
 
                     LinearLayout rowLayout = null; // Her satır için Horizontal layout
 
                     for (int j = 0; j < fishArray.length(); j++) {
                         JSONObject fish = fishArray.getJSONObject(j);
                         int fishId = fish.getInt("id");
-                        String fishName = fish.getString("fish_name");
+                        String fishName = fish.getString("animal_name");
 
                         // Her 2 balıkta bir yeni satır oluştur
                         if (j % 2 == 0) {
@@ -169,10 +169,11 @@ public class EducationMainPage extends AppCompatActivity {
 
 
 
-
-
-    public void btnEducationAnimals(View view){
-        Nav.goToAnimalsTemplate(view);
+    public void navHomePage(View view){
+        Nav.goToHomePage(view);
+    }
+    public void navEducation(View view){
+        Nav.goToEducation(view);
     }
     public void btnEducationSeas(View view){
         Nav.goToSeasTemplate(view);

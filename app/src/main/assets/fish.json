@@ -1,10 +1,11 @@
 [
   {
     "country": "Türkiye",
-    "fish": [
+    "animals": [
       {
         "id": 0,
-        "fish_name": "Hamsi (Anchovy)",
+        "type": "fish",
+        "animal_name": "Hamsi (Anchovy)",
         "max_size": 20,
         "max_weight": 0.2,
         "max_depth": 200,
@@ -24,7 +25,8 @@
       },
       {
         "id": 1,
-        "fish_name": "Levrek (European Sea Bass)",
+        "type": "fish",
+        "animal_name": "Levrek (European Sea Bass)",
         "max_size": 100,
         "max_weight": 12,
         "max_depth": 100,
@@ -44,7 +46,8 @@
       },
       {
         "id": 3,
-        "fish_name": "Palamut (Bonito)",
+        "type": "fish",
+        "animal_name": "Palamut (Bonito)",
         "max_size": 90,
         "max_weight": 6,
         "max_depth": 300,
@@ -61,15 +64,58 @@
         "description": "Lezzetli eti ve göçmen yapısıyla Türkiye’de tanınmış bir balıktır.",
         "distribution_habitat": "Açık deniz ve kıyı geçiş bölgeleri, orta-yüklü derinlikler.",
         "image_paths": ["images/palamut1.png","images/palamut2.png"]
+      },
+      {
+        "id": 13,
+        "type": "creature",
+        "animal_name": "Denizanası",
+        "max_size": 30,
+        "max_weight": 0.5,
+        "max_depth": 50,
+        "other_names": ["Aurelia aurita"],
+        "colors": ["saydam", "pembe"],
+        "family": "Ulmaridae",
+        "habitat": "Açık deniz ve kıyı suları",
+        "poisonous": "yes",
+        "edible": "no",
+        "danger_to_human": true,
+        "social_behaviour": "grup halinde sürü oluşturur",
+        "locations": ["Karadeniz", "Ege Denizi"],
+        "locations_description": "Kıyı bölgelerinde yoğun görülür.",
+        "description": "Jelatinimsi ve şeffaf gövdesiyle deniz ekosisteminde önemli bir tür.",
+        "distribution_habitat": "Kıyı sığlıklarında ve açık deniz geçiş bölgelerinde.",
+        "image_paths": ["images/denizanası1.png","images/denizanası2.png"]
+      },
+      {
+        "id": 14,
+        "type": "other",
+        "animal_name": "Mercan",
+        "max_size": 15,
+        "max_weight": 1,
+        "max_depth": 10,
+        "other_names": ["Coral"],
+        "colors": ["kırmızı", "turuncu", "pembe"],
+        "family": "Scleractinia",
+        "habitat": "Sığ tropik denizler",
+        "poisonous": "no",
+        "edible": "no",
+        "danger_to_human": false,
+        "social_behaviour": "koloni halinde yaşar",
+        "locations": ["Akdeniz"],
+        "locations_description": "Kıyı kayalıklarında yoğun mercan kolonileri.",
+        "description": "Deniz altı ekosistemlerinde biyolojik çeşitlilik sağlar.",
+        "distribution_habitat": "Sığ tropik ve subtropik denizlerde.",
+        "image_paths": ["images/mercan1.png","images/mercan2.png"]
       }
     ]
   },
   {
     "country": "Bulgaristan",
-    "fish": [
+    "animals": [
       {
         "id": 4,
-        "fish_name": "Common Carp (Cyprinus carpio)",
+        "type": "fish",
+        "animal_name": "Common Carp (Cyprinus carpio)",
         "max_size": 120,
         "max_weight": 30,
         "max_depth": 10,
@@ -88,8 +134,17 @@
         "image_paths": ["https://drive.google.com/uc?export=view&id=1pHXHM179a8zu6XR9cS3tHqokq0wa0gWf", "https://drive.google.com/uc?export=view&id=1zqZFDOT8keqhheRJJqjuezqUDpQ1wyah"]
       },
       {
+        "id": 9999,
+        "type": "fish",
+        "animal_name": "Bu Bir Test Ögesidir",
+        "max_size": 120,
+        "max_weight": 30,
+        "max_depth": 10
+      },
+      {
         "id": 5,
-        "fish_name": "Mackerel (Scomber scombrus)",
+        "type": "fish",
+        "animal_name": "Mackerel (Scomber scombrus)",
         "max_size": 60,
         "max_weight": 2,
         "max_depth": 200,
@@ -109,7 +164,8 @@
       },
       {
         "id": 6,
-        "fish_name": "Black Sea Turbot (Psetta maxima maeotica)",
+        "type": "fish",
+        "animal_name": "Black Sea Turbot (Psetta maxima maeotica)",
         "max_size": 70,
         "max_weight": 5,
         "max_depth": 100,
@@ -126,15 +182,37 @@
         "description": "Taban balığı olup sofralık değeri yüksektir.",
         "distribution_habitat": "Kum-çamur zeminler, açık deniz değil kıyıya yakın orta derinlikler.",
         "image_paths": ["images/turbot_bg1.png","images/turbot_bg2.png"]
+      },
+      {
+        "id": 15,
+        "type": "creature",
+        "animal_name": "Denizkestanesi",
+        "max_size": 10,
+        "max_weight": 0.2,
+        "max_depth": 25,
+        "other_names": ["Sea Urchin"],
+        "colors": ["mor", "kahverengi"],
+        "family": "Echinoidea",
+        "habitat": "Kıyı kayalıkları ve deniz tabanı",
+        "poisonous": "yes",
+        "edible": "yes (sınırlı)",
+        "danger_to_human": true,
+        "social_behaviour": "tek başına yaşar",
+        "locations": ["Bulgaristan Karadeniz kıyısı"],
+        "locations_description": "Kıyı kayalıklarında bulunur.",
+        "description": "Deniz ekosisteminde önemli bir omurgasız tür.",
+        "distribution_habitat": "Kıyı sığlıkları ve kayalık alanlar.",
+        "image_paths": ["images/denizkestanesi1.png","images/denizkestanesi2.png"]
       }
     ]
   },
   {
     "country": "Yunanistan",
-    "fish": [
+    "animals": [
       {
         "id": 7,
-        "fish_name": "Gilthead Bream (Sparus aurata)",
+        "type": "fish",
+        "animal_name": "Gilthead Bream (Sparus aurata)",
         "max_size": 70,
         "max_weight": 7,
         "max_depth": 80,
@@ -154,7 +232,8 @@
       },
       {
         "id": 8,
-        "fish_name": "European Sea Bass (Dicentrarchus labrax)",
+        "type": "fish",
+        "animal_name": "European Sea Bass (Dicentrarchus labrax)",
         "max_size": 100,
         "max_weight": 12,
         "max_depth": 100,
@@ -174,7 +253,8 @@
       },
       {
         "id": 9,
-        "fish_name": "Mediterranean Parrotfish (Sparisoma cretense)",
+        "type": "fish",
+        "animal_name": "Mediterranean Parrotfish (Sparisoma cretense)",
         "max_size": 50,
         "max_weight": 3,
         "max_depth": 50,
@@ -196,10 +276,11 @@
   },
   {
     "country": "Portekiz",
-    "fish": [
+    "animals": [
       {
         "id": 10,
-        "fish_name": "Sardine (Sardinha)",
+        "type": "fish",
+        "animal_name": "Sardine (Sardinha)",
         "max_size": 30,
         "max_weight": 0.3,
         "max_depth": 100,
@@ -219,7 +300,8 @@
       },
       {
         "id": 11,
-        "fish_name": "Gilthead Bream (Dourada / Gilthead Bream)",
+        "type": "fish",
+        "animal_name": "Gilthead Bream (Dourada / Gilthead Bream)",
         "max_size": 60,
         "max_weight": 5,
         "max_depth": 40,
@@ -239,7 +321,8 @@
       },
       {
         "id": 12,
-        "fish_name": "European Seabass (Robalo)",
+        "type": "fish",
+        "animal_name": "European Seabass (Robalo)",
         "max_size": 100,
         "max_weight": 12,
         "max_depth": 100,

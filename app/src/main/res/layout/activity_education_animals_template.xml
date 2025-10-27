@@ -420,8 +420,6 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:text="Locations"
-                    android:clickable="true"
-                    android:onClick="goToEducation"
                     style="@style/TextViewSubtitle"
                     android:layout_height="wrap_content"/>
                 <LinearLayout
@@ -439,6 +437,8 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:layout_width="match_parent"
+                        android:clickable="true"
+                        android:onClick="btnEducation"
                         android:padding="3dp"
                         android:orientation="vertical"
                         android:background="@drawable/roundex_box_white">

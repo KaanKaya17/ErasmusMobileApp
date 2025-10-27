@@ -1,5 +1,6 @@
 package com.example.bluesteps;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.ContextThemeWrapper;
 import android.view.View;
@@ -68,7 +69,7 @@ public class EducationAnimalsTemplate extends AppCompatActivity {
             if (countriesArray != null) {
                 for (int i = 0; i < countriesArray.length(); i++) {
                     JSONObject countryObj = countriesArray.getJSONObject(i);
-                    JSONArray fishArray = countryObj.getJSONArray("fish");
+                    JSONArray fishArray = countryObj.getJSONArray("animals");
 
                     for (int j = 0; j < fishArray.length(); j++) {
                         JSONObject fish = fishArray.getJSONObject(j);
@@ -105,7 +106,7 @@ public class EducationAnimalsTemplate extends AppCompatActivity {
         JSONObject fish = searchFishById(intentFishData);
         if (fish != null) {
             try {
-                textViewFishName.setText(fish.getString("fish_name"));
+                textViewFishName.setText(fish.getString("animal_name"));
                 textViewFishMaxWeight.setText(String.valueOf(fish.getDouble("max_weight")));
                 textViewFishMaxSize.setText(String.valueOf(fish.getInt("max_size")));
                 textViewFishMaxDepth.setText(String.valueOf(fish.getInt("max_depth")));
@@ -199,5 +200,15 @@ public class EducationAnimalsTemplate extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }
+
+    public void btnEducation(View view){
+        Intent intent = new Intent(this, EducationMainPage.class);
+        startActivity(intent);
+    }
+
+    public void navHomePage(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }

@@ -23,6 +23,7 @@ import androidx.core.view.WindowInsetsCompat;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -36,17 +37,28 @@ public class EducationSeas extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_education_seas);
 
+
         JSONArray allData = loadFishJson();
-        String countryNameIntent = getIntent().getStringExtra("countryName");
-        JSONArray fishArray = getFishArrayByCountryName(allData, countryNameIntent);
-        if(fishArray != null){
-            generateFishCardsFromCountryName(this, countryNameIntent, fishArray); // burayı countryNameIntent yap
-        }
-        else{
-            generateCards();
+        String countryName = getIntent().getStringExtra("countryName");
+        String selectedType = getIntent().getStringExtra("type"); // Örneğin "fish", "sponge", vb.
+
+        JSONArray fishArray = getFishArrayByCountryName(allData, countryName);
+
+        if (selectedType != null && (countryName == null || countryName.isEmpty())) {
+            // Ülke seçilmemiş ama tür seçilmişse: tüm ülkelerde o türü göster
+            generateAllAnimalCardsByType(selectedType);
+        } else if (fishArray != null && selectedType != null) {
+            // Ülke ve tür seçilmiş: sadece o ülke ve türü göster
+            generateAllAnimalsCardsBySelectedCountry(this, countryName, fishArray, selectedType);
+        } else if (fishArray != null) {
+            // Sadece ülke seçilmiş: o ülkenin tüm hayvanları
+            generateFishCardsFromCountryName(this, countryName, fishArray);
+        } else {
+            // Hiçbiri yoksa: tüm ülkelerde tüm hayvanlar
+            generateAllAnimalCards();
         }
 
-        //Toast.makeText(getApplicationContext(), getCountryName, Toast.LENGTH_SHORT).show();
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -54,119 +66,76 @@ public class EducationSeas extends AppCompatActivity {
         });
     }
 
-    public void generateCards() {
-        LinearLayout parentLayout = findViewById(R.id.parentLayout); // Ana layout
+    public void generateAllAnimalCardsByType(String type) {
+        LinearLayout parentLayout = findViewById(R.id.parentLayout);
+        JSONArray countryArray = loadFishJson();
 
-        JSONArray countryArray = loadFishJson(); // JSON verisini yükle
+        if (countryArray != null) {
+            parentLayout.removeAllViews();
+            try {
+                for (int i = 0; i < countryArray.length(); i++) {
+                    JSONObject countryObj = countryArray.getJSONObject(i);
+                    JSONArray animalsArray = countryObj.getJSONArray("animals");
+
+                    for (int j = 0; j < animalsArray.length(); j++) {
+                        JSONObject obj = animalsArray.getJSONObject(j);
+                        if (obj.optString("type","").equalsIgnoreCase(type)) {
+                            View cardView = createFishCard(this, obj);
+                            parentLayout.addView(cardView);
+                        }
+                    }
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+    public void generateAllAnimalsCardsBySelectedCountry(Context context, String countryName, JSONArray animalArray, String selectedType) {
+        LinearLayout parentLayout = findViewById(R.id.parentLayout);
+        TextView title = findViewById(R.id.title);
+        TextView textviewType = findViewById(R.id.animalsType);
+        textviewType.setText(selectedType);
+
+        title.setText(countryName + " - " + selectedType);
+
+        if (parentLayout != null) {
+            parentLayout.removeAllViews();
+
+            for (int i = 0; i < animalArray.length(); i++) {
+                try {
+                    JSONObject animal = animalArray.getJSONObject(i);
+                    String type = animal.optString("type", "unknown");
+
+                    // Tür eşleşiyorsa (örneğin "fish", "sponge" vs.)
+                    if (type.equalsIgnoreCase(selectedType)) {
+                        View cardView = createFishCard(context, animal);
+                        parentLayout.addView(cardView);
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+
+    public void generateAllAnimalCards() {
+        LinearLayout parentLayout = findViewById(R.id.parentLayout);
+        JSONArray countryArray = loadFishJson();
+
         if (countryArray != null) {
             try {
-                // Ülkeleri gez
                 for (int i = 0; i < countryArray.length(); i++) {
-                    JSONObject countryObject = countryArray.getJSONObject(i);
-                    JSONArray fishArray = countryObject.getJSONArray("fish");
+                    JSONObject countryObj = countryArray.getJSONObject(i);
+                    JSONArray fishArray = countryObj.getJSONArray("animals");
 
                     for (int j = 0; j < fishArray.length(); j++) {
                         JSONObject fishObj = fishArray.getJSONObject(j);
-                        String fishName = fishObj.getString("fish_name");
-                        String fishSizeStr = fishObj.optString("max_size", "N/A");
-                        String fishDepthStr = fishObj.optString("max_depth", "N/A");
-                        int fishId = fishObj.getInt("id");
-
-                        // --- Satır layout ---
-                        LinearLayout rowLayout = new LinearLayout(this);
-                        rowLayout.setOrientation(LinearLayout.VERTICAL);
-                        rowLayout.setLayoutParams(new LinearLayout.LayoutParams(
-                                LinearLayout.LayoutParams.MATCH_PARENT,
-                                LinearLayout.LayoutParams.WRAP_CONTENT
-                        ));
-
-                        // --- Kart layout ---
-                        LinearLayout card = new LinearLayout(this);
-                        card.setOrientation(LinearLayout.HORIZONTAL);
-                        card.setGravity(Gravity.CENTER_VERTICAL);
-                        card.setClickable(true);
-                        card.setPadding(12, 12, 12, 12);
-                        card.setBackgroundResource(R.drawable.card);
-                        card.setId(View.generateViewId());
-                        card.setTag("card_" + fishId);
-
-                        card.setOnClickListener(v -> {
-                            String tag = (String) v.getTag();
-                            Toast.makeText(getApplicationContext(), tag + " tıklandı!", Toast.LENGTH_SHORT).show();
-
-                            int convertedFishId = Integer.parseInt(tag.split("_")[1]);
-                            openFishDetail(convertedFishId);
-                        });
-
-                        LinearLayout.LayoutParams cardParams = new LinearLayout.LayoutParams(
-                                LinearLayout.LayoutParams.MATCH_PARENT,
-                                LinearLayout.LayoutParams.WRAP_CONTENT
-                        );
-                        cardParams.setMargins(16, 16, 16, 16);
-                        card.setLayoutParams(cardParams);
-
-                        // --- ImageView ---
-                        ImageView imageView = new ImageView(this);
-                        LinearLayout.LayoutParams imageParams = new LinearLayout.LayoutParams(100, 100);
-                        imageParams.setMargins(0, 0, 16, 0);
-                        imageView.setLayoutParams(imageParams);
-                        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                        imageView.setImageResource(R.drawable.quiz);
-
-                        // --- Sağdaki text layout ---
-                        LinearLayout textLayout = new LinearLayout(this);
-                        textLayout.setOrientation(LinearLayout.VERTICAL);
-                        textLayout.setLayoutParams(new LinearLayout.LayoutParams(
-                                LinearLayout.LayoutParams.WRAP_CONTENT,
-                                LinearLayout.LayoutParams.WRAP_CONTENT
-                        ));
-
-                        // Fish Name
-                        TextView tvName = new TextView(this);
-                        tvName.setText(fishName);
-                        tvName.setTextColor(Color.parseColor("#066037"));
-                        tvName.setTextSize(16);
-                        tvName.setGravity(Gravity.CENTER_VERTICAL);
-                        tvName.setPadding(0, 0, 0, 2);
-                        textLayout.addView(tvName);
-
-                        // Fish Size
-                        TextView tvSize = new TextView(this);
-                        tvSize.setText(fishSizeStr + " cm");
-                        tvSize.setTextColor(Color.parseColor("#066037"));
-                        tvSize.setTextSize(12);
-                        tvSize.setGravity(Gravity.CENTER_VERTICAL);
-                        tvSize.setPadding(0, 0, 0, 2);
-                        textLayout.addView(tvSize);
-
-                        // Fish Depth
-                        TextView tvDepth = new TextView(this);
-                        tvDepth.setText(fishDepthStr + " m depth");
-                        tvDepth.setTextColor(Color.parseColor("#066037"));
-                        tvDepth.setTextSize(12);
-                        tvDepth.setGravity(Gravity.CENTER_VERTICAL);
-                        textLayout.addView(tvDepth);
-
-                        // Kart içine ekle
-                        card.addView(imageView);
-                        card.addView(textLayout);
-
-                        // --- Divider ---
-                        View divider = new View(this);
-                        LinearLayout.LayoutParams dividerParams = new LinearLayout.LayoutParams(
-                                LinearLayout.LayoutParams.MATCH_PARENT,
-                                2
-                        );
-                        dividerParams.setMargins(0, 8, 0, 8);
-                        divider.setLayoutParams(dividerParams);
-                        divider.setBackgroundColor(Color.BLACK);
-
-                        // Row layout'a ekle
-                        rowLayout.addView(card);
-                        rowLayout.addView(divider);
-
-                        // Ana layout'a ekle
-                        parentLayout.addView(rowLayout);
+                        View cardView = createFishCard(this, fishObj);
+                        parentLayout.addView(cardView);
                     }
                 }
             } catch (JSONException e) {
@@ -176,6 +145,95 @@ public class EducationSeas extends AppCompatActivity {
         } else {
             Toast.makeText(this, "JSON yüklenemedi", Toast.LENGTH_SHORT).show();
         }
+    }
+
+
+    private View createFishCard(Context context, JSONObject obj) throws JSONException {
+        String animalName = obj.getString("animal_name"); // artık hepsi için tek alan
+        String type = obj.optString("type", "unknown");
+        String maxSizeStr = obj.optString("max_size", "N/A");
+        String maxDepthStr = obj.optString("max_depth", "N/A");
+        int id = obj.getInt("id");
+
+        LinearLayout rowLayout = new LinearLayout(context);
+        rowLayout.setOrientation(LinearLayout.VERTICAL);
+        rowLayout.setLayoutParams(new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+        ));
+
+        LinearLayout card = new LinearLayout(context);
+        card.setOrientation(LinearLayout.HORIZONTAL);
+        card.setGravity(Gravity.CENTER_VERTICAL);
+        card.setClickable(true);
+        card.setPadding(12, 12, 12, 12);
+        card.setBackgroundResource(R.drawable.card);
+        card.setId(View.generateViewId());
+        card.setTag("card_" + id);
+
+        card.setOnClickListener(v -> {
+            int convertedId = Integer.parseInt(((String)v.getTag()).split("_")[1]);
+            openFishDetail(convertedId);
+        });
+
+        LinearLayout.LayoutParams cardParams = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+        );
+        cardParams.setMargins(16, 16, 16, 16);
+        card.setLayoutParams(cardParams);
+
+        ImageView imageView = new ImageView(context);
+        LinearLayout.LayoutParams imageParams = new LinearLayout.LayoutParams(150, 150);
+        imageParams.setMargins(0, 0, 25, 0);
+        imageView.setLayoutParams(imageParams);
+        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        imageView.setImageResource(R.drawable.quiz);
+
+        LinearLayout textLayout = new LinearLayout(context);
+        textLayout.setOrientation(LinearLayout.VERTICAL);
+        textLayout.setLayoutParams(new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+        ));
+
+        TextView tvName = new TextView(context);
+        tvName.setText(animalName);
+        tvName.setTextColor(Color.parseColor("#066037"));
+        tvName.setTextSize(16);
+        tvName.setPadding(0, 0, 0, 2);
+        textLayout.addView(tvName);
+
+        if (!maxSizeStr.equals("N/A")) {
+            TextView tvSize = new TextView(context);
+            tvSize.setText(maxSizeStr + " cm");
+            tvSize.setTextColor(Color.parseColor("#066037"));
+            tvSize.setTextSize(12);
+            textLayout.addView(tvSize);
+        }
+
+        if (!maxDepthStr.equals("N/A")) {
+            TextView tvDepth = new TextView(context);
+            tvDepth.setText(maxDepthStr + " m depth");
+            tvDepth.setTextColor(Color.parseColor("#066037"));
+            tvDepth.setTextSize(12);
+            textLayout.addView(tvDepth);
+        }
+
+        card.addView(imageView);
+        card.addView(textLayout);
+
+        View divider = new View(context);
+        LinearLayout.LayoutParams dividerParams = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT, 2);
+        dividerParams.setMargins(0, 8, 0, 8);
+        divider.setLayoutParams(dividerParams);
+        divider.setBackgroundColor(Color.BLACK);
+
+        rowLayout.addView(card);
+        rowLayout.addView(divider);
+
+        return rowLayout;
     }
 
 
@@ -202,7 +260,7 @@ public class EducationSeas extends AppCompatActivity {
 
                 // Ülke adı eşleşirse o ülkenin fish dizisini döndür
                 if (country.equalsIgnoreCase(countryName)) {
-                    return countryObj.getJSONArray("fish");
+                    return countryObj.getJSONArray("animals");
                 }
             }
         } catch (JSONException e) {
@@ -224,111 +282,11 @@ public class EducationSeas extends AppCompatActivity {
 
         if (parentLayout != null) {
             parentLayout.removeAllViews();
-
             for (int i = 0; i < fishArray.length(); i++) {
                 try {
                     JSONObject fishObj = fishArray.getJSONObject(i);
-                    String fishName = fishObj.getString("fish_name");
-                    String fishSizeStr = fishObj.optString("max_size", "N/A");
-                    String fishDepthStr = fishObj.optString("max_depth", "N/A");
-                    int fishId = fishObj.getInt("id");
-
-                    // --- Satır layout ---
-                    LinearLayout rowLayout = new LinearLayout(context);
-                    rowLayout.setOrientation(LinearLayout.VERTICAL);
-                    rowLayout.setLayoutParams(new LinearLayout.LayoutParams(
-                            LinearLayout.LayoutParams.MATCH_PARENT,
-                            LinearLayout.LayoutParams.WRAP_CONTENT
-                    ));
-
-                    // --- Kart layout ---
-                    LinearLayout card = new LinearLayout(context);
-                    card.setOrientation(LinearLayout.HORIZONTAL);
-                    card.setGravity(Gravity.CENTER_VERTICAL);
-                    card.setClickable(true);
-                    card.setPadding(12, 12, 12, 12);
-                    card.setBackgroundResource(R.drawable.card);
-                    card.setId(View.generateViewId());
-                    card.setTag("card_" + fishId);
-
-                    card.setOnClickListener(v -> {
-                        String tag = (String) v.getTag();
-                        Toast.makeText(getApplicationContext(), tag + " tıklandı!", Toast.LENGTH_SHORT).show();
-
-                        int convertedFishId = Integer.parseInt(tag.split("_")[1]);
-                        openFishDetail(convertedFishId);
-                    });
-
-                    LinearLayout.LayoutParams cardParams = new LinearLayout.LayoutParams(
-                            LinearLayout.LayoutParams.MATCH_PARENT,
-                            LinearLayout.LayoutParams.WRAP_CONTENT
-                    );
-                    cardParams.setMargins(16, 16, 16, 16);
-                    card.setLayoutParams(cardParams);
-
-                    // --- ImageView ---
-                    ImageView imageView = new ImageView(context);
-                    LinearLayout.LayoutParams imageParams = new LinearLayout.LayoutParams(100, 100);
-                    imageParams.setMargins(0, 0, 16, 0);
-                    imageView.setLayoutParams(imageParams);
-                    imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                    imageView.setImageResource(R.drawable.quiz);
-
-                    // --- Sağdaki text layout ---
-                    LinearLayout textLayout = new LinearLayout(context);
-                    textLayout.setOrientation(LinearLayout.VERTICAL);
-                    textLayout.setLayoutParams(new LinearLayout.LayoutParams(
-                            LinearLayout.LayoutParams.WRAP_CONTENT,
-                            LinearLayout.LayoutParams.WRAP_CONTENT
-                    ));
-
-                    // Fish Name
-                    TextView tvName = new TextView(context);
-                    tvName.setText(fishName);
-                    tvName.setTextColor(Color.parseColor("#066037"));
-                    tvName.setTextSize(16);
-                    tvName.setGravity(Gravity.CENTER_VERTICAL);
-                    tvName.setPadding(0, 0, 0, 2);
-                    textLayout.addView(tvName);
-
-                    // Fish Size
-                    TextView tvSize = new TextView(context);
-                    tvSize.setText(fishSizeStr + " cm");
-                    tvSize.setTextColor(Color.parseColor("#066037"));
-                    tvSize.setTextSize(12);
-                    tvSize.setGravity(Gravity.CENTER_VERTICAL);
-                    tvSize.setPadding(0, 0, 0, 2);
-                    textLayout.addView(tvSize);
-
-                    // Fish Depth
-                    TextView tvDepth = new TextView(context);
-                    tvDepth.setText(fishDepthStr + " m depth");
-                    tvDepth.setTextColor(Color.parseColor("#066037"));
-                    tvDepth.setTextSize(12);
-                    tvDepth.setGravity(Gravity.CENTER_VERTICAL);
-                    textLayout.addView(tvDepth);
-
-                    // Kart içine ekle
-                    card.addView(imageView);
-                    card.addView(textLayout);
-
-                    // --- Divider ---
-                    View divider = new View(context);
-                    LinearLayout.LayoutParams dividerParams = new LinearLayout.LayoutParams(
-                            LinearLayout.LayoutParams.MATCH_PARENT,
-                            2
-                    );
-                    dividerParams.setMargins(0, 8, 0, 8);
-                    divider.setLayoutParams(dividerParams);
-                    divider.setBackgroundColor(Color.BLACK);
-
-                    // Row layout'a ekle
-                    rowLayout.addView(card);
-                    rowLayout.addView(divider);
-
-                    // Ana layout'a ekle
-                    parentLayout.addView(rowLayout);
-
+                    View cardView = createFishCard(context, fishObj);
+                    parentLayout.addView(cardView);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -336,11 +294,49 @@ public class EducationSeas extends AppCompatActivity {
         }
     }
 
-
-
     public void btnEducation(View view){
         Nav.goToEducation(view);
     }
+    public void countryAllFishes(View view){
+        Intent intent = new Intent(this, EducationSeas.class);
+        intent.putExtra("type", "fish"); // JSON’daki type değerine göre küçük harfle olmalı
+        String countryName = getIntent().getStringExtra("countryName");
+        if(countryName != null){
+            intent.putExtra("countryName", countryName);
+            startActivity(intent);
+        }
+        else {
+            intent.putExtra("countryName", "Türkiye");
+            startActivity(intent);
+        }
+    }
+    public void countryAllCreatures(View view){
+        Intent intent = new Intent(this, EducationSeas.class);
+        intent.putExtra("type", "creature"); // JSON’daki type değerine göre küçük harfle olmalı
+        String countryName = getIntent().getStringExtra("countryName");
+        if(countryName != null){
+            intent.putExtra("countryName", countryName);
+            startActivity(intent);
+        }
+        else {
+            intent.putExtra("countryName", "Türkiye");
+            startActivity(intent);
+        }
+    }
+    public void countryAllOther(View view){
+        Intent intent = new Intent(this, EducationSeas.class);
+        intent.putExtra("type", "other"); // JSON’daki type değerine göre küçük harfle olmalı
+        String countryName = getIntent().getStringExtra("countryName");
+        if(countryName != null){
+            intent.putExtra("countryName", countryName);
+            startActivity(intent);
+        }
+        else {
+            intent.putExtra("countryName", "Türkiye");
+            startActivity(intent);
+        }
+    }
+
 
 
 }

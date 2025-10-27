@@ -128,6 +128,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
+        android:layout_marginBottom="75dp"
         android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
@@ -189,6 +190,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginRight="15dp"
                         android:layout_marginLeft="15dp"
+                        android:clickable="true"
+                        android:onClick="btnEducationAnimalsCreatures"
                         android:padding="20dp"
                         android:orientation="vertical"
                         android:background="@drawable/card">
@@ -213,6 +216,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="20dp"
+                        android:clickable="true"
+                        android:onClick="btnEducationAnimalsOther"
                         android:orientation="vertical"
                         android:background="@drawable/card">
                         <ImageView
