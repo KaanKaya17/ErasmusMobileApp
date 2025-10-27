@@ -75,15 +75,24 @@ public class MainActivity extends AppCompatActivity {
                 // "fish" dizisi varsa uzunluğunu al, yoksa 0 ver
                 int fishCount = 0;
                 int creatureCount = 0;
+                int otherAnimalsCount = 0;
+
                 if (countryObj.has("animals") && !countryObj.isNull("animals")) {
                     JSONArray animalsArray = countryObj.getJSONArray("animals");
                     for (int j = 0; j < animalsArray.length(); j++) {
                         JSONObject animal = animalsArray.getJSONObject(j);
                         String type = animal.optString("type", "");
-                        if (type.equalsIgnoreCase("fish")) fishCount++;
-                        else if (type.equalsIgnoreCase("creature")) creatureCount++;
+
+                        if (type.equalsIgnoreCase("fish")) {
+                            fishCount++;
+                        } else if (type.equalsIgnoreCase("creature")) {
+                            creatureCount++;
+                        } else {
+                            otherAnimalsCount++; // fish ve creature değilse diğerler
+                        }
                     }
                 }
+
 
 
                 // Ana satır layout
@@ -108,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
 
                 // Ülke resmi
                 ImageView flagImage = new ImageView(context);
-                LinearLayout.LayoutParams flagParams = new LinearLayout.LayoutParams(200, 120);
+                LinearLayout.LayoutParams flagParams = new LinearLayout.LayoutParams(200, 200);
                 flagParams.setMargins(0, 0, 20, 0);
                 flagImage.setLayoutParams(flagParams);
                 flagImage.setImageResource(R.drawable.badges);
@@ -138,6 +147,11 @@ public class MainActivity extends AppCompatActivity {
                 creatureText.setText(creatureCount + " Creatures");
                 creatureText.setTextColor(0xFF000000);
 
+                // Diğer Canlı sayısı
+                TextView othersText = new TextView(context);
+                othersText.setText(otherAnimalsCount + " Sponges, Plants, Corals");
+                othersText.setTextColor(0xFF000000);
+
                 // Ayırıcı çizgi
                 View divider = new View(context);
                 LinearLayout.LayoutParams dividerParams = new LinearLayout.LayoutParams(
@@ -150,6 +164,7 @@ public class MainActivity extends AppCompatActivity {
                 infoLayout.addView(countryText);
                 infoLayout.addView(fishText);
                 infoLayout.addView(creatureText);
+                infoLayout.addView(othersText);
                 infoLayout.addView(divider);
 
                 // Ana satıra ekle

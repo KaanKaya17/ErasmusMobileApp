@@ -66,8 +66,27 @@ public class EducationSeas extends AppCompatActivity {
         });
     }
 
+
+
     public void generateAllAnimalCardsByType(String type) {
         LinearLayout parentLayout = findViewById(R.id.parentLayout);
+        TextView textviewTitle = findViewById(R.id.title);
+        if (type != null) {
+            switch (type.toLowerCase()) {
+                case "fish":
+                    textviewTitle.setText("Fishes");
+                    break;
+                case "creature":
+                    textviewTitle.setText("Creatures");
+                    break;
+                default:
+                    textviewTitle.setText("Corals, Sponges, Plants");
+                    break;
+            }
+        } else {
+            textviewTitle.setText(""); // null ise boş bırak
+        }
+
         JSONArray countryArray = loadFishJson();
 
         if (countryArray != null) {
@@ -96,9 +115,27 @@ public class EducationSeas extends AppCompatActivity {
         LinearLayout parentLayout = findViewById(R.id.parentLayout);
         TextView title = findViewById(R.id.title);
         TextView textviewType = findViewById(R.id.animalsType);
-        textviewType.setText(selectedType);
 
-        title.setText(countryName + " - " + selectedType);
+        if (selectedType != null) {
+            switch (selectedType.toLowerCase()) {
+                case "fish":
+                    textviewType.setText("Fishes");
+                    title.setText(countryName + " - " + "Fishes");
+                    break;
+                case "creature":
+                    textviewType.setText("Creatures");
+                    title.setText(countryName + " - " + "Creatures");
+                    break;
+                default:
+                    textviewType.setText("Corals, Sponges, Plants");
+                    title.setText(countryName + " - " + "Corals, Sponges, Plants");
+                    break;
+            }
+        } else {
+            textviewType.setText(""); // null ise boş bırak
+        }
+
+
 
         if (parentLayout != null) {
             parentLayout.removeAllViews();
@@ -184,7 +221,7 @@ public class EducationSeas extends AppCompatActivity {
         card.setLayoutParams(cardParams);
 
         ImageView imageView = new ImageView(context);
-        LinearLayout.LayoutParams imageParams = new LinearLayout.LayoutParams(150, 150);
+        LinearLayout.LayoutParams imageParams = new LinearLayout.LayoutParams(200, 200);
         imageParams.setMargins(0, 0, 25, 0);
         imageView.setLayoutParams(imageParams);
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
@@ -299,6 +336,7 @@ public class EducationSeas extends AppCompatActivity {
     }
     public void countryAllFishes(View view){
         Intent intent = new Intent(this, EducationSeas.class);
+        intent.putExtra("animalsTypeTextview","Fishes");
         intent.putExtra("type", "fish"); // JSON’daki type değerine göre küçük harfle olmalı
         String countryName = getIntent().getStringExtra("countryName");
         if(countryName != null){

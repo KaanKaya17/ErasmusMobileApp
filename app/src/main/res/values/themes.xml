@@ -7,7 +7,7 @@
 
     <style name="Theme.BlueSteps" parent="Base.Theme.BlueSteps" />
 
-    <style name="Theme.MyApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.MyApp" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Uygulama genelinde Montserrat fontunu kullan -->
         <item name="android:fontFamily">@font/montserrat_variablefont_wght</item>
     </style>

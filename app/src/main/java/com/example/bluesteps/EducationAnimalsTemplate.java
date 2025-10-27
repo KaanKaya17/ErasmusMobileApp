@@ -147,7 +147,7 @@ public class EducationAnimalsTemplate extends AppCompatActivity {
                         locationLayout.setLayoutParams(layoutParams);
                         locationLayout.setOrientation(LinearLayout.VERTICAL);
                         locationLayout.setPadding(10, 10, 10, 10);
-                        locationLayout.setBackgroundColor(0xFF000000); // siyah
+                        locationLayout.setBackgroundResource(R.drawable.rounded_box);
 
                         // İç beyaz container
                         LinearLayout textContainer = new LinearLayout(this);
@@ -157,8 +157,8 @@ public class EducationAnimalsTemplate extends AppCompatActivity {
                                 1.0f
                         ));
                         textContainer.setOrientation(LinearLayout.VERTICAL);
-                        textContainer.setPadding(3, 3, 3, 3);
-                        textContainer.setBackgroundResource(R.drawable.roundex_box_white); // burada eklendi
+                        textContainer.setPadding(7, 7, 7, 7);
+                        textContainer.setBackgroundResource(R.drawable.roundex_box_white);
 
                         TextView locationTextView = new TextView(new ContextThemeWrapper(this, R.style.TextViewBody));
                         locationTextView.setLayoutParams(new LinearLayout.LayoutParams(
