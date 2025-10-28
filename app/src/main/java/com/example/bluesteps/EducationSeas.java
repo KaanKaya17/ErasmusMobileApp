@@ -331,8 +331,17 @@ public class EducationSeas extends AppCompatActivity {
         }
     }
 
-    public void btnEducation(View view){
+    public void goToEducation(View view){
         Nav.goToEducation(view);
+    }
+    public void navHomePage(View view){
+        Nav.goToHomePage(view);
+    }
+    public void navQuiz(View view){
+        Nav.goToQuizPage(view);
+    }
+    public void btnAboutUs(View view){
+        Nav.goToAboutUs(view);
     }
     public void goToEducationSeas(String type, String country){
         String currentType = getIntent().getStringExtra("type");

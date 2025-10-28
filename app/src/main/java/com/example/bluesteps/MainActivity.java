@@ -193,6 +193,10 @@ public class MainActivity extends AppCompatActivity {
         Nav.goToAboutUs(view);
     }
 
+    public void navQuiz(View view){
+        Nav.goToQuizPage(view);
+    }
+
     public void navHomePage(View view){
         if(this.getClass() != MainActivity.class){
             Nav.goToHomePage(view);

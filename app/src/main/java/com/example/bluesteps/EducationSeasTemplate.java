@@ -209,7 +209,9 @@ public class EducationSeasTemplate extends AppCompatActivity {
     }
 
 
-
+    public void navQuiz(View view){
+        Nav.goToQuizPage(view);
+    }
     public void navHomePage(View view){
         Nav.goToHomePage(view);
     }

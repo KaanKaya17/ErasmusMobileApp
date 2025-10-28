@@ -202,6 +202,11 @@ public class GameQuiz extends AppCompatActivity {
     public void navHomePage(View view){
         Nav.goToHomePage(view);
     }
+    public void navQuiz(View view){
+        if(this.getClass() != GameQuiz.class){
+            Nav.goToQuizPage(view);
+        }
+    }
     public void goToEducation(View view){
         Nav.goToEducation(view);
     }
