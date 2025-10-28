@@ -85,13 +85,15 @@ public class EducationAnimalsTemplate extends AppCompatActivity {
         return null;
     }
 
+    private int dpToPx(int dp) {
+        return (int) (dp * getResources().getDisplayMetrics().density + 0.5f);
+    }
 
     public boolean loadJSONDataToPage() {
         TextView textViewFishName = findViewById(R.id.fish_name);
         TextView textViewFishMaxWeight = findViewById(R.id.max_weight);
         TextView textViewFishMaxDepth = findViewById(R.id.max_depth);
         TextView textViewFishMaxSize = findViewById(R.id.max_size);
-        TextView textViewFishColors = findViewById(R.id.fish_colors);
         TextView textViewFishDanger = findViewById(R.id.fish_danger);
         TextView textViewFishEdible = findViewById(R.id.fish_edible);
         TextView textViewFishDescription = findViewById(R.id.fish_description);
@@ -112,21 +114,56 @@ public class EducationAnimalsTemplate extends AppCompatActivity {
                 textViewFishMaxDepth.setText(String.valueOf(fish.getInt("max_depth")));
                 textViewFishFamily.setText(fish.getString("family"));
                 textViewFishHabitat.setText(fish.getString("habitat"));
-                textViewFishEdible.setText(fish.getString("edible"));
+                textViewFishEdible.setText(fish.getBoolean("edible") ? "Yes" : "No");
                 textViewFishDescription.setText(fish.getString("description"));
                 textViewFishDistributionHabitat.setText(fish.getString("distribution_habitat"));
                 textViewFishLocationDescription.setText(fish.getString("locations_description"));
                 textViewFishSocialBehaviour.setText(fish.getString("social_behaviour"));
-                textViewFishPoisonous.setText(fish.getString("poisonous"));
+                textViewFishPoisonous.setText(fish.getBoolean("poisonous") ? "Yes" : "No");
                 textViewFishDanger.setText(fish.getBoolean("danger_to_human") ? "Tehlikeli" : "Tehlikesiz");
 
                 JSONArray colorsArray = fish.getJSONArray("colors");
-                StringBuilder colors = new StringBuilder();
+
+// 🔸 Renk toplarını göstereceğimiz LinearLayout
+                LinearLayout colorsLayout = findViewById(R.id.fish_colors_container);
+                colorsLayout.removeAllViews(); // Önceki topları temizle
+
+// 🔸 JSON'daki her renk için döngü
                 for (int i = 0; i < colorsArray.length(); i++) {
-                    colors.append(colorsArray.getString(i));
-                    if (i != colorsArray.length() - 1) colors.append(", ");
+                    String colorValue = colorsArray.getString(i).trim();
+                    int circleColor;
+
+                    // Eğer renk hex formatında (örneğin "#FF0000") değilse hata olmasın diye kontrol et
+                    try {
+                        circleColor = android.graphics.Color.parseColor(colorValue);
+                    } catch (IllegalArgumentException e) {
+                        // Renk ismini çözemezse, gri tonuna çevir
+                        circleColor = android.graphics.Color.GRAY;
+                    }
+
+                    // 🔹 Yeni bir View oluştur (yuvarlak top)
+                    View colorCircle = new View(this);
+
+                    // Boyut ve margin ayarları
+                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(dpToPx(28), dpToPx(28));
+                    params.setMargins(dpToPx(4), dpToPx(4), dpToPx(4), dpToPx(4));
+                    colorCircle.setLayoutParams(params);
+
+                    // 🔹 Yuvarlak görünüm için arka plan tanımla
+                    colorCircle.setBackgroundResource(R.drawable.color_circle_shape);
+
+                    // Arka planın rengini JSON’daki renkle değiştir
+                    colorCircle.getBackground().setTint(circleColor);
+
+                    // (Opsiyonel) Her topa tıklanınca Toast ile renk kodunu göster
+                    colorCircle.setOnClickListener(v -> {
+                        android.widget.Toast.makeText(this, "Color: " + colorValue, android.widget.Toast.LENGTH_SHORT).show();
+                    });
+
+                    // 🔹 Oluşturulan topu layout’a ekle
+                    colorsLayout.addView(colorCircle);
                 }
-                textViewFishColors.setText(colors.toString());
+
 
 
                 JSONArray locationsArray = fish.optJSONArray("locations");
@@ -143,10 +180,10 @@ public class EducationAnimalsTemplate extends AppCompatActivity {
                                 LinearLayout.LayoutParams.MATCH_PARENT,
                                 LinearLayout.LayoutParams.WRAP_CONTENT
                         );
-                        layoutParams.setMargins(0, 5, 0, 5);
+                        layoutParams.setMargins(dpToPx(0), dpToPx(5), dpToPx(0), dpToPx(5));
                         locationLayout.setLayoutParams(layoutParams);
                         locationLayout.setOrientation(LinearLayout.VERTICAL);
-                        locationLayout.setPadding(10, 10, 10, 10);
+                        locationLayout.setPadding(dpToPx(5) , dpToPx(5), dpToPx(5), dpToPx(5));
                         locationLayout.setBackgroundResource(R.drawable.rounded_box);
 
                         // İç beyaz container
@@ -157,7 +194,7 @@ public class EducationAnimalsTemplate extends AppCompatActivity {
                                 1.0f
                         ));
                         textContainer.setOrientation(LinearLayout.VERTICAL);
-                        textContainer.setPadding(7, 7, 7, 7);
+                        textContainer.setPadding(dpToPx(10) , dpToPx(10), dpToPx(10), dpToPx(10));
                         textContainer.setBackgroundResource(R.drawable.roundex_box_white);
 
                         TextView locationTextView = new TextView(new ContextThemeWrapper(this, R.style.TextViewBody));

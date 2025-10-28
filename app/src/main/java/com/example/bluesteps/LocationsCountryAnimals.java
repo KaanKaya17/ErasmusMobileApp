@@ -100,6 +100,11 @@ public class LocationsCountryAnimals extends AppCompatActivity {
 
                 // İçteki clickable horizontal layout
                 LinearLayout innerLayout = new LinearLayout(context);
+                innerLayout.setOnClickListener(v -> {
+                    Intent intent = new Intent(getApplicationContext(), EducationSeas.class);
+                    intent.putExtra("countryName", countryName);
+                    startActivity(intent);
+                });
                 innerLayout.setOrientation(LinearLayout.HORIZONTAL);
                 innerLayout.setClickable(true);
                 innerLayout.setLayoutParams(new LinearLayout.LayoutParams(
@@ -127,11 +132,7 @@ public class LocationsCountryAnimals extends AppCompatActivity {
                 fishCountText.setTextColor(Color.BLACK);
 
                 // Tıklama olayı
-                countryCard.setOnClickListener(v -> {
-                    Intent intent = new Intent(getApplicationContext(), EducationSeas.class);
-                    intent.putExtra("countryName", countryName);
-                    startActivity(intent);
-                });
+
 
                 // Alt çizgi
                 View divider = new View(context);

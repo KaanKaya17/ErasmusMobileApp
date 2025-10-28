@@ -34,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
+        //Intent intent = new Intent(this, GameMatching.class);
+        //startActivity(intent);
+
         JSONArray jsonArray = loadFishJson();
         if (jsonArray != null) {
             loadCountriesFromJson(this, jsonArray);
