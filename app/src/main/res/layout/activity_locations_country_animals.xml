@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LocationsCountryAnimals">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:padding="7dp"
+        android:layout_marginBottom="63dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginBottom="25dp"
+                style="@style/TextViewTitle"
+                android:text="Locations"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:id="@+id/root_layout"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/countryCard"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="7dp"
+                    android:padding="10dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/roundex_box_white"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:clickable="true"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="Alaska"
+                            style="@style/TextViewBody"
+                            android:layout_marginRight="15dp"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            style="@style/TextViewBody"
+                            android:layout_width="wrap_content"
+                            android:text="11"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:background="#000000"
+                    android:layout_height="2dp"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include
+        layout="@layout/nav_bar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

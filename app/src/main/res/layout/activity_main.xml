@@ -9,7 +9,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_marginBottom="75dp"
+        android:layout_marginBottom="63dp"
         android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
@@ -51,7 +51,7 @@
                         android:background="@drawable/card">
                         <ImageView
                             android:layout_width="match_parent"
-                            android:src="@drawable/aboutus"
+                            android:src="@drawable/fish"
                             android:layout_marginBottom="10dp"
                             android:layout_height="match_parent"/>
                         <LinearLayout
@@ -78,7 +78,7 @@
                         android:background="@drawable/card">
                         <ImageView
                             android:layout_width="match_parent"
-                            android:src="@drawable/aboutus"
+                            android:src="@drawable/creature"
                             android:layout_marginBottom="10dp"
                             android:layout_height="match_parent"/>
                         <LinearLayout
@@ -103,7 +103,7 @@
                         android:background="@drawable/card">
                         <ImageView
                             android:layout_width="match_parent"
-                            android:src="@drawable/aboutus"
+                            android:src="@drawable/coral"
                             android:layout_marginBottom="10dp"
                             android:layout_height="match_parent"/>
                         <LinearLayout
@@ -146,6 +146,7 @@
                         android:layout_weight="1"
                         android:gravity="start"/>
 
+                    <!--
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -153,6 +154,7 @@
                         android:gravity="end"
                         style="@style/TextViewSubtitle"
                         android:layout_gravity="end" />
+                    -->
                 </LinearLayout>
 
                 <LinearLayout
@@ -216,6 +218,8 @@
                             android:layout_height="wrap_content"/>
                         <TextView
                             android:layout_width="wrap_content"
+                            android:clickable="true"
+                            android:onClick="btnAnimalCountryLocations"
                             style="@style/TextViewSubtitle"
                             android:layout_weight="1"
                             android:gravity="end"

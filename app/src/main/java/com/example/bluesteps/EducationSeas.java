@@ -70,6 +70,16 @@ public class EducationSeas extends AppCompatActivity {
 
     public void generateAllAnimalCardsByType(String type) {
         LinearLayout parentLayout = findViewById(R.id.parentLayout);
+
+        TextView textviewCategory = findViewById(R.id.textviewCategory);
+        LinearLayout allFishesByCountryName = findViewById(R.id.allFishesByCountryName);
+        LinearLayout allOthersByCountryName = findViewById(R.id.allOthersByCountryName);
+        LinearLayout allCreaturesByCountryName = findViewById(R.id.allCreaturesByCountryName);
+        allFishesByCountryName.setVisibility(View.GONE);
+        textviewCategory.setVisibility(View.GONE);
+        allOthersByCountryName.setVisibility(View.GONE);
+        allCreaturesByCountryName.setVisibility(View.GONE);
+
         TextView textviewTitle = findViewById(R.id.title);
         if (type != null) {
             switch (type.toLowerCase()) {

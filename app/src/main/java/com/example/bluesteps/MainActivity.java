@@ -207,8 +207,6 @@ public class MainActivity extends AppCompatActivity {
         Nav.goToEducation(view);
     }
 
-
-
     public void btnEducationAnimalsCreatures(View view){
         Intent intent = new Intent(this, EducationSeas.class);
         intent.putExtra("type","creature");
@@ -226,6 +224,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, EducationSeas.class);
         intent.putExtra("type","other");
         startActivity(intent);
+    }
+
+    public void btnAnimalCountryLocations(View view){
+        Nav.locationsAnimalsCountry(view);
     }
 
 }

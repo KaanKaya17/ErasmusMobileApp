@@ -85,11 +85,9 @@ public class Nav {
             view.getContext().startActivity(intent);
         }
     }
-
-    public static void goToEducationAnimals(View view){
+    public static void locationsAnimalsCountry(View view){
         if (view != null && view.getContext() != null) {
-            Intent intent = new Intent(view.getContext(), EducationSeaAnimals.class);
-            intent.putExtra("fish_id",3);
+            Intent intent = new Intent(view.getContext(), LocationsCountryAnimals.class);
             view.getContext().startActivity(intent);
         }
     }
@@ -97,8 +95,8 @@ public class Nav {
     public static void goToEducationSeas(Context context){
         startActivitySafely(context, EducationSeas.class);
     }
-    public static void goToEducationAnimals(Context context){
-        startActivitySafely(context, EducationSeaAnimals.class);
+    public static void locationsAnimalsCountry(Context context){
+        startActivitySafely(context, LocationsCountryAnimals.class);
     }
 
     // --- Education Main Page End ---

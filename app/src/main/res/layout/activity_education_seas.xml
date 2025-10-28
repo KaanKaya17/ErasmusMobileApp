@@ -9,7 +9,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_marginBottom="75dp"
+        android:layout_marginBottom="63dp"
         android:layout_height="match_parent">
 
 
@@ -27,6 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <TextView
+                android:id="@+id/textviewCategory"
                 android:text="Categories"
                 style="@style/TextViewSubtitle"
                 android:layout_marginBottom="15dp"
@@ -53,7 +54,7 @@
                         android:background="@drawable/card">
                         <ImageView
                             android:layout_width="match_parent"
-                            android:src="@drawable/aboutus"
+                            android:src="@drawable/fish"
                             android:layout_marginBottom="10dp"
                             android:layout_height="match_parent"/>
                         <LinearLayout
@@ -69,6 +70,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/allCreaturesByCountryName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="15dp"
@@ -80,7 +82,7 @@
                         android:background="@drawable/card">
                         <ImageView
                             android:layout_width="match_parent"
-                            android:src="@drawable/aboutus"
+                            android:src="@drawable/creature"
                             android:layout_marginBottom="10dp"
                             android:layout_height="match_parent"/>
                         <LinearLayout
@@ -96,6 +98,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/allOthersByCountryName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="20dp"
@@ -105,7 +108,7 @@
                         android:background="@drawable/card">
                         <ImageView
                             android:layout_width="match_parent"
-                            android:src="@drawable/aboutus"
+                            android:src="@drawable/coral"
                             android:layout_marginBottom="10dp"
                             android:layout_height="match_parent"/>
                         <LinearLayout
