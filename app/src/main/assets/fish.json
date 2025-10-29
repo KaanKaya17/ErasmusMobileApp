@@ -42,7 +42,10 @@
         "locations_description": "Türkiye’nin batı kıyılarında hem avcılık hem de yetiştiricilikle yaygın.",
         "description": "Türkiye’de yaygın olarak tüketilen ve yetiştiriciliği de yapılan bir balık türüdür.",
         "distribution_habitat": "Kıyı kayalık ve kumluk alanlar, deniz ağzı bölgeleri, sığ-orta derinlikler.",
-        "image_paths": ["images/levrek1.png","images/levrek2.png"]
+        "image_paths": [
+          "https://drive.google.com/uc?export=view&id=1KoQ8Jv_6zeL4jf_2DDB0NpkNwGaBVRv-",
+          "https://drive.google.com/uc?export=view&id=1Jvyd4iPpBe3yRXRhAB3jdKIof6o8TuWI"
+        ]
       },
       {
         "id": 3,
@@ -63,7 +66,10 @@
         "locations_description": "Sonbahar aylarında Türkiye kıyılarında yoğun avlanan bir göçmen türdür.",
         "description": "Lezzetli eti ve göçmen yapısıyla Türkiye’de tanınmış bir balıktır.",
         "distribution_habitat": "Açık deniz ve kıyı geçiş bölgeleri, orta-yüklü derinlikler.",
-        "image_paths": ["images/palamut1.png","images/palamut2.png"]
+        "image_paths": [
+          "https://drive.google.com/uc?export=view&id=1zaMhXPO4AtI1MIbu55zBfnaERO_Apd5-",
+          "https://drive.google.com/uc?export=view&id=16VlhQGqjLkbKQ5SRmFCykwFVghawkc4m"
+        ]
       },
       {
         "id": 13,
@@ -84,7 +90,7 @@
         "locations_description": "Kıyı bölgelerinde yoğun görülür.",
         "description": "Jelatinimsi ve şeffaf gövdesiyle deniz ekosisteminde önemli bir tür.",
         "distribution_habitat": "Kıyı sığlıklarında ve açık deniz geçiş bölgelerinde.",
-        "image_paths": ["images/denizanası1.png","images/denizanası2.png"]
+        "image_paths": ["https://drive.google.com/uc?export=view&id=1SVHv7w7LKfaFsxzhz_2la7JaZgRttbSZ"]
       },
       {
         "id": 14,
@@ -105,7 +111,7 @@
         "locations_description": "Kıyı kayalıklarında yoğun mercan kolonileri.",
         "description": "Deniz altı ekosistemlerinde biyolojik çeşitlilik sağlar.",
         "distribution_habitat": "Sığ tropik ve subtropik denizlerde.",
-        "image_paths": ["images/mercan1.png","images/mercan2.png"]
+        "image_paths": ["https://drive.google.com/uc?export=view&id=1HJHlC3eQc_xQFkK7JsmrwD-1DJYY8Xjc"]
       },
       {
         "id": 16,
@@ -126,7 +132,7 @@
         "locations_description": "Kıyıya yakın sularda sürüler halinde dolaşır.",
         "description": "Türkiye’nin en çok tüketilen küçük balık türlerinden biridir.",
         "distribution_habitat": "Kıyı suları ve orta derinlikteki göç yolları.",
-        "image_paths": ["images/istavrit1.png", "images/istavrit2.png"]
+        "image_paths": ["https://drive.google.com/uc?export=view&id=1kgpwZrQpeK9nT7tnMYinuFXh9T68b_9q"]
       },
       {
         "id": 17,
@@ -147,7 +153,7 @@
         "locations_description": "Göç dönemlerinde Boğazlardan geçişiyle ünlüdür.",
         "description": "Lezzetli etiyle tanınan yırtıcı bir deniz balığıdır.",
         "distribution_habitat": "Açık deniz ve kıyı bölgeleri.",
-        "image_paths": ["images/lufer1.png", "images/lufer2.png"]
+        "image_paths": ["https://drive.google.com/uc?export=view&id=1CQpLXxHjvlf7WTXHQ4OPOaJjWep872Sv"]
       },
       {
         "id": 18,
@@ -168,7 +174,7 @@
         "locations_description": "Kayalık diplerde sıkça rastlanır.",
         "description": "Kollarını yenileyebilme özelliğiyle bilinen deniz canlısıdır.",
         "distribution_habitat": "Kıyı kayalıkları ve deniz tabanı.",
-        "image_paths": ["images/denizyildizi1.png", "images/denizyildizi2.png"]
+        "image_paths": ["https://drive.google.com/uc?export=view&id=1keiLq5vR5RNBz9roh4xmkKYEIwJJ_Oqr"]
       },
       {
         "id": 28,
@@ -189,7 +195,7 @@
         "locations_description": "Kıyı kayalıklarında yoğun görülür.",
         "description": "Deniz ekosisteminde önemli oksijen ve besin kaynağıdır.",
         "distribution_habitat": "Sığ kıyı alanları, kayalık ve kumlu zeminler.",
-        "image_paths": ["images/seaweed_tr1.png","images/seaweed_tr2.png"]
+        "image_paths": ["https://drive.google.com/uc?export=view&id=1LQLDFOtTVF_Ne1qffc4-R4hLK4_lIMND"]
       },
       {
         "id": 29,
@@ -210,7 +216,7 @@
         "locations_description": "Kıyı kayalıklarında yoğun koloniler oluşturur.",
         "description": "Deniz ekosistemine renk ve biyolojik çeşitlilik katar.",
         "distribution_habitat": "Sığ ve korunaklı kayalık alanlar.",
-        "image_paths": ["images/coral_tr1.png","images/coral_tr2.png"]
+        "image_paths": ["https://drive.google.com/uc?export=view&id=1HJHlC3eQc_xQFkK7JsmrwD-1DJYY8Xjc"]
       }
     ]
   },
@@ -236,7 +242,10 @@
         "locations_description": "Bulgaristan’da su ürünleri ve balıkçılık açısından yaygın tatlı su türlerinden biridir.",
         "description": "Bulgaristan tatlı sularında yaygın olarak bulunan ve tüketilen büyük bir tatlı su balığıdır.",
         "distribution_habitat": "Yavaş akan nehirler, göller, rezervuarlar, bitki örtüsü zengin kıyılar.",
-        "image_paths": ["https://drive.google.com/uc?export=view&id=1pHXHM179a8zu6XR9cS3tHqokq0wa0gWf", "https://drive.google.com/uc?export=view&id=1zqZFDOT8keqhheRJJqjuezqUDpQ1wyah"]
+        "image_paths": [
+          "https://drive.google.com/uc?export=view&id=1kGxpZaSBrNpuwl_Fq9U0HRcNhKNinR8J",
+          "https://drive.google.com/uc?export=view&id=1ofPUNU6cVELQciQBXkHNfWr5dzDdsU1y"
+        ]
       },
       {
         "id": 5,
@@ -257,7 +266,10 @@
         "locations_description": "Bulgaristan’da tüketimi yaygın olan göçmen ve yağlı balık türlerinden biridir.",
         "description": "Genellikle yağlı eti nedeniyle tercih edilen bir balıktır.",
         "distribution_habitat": "Kıyı açık deniz, göç yolları, orta derinlikler.",
-        "image_paths": ["images/mackerel_bg1.png","images/mackerel_bg2.png"]
+        "image_paths": [
+          "https://drive.google.com/uc?export=view&id=1sB7adgM2bpufrcEy4-YDBxxB7e1b_YF6",
+          "https://drive.google.com/uc?export=view&id=1FqCZO5pP8DCILMqN-LOYG19Q3tJU_zVE"
+        ]
       },
       {
         "id": 6,
@@ -278,7 +290,7 @@
         "locations_description": "Karadeniz’in Bulgar kıyılarında avlanan bir düz balık türüdür.",
         "description": "Taban balığı olup sofralık değeri yüksektir.",
         "distribution_habitat": "Kum-çamur zeminler, açık deniz değil kıyıya yakın orta derinlikler.",
-        "image_paths": ["images/turbot_bg1.png","images/turbot_bg2.png"]
+        "image_paths": ["https://drive.google.com/uc?export=view&id=1rv06PB5pI8MqmS0Mu3idkn9EV5nKjY-U"]
       },
       {
         "id": 15,
@@ -299,7 +311,7 @@
         "locations_description": "Kıyı kayalıklarında bulunur.",
         "description": "Deniz ekosisteminde önemli bir omurgasız tür.",
         "distribution_habitat": "Kıyı sığlıkları ve kayalık alanlar.",
-        "image_paths": ["images/denizkestanesi1.png","images/denizkestanesi2.png"]
+        "image_paths": ["https://drive.google.com/uc?export=view&id=1mhBTx13dz2-S2hl2u_WU0lv7EVCxxEBK"]
       },
       {
         "id": 19,
@@ -320,7 +332,7 @@
         "locations_description": "Bulgaristan’ın iç sularında avcılığı yapılan yırtıcı türlerden biridir.",
         "description": "Tatlı suların hızlı ve çevik avcı balığıdır.",
         "distribution_habitat": "Yavaş akan tatlı sular, otluk alanlar.",
-        "image_paths": ["images/pike_bg1.png", "images/pike_bg2.png"]
+        "image_paths": ["https://drive.google.com/uc?export=view&id=1agiLwwHniyY8xUjlc5zBg6dPM03DWERg"]
       },
       {
         "id": 20,
@@ -341,12 +353,12 @@
         "locations_description": "Yerel balıkçılıkta sıkça rastlanan tür.",
         "description": "Lezzetli etiyle bilinen küçük-orta boy tatlı su balığı.",
         "distribution_habitat": "Tatlı su gölleri ve akıntısız alanlar.",
-        "image_paths": ["images/perch_bg1.png", "images/perch_bg2.png"]
+        "image_paths": ["https://drive.google.com/uc?export=view&id=1O2BdQI7DuFdgO00G6d_77hKD9zH2GBVH"]
       },
       {
         "id": 21,
         "type": "creature",
-        "animal_name": "Tatlı su midYesi (Freshwater Mussel)",
+        "animal_name": "Tatlı su midyesi (Freshwater Mussel)",
         "max_size": 10,
         "max_weight": 0.1,
         "max_depth": 5,
@@ -362,7 +374,7 @@
         "locations_description": "Tatlı su ekosistemlerinde filtreleyici rol oynar.",
         "description": "Ekosistemde suyun temiz kalmasına yardımcı olur.",
         "distribution_habitat": "Tatlı su diplerinde, çamurlu zeminlerde.",
-        "image_paths": ["images/mussel_bg1.png", "images/mussel_bg2.png"]
+        "image_paths": ["https://drive.google.com/uc?export=view&id=1Pmy-CTIY3FyxAkdy8dJRsaEnwICSkOfI"]
       },
       {
         "id": 30,
@@ -383,7 +395,7 @@
         "locations_description": "Kıyı kayalıklarında ve dip mağaralarında bulunur.",
         "description": "Filtre beslenen ilkel deniz canlısıdır.",
         "distribution_habitat": "Kayalık ve çamurlu dip alanlar.",
-        "image_paths": ["images/sponge_bg1.png","images/sponge_bg2.png"]
+        "image_paths": ["https://drive.google.com/uc?export=view&id=1rjP7JFadGU4u366K3cBYzzoxFgv4FUUR"]
       },
       {
         "id": 31,
@@ -404,7 +416,7 @@
         "locations_description": "Kıyı sığlıklarında yoğun görülür, balıklar için besin kaynağıdır.",
         "description": "Deniz ekosisteminde habitat ve oksijen sağlayan bitki türü.",
         "distribution_habitat": "Sığ ve sakin deniz alanları.",
-        "image_paths": ["images/seagrass_bg1.png","images/seagrass_bg2.png"]
+        "image_paths": ["https://drive.google.com/uc?export=view&id=1kgpwZrQpeK9nT7tnMYinuFXh9T68b_9q"]
       }
     ]
   },
@@ -430,7 +442,10 @@
         "locations_description": "Yunanistan’da restoranlarda yaygın olarak bulunan ve avlanan bir balıktır.",
         "description": "Akdeniz bölgesinde sıkça tüketilen beyaz etli balıklardan biridir.",
         "distribution_habitat": "Kıyı kayalık ve kumluk alanlar, lagün ağızları.",
-        "image_paths": ["images/gilthead1.png","images/gilthead2.png"]
+        "image_paths": [
+          "https://drive.google.com/uc?export=view&id=1yIXZXGjKKIsXpRLADY00k9G8OyASw6jA",
+          "https://drive.google.com/uc?export=view&id=1_AkVeoIi2nt68BYwAPvlBj7Ym0NUEkVi"
+        ]
       },
       {
         "id": 8,
@@ -451,7 +466,10 @@
         "locations_description": "Yunanistan’da hem avcılığı hem yetiştiriciliği yapılan popüler bir balık türüdür.",
         "description": "Akdeniz ve Ege bölgesinin yaygın beyaz etli balıklarından biridir.",
         "distribution_habitat": "Kıyı kayalık ve kumluk alanlar, sığ-orta derinliklerde.",
-        "image_paths": ["images/sea_bass_gr1.png","images/sea_bass_gr2.png"]
+        "image_paths": [
+          "https://drive.google.com/uc?export=view&id=1q70Dggz_KoCODH27L_54BOJCYYk30kVk",
+          "https://drive.google.com/uc?export=view&id=1VzCRvcoXi8JQJkMplm3l5vmF1-ssyw9x"
+        ]
       },
       {
         "id": 9,
@@ -472,7 +490,10 @@
         "locations_description": "Akdeniz’de özellikle kayalık kıyı sistemlerinde bulunan resif balığıdır.[oaicite:6]{index=6}",
         "description": "Renkli ve resif habitatına özel bir tür; avcılığı yaygın değil ama tanımlanabilir bir balıktır.",
         "distribution_habitat": "Kayalık ve alg yoğun bölümler, sığ-orta derinlikler.",
-        "image_paths": ["images/parrotfish_gr1.png","images/parrotfish_gr2.png"]
+        "image_paths": [
+          "https://drive.google.com/uc?export=view&id=1AhAqpVxf7HBZafEwJGSvQKP6pQvG1swU",
+          "https://drive.google.com/uc?export=view&id=183FJzwM5VBTnI3nzFqMjSm-36GR8lShF"
+        ]
       },
       {
         "id": 22,
@@ -493,7 +514,7 @@
         "locations_description": "Yunan mutfağında popüler bir deniz balığıdır.",
         "description": "Lezzetli etiyle restoranlarda sıkça tercih edilir.",
         "distribution_habitat": "Kıyı kumluk alanlar ve sığ sular.",
-        "image_paths": ["images/redmullet_gr1.png", "images/redmullet_gr2.png"]
+        "image_paths": ["https://drive.google.com/uc?export=view&id=1qCrfny8Obe07Sw3hNsomTy__lZRNLepu"]
       },
       {
         "id": 23,
@@ -514,7 +535,7 @@
         "locations_description": "Yunanistan açık denizlerinde nadiren avlanır.",
         "description": "Dev boyutları ve uzun burnuyla tanınan yırtıcı bir balıktır.",
         "distribution_habitat": "Açık deniz, derin sular.",
-        "image_paths": ["images/swordfish_gr1.png", "images/swordfish_gr2.png"]
+        "image_paths": ["https://drive.google.com/uc?export=view&id=1Mcm71LNeIIO7KZggGx2GPPy3pUh60GE3"]
       },
       {
         "id": 24,
@@ -535,7 +556,7 @@
         "locations_description": "Kayalık diplerde bulunur.",
         "description": "Yavaş hareket eden kabuklu deniz canlısıdır.",
         "distribution_habitat": "Kayalık zeminler ve sığ sular.",
-        "image_paths": ["images/seasnail_gr1.png", "images/seasnail_gr2.png"]
+        "image_paths": ["https://drive.google.com/uc?export=view&id=1hczsTgmq4_EjXk-zcpH30hiwaYYZB9Bj"]
       },
       {
         "id": 32,
@@ -556,7 +577,7 @@
         "locations_description": "Kayalık resiflerde yoğun olarak görülür.",
         "description": "Resiflerin yapısına katkı sağlayan önemli bir canlıdır.",
         "distribution_habitat": "Sığ kayalık ve resif alanları.",
-        "image_paths": ["images/coral_gr1.png","images/coral_gr2.png"]
+        "image_paths": ["https://drive.google.com/uc?export=view&id=1HJHlC3eQc_xQFkK7JsmrwD-1DJYY8Xjc"]
       },
       {
         "id": 33,
@@ -577,7 +598,7 @@
         "locations_description": "Kıyı kayalıklarına tutunarak büyür.",
         "description": "Besin ve oksijen kaynağı olarak ekosistemde rol oynar.",
         "distribution_habitat": "Sığ kıyı ve kayalık bölgeler.",
-        "image_paths": ["images/seaweed_gr1.png","images/seaweed_gr2.png"]
+        "image_paths": ["https://drive.google.com/uc?export=view&id=17kDgX91KiYj9IN8LgtsMCP2TWn2tpqFc"]
       }
     ]
   },
@@ -624,8 +645,10 @@
         "locations_description": "Portekiz’de yaygın olarak bulunan ve tüketilen bir balıktır.",
         "description": "Akdeniz kadar olmasa da Portekiz’de beyaz etli balık olarak tercih edilir.",
         "distribution_habitat": "Kıyı bölgeleri, lagünler ve sığ deniz tabanı.",
-        "image_paths": ["images/dourada_pt1.png","images/dourada_pt2.png"]
-      },
+        "image_paths": [
+          "https://drive.google.com/uc?export=view&id=1yIXZXGjKKIsXpRLADY00k9G8OyASw6jA",
+          "https://drive.google.com/uc?export=view&id=1_AkVeoIi2nt68BYwAPvlBj7Ym0NUEkVi"
+        ]      },
       {
         "id": 12,
         "type": "fish",
@@ -645,8 +668,10 @@
         "locations_description": "Portekiz’de deniz balıkçılığında önemli bir türdür.",
         "description": "Portekiz sahillerinde beyaz etli balık olarak tercih edilen bir türdür.",
         "distribution_habitat": "Kıyı kayalık ve kumluk alanlar, sığ-orta derinliklerde.",
-        "image_paths": ["images/sea_bass_pt1.png","images/sea_bass_pt2.png"]
-      },
+        "image_paths": [
+          "https://drive.google.com/uc?export=view&id=1q70Dggz_KoCODH27L_54BOJCYYk30kVk",
+          "https://drive.google.com/uc?export=view&id=1VzCRvcoXi8JQJkMplm3l5vmF1-ssyw9x"
+        ]      },
       {
         "id": 25,
         "type": "fish",
@@ -666,7 +691,7 @@
         "locations_description": "Portekiz mutfağında tuzlanmış haliyle gelenekseldir.",
         "description": "Portekiz’de yüzlerce farklı ‘bacalhau’ tarifiyle tüketilir.",
         "distribution_habitat": "Derin soğuk Atlantik suları.",
-        "image_paths": ["images/bacalhau_pt1.png", "images/bacalhau_pt2.png"]
+        "image_paths": ["https://drive.google.com/uc?export=view&id=1Kk3xifAZ9iSkh2FSgnkAprLqv-IVdFGM"]
       },
       {
         "id": 26,
@@ -687,7 +712,7 @@
         "locations_description": "Lüks restoranlarda tercih edilen beyaz etli balık.",
         "description": "Gövdesindeki yuvarlak siyah lekesiyle tanınır.",
         "distribution_habitat": "Kıyıya yakın kumluk ve kayalık alanlar.",
-        "image_paths": ["images/johndory_pt1.png", "images/johndory_pt2.png"]
+        "image_paths": ["https://drive.google.com/uc?export=view&id=1uts6OHif0EpFz2hogdZOEpdipZFr85fi"]
       },
       {
         "id": 27,
@@ -708,28 +733,7 @@
         "locations_description": "Portekiz kıyılarında sıkça rastlanan doğal sünger türleri.",
         "description": "Filtre beslenen ilkel deniz canlılarıdır.",
         "distribution_habitat": "Kıyı kayalıkları ve deniz tabanı.",
-        "image_paths": ["images/sponge_pt1.png", "images/sponge_pt2.png"]
-      },
-      {
-        "id": 34,
-        "type": "other",
-        "animal_name": "Deniz süngeri (Sea Sponge)",
-        "max_size": 50,
-        "max_weight": 1,
-        "max_depth": 80,
-        "other_names": ["Porifera"],
-        "colors": ["#FFFF00", "#A52A2A"],
-        "family": "Porifera",
-        "habitat": "Portekiz kıyıları, kayalık alanlar",
-        "poisonous": false,
-        "edible": false,
-        "danger_to_human": false,
-        "social_behaviour": "koloni halinde",
-        "locations": ["Atlantik kıyısı"],
-        "locations_description": "Kıyı mağaralarında ve kayalık diplerde bulunur.",
-        "description": "Filtreleyici olarak ekosistemde önemli rol oynar.",
-        "distribution_habitat": "Kayalık ve kumlu zeminler.",
-        "image_paths": ["images/sponge_pt1.png","images/sponge_pt2.png"]
+        "image_paths": ["https://drive.google.com/uc?export=view&id=1rjP7JFadGU4u366K3cBYzzoxFgv4FUUR"]
       },
       {
         "id": 35,
@@ -750,7 +754,7 @@
         "locations_description": "Kıyı sığlıklarında balık ve omurgasızlar için önemli habitat sağlar.",
         "description": "Ekosistemde oksijen ve besin kaynağı olarak görev yapar.",
         "distribution_habitat": "Sığ ve sakin deniz alanları.",
-        "image_paths": ["images/seagrass_pt1.png","images/seagrass_pt2.png"]
+        "image_paths": ["https://drive.google.com/uc?export=view&id=1kgpwZrQpeK9nT7tnMYinuFXh9T68b_9q"]
       }
     ]
   }
