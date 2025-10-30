@@ -48,24 +48,11 @@ public class EducationAnimalsTemplate extends AppCompatActivity {
         });
     }
 
-    public JSONArray loadFishJson() {
-        try {
-            InputStream is = getAssets().open("fish.json");
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
-            String json = new String(buffer, StandardCharsets.UTF_8);
-            return new JSONArray(json);
-        } catch (IOException | JSONException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
+
 
     public JSONObject searchFishById(int id) {
         try {
-            JSONArray countriesArray = loadFishJson();
+            JSONArray countriesArray = fishJson.loadFishJson(this);
             if (countriesArray != null) {
                 for (int i = 0; i < countriesArray.length(); i++) {
                     JSONObject countryObj = countriesArray.getJSONObject(i);

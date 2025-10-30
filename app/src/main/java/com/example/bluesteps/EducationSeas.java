@@ -38,7 +38,7 @@ public class EducationSeas extends AppCompatActivity {
         setContentView(R.layout.activity_education_seas);
 
 
-        JSONArray allData = loadFishJson();
+        JSONArray allData = fishJson.loadFishJson(this);
         String countryName = getIntent().getStringExtra("countryName");
         String selectedType = getIntent().getStringExtra("type"); // Örneğin "fish", "sponge", vb.
 
@@ -97,7 +97,7 @@ public class EducationSeas extends AppCompatActivity {
             textviewTitle.setText(""); // null ise boş bırak
         }
 
-        JSONArray countryArray = loadFishJson();
+        JSONArray countryArray = fishJson.loadFishJson(this);
 
         if (countryArray != null) {
             parentLayout.removeAllViews();
@@ -171,7 +171,7 @@ public class EducationSeas extends AppCompatActivity {
 
     public void generateAllAnimalCards() {
         LinearLayout parentLayout = findViewById(R.id.parentLayout);
-        JSONArray countryArray = loadFishJson();
+        JSONArray countryArray = fishJson.loadFishJson(this);
 
         if (countryArray != null) {
             try {
@@ -291,21 +291,6 @@ public class EducationSeas extends AppCompatActivity {
     }
 
 
-
-    public JSONArray loadFishJson() {
-        try {
-            InputStream is = getAssets().open("fish.json");
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
-            String json = new String(buffer, StandardCharsets.UTF_8);
-            return new JSONArray(json);
-        } catch (IOException | JSONException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
     public JSONArray getFishArrayByCountryName(JSONArray jsonArray, String countryName) {
         try {
             for (int i = 0; i < jsonArray.length(); i++) {

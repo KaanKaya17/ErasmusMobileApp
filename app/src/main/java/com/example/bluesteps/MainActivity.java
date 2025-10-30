@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         //Intent intent = new Intent(this, GameMatching.class);
         //startActivity(intent);
 
-        JSONArray jsonArray = loadFishJson();
+        JSONArray jsonArray = fishJson.loadFishJson(this);
         JSONArray jsonSeaArray = loadSeaJson();
         if(jsonSeaArray != null){
             loadAllSeasToPage();
@@ -57,24 +57,6 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-    }
-
-    public JSONArray loadFishJson() {
-        try {
-            InputStream is = getAssets().open("fish.json");
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            int read = is.read(buffer);
-            is.close();
-
-            if (read <= 0) return null;
-
-            String json = new String(buffer, StandardCharsets.UTF_8);
-            return new JSONArray(json);
-        } catch (IOException | JSONException e) {
-            e.printStackTrace();
-            return null;
-        }
     }
 
     private void loadCountriesFromJson(Context context, JSONArray countriesArray) {
@@ -133,8 +115,9 @@ public class MainActivity extends AppCompatActivity {
                 ImageView flagImage = new ImageView(context);
                 LinearLayout.LayoutParams flagParams = new LinearLayout.LayoutParams(200, 200);
                 flagParams.setMargins(0, 0, 20, 0);
+                flagImage.setScaleType(ImageView.ScaleType.CENTER_CROP);
                 flagImage.setLayoutParams(flagParams);
-                flagImage.setImageResource(R.drawable.badges);
+                flagImage.setImageResource(R.drawable.country);
 
                 // Bilgi kısmı
                 LinearLayout infoLayout = new LinearLayout(context);
@@ -307,8 +290,9 @@ public class MainActivity extends AppCompatActivity {
 
                 // 🔹 Deniz resmi
                 ImageView seaImage = new ImageView(this);
-                LinearLayout.LayoutParams imageParams = new LinearLayout.LayoutParams(dpToPx(100), dpToPx(100));
+                LinearLayout.LayoutParams imageParams = new LinearLayout.LayoutParams(dpToPx(125), dpToPx(125));
                 imageParams.setMargins(0, 0, dpToPx(20), 0);
+                seaImage.setScaleType(ImageView.ScaleType.CENTER_CROP);
                 seaImage.setLayoutParams(imageParams);
 
                 String imageUrl = null;

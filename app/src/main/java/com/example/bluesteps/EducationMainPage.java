@@ -40,20 +40,6 @@ public class EducationMainPage extends AppCompatActivity {
             return insets;
         });
     }
-    public JSONArray loadFishJson() {
-        try {
-            InputStream is = getAssets().open("fish.json");
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
-            String json = new String(buffer, StandardCharsets.UTF_8);
-            return new JSONArray(json);
-        } catch (IOException | JSONException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
     private void openFishDetail(int fishId) {
 
         Intent intent = new Intent(this, EducationAnimalsTemplate.class);
@@ -63,7 +49,7 @@ public class EducationMainPage extends AppCompatActivity {
     public void generateCards() {
         LinearLayout cardLayout = findViewById(R.id.cardLayout); // Ana layout
 
-        JSONArray countryArray = loadFishJson(); // JSON'u yükle
+        JSONArray countryArray = fishJson.loadFishJson(this); // JSON'u yükle
         if (countryArray != null) {
             try {
                 // Ülkeleri gez

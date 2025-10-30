@@ -31,7 +31,7 @@ public class LocationsCountryAnimals extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_locations_country_animals);
 
-        JSONArray fishArray = loadFishJson();
+        JSONArray fishArray = fishJson.loadFishJson(this);
         loadCountriesFromJson(this,fishArray);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -39,24 +39,6 @@ public class LocationsCountryAnimals extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-    }
-
-    public JSONArray loadFishJson() {
-        try {
-            InputStream is = getAssets().open("fish.json");
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            int read = is.read(buffer);
-            is.close();
-
-            if (read <= 0) return null;
-
-            String json = new String(buffer, StandardCharsets.UTF_8);
-            return new JSONArray(json);
-        } catch (IOException | JSONException e) {
-            e.printStackTrace();
-            return null;
-        }
     }
 
     private int dpToPx(int dp) {
