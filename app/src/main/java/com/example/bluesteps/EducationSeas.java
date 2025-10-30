@@ -235,7 +235,14 @@ public class EducationSeas extends AppCompatActivity {
         imageParams.setMargins(0, 0, 25, 0);
         imageView.setLayoutParams(imageParams);
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        imageView.setImageResource(R.drawable.quiz);
+        if (type.equalsIgnoreCase("fish")) {
+            imageView.setImageResource(R.drawable.fish);
+        } else if (type.equalsIgnoreCase("other")) {
+            imageView.setImageResource(R.drawable.coral);
+        } else{
+            imageView.setImageResource(R.drawable.creature);
+        }
+
 
         LinearLayout textLayout = new LinearLayout(context);
         textLayout.setOrientation(LinearLayout.VERTICAL);

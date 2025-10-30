@@ -85,6 +85,13 @@ public class Nav {
             view.getContext().startActivity(intent);
         }
     }
+
+    public static void goToAllSeas(View view){
+        if (view != null && view.getContext() != null) {
+            Intent intent = new Intent(view.getContext(), AllSeas.class);
+            view.getContext().startActivity(intent);
+        }
+    }
     public static void locationsAnimalsCountry(View view){
         if (view != null && view.getContext() != null) {
             Intent intent = new Intent(view.getContext(), LocationsCountryAnimals.class);
@@ -94,6 +101,9 @@ public class Nav {
 
     public static void goToEducationSeas(Context context){
         startActivitySafely(context, EducationSeas.class);
+    }
+    public static void goToAllSeas(Context context){
+        startActivitySafely(context, AllSeas.class);
     }
     public static void locationsAnimalsCountry(Context context){
         startActivitySafely(context, LocationsCountryAnimals.class);

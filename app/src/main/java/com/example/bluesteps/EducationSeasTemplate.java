@@ -32,7 +32,21 @@ public class EducationSeasTemplate extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_education_seas_template);
 
-        int seaId = getIntent().getIntExtra("id", 2);
+        int seaId = getIntent().getIntExtra("seaId", -1);
+        if (seaId != -1) {
+            JSONObject sea = searchSeaById(seaId); // Daha önce yazdığın searchSeaById metodunu kullan
+            if (sea != null) {
+                TextView seaNameTextView = findViewById(R.id.sea_name);
+                seaNameTextView.setText(sea.optString("sea_name", "Bulunamadı"));
+
+                // Burada diğer bilgileri de aynı şekilde çekebilirsin
+                // örn: area, max_depth, main_fishes vs.
+            }
+        } else {
+            Toast.makeText(this, "Deniz bulunamadı!", Toast.LENGTH_SHORT).show();
+        }
+
+
 
         loadJSONToPage(seaId);
 
@@ -97,12 +111,16 @@ public class EducationSeasTemplate extends AppCompatActivity {
         }
         return null;
     }
-
+    private int dpToPx(int dp) {
+        float density = getResources().getDisplayMetrics().density;
+        return Math.round(dp * density);
+    }
     public void loadJSONToPage(int seaId) {
         JSONArray seaArray = loadSeaJson();
         JSONObject sea = null;
 
         try {
+            // ID’ye göre denizi bul
             for (int i = 0; i < seaArray.length(); i++) {
                 JSONObject s = seaArray.getJSONObject(i);
                 if (s.getInt("id") == seaId) {
@@ -116,6 +134,7 @@ public class EducationSeasTemplate extends AppCompatActivity {
                 return;
             }
 
+            // TextView’leri bul
             TextView textSeaName = findViewById(R.id.sea_name);
             TextView textMaxDepth = findViewById(R.id.sea_max_depth);
             TextView textSalinity = findViewById(R.id.sea_salinity);
@@ -124,7 +143,9 @@ public class EducationSeasTemplate extends AppCompatActivity {
             TextView textDescription = findViewById(R.id.sea_description);
             TextView textEcosystem = findViewById(R.id.sea_ecosystem);
             TextView textEconomicActivities = findViewById(R.id.sea_economic_activities);
+            TextView textMainFishesDescription = findViewById(R.id.sea_main_fishes_description);
 
+            // Verileri ayarla
             textSeaName.setText(sea.optString("sea_name", ""));
             textMaxDepth.setText(sea.optInt("max_depth", 0) + " m");
             textSalinity.setText(sea.optString("salinity", ""));
@@ -133,6 +154,7 @@ public class EducationSeasTemplate extends AppCompatActivity {
             textDescription.setText(sea.optString("description", ""));
             textEcosystem.setText(sea.optString("ecosystem", ""));
 
+            // Economic activities
             JSONArray activitiesArray = sea.optJSONArray("economic_activities");
             if (activitiesArray != null) {
                 StringBuilder activitiesBuilder = new StringBuilder();
@@ -143,6 +165,7 @@ public class EducationSeasTemplate extends AppCompatActivity {
                 textEconomicActivities.setText(activitiesBuilder.toString());
             }
 
+            // Main fishes
             JSONArray mainFishesArray = sea.optJSONArray("main_fishes");
             if (mainFishesArray != null) {
                 LinearLayout mainFishesLayout = findViewById(R.id.main_fishes_layout);
@@ -151,45 +174,38 @@ public class EducationSeasTemplate extends AppCompatActivity {
                 for (int i = 0; i < mainFishesArray.length(); i++) {
                     String fishName = mainFishesArray.optString(i, "");
 
-                    // Her balık için LinearLayout oluştur
-                    LinearLayout fishLayout = new LinearLayout(this);
-                    LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
+                    // Her balık için container oluştur
+                    LinearLayout fishContainer = new LinearLayout(this);
+                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                             LinearLayout.LayoutParams.MATCH_PARENT,
                             LinearLayout.LayoutParams.WRAP_CONTENT
                     );
-                    layoutParams.setMargins(0, 5, 0, 5); // Margin top/bottom
-                    fishLayout.setLayoutParams(layoutParams);
-                    fishLayout.setOrientation(LinearLayout.VERTICAL);
-                    fishLayout.setPadding(10, 10, 10, 10);
-                    fishLayout.setBackgroundColor(0xFF000000); // #000000
+                    params.setMargins(0, dpToPx(8), 0, dpToPx(8)); // Üst ve alt margin
+                    fishContainer.setLayoutParams(params);
 
-                    // İçine TextView ekle
-                    LinearLayout textContainer = new LinearLayout(this);
-                    textContainer.setLayoutParams(new LinearLayout.LayoutParams(
-                            LinearLayout.LayoutParams.MATCH_PARENT,
-                            LinearLayout.LayoutParams.WRAP_CONTENT,
-                            1.0f
-                    ));
-                    textContainer.setOrientation(LinearLayout.VERTICAL);
-                    textContainer.setPadding(3, 3, 3, 3);
-                    textContainer.setBackgroundColor(0xFFFFFFFF); // #ffffff
+                    fishContainer.setOrientation(LinearLayout.VERTICAL);
+                    fishContainer.setPadding(dpToPx(3), dpToPx(3), dpToPx(3), dpToPx(3));
+                    fishContainer.setBackground(getDrawable(R.drawable.roundex_box_white));
+// XML’deki arkaplan
 
+                    // TextView oluştur
                     TextView fishTextView = new TextView(new ContextThemeWrapper(this, R.style.TextViewBody));
                     fishTextView.setLayoutParams(new LinearLayout.LayoutParams(
                             LinearLayout.LayoutParams.MATCH_PARENT,
                             LinearLayout.LayoutParams.WRAP_CONTENT
                     ));
-                    fishTextView.setPadding(6, 6, 6, 6);
+                    fishTextView.setPadding(dpToPx(6), dpToPx(6), dpToPx(6), dpToPx(6));
                     fishTextView.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_START);
                     fishTextView.setText(fishName);
 
-                    textContainer.addView(fishTextView);
-                    fishLayout.addView(textContainer);
-                    mainFishesLayout.addView(fishLayout);
+                    fishContainer.addView(fishTextView);
+                    mainFishesLayout.addView(fishContainer);
                 }
+
+                textMainFishesDescription.setText("The main fishes of " + sea.optString("sea_name", ""));
             }
 
-            /*
+            // ViewPager2 için resimler
             ViewPager2 viewPager = findViewById(R.id.viewPager);
             JSONArray imagePaths = sea.optJSONArray("image_paths");
             if (imagePaths != null) {
@@ -197,16 +213,16 @@ public class EducationSeasTemplate extends AppCompatActivity {
                 for (int k = 0; k < imagePaths.length(); k++) {
                     images.add(imagePaths.getString(k));
                 }
-                ImageAdapter adapter = new ImageAdapter(this, images);
-                viewPager.setAdapter(adapter);
+                //ImageAdapterSea adapter = new ImageAdapterSea(this, ImageAdapterSea); // Senin adapter’in
+                //viewPager.setAdapter(adapter);
             }
-            */
 
         } catch (JSONException e) {
             e.printStackTrace();
             Toast.makeText(this, "JSON parse error", Toast.LENGTH_SHORT).show();
         }
     }
+
 
 
     public void navQuiz(View view){

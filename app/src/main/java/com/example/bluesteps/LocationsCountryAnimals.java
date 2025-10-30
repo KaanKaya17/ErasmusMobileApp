@@ -167,4 +167,17 @@ public class LocationsCountryAnimals extends AppCompatActivity {
         }
     }
 
+    public void navHomePage(View view){
+        Nav.goToHomePage(view);
+    }
+    public void goToEducation(View view){
+        Nav.goToEducation(view);
+    }
+    public void navQuiz(View view){
+        Nav.goToQuizPage(view);
+    }
+    public void btnAboutUs(View view){
+        Nav.goToAboutUs(view);
+    }
+
 }

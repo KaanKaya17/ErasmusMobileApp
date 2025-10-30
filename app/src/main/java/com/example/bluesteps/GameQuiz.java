@@ -55,6 +55,17 @@ public class GameQuiz extends AppCompatActivity {
 
     // Örnek bir method, butona tıklandığında çağırabilirsin
     public void showAnswerStatus(boolean status, String description){
+        LinearLayout answer1 = findViewById(R.id.quizGameAnswer1);
+        LinearLayout answer2 = findViewById(R.id.quizGameAnswer2);
+        LinearLayout answer3 = findViewById(R.id.quizGameAnswer3);
+        LinearLayout answer4 = findViewById(R.id.quizGameAnswer4);
+
+        answer1.setClickable(false);
+        answer2.setClickable(false);
+        answer3.setClickable(false);
+        answer4.setClickable(false);
+
+
         FrameLayout root_layout = findViewById(R.id.root_layout);
         root_layout.setVisibility(View.VISIBLE);
         root_layout.bringToFront();
@@ -85,6 +96,15 @@ public class GameQuiz extends AppCompatActivity {
         answerStatusQuestionText.setText(randomQuestionCorrectAnswer);
     }
     public void showNextQuestion(View view){
+        LinearLayout answer1 = findViewById(R.id.quizGameAnswer1);
+        LinearLayout answer2 = findViewById(R.id.quizGameAnswer2);
+        LinearLayout answer3 = findViewById(R.id.quizGameAnswer3);
+        LinearLayout answer4 = findViewById(R.id.quizGameAnswer4);
+
+        answer1.setClickable(true);
+        answer2.setClickable(true);
+        answer3.setClickable(true);
+        answer4.setClickable(true);
         showRandomQuestion();
         FrameLayout root_layout = findViewById(R.id.root_layout);
         root_layout.setVisibility(View.INVISIBLE);
