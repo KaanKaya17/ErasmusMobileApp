@@ -5,16 +5,19 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E0F7FF"
     tools:context=".AllSeas">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_marginBottom="60dp"
+        android:padding="12dp"
         android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="vertical"
+            android:paddingBottom="30dp"
             android:layout_height="wrap_content">
 
             <TextView
@@ -23,12 +26,8 @@
                 android:text="Seas"
                 android:layout_height="wrap_content"/>
 
-            <View
-                android:layout_width="match_parent"
-                android:background="#000000"
-                android:layout_marginTop="7dp"
-                android:layout_marginBottom="7dp"
-                android:layout_height="2dp"/>
+            <include
+                layout="@layout/horizantal_line"/>
 
             <LinearLayout
                 android:id="@+id/main_seas_layout"
@@ -72,11 +71,8 @@
                             style="@style/TextViewBody"
                             android:layout_height="wrap_content"/>
 
-                        <View
-                            android:layout_width="match_parent"
-                            android:background="#000000"
-                            android:layout_marginTop="6dp"
-                            android:layout_height="2dp"/>
+                        <include
+                            layout="@layout/horizantal_line"/>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>

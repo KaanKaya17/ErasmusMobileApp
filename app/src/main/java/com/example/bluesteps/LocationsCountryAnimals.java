@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.ContextThemeWrapper;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -95,10 +96,8 @@ public class LocationsCountryAnimals extends AppCompatActivity {
                 ));
 
                 // Ülke adı TextView
-                TextView countryText = new TextView(context);
+                TextView countryText = new TextView(new ContextThemeWrapper(context, R.style.TextviewBodySubtitleWhite));
                 countryText.setText(countryName);
-                countryText.setTextSize(16);
-                countryText.setTextColor(Color.BLACK);
                 countryText.setTypeface(null, Typeface.BOLD);
                 LinearLayout.LayoutParams countryTextParams = new LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.WRAP_CONTENT,
@@ -108,15 +107,14 @@ public class LocationsCountryAnimals extends AppCompatActivity {
                 countryText.setLayoutParams(countryTextParams);
 
                 // Balık sayısı TextView
-                TextView fishCountText = new TextView(context);
+                TextView fishCountText = new TextView(new ContextThemeWrapper(context, R.style.TextviewBodyWhite));
                 fishCountText.setText(String.valueOf(fishCount));
-                fishCountText.setTextSize(16);
-                fishCountText.setTextColor(Color.BLACK);
 
                 // Tıklama olayı
 
 
                 // Alt çizgi
+                /*
                 View divider = new View(context);
                 LinearLayout.LayoutParams dividerParams = new LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.MATCH_PARENT,
@@ -124,8 +122,8 @@ public class LocationsCountryAnimals extends AppCompatActivity {
                 );
                 //dividerParams.setMargins(dpToPx(0),dpToPx(7),dpToPx(0),dpToPx(0));
                 divider.setLayoutParams(dividerParams);
-                divider.setBackgroundColor(Color.BLACK);
-
+                divider.setBackgroundColor(R.layout.horizantal_line);
+                */
                 // Hiyerarşi:
                 // rootLayout
                 // ├── countryCard
@@ -138,7 +136,7 @@ public class LocationsCountryAnimals extends AppCompatActivity {
                 innerLayout.addView(fishCountText);
                 countryCard.addView(innerLayout);
                 rootLayout.addView(countryCard);
-                rootLayout.addView(divider);
+                //rootLayout.addView(divider);
 
                 // Parent’e ekle
                 parentLayout.addView(rootLayout);

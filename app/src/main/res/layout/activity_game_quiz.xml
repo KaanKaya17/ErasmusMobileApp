@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E0F7FF"
     tools:context=".GameQuiz">
 
     <FrameLayout
@@ -61,7 +62,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:background="@drawable/quiz_game_rounded"
+                android:background="@drawable/card"
                 android:layout_marginBottom="10dp"
                 android:padding="7dp"
                 android:orientation="horizontal"
@@ -195,13 +196,8 @@
                 android:layout_marginTop="5dp"
                 android:layout_height="wrap_content">
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="3dp"
-                    android:layout_marginTop="7dp"
-                    android:layout_marginBottom="7dp"
-                    android:background="#000000">
-                </View>
+                <include
+                    layout="@layout/horizantal_line"/>
 
             </LinearLayout>
 
@@ -227,7 +223,7 @@
                     <LinearLayout
                         android:id="@+id/quizGameAnswer1"
                         android:layout_width="match_parent"
-                        android:background="@drawable/quiz_game_rounded"
+                        android:background="@drawable/card"
                         android:layout_marginBottom="10dp"
                         android:clickable="true"
                         android:onClick="quizGameAnswer1"
@@ -267,7 +263,7 @@
                     <LinearLayout
                         android:id="@+id/quizGameAnswer2"
                         android:layout_width="match_parent"
-                        android:background="@drawable/quiz_game_rounded"
+                        android:background="@drawable/card"
                         android:layout_marginBottom="10dp"
                         android:clickable="true"
                         android:onClick="quizGameAnswer2"
@@ -307,7 +303,7 @@
                     <LinearLayout
                         android:id="@+id/quizGameAnswer3"
                         android:layout_width="match_parent"
-                        android:background="@drawable/quiz_game_rounded"
+                        android:background="@drawable/card"
                         android:clickable="true"
                         android:onClick="quizGameAnswer3"
                         android:padding="7dp"
@@ -347,7 +343,7 @@
                     <LinearLayout
                         android:id="@+id/quizGameAnswer4"
                         android:layout_width="match_parent"
-                        android:background="@drawable/quiz_game_rounded"
+                        android:background="@drawable/card"
                         android:clickable="true"
                         android:onClick="quizGameAnswer4"
                         android:layout_marginBottom="10dp"

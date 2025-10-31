@@ -4,18 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
+    android:background="#E0F7FF"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_marginBottom="60dp"
+        android:padding="12dp"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_marginBottom="75dp"
             android:orientation="vertical"
-            android:padding="7dp"
+            android:paddingBottom="30dp"
             android:layout_height="match_parent">
 
             <TextView
@@ -167,15 +169,13 @@
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:textSize="18dp"
-                        android:textStyle="bold"
+                        style="@style/TextViewSubtitle"
                         android:text="Learn New Things!!!"
-                        android:textColor="#ffffff"
                         android:layout_height="wrap_content"/>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:padding="7dp"
+                        android:padding="10dp"
                         android:background="@drawable/roundex_box_white"
                         android:layout_marginTop="10dp"
                         android:layout_height="wrap_content">
@@ -183,6 +183,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:text="Start A New Quiz"
+                            style="@style/TextviewBodyWhite"
                             android:clickable="true"
                             android:onClick="btnQuiz"
                             android:textSize="18dp"
@@ -228,10 +229,8 @@
 
                     </LinearLayout>
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:background="#000000"
-                        android:layout_height="2dp"/>
+                    <include
+                        layout="@layout/horizantal_line"/>
 
                     <!--
                     <LinearLayout
@@ -316,10 +315,8 @@
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:background="#000000"
-                    android:layout_height="2dp"/>
+                <include
+                    layout="@layout/horizantal_line"/>
 
                 <LinearLayout
                     android:id="@+id/main_seas_layout"
@@ -363,11 +360,8 @@
                                 style="@style/TextViewBody"
                                 android:layout_height="wrap_content"/>
 
-                            <View
-                                android:layout_width="match_parent"
-                                android:background="#000000"
-                                android:layout_marginTop="6dp"
-                                android:layout_height="2dp"/>
+                            <include
+                                layout="@layout/horizantal_line"/>
                         </LinearLayout>
                     </LinearLayout>
 

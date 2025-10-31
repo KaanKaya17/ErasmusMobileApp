@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.ContextThemeWrapper;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
@@ -251,26 +252,20 @@ public class EducationSeas extends AppCompatActivity {
                 LinearLayout.LayoutParams.WRAP_CONTENT
         ));
 
-        TextView tvName = new TextView(context);
+        TextView tvName = new TextView(new ContextThemeWrapper(context, R.style.TextviewBodySubtitleWhite));
         tvName.setText(animalName);
-        tvName.setTextColor(Color.parseColor("#066037"));
-        tvName.setTextSize(16);
         tvName.setPadding(0, 0, 0, 2);
         textLayout.addView(tvName);
 
         if (!maxSizeStr.equals("N/A")) {
-            TextView tvSize = new TextView(context);
+            TextView tvSize = new TextView(new ContextThemeWrapper(context, R.style.TextviewBodyWhite));
             tvSize.setText(maxSizeStr + " cm");
-            tvSize.setTextColor(Color.parseColor("#066037"));
-            tvSize.setTextSize(12);
             textLayout.addView(tvSize);
         }
 
         if (!maxDepthStr.equals("N/A")) {
-            TextView tvDepth = new TextView(context);
+            TextView tvDepth = new TextView(new ContextThemeWrapper(context, R.style.TextviewBodyWhite));
             tvDepth.setText(maxDepthStr + " m depth");
-            tvDepth.setTextColor(Color.parseColor("#066037"));
-            tvDepth.setTextSize(12);
             textLayout.addView(tvDepth);
         }
 

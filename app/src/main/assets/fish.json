@@ -18,9 +18,9 @@
         "danger_to_human": false,
         "social_behaviour": "sürü halinde göç eder",
         "locations": ["Karadeniz", "Marmara Denizi"],
-        "locations_description": "Karadeniz kıyılarında yoğun, göç eden sürüler halinde.",
-        "description": "Türkiye’de özellikle Karadeniz’de en çok tüketilen küçük yağlı balıklardan biri.",
-        "distribution_habitat": "Kıyı bölgeleri, açık deniz göç yolları, özellikle serin ve besince zengin sularda.",
+        "locations_description": "Commonly seen along the coasts of Turkey and surrounding seas. Anchovies are vital in the marine food web, serving as prey for larger fish and seabirds, and are widely consumed by humans due to their nutritional value.",
+        "description": "Anchovy (Engraulis encrasicolus) is a small, oily fish commonly found in the Black Sea, Marmara, and Aegean Seas. Typically measuring 10–20 cm in length and weighing around 0.1–0.2 kg, anchovies have a slender, silver body with a bluish-green back. They usually swim in large schools and feed on plankton and small crustaceans.\n\nAnchovies are rich in omega-3 fatty acids, protein, vitamins, and minerals, supporting heart health and overall nutrition. In Turkish cuisine, they are especially popular in autumn and winter, often grilled, fried, or used in pickles. Fresh anchovies offer the best taste and nutritional value. Sustainable fishing practices are important to preserve their natural population.",
+        "distribution_habitat": "Found in coastal and offshore waters of the Black Sea, Marmara, and Aegean Seas. Prefers shallow areas with abundant plankton for feeding, often forming large schools for protection and efficient foraging.",
         "image_paths": ["https://drive.google.com/uc?export=view&id=1pHXHM179a8zu6XR9cS3tHqokq0wa0gWf", "https://drive.google.com/uc?export=view&id=1zqZFDOT8keqhheRJJqjuezqUDpQ1wyah"]
       },
       {
@@ -40,7 +40,7 @@
         "social_behaviour": "bireysel ya da küçük gruplar halinde",
         "locations": ["Ege Denizi", "Akdeniz"],
         "locations_description": "Türkiye’nin batı kıyılarında hem avcılık hem de yetiştiricilikle yaygın.",
-        "description": "Türkiye’de yaygın olarak tüketilen ve yetiştiriciliği de yapılan bir balık türüdür.",
+        "description": "Sea Bass (Dicentrarchus labrax) is a popular and nutritious fish found in the Mediterranean Sea, Aegean Sea, and along the coasts of Europe. Typically measuring 30–60 cm in length and weighing 0.5–3 kg, sea bass has a sleek, silver-gray body with a slightly darker back. It is a predatory fish, feeding on smaller fish and crustaceans.\n\nSea bass is rich in high-quality protein, omega-3 fatty acids, vitamins, and minerals, making it beneficial for heart health and overall well-being. In Turkey and Mediterranean cuisine, it is commonly grilled, baked, or steamed. Fresh sea bass offers the best flavor and nutritional value. Sustainable fishing ensures that this valuable species remains abundant for future generations.",
         "distribution_habitat": "Kıyı kayalık ve kumluk alanlar, deniz ağzı bölgeleri, sığ-orta derinlikler.",
         "image_paths": [
           "https://drive.google.com/uc?export=view&id=1KoQ8Jv_6zeL4jf_2DDB0NpkNwGaBVRv-",
@@ -64,7 +64,7 @@
         "social_behaviour": "sürü halinde göç eder, avlanır",
         "locations": ["Marmara Denizi", "Ege Denizi"],
         "locations_description": "Sonbahar aylarında Türkiye kıyılarında yoğun avlanan bir göçmen türdür.",
-        "description": "Lezzetli eti ve göçmen yapısıyla Türkiye’de tanınmış bir balıktır.",
+        "description": "Bonito (Scomber scombrus / Scomber japonicus) is a tasty and nutritious oily fish commonly found in the Black Sea, Marmara, and Aegean Seas. Typically measuring 20–60 cm in length and weighing 0.2–3 kg, bonito has a dark blue-green upper body and a silvery-white underside. It usually swims in schools and feeds on plankton and small fish.\n\nRich in omega-3 fatty acids, protein, vitamins, and minerals, consuming bonito regularly supports heart health and boosts the immune system. In Turkey, it is especially enjoyed during autumn and winter, prepared grilled, fried, or steamed. Fresh bonito is the most flavorful and nutritious. Sustainable fishing practices are essential to preserve its natural population.",
         "distribution_habitat": "Açık deniz ve kıyı geçiş bölgeleri, orta-yüklü derinlikler.",
         "image_paths": [
           "https://drive.google.com/uc?export=view&id=1zaMhXPO4AtI1MIbu55zBfnaERO_Apd5-",
@@ -87,9 +87,9 @@
         "danger_to_human": true,
         "social_behaviour": "grup halinde sürü oluşturur",
         "locations": ["Karadeniz", "Ege Denizi"],
-        "locations_description": "Kıyı bölgelerinde yoğun görülür.",
-        "description": "Jelatinimsi ve şeffaf gövdesiyle deniz ekosisteminde önemli bir tür.",
-        "distribution_habitat": "Kıyı sığlıklarında ve açık deniz geçiş bölgelerinde.",
+        "locations_description": "Common in the Mediterranean and Aegean Seas. Jellyfish populations often increase in summer, playing both predator and prey roles within marine ecosystems.",
+        "description": "Jellyfish are fascinating marine animals found in oceans worldwide, including the Mediterranean, Aegean, and Black Seas. They have a soft, gelatinous body, often umbrella-shaped, with tentacles that can sting to capture prey. Jellyfish vary greatly in size, from a few centimeters to over a meter in diameter.\n\nAlthough not typically consumed in many Western diets, jellyfish are a source of protein and are eaten in some Asian cuisines. They play an important role in marine ecosystems by controlling plankton populations and serving as food for larger marine animals. Observing jellyfish can be mesmerizing, but caution is advised due to their stinging capabilities.",
+        "distribution_habitat": "Inhabits open seas and coastal waters, drifting with ocean currents. Prefers temperate to warm regions with abundant plankton.",
         "image_paths": ["https://drive.google.com/uc?export=view&id=1SVHv7w7LKfaFsxzhz_2la7JaZgRttbSZ"]
       },
       {
@@ -108,9 +108,9 @@
         "danger_to_human": false,
         "social_behaviour": "koloni halinde yaşar",
         "locations": ["Akdeniz"],
-        "locations_description": "Kıyı kayalıklarında yoğun mercan kolonileri.",
-        "description": "Deniz altı ekosistemlerinde biyolojik çeşitlilik sağlar.",
-        "distribution_habitat": "Sığ tropik ve subtropik denizlerde.",
+        "locations_description": "Common in parts of the Mediterranean and Red Sea. Sea corals build complex habitats that host a wide range of marine species and protect coastlines from erosion.",
+        "description": "Coral Fish are colorful and diverse species that inhabit coral reefs in tropical and subtropical seas. They vary widely in size, shape, and color, often displaying vibrant patterns that help them blend into the reef environment. Coral fish feed on algae, plankton, and small invertebrates, playing a crucial role in maintaining reef health.\n\nRich in protein and often low in fat, some species of coral fish are consumed locally, though they are more commonly admired for their beauty in marine ecosystems and aquariums. Protecting coral reefs is essential to preserve these species, as they rely on healthy reef habitats for shelter, breeding, and food.",
+        "distribution_habitat": "Found in warm, shallow tropical and subtropical seas, often forming reefs on rocky substrates.",
         "image_paths": ["https://drive.google.com/uc?export=view&id=1HJHlC3eQc_xQFkK7JsmrwD-1DJYY8Xjc"]
       },
       {
@@ -129,8 +129,8 @@
         "danger_to_human": false,
         "social_behaviour": "sürü halinde yaşar",
         "locations": ["Karadeniz", "Marmara Denizi"],
-        "locations_description": "Kıyıya yakın sularda sürüler halinde dolaşır.",
-        "description": "Türkiye’nin en çok tüketilen küçük balık türlerinden biridir.",
+        "locations_description": "Commonly seen along the coasts of Turkey and surrounding seas. Anchovies are vital in the marine food web, serving as prey for larger fish and seabirds, and are widely consumed by humans due to their nutritional value.",
+        "description": "Horse Mackerel (Trachurus trachurus) is a widely found oily fish in the Black Sea, Marmara, and Aegean Seas. Typically measuring 20–40 cm in length and weighing 0.2–1 kg, horse mackerel has a streamlined silver body with a slightly darker back. It usually swims in schools and feeds on small fish, crustaceans, and plankton.\n\nHorse mackerel is rich in omega-3 fatty acids, protein, vitamins, and minerals, making it beneficial for heart health and overall nutrition. In Turkish cuisine, it is commonly grilled, fried, or used in stews. Fresh horse mackerel offers the best flavor and nutritional value. Sustainable fishing practices are important to preserve its natural populations.",
         "distribution_habitat": "Kıyı suları ve orta derinlikteki göç yolları.",
         "image_paths": ["https://drive.google.com/uc?export=view&id=1kgpwZrQpeK9nT7tnMYinuFXh9T68b_9q"]
       },
@@ -151,7 +151,7 @@
         "social_behaviour": "sürü halinde avlanır",
         "locations": ["Boğazlar", "Ege Denizi"],
         "locations_description": "Göç dönemlerinde Boğazlardan geçişiyle ünlüdür.",
-        "description": "Lezzetli etiyle tanınan yırtıcı bir deniz balığıdır.",
+        "description": "Bluefish (Pomatomus saltatrix) is a popular and nutritious predatory fish found in the Black Sea, Marmara, and Aegean Seas. Typically measuring 30–50 cm in length and weighing 0.5–2 kg, bluefish has a streamlined, silver-blue body with a slightly darker back. It swims in schools and feeds on smaller fish and crustaceans.\n\nBluefish is rich in omega-3 fatty acids, high-quality protein, vitamins, and minerals, supporting heart health and overall nutrition. In Turkish cuisine, it is commonly grilled, fried, or baked, especially during autumn when it is most abundant. Fresh bluefish offers the best flavor and nutritional value. Sustainable fishing is important to maintain healthy populations for future generations.",
         "distribution_habitat": "Açık deniz ve kıyı bölgeleri.",
         "image_paths": ["https://drive.google.com/uc?export=view&id=1CQpLXxHjvlf7WTXHQ4OPOaJjWep872Sv"]
       },
@@ -172,7 +172,7 @@
         "social_behaviour": "tek başına yaşar",
         "locations": ["Ege Denizi"],
         "locations_description": "Kayalık diplerde sıkça rastlanır.",
-        "description": "Kollarını yenileyebilme özelliğiyle bilinen deniz canlısıdır.",
+        "description": "Starfish (Sea Star) are marine invertebrates found in oceans worldwide, including the Mediterranean, Aegean, and Black Seas. They typically have a star-shaped body with five or more arms, which they use to move and capture prey such as mollusks. Starfish have a unique water vascular system that aids in locomotion and feeding.\n\nAlthough not commonly consumed as food, starfish play an important role in marine ecosystems by controlling populations of other invertebrates and contributing to reef health. Their fascinating appearance and regenerative abilities—some species can regrow lost arms—make them a subject of interest for marine biology and aquarium enthusiasts.",
         "distribution_habitat": "Kıyı kayalıkları ve deniz tabanı.",
         "image_paths": ["https://drive.google.com/uc?export=view&id=1keiLq5vR5RNBz9roh4xmkKYEIwJJ_Oqr"]
       },
@@ -193,7 +193,7 @@
         "social_behaviour": "koloni halinde",
         "locations": ["Ege Denizi", "Akdeniz"],
         "locations_description": "Kıyı kayalıklarında yoğun görülür.",
-        "description": "Deniz ekosisteminde önemli oksijen ve besin kaynağıdır.",
+        "description": "Seaweed (Marine Algae) are diverse marine plants found in oceans worldwide, including the Mediterranean, Aegean, and Black Seas. They grow in shallow waters and attach to rocks or the seabed. Seaweed comes in various colors—green, brown, and red—and provides habitat and food for many marine species.\n\nSeaweed is highly nutritious, rich in vitamins, minerals, fiber, and antioxidants. It is consumed in many cuisines, especially in Asia, and is also used in supplements, cosmetics, and fertilizers. Beyond its nutritional value, seaweed plays a vital role in marine ecosystems by producing oxygen, reducing carbon dioxide, and supporting biodiversity.",
         "distribution_habitat": "Sığ kıyı alanları, kayalık ve kumlu zeminler.",
         "image_paths": ["https://drive.google.com/uc?export=view&id=1LQLDFOtTVF_Ne1qffc4-R4hLK4_lIMND"]
       },
@@ -214,7 +214,7 @@
         "social_behaviour": "koloni halinde",
         "locations": ["Akdeniz"],
         "locations_description": "Kıyı kayalıklarında yoğun koloniler oluşturur.",
-        "description": "Deniz ekosistemine renk ve biyolojik çeşitlilik katar.",
+        "description": "Coral (Marine Coral) are marine invertebrates found in tropical and subtropical oceans, forming vibrant reef ecosystems. They have a hard calcium carbonate skeleton and live in colonies, creating complex structures that provide shelter and food for numerous marine species.\n\nCoral reefs support biodiversity and protect coastlines from erosion. While not typically consumed as food, corals are highly valued for their ecological importance, beauty, and use in jewelry. Protecting coral reefs is crucial, as climate change, pollution, and overfishing threaten their survival and the countless species that depend on them.",
         "distribution_habitat": "Sığ ve korunaklı kayalık alanlar.",
         "image_paths": ["https://drive.google.com/uc?export=view&id=1HJHlC3eQc_xQFkK7JsmrwD-1DJYY8Xjc"]
       }
@@ -240,7 +240,7 @@
         "social_behaviour": "sürü halinde genç yaşta, erişkinlerde daha bireysel",
         "locations": ["Dolinata nehir sistemi", "Bulgaristan göletleri"],
         "locations_description": "Bulgaristan’da su ürünleri ve balıkçılık açısından yaygın tatlı su türlerinden biridir.",
-        "description": "Bulgaristan tatlı sularında yaygın olarak bulunan ve tüketilen büyük bir tatlı su balığıdır.",
+        "description": "Common Carp (Cyprinus carpio) is a freshwater fish widely found in rivers, lakes, and ponds across Europe, Asia, and other regions. Typically measuring 40–80 cm in length and weighing 2–14 kg, common carp has a robust, elongated body covered with large scales, usually golden-brown or greenish in color. It is an omnivorous fish, feeding on plants, insects, and small invertebrates.\n\nCommon carp is valued for its high protein content and is commonly farmed or caught for food. In many cultures, it is prepared grilled, baked, or smoked. Sustainable fishing and aquaculture practices are important to maintain healthy populations, as this adaptable species plays a key role in freshwater ecosystems.",
         "distribution_habitat": "Yavaş akan nehirler, göller, rezervuarlar, bitki örtüsü zengin kıyılar.",
         "image_paths": [
           "https://drive.google.com/uc?export=view&id=1kGxpZaSBrNpuwl_Fq9U0HRcNhKNinR8J",
@@ -264,7 +264,7 @@
         "social_behaviour": "sürü halinde göç eden",
         "locations": ["Karadeniz Bulgaristan kıyıları"],
         "locations_description": "Bulgaristan’da tüketimi yaygın olan göçmen ve yağlı balık türlerinden biridir.",
-        "description": "Genellikle yağlı eti nedeniyle tercih edilen bir balıktır.",
+        "description": "Mackerel (Scomber scombrus / Scomber japonicus) is a popular oily fish found in the Atlantic Ocean, Mediterranean Sea, and other temperate waters. Typically measuring 20–60 cm in length and weighing 0.2–3 kg, mackerel has a streamlined, silver body with a dark bluish-green back. It swims in schools and feeds on plankton, small fish, and crustaceans.\n\nRich in omega-3 fatty acids, protein, vitamins, and minerals, mackerel supports heart health, brain function, and overall nutrition. In cuisine, it is commonly grilled, smoked, or baked. Fresh mackerel offers the best flavor and nutritional value, and sustainable fishing practices are essential to preserve its natural populations.",
         "distribution_habitat": "Kıyı açık deniz, göç yolları, orta derinlikler.",
         "image_paths": [
           "https://drive.google.com/uc?export=view&id=1sB7adgM2bpufrcEy4-YDBxxB7e1b_YF6",
@@ -288,7 +288,7 @@
         "social_behaviour": "tek başına yaşayan",
         "locations": ["Bulgaristan Karadeniz kıyısı"],
         "locations_description": "Karadeniz’in Bulgar kıyılarında avlanan bir düz balık türüdür.",
-        "description": "Taban balığı olup sofralık değeri yüksektir.",
+        "description": "Black Sea Turbot (Scophthalmus maeoticus) is a flat, bottom-dwelling fish found in the Black Sea and the Sea of Marmara. Typically measuring 30–70 cm in length and weighing 1–5 kg, turbot has a broad, diamond-shaped body with a sandy-brown upper side that helps it blend into the seabed, and a white underside. It feeds on small fish, crustaceans, and other invertebrates.\n\nTurbot is highly valued for its firm, white flesh, rich in protein and low in fat. It is commonly prepared grilled, baked, or steamed in Mediterranean and Turkish cuisine. Fresh turbot offers excellent taste and nutritional value, and sustainable fishing is important to preserve its population for future generations.",
         "distribution_habitat": "Kum-çamur zeminler, açık deniz değil kıyıya yakın orta derinlikler.",
         "image_paths": ["https://drive.google.com/uc?export=view&id=1rv06PB5pI8MqmS0Mu3idkn9EV5nKjY-U"]
       },
@@ -308,9 +308,9 @@
         "danger_to_human": true,
         "social_behaviour": "tek başına yaşar",
         "locations": ["Bulgaristan Karadeniz kıyısı"],
-        "locations_description": "Kıyı kayalıklarında bulunur.",
-        "description": "Deniz ekosisteminde önemli bir omurgasız tür.",
-        "distribution_habitat": "Kıyı sığlıkları ve kayalık alanlar.",
+        "locations_description": "Widespread in the Mediterranean and Aegean Seas. Sea urchins are important grazers that help control algal growth and maintain ecological balance.",
+        "description": "Sea Urchin is a small, spiny marine invertebrate found in oceans worldwide, including the Mediterranean, Aegean, and Black Seas. They have a round, hard shell covered with movable spines for protection and locomotion. Sea urchins feed mainly on algae and play an important role in maintaining the balance of marine ecosystems.\n\nSea urchins are considered a delicacy in many cuisines, especially in Mediterranean and Japanese dishes, valued for their rich, briny flavor and high protein content. They also contribute to marine biodiversity, providing habitat and food for other species. Sustainable harvesting is essential to protect their populations and preserve ecosystem health.",
+        "distribution_habitat": "Found on rocky seabeds and coral reefs in shallow waters. Prefers clean, well-lit areas where algae are abundant.",
         "image_paths": ["https://drive.google.com/uc?export=view&id=1mhBTx13dz2-S2hl2u_WU0lv7EVCxxEBK"]
       },
       {
@@ -330,7 +330,7 @@
         "social_behaviour": "tek başına yaşar",
         "locations": ["Bulgaristan nehirleri", "Tatlı su gölleri"],
         "locations_description": "Bulgaristan’ın iç sularında avcılığı yapılan yırtıcı türlerden biridir.",
-        "description": "Tatlı suların hızlı ve çevik avcı balığıdır.",
+        "description": "Pike (Esox lucius) is a freshwater predatory fish commonly found in rivers, lakes, and ponds across Europe, Asia, and North America. Typically measuring 40–120 cm in length and weighing 1–20 kg, pike has an elongated body, a pointed snout, and sharp teeth, which it uses to catch smaller fish. Its coloration is usually greenish with lighter, yellowish patterns for camouflage.\n\nPike is valued for its firm, white flesh, rich in protein and low in fat. It is commonly prepared grilled, baked, or smoked. As a top predator in freshwater ecosystems, pike plays an important role in maintaining the balance of fish populations. Sustainable fishing practices are essential to preserve healthy pike populations for the future.",
         "distribution_habitat": "Yavaş akan tatlı sular, otluk alanlar.",
         "image_paths": ["https://drive.google.com/uc?export=view&id=1agiLwwHniyY8xUjlc5zBg6dPM03DWERg"]
       },
@@ -351,7 +351,7 @@
         "social_behaviour": "küçük gruplar halinde",
         "locations": ["Bulgaristan göletleri"],
         "locations_description": "Yerel balıkçılıkta sıkça rastlanan tür.",
-        "description": "Lezzetli etiyle bilinen küçük-orta boy tatlı su balığı.",
+        "description": "Perch (Perca fluviatilis) is a freshwater fish commonly found in rivers, lakes, and ponds across Europe and parts of Asia. Typically measuring 15–50 cm in length and weighing 0.2–2 kg, perch has a laterally compressed body with greenish-brown coloration and distinctive dark vertical stripes. It feeds on small fish, insects, and invertebrates.\n\nPerch is valued for its mild, white flesh and high protein content. It is commonly prepared grilled, fried, or baked in many cuisines. As a predatory fish, perch plays a key role in maintaining the balance of freshwater ecosystems. Sustainable fishing helps ensure healthy perch populations for future generations.",
         "distribution_habitat": "Tatlı su gölleri ve akıntısız alanlar.",
         "image_paths": ["https://drive.google.com/uc?export=view&id=1O2BdQI7DuFdgO00G6d_77hKD9zH2GBVH"]
       },
@@ -372,7 +372,7 @@
         "social_behaviour": "grup halinde yaşar",
         "locations": ["Bulgaristan göletleri"],
         "locations_description": "Tatlı su ekosistemlerinde filtreleyici rol oynar.",
-        "description": "Ekosistemde suyun temiz kalmasına yardımcı olur.",
+        "description": "Freshwater Mussel is a bivalve mollusk found in rivers, lakes, and ponds worldwide. Typically, mussels attach themselves to rocks or sediment using strong byssal threads. They filter-feed on plankton and organic particles, playing an important role in maintaining water quality and ecosystem balance.\n\nFreshwater mussels are rich in protein and minerals, though they are less commonly consumed than marine mussels. They are also valued for their ecological role, providing habitat for other aquatic species and contributing to biodiversity. Protecting freshwater habitats is essential to preserve mussel populations and the overall health of aquatic ecosystems.",
         "distribution_habitat": "Tatlı su diplerinde, çamurlu zeminlerde.",
         "image_paths": ["https://drive.google.com/uc?export=view&id=1Pmy-CTIY3FyxAkdy8dJRsaEnwICSkOfI"]
       },
@@ -393,7 +393,7 @@
         "social_behaviour": "koloni halinde",
         "locations": ["Bulgaristan Karadeniz kıyısı"],
         "locations_description": "Kıyı kayalıklarında ve dip mağaralarında bulunur.",
-        "description": "Filtre beslenen ilkel deniz canlısıdır.",
+        "description": "Sea Sponge is a simple, porous marine animal found in oceans worldwide, including the Mediterranean, Aegean, and Black Seas. They attach to rocks or the seabed and filter water to obtain nutrients, playing an important role in maintaining marine ecosystem health. Sea sponges come in various shapes, sizes, and colors, providing habitat and shelter for many small marine organisms.\n\nSea sponges have been used by humans for centuries, primarily for bathing, cleaning, and cosmetic purposes. They are rich in natural compounds that are also studied for potential medical applications. Protecting marine habitats ensures the survival of sponge populations and the species that depend on them.",
         "distribution_habitat": "Kayalık ve çamurlu dip alanlar.",
         "image_paths": ["https://drive.google.com/uc?export=view&id=1rjP7JFadGU4u366K3cBYzzoxFgv4FUUR"]
       },
@@ -414,7 +414,7 @@
         "social_behaviour": "koloni halinde",
         "locations": ["Bulgaristan Karadeniz kıyısı"],
         "locations_description": "Kıyı sığlıklarında yoğun görülür, balıklar için besin kaynağıdır.",
-        "description": "Deniz ekosisteminde habitat ve oksijen sağlayan bitki türü.",
+        "description": "Marine Plants (Sea Plants) are photosynthetic organisms found in oceans and seas worldwide, including the Mediterranean, Aegean, and Black Seas. They include seagrasses, algae, and other aquatic plants that grow in shallow waters, anchoring themselves to the seabed or floating freely. Marine plants provide food, shelter, and oxygen for numerous marine species.\n\nMarine plants are rich in nutrients and play a crucial role in maintaining healthy marine ecosystems. They help prevent coastal erosion, absorb carbon dioxide, and support biodiversity. Protecting marine plants is essential for sustaining ocean health and the countless species that depend on them.",
         "distribution_habitat": "Sığ ve sakin deniz alanları.",
         "image_paths": ["https://drive.google.com/uc?export=view&id=1kgpwZrQpeK9nT7tnMYinuFXh9T68b_9q"]
       }
@@ -440,7 +440,7 @@
         "social_behaviour": "sürü halinde genç yaşta, erişkinde daha bireysel",
         "locations": ["Yunan adaları kıyıları", "Ege Denizi"],
         "locations_description": "Yunanistan’da restoranlarda yaygın olarak bulunan ve avlanan bir balıktır.",
-        "description": "Akdeniz bölgesinde sıkça tüketilen beyaz etli balıklardan biridir.",
+        "description": "Gilthead Bream (Sparus aurata) is a popular coastal fish found in the Mediterranean Sea, Aegean Sea, and eastern Atlantic Ocean. Typically measuring 20–50 cm in length and weighing 0.3–2 kg, gilthead bream has a silver body with a distinctive golden stripe between its eyes. It feeds on small invertebrates, crustaceans, and algae.\n\nRich in protein, vitamins, and minerals, gilthead bream is highly valued for its firm, flavorful flesh. In Mediterranean cuisine, it is commonly grilled, baked, or steamed. Fresh gilthead bream offers the best taste and nutritional benefits. Sustainable fishing is essential to preserve its natural populations for future generations.",
         "distribution_habitat": "Kıyı kayalık ve kumluk alanlar, lagün ağızları.",
         "image_paths": [
           "https://drive.google.com/uc?export=view&id=1yIXZXGjKKIsXpRLADY00k9G8OyASw6jA",
@@ -464,7 +464,7 @@
         "social_behaviour": "çoğunlukla bireysel",
         "locations": ["Yunan sahilleri", "Ege Denizi"],
         "locations_description": "Yunanistan’da hem avcılığı hem yetiştiriciliği yapılan popüler bir balık türüdür.",
-        "description": "Akdeniz ve Ege bölgesinin yaygın beyaz etli balıklarından biridir.",
+        "description": "European Sea Bass (Dicentrarchus labrax) is a widely appreciated coastal fish found in the Mediterranean Sea, Black Sea, and eastern Atlantic Ocean. Typically measuring 30–60 cm in length and weighing 0.5–3 kg, it has a streamlined silver-gray body with a slightly darker back. European sea bass is a predatory fish, feeding on smaller fish, crustaceans, and mollusks.\n\nRich in high-quality protein, omega-3 fatty acids, vitamins, and minerals, it supports heart health and overall nutrition. It is commonly grilled, baked, or steamed in Mediterranean cuisine. Fresh European sea bass offers excellent flavor and nutritional value, and sustainable fishing practices are essential to maintain healthy populations.",
         "distribution_habitat": "Kıyı kayalık ve kumluk alanlar, sığ-orta derinliklerde.",
         "image_paths": [
           "https://drive.google.com/uc?export=view&id=1q70Dggz_KoCODH27L_54BOJCYYk30kVk",
@@ -488,7 +488,7 @@
         "social_behaviour": "küçük gruplar halinde yaşayan",
         "locations": ["Ege Denizi kayalık kıyılar", "Doğu Akdeniz"],
         "locations_description": "Akdeniz’de özellikle kayalık kıyı sistemlerinde bulunan resif balığıdır.[oaicite:6]{index=6}",
-        "description": "Renkli ve resif habitatına özel bir tür; avcılığı yaygın değil ama tanımlanabilir bir balıktır.",
+        "description": "Mediterranean Parrotfish are colorful marine fish found in the Mediterranean Sea. They are known for their strong beak-like teeth, which they use to graze on algae and scrape surfaces of rocks and coral reefs. Typically, they measure 15–35 cm in length and display vibrant colors that help them blend into their environment.\n\nParrotfish play a crucial role in maintaining reef health by controlling algal growth and contributing to sand production through their feeding habits. While not commonly consumed as food, they are admired for their beauty and ecological importance. Protecting their habitats is essential to preserve the biodiversity of Mediterranean marine ecosystems.",
         "distribution_habitat": "Kayalık ve alg yoğun bölümler, sığ-orta derinlikler.",
         "image_paths": [
           "https://drive.google.com/uc?export=view&id=1AhAqpVxf7HBZafEwJGSvQKP6pQvG1swU",
@@ -511,9 +511,9 @@
         "danger_to_human": false,
         "social_behaviour": "küçük gruplar halinde",
         "locations": ["Ege Denizi"],
-        "locations_description": "Yunan mutfağında popüler bir deniz balığıdır.",
-        "description": "Lezzetli etiyle restoranlarda sıkça tercih edilir.",
-        "distribution_habitat": "Kıyı kumluk alanlar ve sığ sular.",
+        "locations_description": "Common in the Mediterranean and eastern Atlantic coasts. Red mullet is a popular species in regional cuisines, prized for its tender, flavorful meat.",
+        "description": "Red Mullet (Mullus barbatus / Mullus surmuletus) is a small, bottom-dwelling fish found in the Mediterranean Sea, Aegean Sea, and eastern Atlantic Ocean. Typically measuring 15–30 cm in length, red mullet has a reddish-pink body with two distinctive barbels under its chin, which it uses to detect food on the seabed. It feeds on small invertebrates, crustaceans, and worms.\n\nRed mullet is highly prized for its delicate, flavorful flesh and high protein content. In Mediterranean cuisine, it is commonly grilled, baked, or fried. Fresh red mullet offers the best taste and nutritional value. Sustainable fishing practices are important to preserve its natural populations and the health of marine ecosystems.",
+        "distribution_habitat": "Lives in sandy and muddy seabeds of the Mediterranean and Black Seas, usually at depths between 10 and 100 meters.",
         "image_paths": ["https://drive.google.com/uc?export=view&id=1qCrfny8Obe07Sw3hNsomTy__lZRNLepu"]
       },
       {
@@ -532,9 +532,9 @@
         "danger_to_human": false,
         "social_behaviour": "tek başına yaşar",
         "locations": ["Girit açıkları", "Ege Denizi"],
-        "locations_description": "Yunanistan açık denizlerinde nadiren avlanır.",
-        "description": "Dev boyutları ve uzun burnuyla tanınan yırtıcı bir balıktır.",
-        "distribution_habitat": "Açık deniz, derin sular.",
+        "locations_description": "Widespread in tropical and temperate seas. Swordfish are apex predators, known for their long bills used to slash at prey, and play an essential role in pelagic ecosystems.",
+        "description": "Swordfish (Xiphias gladius) is a large, migratory predatory fish found in oceans worldwide, including the Mediterranean Sea and the Atlantic Ocean. Typically measuring 1.5–3 meters in length and weighing 30–200 kg, swordfish has a long, flat, sword-like bill and a streamlined body, which it uses to hunt smaller fish and squid.\n\nSwordfish is highly valued for its firm, meaty flesh, rich in protein and low in fat. It is commonly grilled, baked, or seared in Mediterranean and international cuisines. Fresh swordfish offers excellent taste and nutritional benefits. Sustainable fishing practices are essential to protect swordfish populations and maintain oceanic ecosystem balance.",
+        "distribution_habitat": "Found in open waters of the Atlantic, Mediterranean, and Indian Oceans. Prefers warm, deep waters and migrates seasonally.",
         "image_paths": ["https://drive.google.com/uc?export=view&id=1Mcm71LNeIIO7KZggGx2GPPy3pUh60GE3"]
       },
       {
@@ -553,9 +553,9 @@
         "danger_to_human": false,
         "social_behaviour": "tek başına yaşar",
         "locations": ["Ege Denizi"],
-        "locations_description": "Kayalık diplerde bulunur.",
-        "description": "Yavaş hareket eden kabuklu deniz canlısıdır.",
-        "distribution_habitat": "Kayalık zeminler ve sığ sular.",
+        "locations_description": "Common throughout the Mediterranean and Aegean Seas. Sea snails play an important role in cleaning the seabed and recycling nutrients within marine ecosystems.",
+        "description": "Sea Snail (Marine Snail) is a small, slow-moving marine mollusk found in oceans worldwide, including the Mediterranean, Aegean, and Black Seas. It has a coiled shell that provides protection from predators and a soft body that it uses to move and feed on algae, detritus, or small invertebrates.\n\nSea snails are consumed in various cuisines, particularly in Mediterranean regions, for their tender, flavorful flesh. They also play an important ecological role by grazing on algae and contributing to the balance of marine ecosystems. Protecting their habitats is essential to sustain healthy populations and maintain marine biodiversity.",
+        "distribution_habitat": "Lives in shallow coastal zones, rocky shores, and sandy seabeds, feeding on algae and detritus.",
         "image_paths": ["https://drive.google.com/uc?export=view&id=1hczsTgmq4_EjXk-zcpH30hiwaYYZB9Bj"]
       },
       {
@@ -575,7 +575,7 @@
         "social_behaviour": "koloni halinde",
         "locations": ["Ege Denizi"],
         "locations_description": "Kayalık resiflerde yoğun olarak görülür.",
-        "description": "Resiflerin yapısına katkı sağlayan önemli bir canlıdır.",
+        "description": "Coral Fish are colorful and diverse species that inhabit coral reefs in tropical and subtropical seas. They vary widely in size, shape, and color, often displaying vibrant patterns that help them blend into the reef environment. Coral fish feed on algae, plankton, and small invertebrates, playing a crucial role in maintaining reef health.\n\nRich in protein and often low in fat, some species of coral fish are consumed locally, though they are more commonly admired for their beauty in marine ecosystems and aquariums. Protecting coral reefs is essential, as they rely on healthy reef habitats for shelter, breeding, and food.",
         "distribution_habitat": "Sığ kayalık ve resif alanları.",
         "image_paths": ["https://drive.google.com/uc?export=view&id=1HJHlC3eQc_xQFkK7JsmrwD-1DJYY8Xjc"]
       },
@@ -595,9 +595,9 @@
         "danger_to_human": false,
         "social_behaviour": "koloni halinde",
         "locations": ["Ege Denizi"],
-        "locations_description": "Kıyı kayalıklarına tutunarak büyür.",
-        "description": "Besin ve oksijen kaynağı olarak ekosistemde rol oynar.",
-        "distribution_habitat": "Sığ kıyı ve kayalık bölgeler.",
+        "locations_description": "Found throughout the Mediterranean, Aegean, and Black Seas. Marine plants provide oxygen, shelter, and food for countless marine organisms and help stabilize seabed sediments.",
+        "description": "Seaweed (Marine Algae) are diverse marine plants found in oceans worldwide, including the Mediterranean, Aegean, and Black Seas. They grow attached to rocks or seabeds and come in various colors, including green, brown, and red. Seaweed provides food, shelter, and oxygen for numerous marine species.\n\nRich in vitamins, minerals, fiber, and antioxidants, seaweed is consumed in many cuisines, especially in Asia, and is also used in supplements, cosmetics, and fertilizers. Beyond its nutritional value, seaweed plays a vital role in marine ecosystems by supporting biodiversity and maintaining water quality.",
+        "distribution_habitat": "Grows in shallow coastal waters with plenty of sunlight. Includes seagrasses and algae that thrive in nutrient-rich environments.",
         "image_paths": ["https://drive.google.com/uc?export=view&id=17kDgX91KiYj9IN8LgtsMCP2TWn2tpqFc"]
       }
     ]
@@ -622,7 +622,7 @@
         "social_behaviour": "yoğun sürüler halinde göç ve beslenme",
         "locations": ["Portekiz Atlantik kıyısı"],
         "locations_description": "Portekiz’de en çok tüketilen balıklardan biri",
-        "description": "Portekiz mutfağında sardalya önemli bir yer tutar; festivaller bile yapılır.",
+        "description": "Sardine (Sardina pilchardus / Sardinops sagax) is a small, oily fish commonly found in the Mediterranean Sea, Atlantic Ocean, and other temperate waters. Typically measuring 15–25 cm in length and weighing around 0.1–0.2 kg, sardines have a slender, silver body with a bluish-green back. They usually swim in large schools and feed on plankton and small crustaceans.\n\nSardines are rich in omega-3 fatty acids, protein, vitamins, and minerals, supporting heart health and overall nutrition. In cuisine, they are commonly grilled, canned, or smoked. Fresh sardines offer the best flavor and nutritional benefits, and sustainable fishing practices are essential to preserve their populations.",
         "distribution_habitat": "Kıyı açık deniz, sürü halinde göç yolları, sığ ve orta derinliklerle.",
         "image_paths": ["images/sardine_pt1.png","images/sardine_pt2.png"]
       },
@@ -642,9 +642,9 @@
         "danger_to_human": false,
         "social_behaviour": "sürü halinde gençlik döneminde",
         "locations": ["Portekiz sahilleri"],
-        "locations_description": "Portekiz’de yaygın olarak bulunan ve tüketilen bir balıktır.",
-        "description": "Akdeniz kadar olmasa da Portekiz’de beyaz etli balık olarak tercih edilir.",
-        "distribution_habitat": "Kıyı bölgeleri, lagünler ve sığ deniz tabanı.",
+        "locations_description": "Commonly found throughout the Mediterranean and along European Atlantic coasts. Gilthead bream is a key species in local fisheries and aquaculture, contributing to both the economy and coastal marine ecosystems.",
+        "description": "Gilthead Bream (Sparus aurata) is a popular coastal fish found in the Mediterranean Sea, Aegean Sea, and eastern Atlantic Ocean. Typically measuring 20–50 cm in length and weighing 0.3–2 kg, it has a silver body with a distinctive golden stripe between its eyes. Gilthead bream feeds on small invertebrates, crustaceans, and algae.\n\nRich in protein, vitamins, and minerals, it is highly valued for its firm, flavorful flesh. In Mediterranean cuisine, it is commonly grilled, baked, or steamed. Fresh gilthead bream offers excellent taste and nutritional benefits. Sustainable fishing is essential to preserve its natural populations for future generations.",
+        "distribution_habitat": "Found in shallow coastal waters, lagoons, and estuaries of the Mediterranean Sea, Aegean Sea, and eastern Atlantic Ocean. Prefers sandy or muddy bottoms where it can forage for small invertebrates, crustaceans, and algae.",
         "image_paths": [
           "https://drive.google.com/uc?export=view&id=1yIXZXGjKKIsXpRLADY00k9G8OyASw6jA",
           "https://drive.google.com/uc?export=view&id=1_AkVeoIi2nt68BYwAPvlBj7Ym0NUEkVi"
@@ -665,9 +665,9 @@
         "danger_to_human": false,
         "social_behaviour": "kişisel ya da küçük gruplar halinde",
         "locations": ["Portekiz kıyıları Atlantik"],
-        "locations_description": "Portekiz’de deniz balıkçılığında önemli bir türdür.",
-        "description": "Portekiz sahillerinde beyaz etli balık olarak tercih edilen bir türdür.",
-        "distribution_habitat": "Kıyı kayalık ve kumluk alanlar, sığ-orta derinliklerde.",
+        "locations_description": "Widely distributed throughout the Mediterranean, Black Sea, and along European Atlantic coasts. European sea bass is an important species for both commercial and recreational fishing and plays a key role as a predator in coastal ecosystems.",
+        "description": "European Sea Bass (Dicentrarchus labrax) is a widely appreciated coastal fish found in the Mediterranean Sea, Black Sea, and eastern Atlantic Ocean. Typically measuring 30–60 cm in length and weighing 0.5–3 kg, it has a streamlined silver-gray body with a slightly darker back. European sea bass is a predatory fish, feeding on smaller fish, crustaceans, and mollusks.\n\nRich in high-quality protein, omega-3 fatty acids, vitamins, and minerals, it supports heart health and overall nutrition. It is commonly grilled, baked, or steamed in Mediterranean cuisine. Fresh European sea bass offers excellent flavor and nutritional value, and sustainable fishing practices are essential to maintain healthy populations.",
+        "distribution_habitat": "Found in coastal waters, estuaries, and lagoons of the Mediterranean Sea, Black Sea, and eastern Atlantic Ocean. Prefers shallow, sheltered areas with sandy or rocky bottoms where it can hunt smaller fish and crustaceans.",
         "image_paths": [
           "https://drive.google.com/uc?export=view&id=1q70Dggz_KoCODH27L_54BOJCYYk30kVk",
           "https://drive.google.com/uc?export=view&id=1VzCRvcoXi8JQJkMplm3l5vmF1-ssyw9x"
@@ -688,9 +688,9 @@
         "danger_to_human": false,
         "social_behaviour": "küçük sürüler halinde",
         "locations": ["Portekiz açıkları"],
-        "locations_description": "Portekiz mutfağında tuzlanmış haliyle gelenekseldir.",
-        "description": "Portekiz’de yüzlerce farklı ‘bacalhau’ tarifiyle tüketilir.",
-        "distribution_habitat": "Derin soğuk Atlantik suları.",
+        "locations_description": "Commonly found along the coasts of Norway, Iceland, and Canada. Atlantic cod is one of the most economically important fish species and a cornerstone of North Atlantic marine ecosystems.",
+        "description": "Atlantic Cod (Gadus morhua) is a cold-water fish commonly found in the North Atlantic Ocean. Typically measuring 50–100 cm in length and weighing 2–20 kg, Atlantic cod has a robust, elongated body with a light brown to greenish coloration and a distinctive white lateral line. It feeds on smaller fish, crustaceans, and invertebrates.\n\nAtlantic cod is highly valued for its mild, flaky flesh, rich in protein and low in fat. It is commonly prepared baked, grilled, or fried. Cod plays an important role in marine ecosystems as a predator, and sustainable fishing practices are crucial to maintain healthy populations and protect ocean biodiversity.",
+        "distribution_habitat": "Lives in cold and temperate waters of the North Atlantic, near the sea floor in sandy or muddy areas. Prefers depths between 20 and 200 meters.",
         "image_paths": ["https://drive.google.com/uc?export=view&id=1Kk3xifAZ9iSkh2FSgnkAprLqv-IVdFGM"]
       },
       {
@@ -709,9 +709,9 @@
         "danger_to_human": false,
         "social_behaviour": "tek başına dolaşır",
         "locations": ["Portekiz batı kıyısı"],
-        "locations_description": "Lüks restoranlarda tercih edilen beyaz etli balık.",
-        "description": "Gövdesindeki yuvarlak siyah lekesiyle tanınır.",
-        "distribution_habitat": "Kıyıya yakın kumluk ve kayalık alanlar.",
+        "locations_description": "Akdeniz, Atlantik ve bazı ılıman denizlerde yaygın olarak rastlanır. John Dory, bu bölgelerde hem avlanma hem de üreme için ideal koşulları bulur ve deniz ekosisteminde önemli bir predatör olarak rol oynar.",
+        "description": "John Dory (Zeus faber) is a coastal fish found in the Mediterranean Sea, Atlantic Ocean, and other temperate waters. Typically measuring 30–65 cm in length and weighing 0.5–3 kg, John Dory has a laterally compressed, olive-green to brown body with a distinctive dark spot on each side. It feeds on smaller fish and invertebrates.\n\nJohn Dory is prized for its delicate, white flesh, rich in protein and low in fat. It is commonly prepared grilled, baked, or steamed in Mediterranean cuisine. Fresh John Dory offers excellent flavor and nutritional value. Sustainable fishing is important to preserve its natural populations for future generations.",
+        "distribution_habitat": "Kıyı sığlıkları ve açık deniz alanlarında bulunur; genellikle kumlu veya çamurlu deniz tabanına yakın bölgeleri tercih eder. Bu habitat, avını kolayca yakalayabileceği ve kendini kamufle edebileceği bir ortam sağlar.",
         "image_paths": ["https://drive.google.com/uc?export=view&id=1uts6OHif0EpFz2hogdZOEpdipZFr85fi"]
       },
       {
@@ -730,9 +730,9 @@
         "danger_to_human": false,
         "social_behaviour": "koloni halinde yaşar",
         "locations": ["Atlantik kıyısı", "Açık deniz kayalıkları"],
-        "locations_description": "Portekiz kıyılarında sıkça rastlanan doğal sünger türleri.",
-        "description": "Filtre beslenen ilkel deniz canlılarıdır.",
-        "distribution_habitat": "Kıyı kayalıkları ve deniz tabanı.",
+        "locations_description": "Common along the Mediterranean and Aegean coasts, particularly near Portugal and Greece. Sea sponges filter water, providing essential ecosystem services and shelter for small marine species.",
+        "description": "Sea Sponge is a simple, porous marine animal found in oceans worldwide, including the Mediterranean, Aegean, and Black Seas. Sea sponges attach to rocks or the seabed and filter water to obtain nutrients, playing an important role in maintaining healthy marine ecosystems. They come in various shapes, sizes, and colors, providing shelter for many small marine organisms.\n\nHumans have used sea sponges for centuries for bathing, cleaning, and cosmetic purposes. They also contain natural compounds studied for potential medical applications. Protecting marine habitats ensures the survival of sponge populations and the species that depend on them.",
+        "distribution_habitat": "Inhabits rocky coastal areas and the sea floor, attaching to solid surfaces. Prefers clean, well-oxygenated waters with steady currents.",
         "image_paths": ["https://drive.google.com/uc?export=view&id=1rjP7JFadGU4u366K3cBYzzoxFgv4FUUR"]
       },
       {
@@ -751,9 +751,9 @@
         "danger_to_human": false,
         "social_behaviour": "koloni halinde",
         "locations": ["Portekiz kıyıları"],
-        "locations_description": "Kıyı sığlıklarında balık ve omurgasızlar için önemli habitat sağlar.",
-        "description": "Ekosistemde oksijen ve besin kaynağı olarak görev yapar.",
-        "distribution_habitat": "Sığ ve sakin deniz alanları.",
+        "locations_description": "Kıyı sığlıklarında bulunur ve balıklar ile çeşitli omurgasızlar için önemli bir yaşam alanı oluşturur. Bu bölgeler, hem beslenme hem de üreme için ideal ortam sunar. Deniz bitkileri, su altı ekosisteminde hem barınak sağlar hem de küçük organizmaların saklanmasına yardımcı olur, böylece biyolojik çeşitliliği destekler.",
+        "description": "Marine Plants (Sea Plants) are photosynthetic organisms found in oceans and seas worldwide, including the Mediterranean, Aegean, and Black Seas. They include seagrasses, algae, and other aquatic plants that grow in shallow waters, either anchored to the seabed or floating freely. Marine plants provide food, oxygen, and shelter for numerous marine species.\n\nRich in nutrients, marine plants play a crucial role in maintaining healthy marine ecosystems. They help prevent coastal erosion, absorb carbon dioxide, and support biodiversity. Protecting marine plants is essential for sustaining ocean health and the countless species that depend on them.",
+        "distribution_habitat": "Sığ ve sakin deniz alanlarında bulunur; genellikle kıyıya yakın bölgelerde, taşlık veya kumluk zeminlerde yetişir. Bu alanlar, yeterli ışık alması ve besinlerini kolayca elde edebilmesi için uygundur. Deniz bitkileri su altı ekosisteminde hem oksijen üretir hem de birçok küçük deniz canlısına barınak sağlar.",
         "image_paths": ["https://drive.google.com/uc?export=view&id=1kgpwZrQpeK9nT7tnMYinuFXh9T68b_9q"]
       }
     ]

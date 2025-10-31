@@ -1,5 +1,6 @@
 package com.example.bluesteps;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -37,7 +38,7 @@ public class AllSeas extends AppCompatActivity {
 
         JSONArray jsonSeaArray = loadSeaJson();
         if(jsonSeaArray != null){
-            loadAllSeasToPage();
+            loadAllSeasToPage(this);
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -82,7 +83,7 @@ public class AllSeas extends AppCompatActivity {
         return Math.round(dp * density);
     }
 
-    public void loadAllSeasToPage() {
+    public void loadAllSeasToPage(Context context) {
         JSONArray seaArray = loadSeaJson();
         if (seaArray == null) return;
 
@@ -94,7 +95,20 @@ public class AllSeas extends AppCompatActivity {
             for (int i = 0; i < seaArray.length(); i++) {
                 JSONObject sea = seaArray.getJSONObject(i);
 
-                // 🔹 Ana satır layout
+                // 🔹 Dış konteyner (her bir deniz kartı için)
+                LinearLayout outerContainer = new LinearLayout(this);
+                LinearLayout.LayoutParams outerParams = new LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT
+                );
+                outerParams.setMargins(dpToPx(12), dpToPx(8), dpToPx(12), dpToPx(8));
+                outerContainer.setLayoutParams(outerParams);
+                outerContainer.setOrientation(LinearLayout.VERTICAL);
+                outerContainer.setPadding(dpToPx(14), dpToPx(14), dpToPx(14), dpToPx(14));
+                outerContainer.setBackgroundResource(R.drawable.card); // köşeleri yuvarlatılmış arka plan
+                outerContainer.setElevation(dpToPx(4));
+
+// 🔹 Ana satır layout
                 LinearLayout seaRow = new LinearLayout(this);
                 seaRow.setOrientation(LinearLayout.HORIZONTAL);
                 seaRow.setId(i);
@@ -107,7 +121,7 @@ public class AllSeas extends AppCompatActivity {
                     startActivity(intent);
                 });
 
-                // 🔹 Deniz resmi
+// 🔹 Deniz resmi
                 ImageView seaImage = new ImageView(this);
                 LinearLayout.LayoutParams imageParams = new LinearLayout.LayoutParams(dpToPx(100), dpToPx(100));
                 imageParams.setMargins(0, 0, dpToPx(20), 0);
@@ -126,7 +140,7 @@ public class AllSeas extends AppCompatActivity {
                     seaImage.setImageResource(R.drawable.badges);
                 }
 
-                // 🔹 Bilgi kısmı
+// 🔹 Bilgi kısmı
                 LinearLayout infoLayout = new LinearLayout(this);
                 infoLayout.setOrientation(LinearLayout.VERTICAL);
                 infoLayout.setLayoutParams(new LinearLayout.LayoutParams(
@@ -134,73 +148,63 @@ public class AllSeas extends AppCompatActivity {
                         LinearLayout.LayoutParams.WRAP_CONTENT
                 ));
 
-                // Deniz adı
-                TextView seaName = new TextView(this);
+// Deniz adı
+                TextView seaName = new TextView(new ContextThemeWrapper(context, R.style.TextViewTitle));
                 seaName.setText(sea.optString("sea_name", "Sea Name"));
                 seaName.setTextSize(18);
                 seaName.setTextColor(0xFF000000);
                 seaName.setTypeface(null, android.graphics.Typeface.BOLD);
 
-                // Alan
-                TextView area = new TextView(this);
+// Alan
+                TextView area = new TextView(new ContextThemeWrapper(context, R.style.TextViewBody));
                 area.setText("Area: " + sea.optString("area", "N/A"));
-                area.setTextColor(0xFF000000);
 
-                // Konum
-                TextView location = new TextView(this);
+// Konum
+                TextView location = new TextView(new ContextThemeWrapper(context, R.style.TextViewBody));
                 location.setText("Location: " + sea.optString("location", "N/A"));
-                location.setTextColor(0xFF000000);
 
-                /*
-                // Balık sayısı (opsiyonel, JSON’da varsa)
-                int fishCount = sea.has("fish_count") ? sea.getInt("fish_count") : 0;
-                TextView fishText = new TextView(this);
-                fishText.setText(fishCount + " Fishes");
-                fishText.setTextColor(0xFF000000);
-
-                // Diğer canlılar
-                int creatureCount = sea.has("creature_count") ? sea.getInt("creature_count") : 0;
-                TextView creatureText = new TextView(this);
-                creatureText.setText(creatureCount + " Creatures");
-                creatureText.setTextColor(0xFF000000);
-
-                int otherAnimalsCount = sea.has("other_count") ? sea.getInt("other_count") : 0;
-                TextView othersText = new TextView(this);
-                othersText.setText(otherAnimalsCount + " Sponges, Plants, Corals");
-                othersText.setTextColor(0xFF000000);
-                */
-
-                // Ayırıcı çizgi
+// Ayırıcı çizgi
                 View divider = new View(this);
                 LinearLayout.LayoutParams dividerParams = new LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.MATCH_PARENT, dpToPx(2));
                 dividerParams.setMargins(0, dpToPx(10), 0, 0);
                 divider.setLayoutParams(dividerParams);
-                divider.setBackgroundColor(0xFF000000);
+                divider.setBackgroundColor(Color.parseColor("#575757"));
 
-                // Bilgileri ekle
+// Bilgileri ekle
                 infoLayout.addView(seaName);
                 infoLayout.addView(area);
                 infoLayout.addView(location);
-                /*
-                infoLayout.addView(fishText);
-                infoLayout.addView(creatureText);
-                infoLayout.addView(othersText);
-                */
                 infoLayout.addView(divider);
 
-                // Ana satıra ekle
+// Ana satıra ekle
                 seaRow.addView(seaImage);
                 seaRow.addView(infoLayout);
 
-                // Parent’e ekle
-                mainLayout.addView(seaRow);
+// Ana satırı dış kapsayıcıya ekle
+                outerContainer.addView(seaRow);
+
+// Parent’e ekle
+                mainLayout.addView(outerContainer);
+
             }
 
         } catch (JSONException e) {
             e.printStackTrace();
             Toast.makeText(this, "JSON parse error", Toast.LENGTH_SHORT).show();
         }
+    }
+    public void navHomePage(View view){
+        Nav.goToHomePage(view);
+    }
+    public void goToEducation(View view){
+        Nav.goToEducation(view);
+    }
+    public void navQuiz(View view){
+        Nav.goToQuizPage(view);
+    }
+    public void btnAboutUs(View view){
+        Nav.goToAboutUs(view);
     }
 
 }
