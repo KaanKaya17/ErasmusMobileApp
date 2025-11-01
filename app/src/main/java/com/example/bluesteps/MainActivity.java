@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.ContextThemeWrapper;
 import android.view.Gravity;
 import android.view.View;
+import android.view.ViewOutlineProvider;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.ImageView;
@@ -102,6 +103,9 @@ public class MainActivity extends AppCompatActivity {
                 outerCard.setLayoutParams(outerParams);
                 outerCard.setPadding(dpToPx(14), dpToPx(14), dpToPx(14), dpToPx(14));
                 outerCard.setBackgroundResource(R.drawable.roundex_box_white); // Yuvarlak köşeli beyaz kutu
+                outerCard.setElevation(12f);
+                outerCard.setOutlineProvider(ViewOutlineProvider.BACKGROUND);
+
 
 // Ana satır layout (senin mevcut kodun)
                 LinearLayout countryRow = new LinearLayout(context);
@@ -293,6 +297,8 @@ public class MainActivity extends AppCompatActivity {
                 outerCard.setLayoutParams(outerParams);
                 outerCard.setPadding(dpToPx(14), dpToPx(14), dpToPx(14), dpToPx(14));
                 outerCard.setBackgroundResource(R.drawable.roundex_box_white); // yuvarlak köşeli stil
+                outerCard.setElevation(12f);
+                outerCard.setOutlineProvider(ViewOutlineProvider.BACKGROUND);
 
 // 🔹 Ana satır (mevcut seaRow kodun)
                 LinearLayout seaRow = new LinearLayout(this);

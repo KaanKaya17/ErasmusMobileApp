@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.ContextThemeWrapper;
 import android.view.Gravity;
 import android.view.View;
+import android.view.ViewOutlineProvider;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -76,10 +77,10 @@ public class EducationSeas extends AppCompatActivity {
         LinearLayout allFishesByCountryName = findViewById(R.id.allFishesByCountryName);
         LinearLayout allOthersByCountryName = findViewById(R.id.allOthersByCountryName);
         LinearLayout allCreaturesByCountryName = findViewById(R.id.allCreaturesByCountryName);
-        allFishesByCountryName.setVisibility(View.GONE);
+        //allFishesByCountryName.setVisibility(View.GONE);
         textviewCategory.setVisibility(View.GONE);
-        allOthersByCountryName.setVisibility(View.GONE);
-        allCreaturesByCountryName.setVisibility(View.GONE);
+        //allOthersByCountryName.setVisibility(View.GONE);
+        //allCreaturesByCountryName.setVisibility(View.GONE);
 
         TextView textviewTitle = findViewById(R.id.title);
         if (type != null) {
@@ -229,6 +230,8 @@ public class EducationSeas extends AppCompatActivity {
                 LinearLayout.LayoutParams.WRAP_CONTENT
         );
         cardParams.setMargins(16, 16, 16, 16);
+        card.setElevation(12f);
+        card.setOutlineProvider(ViewOutlineProvider.BACKGROUND);
         card.setLayoutParams(cardParams);
 
         ImageView imageView = new ImageView(context);
@@ -272,15 +275,17 @@ public class EducationSeas extends AppCompatActivity {
         card.addView(imageView);
         card.addView(textLayout);
 
+        /*
         View divider = new View(context);
         LinearLayout.LayoutParams dividerParams = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT, 2);
         dividerParams.setMargins(0, 8, 0, 8);
         divider.setLayoutParams(dividerParams);
         divider.setBackgroundColor(Color.BLACK);
+         */
 
         rowLayout.addView(card);
-        rowLayout.addView(divider);
+        //rowLayout.addView(divider);
 
         return rowLayout;
     }
@@ -358,24 +363,52 @@ public class EducationSeas extends AppCompatActivity {
     }
 
     public void countryAllFishes(View view){
+        String selectedType = "fish";
         String countryName = getIntent().getStringExtra("countryName");
-        if (countryName == null) countryName = "Türkiye";
+        String type = getIntent().getStringExtra("type");
+        if (countryName == null && type != null){
+            if(!selectedType.equalsIgnoreCase(type)){
+                Intent intent = new Intent(this, EducationSeas.class);
+                intent.putExtra("type","fish");
+                startActivity(intent);
+            }
+        }
+        else{
+            goToEducationSeas("fish", countryName);
+        }
 
-        goToEducationSeas("fish", countryName);
     }
 
     public void countryAllCreatures(View view){
+        String selectedType = "creature";
         String countryName = getIntent().getStringExtra("countryName");
-        if (countryName == null) countryName = "Türkiye";
-
-        goToEducationSeas("creature", countryName);
+        String type = getIntent().getStringExtra("type");
+        if (countryName == null && type != null){
+            if(!selectedType.equalsIgnoreCase(type)){
+                Intent intent = new Intent(this, EducationSeas.class);
+                intent.putExtra("type","creature");
+                startActivity(intent);
+            }
+        }
+        else{
+            goToEducationSeas("creature", countryName);
+        }
     }
 
     public void countryAllOther(View view){
+        String selectedType = "other";
         String countryName = getIntent().getStringExtra("countryName");
-        if (countryName == null) countryName = "Türkiye";
-
-        goToEducationSeas("other", countryName);
+        String type = getIntent().getStringExtra("type");
+        if (countryName == null && type != null){
+            if(!selectedType.equalsIgnoreCase(type)){
+                Intent intent = new Intent(this, EducationSeas.class);
+                intent.putExtra("type","other");
+                startActivity(intent);
+            }
+        }
+        else{
+            goToEducationSeas("other", countryName);
+        }
     }
 
 

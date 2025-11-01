@@ -46,6 +46,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
+                    android:elevation="12px"
+                    android:outlineProvider="background"
                     android:gravity="center"
                     android:padding="10dp"
                     android:background="@drawable/rounded_box">
@@ -198,6 +200,8 @@
                     <LinearLayout
                         android:id="@+id/main_fishes_layout"
                         android:layout_width="match_parent"
+                        android:elevation="12px"
+                        android:outlineProvider="background"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:gravity="center"

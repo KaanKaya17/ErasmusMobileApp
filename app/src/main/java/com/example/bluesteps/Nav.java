@@ -10,7 +10,8 @@ public class Nav {
     // --- Main Page ---
     public static void goToEducation(View view){
         if (view != null && view.getContext() != null) {
-            Intent intent = new Intent(view.getContext(), EducationMainPage.class);
+            Intent intent = new Intent(view.getContext(), EducationSeas.class);
+            intent.putExtra("type","creature");
             view.getContext().startActivity(intent);
         }
     }
@@ -47,7 +48,7 @@ public class Nav {
         startActivitySafely(context, AboutUs.class);
     }
     public static void goToEducation(Context context){
-        startActivitySafely(context, EducationMainPage.class);
+        startActivitySafely(context, EducationSeas.class);
     }
     public static void goToMainPage(Context context){
         startActivitySafely(context, EducationMainPage.class);
@@ -101,13 +102,6 @@ public class Nav {
 
     // --- Game Main Page ---
 
-    public static void goToMatching(View view){
-        if (view != null && view.getContext() != null) {
-            Intent intent = new Intent(view.getContext(), GameMatching.class);
-            view.getContext().startActivity(intent);
-        }
-    }
-
     public static void goToQuiz(View view){
         if (view != null && view.getContext() != null) {
             Intent intent = new Intent(view.getContext(), GameQuiz.class);
@@ -115,9 +109,6 @@ public class Nav {
         }
     }
 
-    public static void goToMatching(Context context){
-        startActivitySafely(context, GameMatching.class);
-    }
     public static void goToQuiz(Context context){
         startActivitySafely(context, GameQuiz.class);
     }

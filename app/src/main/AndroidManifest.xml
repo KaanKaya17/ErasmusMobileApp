@@ -32,9 +32,6 @@
             android:name=".GameQuiz"
             android:exported="false" />
         <activity
-            android:name=".GameMatching"
-            android:exported="false" />
-        <activity
             android:name=".EducationSeas"
             android:exported="false" />
         <activity
