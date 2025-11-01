@@ -137,7 +137,7 @@ public class GameQuiz extends AppCompatActivity {
 
         // Tüm sorular gösterildiyse uyarı ver
         if (usedQuestionIndices.size() >= jsonArray.length()) {
-            Toast.makeText(this, "Tüm sorular gösterildi!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "All questions have been shown", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -210,11 +210,11 @@ public class GameQuiz extends AppCompatActivity {
     // Ortak metod: doğruysa yeni soruyu göster
     private boolean checkAnswerAndShowNext() {
         if(isUserAnswerCorrect(userSelectedIndex, correctAnswerIndex)){
-            Toast.makeText(this, "Doğru!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show();
             //showRandomQuestion(); // Yeni soruyu göster
             return true;
         } else {
-            Toast.makeText(this, "Yanlış, tekrar dene!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Wrong Try Again!", Toast.LENGTH_SHORT).show();
             return false;
         }
     }

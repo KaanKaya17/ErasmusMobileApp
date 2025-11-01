@@ -37,13 +37,13 @@ public class EducationSeasTemplate extends AppCompatActivity {
             JSONObject sea = searchSeaById(seaId); // Daha önce yazdığın searchSeaById metodunu kullan
             if (sea != null) {
                 TextView seaNameTextView = findViewById(R.id.sea_name);
-                seaNameTextView.setText(sea.optString("sea_name", "Bulunamadı"));
+                seaNameTextView.setText(sea.optString("sea_name", "Not Found"));
 
                 // Burada diğer bilgileri de aynı şekilde çekebilirsin
                 // örn: area, max_depth, main_fishes vs.
             }
         } else {
-            Toast.makeText(this, "Deniz bulunamadı!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Sea Not Found!", Toast.LENGTH_SHORT).show();
         }
 
 

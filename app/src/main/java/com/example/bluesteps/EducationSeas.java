@@ -189,10 +189,10 @@ public class EducationSeas extends AppCompatActivity {
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
-                Toast.makeText(this, "JSON hatası", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "JSON Error", Toast.LENGTH_SHORT).show();
             }
         } else {
-            Toast.makeText(this, "JSON yüklenemedi", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "JSON Not Downloaded", Toast.LENGTH_SHORT).show();
         }
     }
 

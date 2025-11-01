@@ -91,7 +91,7 @@ public class EducationMainPage extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 String tag = (String) v.getTag(); // örn: "card_0"
-                                Toast.makeText(getApplicationContext(), tag + " tıklandı!", Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(getApplicationContext(), tag + " tıklandı!", Toast.LENGTH_SHORT).show();
 
                                 // İstersen JSON'daki fish_id ile detay sayfasına geçebilirsin
                                 int fishId = Integer.parseInt(tag.split("_")[1]);
@@ -145,10 +145,10 @@ public class EducationMainPage extends AppCompatActivity {
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
-                Toast.makeText(getApplicationContext(), "JSON hatası", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "JSON error", Toast.LENGTH_SHORT).show();
             }
         } else {
-            Toast.makeText(getApplicationContext(), "JSON yüklenemedi", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "JSON not downloaded", Toast.LENGTH_SHORT).show();
         }
     }
 

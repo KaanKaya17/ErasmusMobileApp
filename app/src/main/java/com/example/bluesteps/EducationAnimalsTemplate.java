@@ -90,15 +90,16 @@ public class EducationAnimalsTemplate extends AppCompatActivity {
         TextView textViewFishLocationDescription = findViewById(R.id.fish_location_description);
         TextView textViewFishPoisonous = findViewById(R.id.fish_poisonous);
         TextView textViewFishSocialBehaviour = findViewById(R.id.fish_social_behaviour);
+        TextView textviewOtherNames = findViewById(R.id.other_names);
 
         int intentFishData = getIntent().getIntExtra("fish_id", 0);
         JSONObject fish = searchFishById(intentFishData);
         if (fish != null) {
             try {
                 textViewFishName.setText(fish.getString("animal_name"));
-                textViewFishMaxWeight.setText(String.valueOf(fish.getDouble("max_weight")));
-                textViewFishMaxSize.setText(String.valueOf(fish.getInt("max_size")));
-                textViewFishMaxDepth.setText(String.valueOf(fish.getInt("max_depth")));
+                textViewFishMaxWeight.setText(String.valueOf(fish.getDouble("max_weight")) + " kg");
+                textViewFishMaxSize.setText(String.valueOf(fish.getInt("max_size")) + " m");
+                textViewFishMaxDepth.setText(String.valueOf(fish.getInt("max_depth")) + " m");
                 textViewFishFamily.setText(fish.getString("family"));
                 textViewFishHabitat.setText(fish.getString("habitat"));
                 textViewFishEdible.setText(fish.getBoolean("edible") ? "Yes" : "No");
@@ -107,9 +108,21 @@ public class EducationAnimalsTemplate extends AppCompatActivity {
                 textViewFishLocationDescription.setText(fish.getString("locations_description"));
                 textViewFishSocialBehaviour.setText(fish.getString("social_behaviour"));
                 textViewFishPoisonous.setText(fish.getBoolean("poisonous") ? "Yes" : "No");
-                textViewFishDanger.setText(fish.getBoolean("danger_to_human") ? "Tehlikeli" : "Tehlikesiz");
+                textViewFishDanger.setText(fish.getBoolean("danger_to_human") ? "Dangerous" : "Not dangerous");
 
                 JSONArray colorsArray = fish.getJSONArray("colors");
+
+                JSONArray otherNamesArray = fish.optJSONArray("other_names");
+                if (otherNamesArray != null) {
+                    StringBuilder namesBuilder = new StringBuilder();
+                    for (int i = 0; i < otherNamesArray.length(); i++) {
+                        namesBuilder.append(otherNamesArray.optString(i));
+                        if (i < otherNamesArray.length() - 1) {
+                            namesBuilder.append(", ");
+                        }
+                    }
+                    textviewOtherNames.setText(namesBuilder.toString());
+                }
 
 // 🔸 Renk toplarını göstereceğimiz LinearLayout
                 LinearLayout colorsLayout = findViewById(R.id.fish_colors_container);

@@ -1,38 +1,38 @@
 [
   {
     "id": 0,
-    "sea_name": "Mediterranean Sea (Turkey Coast)",
+    "sea_name": "Mediterranean Sea (Turkish Coast)",
     "area": "2,500,000 km² (total Mediterranean Sea)",
     "max_depth": 5267,
-    "location": "Southern coast of Turkey",
+    "location": "The Southern and Southwestern coast of Turkey, extending from Muğla to Hatay",
     "main_fishes": [
-      "European Anchovy",
-      "Bluefish",
-      "Red Mullet",
-      "Gilt-head Bream"
+      "European Anchovy (Engraulis encrasicolus)",
+      "Bluefish (Pomatomus saltatrix)",
+      "Red Mullet (Mullus surmuletus)",
+      "Gilt-head Bream (Sparus aurata)"
     ],
     "main_species": [
-      "Octopus",
-      "Squid",
-      "Cuttlefish",
-      "Sea Urchin"
+      "Common Octopus (Octopus vulgaris)",
+      "European Squid (Loligo vulgaris)",
+      "Common Cuttlefish (Sepia officinalis)",
+      "Edible Sea Urchin (Paracentrotus lividus)"
     ],
     "temperature_range": "13°C - 29°C",
     "salinity": "37 PSU",
-    "currents": "Eastern Mediterranean current, Cyprus eddies",
-    "ecosystem": "Warm temperate marine ecosystem with coastal lagoons, seagrass meadows, and rocky reefs",
-    "coastline_features": "Rocky cliffs, sandy beaches, estuaries, bays",
+    "currents": "Dominated by the Eastern Mediterranean Current and large-scale, persistent Cyprus Eddies in the Levantine Basin",
+    "ecosystem": "A rich, warm temperate marine ecosystem characterized by vital coastal lagoons, dense Posidonia oceanica seagrass meadows, and complex rocky reefs supporting high biodiversity",
+    "coastline_features": "Dramatic, steep rocky cliffs, wide stretches of sandy beaches, numerous river estuaries, and sheltered bays (e.g., Gulf of Antalya)",
     "important_ports": [
-      "İzmir",
-      "Mersin",
-      "Antalya"
+      "İzmir (Major commercial hub)",
+      "Mersin (Largest port in the region)",
+      "Antalya (Leading tourism and commercial port)"
     ],
     "economic_activities": [
-      "Fishing",
-      "Tourism",
-      "Shipping"
+      "Commercial and recreational fishing (primarily for pelagic species)",
+      "International and coastal tourism (vital to the regional economy)",
+      "Shipping and international maritime transport"
     ],
-    "description": "The Turkish Mediterranean coast is rich in biodiversity with a mix of commercial and recreational fishing. Important habitats include Posidonia seagrass beds and coral communities.",
+    "description": "The Turkish Mediterranean coast is a global biodiversity hotspot, constantly facing pressures from overfishing and coastal development. Its unique habitats, such as the *Posidonia* seagrass beds and deep-water coral communities, are crucial for numerous endemic and commercial species, supporting a complex marine food web. The region is also prone to the arrival of invasive Lessepsian species from the Red Sea.",
     "image_paths": [
       "https://drive.usercontent.google.com/download?id=1IuQP92XbL-EO0iAjmKF9n3WidvW7TK_D&export=view&authuser=0"
     ]
@@ -42,35 +42,35 @@
     "sea_name": "Aegean Sea (Turkey, Greece Coast)",
     "area": "214,000 km²",
     "max_depth": 3543,
-    "location": "Between Turkey and Greece",
+    "location": "Located between the Turkish mainland and the Greek peninsula, dotted with thousands of islands",
     "main_fishes": [
-      "Sardine",
-      "European Hake",
-      "Gilt-head Bream",
-      "Red Mullet"
+      "Sardine (Sardina pilchardus)",
+      "European Hake (Merluccius merluccius)",
+      "Gilt-head Bream (Sparus aurata)",
+      "Red Mullet (Mullus surmuletus)"
     ],
     "main_species": [
-      "Octopus",
-      "Cuttlefish",
-      "Sea Star",
-      "Spiny Lobster"
+      "Common Octopus (Octopus vulgaris)",
+      "Common Cuttlefish (Sepia officinalis)",
+      "Sea Star (Echinodermata species)",
+      "Spiny Lobster (Palinurus species)"
     ],
     "temperature_range": "12°C - 27°C",
     "salinity": "36-38 PSU",
-    "currents": "Cyclonic Aegean circulation, seasonal wind-driven currents",
-    "ecosystem": "Temperate marine ecosystem with islands, reefs, and seagrass beds",
-    "coastline_features": "Rocky shores, islands, bays, estuaries",
+    "currents": "Characterized by the Cyclonic Aegean circulation pattern and strong, seasonal, wind-driven surface currents influencing nutrient distribution",
+    "ecosystem": "A highly diverse, temperate marine ecosystem featuring a multitude of islands, extensive rocky reefs, and critical seagrass beds (Posidonia)",
+    "coastline_features": "Jagged, rocky shores, numerous large and small islands (archipelago structure), deep sheltered bays, and river estuaries (e.g., Menderes)",
     "important_ports": [
-      "Izmir",
-      "Thessaloniki",
-      "Athens (Piraeus)"
+      "Izmir (Major export/import terminal for Turkey)",
+      "Thessaloniki (Northern Greek gateway port)",
+      "Athens (Piraeus) (Largest passenger and cargo port in the Aegean)"
     ],
     "economic_activities": [
-      "Fishing",
-      "Tourism",
-      "Shipping"
+      "Commercial fishing (especially small pelagic species like sardines)",
+      "Intense coastal and island tourism (crucial for local economies)",
+      "Shipping and ferry transport between the islands and mainland"
     ],
-    "description": "The Aegean Sea supports significant fisheries and is known for its high diversity of small pelagic fish. Coastal tourism is also a major economic activity.",
+    "description": "The Aegean Sea's complex bathymetry and high number of islands create distinct micro-ecosystems. It supports crucial small pelagic fish stocks and is a significant area for artisanal and small-scale fisheries. Its iconic beauty drives substantial coastal tourism, leading to conservation challenges.",
     "image_paths": [
       "https://drive.usercontent.google.com/download?id=1rjfxsGj7Jm15a-BvHEgJzjagCqex_Xod&export=view&authuser=0"
     ]
@@ -80,35 +80,35 @@
     "sea_name": "Black Sea (Turkey, Bulgaria Coast)",
     "area": "436,000 km²",
     "max_depth": 2212,
-    "location": "Northern coast of Turkey, Bulgaria, Romania, Ukraine",
+    "location": "The Northern coast of Turkey, bordered by Bulgaria, Romania, Ukraine, Russia, and Georgia",
     "main_fishes": [
-      "Anchovy",
-      "Sprat",
-      "Mullet",
-      "Turbot"
+      "Anchovy (Engraulis encrasicolus)",
+      "Sprat (Sprattus sprattus)",
+      "Mullet (Mugilidae species)",
+      "Turbot (Psetta maxima)"
     ],
     "main_species": [
-      "Octopus",
-      "Squid",
-      "Sea Cucumber",
-      "Sturgeon"
+      "Common Octopus (Octopus species, less common due to salinity)",
+      "Squid (Loligo species, less abundant)",
+      "Sea Cucumber (Holothuroidea species)",
+      "Sturgeon (Acipenser species, critically endangered)"
     ],
     "temperature_range": "7°C - 27°C",
     "salinity": "17-18 PSU",
-    "currents": "Counterclockwise rim current along coastlines",
-    "ecosystem": "Semi-enclosed sea with lower salinity, productive in plankton, supports commercial fisheries",
-    "coastline_features": "Sandy beaches, river deltas, cliffs",
+    "currents": "Dominated by the vigorous, basin-wide counterclockwise Rim Current flowing along the coastlines, isolating the central gyres",
+    "ecosystem": "A semi-enclosed sea uniquely defined by a permanent halocline, creating an anoxic (oxygen-free) deep layer below 150-200m. Biologically productive surface waters support major commercial fisheries.",
+    "coastline_features": "Long stretches of sandy beaches, significant river deltas (e.g., Danube), and varying coastal cliffs (e.g., Turkish coast)",
     "important_ports": [
-      "Varna",
-      "Burgas",
-      "Istanbul (via Bosporus)"
+      "Varna (Bulgaria's major seaport)",
+      "Burgas (Key oil and industrial port)",
+      "Istanbul (via the Bosporus Strait, connecting to the Marmara Sea)"
     ],
     "economic_activities": [
-      "Fishing",
-      "Shipping",
-      "Tourism"
+      "Mass commercial fishing (Anchovy fisheries are the most important regional activity)",
+      "International shipping and energy transport",
+      "Coastal tourism (popular in Bulgaria, Romania, and Turkey)"
     ],
-    "description": "The Black Sea is unique due to its low salinity and anoxic deep layers. Anchovy fisheries are especially important for the regional economy.",
+    "description": "The Black Sea is ecologically sensitive due to its unique low salinity, anoxic deep water, and heavy influence from large European rivers. Anchovy fisheries are economically paramount but subject to high variability. Pollution and habitat degradation from river runoff and shipping pose major environmental threats.",
     "image_paths": [
       "https://drive.usercontent.google.com/download?id=1H5yw63uKr0lomlEqY-oU2BEU2ehvJhA5&export=view&authuser=0"
     ]
@@ -118,35 +118,35 @@
     "sea_name": "Atlantic Ocean (Portugal Coast)",
     "area": "Open Atlantic off western Portugal",
     "max_depth": 8486,
-    "location": "Western coast of Portugal",
+    "location": "The entire western and southern coast of Portugal, bordering the North Atlantic Ocean",
     "main_fishes": [
-      "Atlantic Cod",
-      "Sardine",
-      "Mackerel",
-      "Bluefin Tuna"
+      "Atlantic Cod (Gadus morhua - historically important)",
+      "Sardine (Sardina pilchardus - cornerstone of local cuisine)",
+      "Mackerel (Scomber scombrus)",
+      "Bluefin Tuna (Thunnus thynnus - highly migratory and valuable)"
     ],
     "main_species": [
-      "Octopus",
-      "Squid",
-      "Sea Urchin",
-      "Lobster"
+      "Common Octopus (Octopus vulgaris)",
+      "European Squid (Loligo vulgaris)",
+      "Edible Sea Urchin (Paracentrotus lividus)",
+      "European Lobster (Homarus gammarus)"
     ],
     "temperature_range": "12°C - 22°C",
     "salinity": "35 PSU",
-    "currents": "Portugal Current, North Atlantic Drift influence",
-    "ecosystem": "Temperate marine ecosystem with rocky reefs, sandy bottoms, and upwelling zones supporting rich fisheries",
-    "coastline_features": "Rocky cliffs, sandy beaches, estuaries",
+    "currents": "Influenced by the cold Portugal Current flowing south and the warmer North Atlantic Drift, creating dynamic conditions",
+    "ecosystem": "A highly productive temperate shelf ecosystem, characterized by extensive rocky reefs, varied sandy bottoms, and seasonal coastal upwelling zones that bring cold, nutrient-rich water to the surface, supporting massive fish stocks",
+    "coastline_features": "Dramatic, windswept rocky cliffs (e.g., Cabo da Roca), extensive sandy beaches, and important river estuaries (e.g., Tagus and Douro)",
     "important_ports": [
-      "Lisbon",
-      "Porto",
-      "Setúbal"
+      "Lisbon (The largest and most important port for commerce and cruises)",
+      "Porto (Key industrial and shipping hub in the north)",
+      "Setúbal (Important for fishing and shipbuilding)"
     ],
     "economic_activities": [
-      "Fishing",
-      "Shipping",
-      "Tourism"
+      "Intensive fishing (especially for pelagic species like sardine and tuna)",
+      "International shipping and maritime services (due to strategic Atlantic location)",
+      "Coastal and surf tourism (along the entire coast)"
     ],
-    "description": "Portugal's Atlantic coast has a highly productive marine ecosystem, famous for sardine and tuna fisheries. Coastal tourism is also significant.",
+    "description": "Portugal's Atlantic coast is known for its highly productive marine environment driven by seasonal upwelling, making it one of the richest fishing grounds in Europe. The long tradition of cod (Bacalhau) consumption, despite the cod being caught primarily in the North Atlantic, is a defining cultural element. Sustainable management of local sardine and tuna stocks is a constant priority.",
     "image_paths": [
       "https://drive.usercontent.google.com/download?id=1wD-UGo_hVK3Jc2XUmw9GIll11CJuv5CU&export=view&authuser=0"
     ]
