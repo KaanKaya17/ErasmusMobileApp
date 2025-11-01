@@ -46,8 +46,8 @@
         "description": "Sea Bass (Dicentrarchus labrax) is a popular and nutritious fish found in the Mediterranean Sea, Aegean Sea, and along the coasts of Europe. Typically measuring 30–60 cm in length and weighing 0.5–3 kg, sea bass has a sleek, silver-gray body with a slightly darker back. It is a predatory fish, feeding on smaller fish and crustaceans.\n\nSea bass is rich in high-quality protein, omega-3 fatty acids, vitamins, and minerals, making it beneficial for heart health and overall well-being. In Turkish and Mediterranean cuisine, it is commonly grilled, baked, or steamed. Fresh sea bass offers the best flavor and nutritional value. Sustainable fishing ensures that this valuable species remains abundant for future generations.",
         "distribution_habitat": "Coastal rocky and sandy areas, estuaries, shallow to mid-depth waters.",
         "image_paths": [
-          "https://drive.google.com/uc?export=view&id=1KoQ8Jv_6zeL4jf_2DDB0NpkNwGaBVRv-",
-          "https://drive.google.com/uc?export=view&id=1Jvyd4iPpBe3yRXRhAB3jdKIof6o8TuWI"
+          "https://drive.google.com/uc?export=view&id=1Jvyd4iPpBe3yRXRhAB3jdKIof6o8TuWI",
+          "https://drive.google.com/uc?export=view&id=1KoQ8Jv_6zeL4jf_2DDB0NpkNwGaBVRv-"
         ]
       },
       {
@@ -141,7 +141,7 @@
         "description": "Horse Mackerel (Trachurus trachurus) is a widely distributed oily fish found in the Black Sea, Marmara, and Aegean Seas. Typically measuring 20–40 cm in length and weighing 0.2–1 kg, horse mackerel have a streamlined silver body with a slightly darker back. They usually swim in large schools and feed on small fish, crustaceans, and plankton.\n\nHorse mackerel are rich in omega-3 fatty acids, protein, vitamins, and minerals, making them beneficial for heart health and overall nutrition. In Turkish cuisine, they are commonly grilled, fried, or used in stews. Fresh horse mackerel offer the best flavor and nutritional value. Sustainable fishing practices are essential to maintain their natural populations.",
         "distribution_habitat": "Coastal waters and mid-depth migration routes.",
         "image_paths": [
-          "https://drive.google.com/uc?export=view&id=1kgpwZrQpeK9nT7tnMYinuFXh9T68b_9q"
+          "https://drive.google.com/uc?export=view&id=1LQLDFOtTVF_Ne1qffc4-R4hLK4_lIMND"
         ]
       },
 
@@ -164,7 +164,9 @@
         "locations_description": "Famous for passing through the Straits (Bosporus and Dardanelles) during migration periods.",
         "description": "Bluefish (Pomatomus saltatrix) is a popular and nutritious predatory fish found in the Black Sea, Marmara, and Aegean Seas. Typically measuring 30–50 cm in length and weighing 0.5–2 kg, bluefish has a streamlined, silver-blue body with a slightly darker back. It swims in schools and feeds on smaller fish and crustaceans.\n\nBluefish is rich in omega-3 fatty acids, high-quality protein, vitamins, and minerals, supporting heart health and overall nutrition. In Turkish cuisine, it is commonly grilled, fried, or baked, especially during autumn when it is most abundant. Fresh bluefish offers the best flavor and nutritional value. Sustainable fishing is important to maintain healthy populations for future generations.",
         "distribution_habitat": "Open sea and coastal regions.",
-        "image_paths": ["https://drive.google.com/uc?export=view&id=1CQpLXxHjvlf7WTXHQ4OPOaJjWep872Sv"]
+        "image_paths": [
+          "https://drive.google.com/uc?export=view&id=1keiLq5vR5RNBz9roh4xmkKYEIwJJ_Oqr"
+        ]
       },
       {
         "id": 18,
@@ -185,7 +187,9 @@
         "locations_description": "Frequently found on rocky bottoms.",
         "description": "Starfish (Sea Star) are marine invertebrates found in oceans worldwide, including the Mediterranean, Aegean, and Black Seas. They typically have a star-shaped body with five or more arms, which they use to move and capture prey such as mollusks. Starfish have a unique water vascular system that aids in locomotion and feeding.\n\nAlthough not commonly consumed as food, starfish play an important role in marine ecosystems by controlling populations of other invertebrates and contributing to reef health. Their fascinating appearance and regenerative abilities—some species can regrow lost arms—make them a subject of interest for marine biology and aquarium enthusiasts.",
         "distribution_habitat": "Coastal rocks and seabed.",
-        "image_paths": ["https://drive.google.com/uc?export=view&id=1keiLq5vR5RNBz9roh4xmkKYEIwJJ_Oqr"]
+        "image_paths": [
+          "https://drive.google.com/uc?export=view&id=1CQpLXxHjvlf7WTXHQ4OPOaJjWep872Sv"
+        ]
       },
       {
         "id": 28,
@@ -206,7 +210,7 @@
         "locations_description": "Seen densely on coastal rocks.",
         "description": "Seaweed (Marine Algae) are diverse marine plants found in oceans worldwide, including the Mediterranean, Aegean, and Black Seas. They grow in shallow waters and attach to rocks or the seabed. Seaweed comes in various colors—green, brown, and red—and provides habitat and food for many marine species.\n\nSeaweed is highly nutritious, rich in vitamins, minerals, fiber, and antioxidants. It is consumed in many cuisines, especially in Asia, and is also used in supplements, cosmetics, and fertilizers. Beyond its nutritional value, seaweed plays a vital role in marine ecosystems by producing oxygen, reducing carbon dioxide, and supporting biodiversity.",
         "distribution_habitat": "Shallow coastal areas, rocky and sandy bottoms.",
-        "image_paths": ["https://drive.google.com/uc?export=view&id=1LQLDFOtTVF_Ne1qffc4-R4hLK4_lIMND"]
+        "image_paths": ["https://drive.google.com/uc?export=view&id=1kgpwZrQpeK9nT7tnMYinuFXh9T68b_9q"]
       },
       {
         "id": 29,
@@ -227,7 +231,7 @@
         "locations_description": "Forms dense colonies on coastal rocks.",
         "description": "Coral (Marine Coral) are marine invertebrates found in tropical and subtropical oceans, forming vibrant reef ecosystems. They have a hard calcium carbonate skeleton and live in colonies, creating complex structures that provide shelter and food for numerous marine species.\n\nCoral reefs support biodiversity and protect coastlines from erosion. While not typically consumed as food, corals are highly valued for their ecological importance, beauty, and use in jewelry. Protecting coral reefs is crucial, as climate change, pollution, and overfishing threaten their survival and the countless species that depend on them.",
         "distribution_habitat": "Shallow and sheltered rocky areas.",
-        "image_paths": ["https://drive.google.com/uc?export=view&id=1HJHlC3eQc_xQFkK7JsmrwD-1DJYY8Xjc"]
+        "image_paths": ["https://drive.google.com/uc?export=view&id=1CTGsUj276H5Cx-28Gnc6xfCyVC_RmGgp"]
       }
     ]
   },
@@ -588,7 +592,7 @@
         "locations_description": "Seen densely in rocky reefs.",
         "description": "Coral Fish are colorful and diverse species that inhabit coral reefs in tropical and subtropical seas. They vary widely in size, shape, and color, often displaying vibrant patterns that help them blend into the reef environment. Coral fish feed on algae, plankton, and small invertebrates, playing a crucial role in maintaining reef health.\n\nRich in protein and often low in fat, some species of coral fish are consumed locally, though they are more commonly admired for their beauty in marine ecosystems and aquariums. Protecting coral reefs is essential, as they rely on healthy reef habitats for shelter, breeding, and food.",
         "distribution_habitat": "Shallow rocky and reef areas.",
-        "image_paths": ["https://drive.google.com/uc?export=view&id=1HJHlC3eQc_xQFkK7JsmrwD-1DJYY8Xjc"]
+        "image_paths": ["https://drive.google.com/uc?export=view&id=1CTGsUj276H5Cx-28Gnc6xfCyVC_RmGgp"]
       },
       {
         "id": 33,

@@ -98,7 +98,7 @@ public class EducationAnimalsTemplate extends AppCompatActivity {
             try {
                 textViewFishName.setText(fish.getString("animal_name"));
                 textViewFishMaxWeight.setText(String.valueOf(fish.getDouble("max_weight")) + " kg");
-                textViewFishMaxSize.setText(String.valueOf(fish.getInt("max_size")) + " m");
+                textViewFishMaxSize.setText(String.valueOf(fish.getInt("max_size")) + " cm");
                 textViewFishMaxDepth.setText(String.valueOf(fish.getInt("max_depth")) + " m");
                 textViewFishFamily.setText(fish.getString("family"));
                 textViewFishHabitat.setText(fish.getString("habitat"));
