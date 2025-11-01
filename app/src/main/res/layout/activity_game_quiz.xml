@@ -70,7 +70,7 @@
 
                 <ImageView
                     android:layout_width="100dp"
-                    android:src="@drawable/badges"
+                    android:src="@drawable/fish"
                     android:layout_marginRight="15dp"
                     android:layout_height="match_parent"/>
 
@@ -89,7 +89,7 @@
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:text="Test Test"
+                        android:text=""
                         android:layout_marginTop="10dp"
                         android:layout_height="wrap_content"/>
 

@@ -35,14 +35,13 @@ public class GameQuiz extends AppCompatActivity {
     int correctAnswerIndex = 0;
 
     String randomQuestionCorrectAnswer = "";
+    String randomQuestionExplanation = ""; // EKLENEN SINIF DEĞİŞKENİ
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_game_quiz);
-
-        //showAnswerStatus(true,"Test");
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -53,7 +52,6 @@ public class GameQuiz extends AppCompatActivity {
         showRandomQuestion();
     }
 
-    // Örnek bir method, butona tıklandığında çağırabilirsin
     public void showAnswerStatus(boolean status, String description){
         LinearLayout answer1 = findViewById(R.id.quizGameAnswer1);
         LinearLayout answer2 = findViewById(R.id.quizGameAnswer2);
@@ -116,7 +114,7 @@ public class GameQuiz extends AppCompatActivity {
 
     private JSONArray loadJsonFromAssets() {
         try {
-            InputStream is = getAssets().open("questions.json"); // JSON dosya adını buraya yaz
+            InputStream is = getAssets().open("questions.json");
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
@@ -135,7 +133,6 @@ public class GameQuiz extends AppCompatActivity {
         JSONArray jsonArray = loadJsonFromAssets();
         if (jsonArray == null || jsonArray.length() == 0) return;
 
-        // Tüm sorular gösterildiyse uyarı ver
         if (usedQuestionIndices.size() >= jsonArray.length()) {
             Toast.makeText(this, "All questions have been shown", Toast.LENGTH_SHORT).show();
             return;
@@ -144,24 +141,22 @@ public class GameQuiz extends AppCompatActivity {
         int randomIndex;
         Random random = new Random();
 
-        // Daha önce seçilmiş bir index gelirse tekrar seç
         do {
             randomIndex = random.nextInt(jsonArray.length());
         } while (usedQuestionIndices.contains(randomIndex));
 
-        // Seçilen index'i Set'e ekle
         usedQuestionIndices.add(randomIndex);
 
         try {
-            // Rastgele seçilen soru
             JSONObject questionObj = jsonArray.getJSONObject(randomIndex);
             String question = questionObj.getString("question");
             JSONArray answers = questionObj.getJSONArray("answers");
             correctAnswerIndex = questionObj.getInt("correct_answer_index");
 
+            randomQuestionExplanation = questionObj.optString("explanation", "No detailed explanation available."); // GÜNCELLENEN KISIM
+
             randomQuestionCorrectAnswer = answers.getString(correctAnswerIndex);
 
-            // TextView'lere yazdır
             TextView textviewQuestion = findViewById(R.id.question);
             TextView textviewAnswer1 = findViewById(R.id.answer1);
             TextView textviewAnswer2 = findViewById(R.id.answer2);
@@ -179,42 +174,38 @@ public class GameQuiz extends AppCompatActivity {
         }
     }
 
-    // Rastgele index üreten method
     private int getRandomIndex(int maxLength) {
         Random random = new Random();
-        return random.nextInt(maxLength); // 0 ile maxLength-1 arasında sayı
+        return random.nextInt(maxLength);
     }
 
     public void quizGameAnswer1(View view){
         userSelectedIndex = 0;
-        showAnswerStatus(checkAnswerAndShowNext(),"Test Test");
+        showAnswerStatus(checkAnswerAndShowNext(), randomQuestionExplanation); // GÜNCELLENEN KISIM
     }
 
     public void quizGameAnswer2(View view){
         userSelectedIndex = 1;
-        showAnswerStatus(checkAnswerAndShowNext(),"Test Test");
+        showAnswerStatus(checkAnswerAndShowNext(), randomQuestionExplanation); // GÜNCELLENEN KISIM
     }
 
     public void quizGameAnswer3(View view){
         userSelectedIndex = 2;
-        showAnswerStatus(checkAnswerAndShowNext(),"Test Test");
+        showAnswerStatus(checkAnswerAndShowNext(), randomQuestionExplanation); // GÜNCELLENEN KISIM
     }
 
     public void quizGameAnswer4(View view){
         userSelectedIndex = 3;
-        showAnswerStatus(checkAnswerAndShowNext(),"Test Test");
+        showAnswerStatus(checkAnswerAndShowNext(), randomQuestionExplanation); // GÜNCELLENEN KISIM
     }
 
 
-
-    // Ortak metod: doğruysa yeni soruyu göster
     private boolean checkAnswerAndShowNext() {
         if(isUserAnswerCorrect(userSelectedIndex, correctAnswerIndex)){
-            Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show();
-            //showRandomQuestion(); // Yeni soruyu göster
+            //Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show();
             return true;
         } else {
-            Toast.makeText(this, "Wrong Try Again!", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Wrong Try Again!", Toast.LENGTH_SHORT).show();
             return false;
         }
     }
