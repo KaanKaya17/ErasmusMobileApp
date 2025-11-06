@@ -104,7 +104,7 @@
       },
       {
         "id": 14,
-        "3d_model" : "https://sketchfab.com/3d-models/corals-d521ba70ae54457faea69294757b75b5",
+        "3d_model" : "https://sketchfab.com/models/d521ba70ae54457faea69294757b75b5/embed",
         "type": "other",
         "animal_name": "Coral",
         "max_size": 15,
@@ -177,7 +177,7 @@
       },
       {
         "id": 18,
-        "3d_model" : "https://sketchfab.com/3d-models/starfish-645b4a2217ef452581428e0510d7e607",
+        "3d_model" : "https://sketchfab.com/models/645b4a2217ef452581428e0510d7e607/embed",
         "type": "creature",
         "animal_name": "Starfish",
         "max_size": 25,
@@ -201,7 +201,7 @@
       },
       {
         "id": 28,
-        "3d_model" : "https://sketchfab.com/3d-models/cartoon-seaweed-10-00d670cf071d498b9f20e6fe3e4fc347",
+        "3d_model" : "https://sketchfab.com/models/00d670cf071d498b9f20e6fe3e4fc347/embed",
         "type": "other",
         "animal_name": "Seaweed",
         "max_size": 50,
@@ -223,7 +223,7 @@
       },
       {
         "id": 29,
-        "3d_model" : "https://sketchfab.com/3d-models/corals-d521ba70ae54457faea69294757b75b5",
+        "3d_model" : "https://sketchfab.com/models/d521ba70ae54457faea69294757b75b5/embed",
         "type": "other",
         "animal_name": "Coral",
         "max_size": 20,
@@ -300,7 +300,7 @@
       },
       {
         "id": 6,
-        "3d_model" : "https://sketchfab.com/3d-models/american-shad-df09d2c1e3f34ebeb7dc957b3",
+        "3d_model" : "https://sketchfab.com/models/df09d2c1e3f34ebeb7dc957b3/embed",
         "type": "fish",
         "animal_name": "Black Sea Turbot (Psetta maxima maeotica)",
         "max_size": 70,
@@ -322,7 +322,7 @@
       },
       {
         "id": 15,
-        "3d_model" : "https://sketchfab.com/3d-models/red-sea-urchin-small-2adc33a3a8c74a3c8759745c46c612ff",
+        "3d_model" : "https://sketchfab.com/models/2adc33a3a8c74a3c8759745c46c612ff/embed",
         "type": "creature",
         "animal_name": "Sea Urchin",
         "max_size": 10,
@@ -388,7 +388,7 @@
       },
       {
         "id": 21,
-        "3d_model" : "https://sketchfab.com/3d-models/black-mussel-surface-macro-c710d5a183a547d8a999c721a2d906cf",
+        "3d_model" : "https://sketchfab.com/models/c710d5a183a547d8a999c721a2d906cf/embed",
         "type": "creature",
         "animal_name": "Freshwater Mussel",
         "max_size": 10,
@@ -410,7 +410,7 @@
       },
       {
         "id": 30,
-        "3d_model" : "https://sketchfab.com/3d-models/deep-sea-sponge-4cd0e97040c9404e90d9645fc0f69aab",
+        "3d_model" : "https://sketchfab.com/models/4cd0e97040c9404e90d9645fc0f69aab/embed",
         "type": "other",
         "animal_name": "Sea Sponge",
         "max_size": 40,
@@ -432,7 +432,7 @@
       },
       {
         "id": 31,
-        "3d_model" : "https://sketchfab.com/3d-models/corals-d521ba70ae54457faea69294757b75b5",
+        "3d_model" : "https://sketchfab.com/models/d521ba70ae54457faea69294757b75b5/embed",
         "type": "other",
         "animal_name": "Seagrass",
         "max_size": 60,
@@ -578,7 +578,7 @@
       },
       {
         "id": 24,
-        "3d_model" : "https://sketchfab.com/3d-models/sea-snail-shell-6515f625857041ad87bb6e2e5e5f6206",
+        "3d_model" : "https://sketchfab.com/models/6515f625857041ad87bb6e2e5e5f6206/embed",
         "type": "creature",
         "animal_name": "Sea Snail",
         "max_size": 8,
@@ -600,7 +600,7 @@
       },
       {
         "id": 32,
-        "3d_model" : "https://sketchfab.com/3d-models/corals-d521ba70ae54457faea69294757b75b5",
+        "3d_model" : "https://sketchfab.com/models/d521ba70ae54457faea69294757b75b5/embed",
         "type": "other",
         "animal_name": "Coral",
         "max_size": 25,
@@ -622,7 +622,7 @@
       },
       {
         "id": 33,
-        "3d_model" : "https://sketchfab.com/3d-models/cartoon-seaweed-10-00d670cf071d498b9f20e6fe3e4fc347",
+        "3d_model" : "https://sketchfab.com/models/00d670cf071d498b9f20e6fe3e4fc347/embed",
         "type": "other",
         "animal_name": "Seaweed",
         "max_size": 45,
@@ -786,7 +786,7 @@
       },
       {
         "id": 35,
-        "3d_model" : "https://sketchfab.com/3d-models/cartoon-seaweed-10-00d670cf071d498b9f20e6fe3e4fc347",
+        "3d_model" : "https://sketchfab.com/models/00d670cf071d498b9f20e6fe3e4fc347/embed",
         "type": "other",
         "animal_name": "Seagrass",
         "max_size": 60,
