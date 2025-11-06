@@ -40,7 +40,7 @@
   },
   {
     "id": 1,
-    "sea_image" : "agean_image",
+    "sea_image" : "black_sea_image",
     "sea_name": "Aegean Sea (Turkey, Greece Coast)",
     "area": "214,000 km²",
     "max_depth": 3543,
