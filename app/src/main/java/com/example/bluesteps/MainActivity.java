@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.ContextThemeWrapper;
 import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.ViewOutlineProvider;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -61,6 +62,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private int dpToPx(int dp) {
+        float density = getResources().getDisplayMetrics().density;
+        return Math.round(dp * density);
+    }
+
     private void loadCountriesFromJson(Context context, JSONArray countriesArray) {
         LinearLayout parentLayout = findViewById(R.id.parentLayout);
         //parentLayout.removeAllViews();
@@ -70,7 +76,11 @@ public class MainActivity extends AppCompatActivity {
                 JSONObject countryObj = countriesArray.getJSONObject(i);
                 String countryName = countryObj.getString("country");
 
-                // "fish" dizisi varsa uzunluğunu al, yoksa 0 ver
+                // 🔹 JSON'dan country_image alanını oku
+                String imageName = countryObj.optString("country_image", "country"); // Varsayılan görsel ismi: "country"
+                int imageResId = context.getResources().getIdentifier(imageName, "drawable", context.getPackageName());
+
+                // Tür sayacı
                 int fishCount = 0;
                 int creatureCount = 0;
                 int otherAnimalsCount = 0;
@@ -86,11 +96,10 @@ public class MainActivity extends AppCompatActivity {
                         } else if (type.equalsIgnoreCase("creature")) {
                             creatureCount++;
                         } else {
-                            otherAnimalsCount++; // fish ve creature değilse diğerler
+                            otherAnimalsCount++;
                         }
                     }
                 }
-
 
                 // Dış kapsayıcı (yuvarlak kart)
                 LinearLayout outerCard = new LinearLayout(context);
@@ -99,37 +108,43 @@ public class MainActivity extends AppCompatActivity {
                         LinearLayout.LayoutParams.MATCH_PARENT,
                         LinearLayout.LayoutParams.WRAP_CONTENT
                 );
-                outerParams.setMargins(dpToPx(10), dpToPx(10), dpToPx(10), dpToPx(10)); // Kartlar arası boşluk
+                outerParams.setMargins(dpToPx(10), dpToPx(10), dpToPx(10), dpToPx(10));
                 outerCard.setLayoutParams(outerParams);
                 outerCard.setPadding(dpToPx(14), dpToPx(14), dpToPx(14), dpToPx(14));
-                outerCard.setBackgroundResource(R.drawable.roundex_box_white); // Yuvarlak köşeli beyaz kutu
+                outerCard.setBackgroundResource(R.drawable.roundex_box_white);
                 outerCard.setElevation(12f);
                 outerCard.setOutlineProvider(ViewOutlineProvider.BACKGROUND);
+                //outerCard.getBackground().setAlpha(90); // 0=şeffaf, 255=opaks
 
 
-// Ana satır layout (senin mevcut kodun)
+                // Ana satır layout
                 LinearLayout countryRow = new LinearLayout(context);
                 countryRow.setOrientation(LinearLayout.HORIZONTAL);
+                countryRow.setGravity(Gravity.CENTER_VERTICAL); // 🔹 Dikey ortalama eklendi
                 countryRow.setId(i);
                 countryRow.setTag("sea_" + i);
                 countryRow.setOnClickListener(v -> {
-                    int viewId = v.getId();
-                    String tag = (String) v.getTag();
                     Intent intent = new Intent(getApplicationContext(), EducationSeas.class);
                     intent.putExtra("countryName", countryName);
                     startActivity(intent);
                 });
                 countryRow.setPadding(0, 14, 0, 14);
 
-// Ülke resmi
+
+                // 🔹 Ülke resmi (JSON’dan gelen drawable)
                 ImageView flagImage = new ImageView(context);
-                LinearLayout.LayoutParams flagParams = new LinearLayout.LayoutParams(200, 200);
+                LinearLayout.LayoutParams flagParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
                 flagParams.setMargins(0, 0, dpToPx(20), 0);
                 flagImage.setScaleType(ImageView.ScaleType.CENTER_CROP);
                 flagImage.setLayoutParams(flagParams);
-                flagImage.setImageResource(R.drawable.country);
 
-// Bilgi kısmı
+                if (imageResId != 0) {
+                    flagImage.setImageResource(imageResId); // JSON’daki isimle bulunan resim
+                } else {
+                    flagImage.setImageResource(R.drawable.country); // yedek resim
+                }
+
+                // Bilgi kısmı
                 LinearLayout infoLayout = new LinearLayout(context);
                 infoLayout.setOrientation(LinearLayout.VERTICAL);
                 infoLayout.setLayoutParams(new LinearLayout.LayoutParams(
@@ -137,50 +152,38 @@ public class MainActivity extends AppCompatActivity {
                         LinearLayout.LayoutParams.WRAP_CONTENT
                 ));
 
-// Ülke adı
+                // Ülke adı
                 TextView countryText = new TextView(new ContextThemeWrapper(context, R.style.TextviewBodySubtitleWhite));
                 countryText.setText(countryName);
-                countryText.setTypeface(null, android.graphics.Typeface.BOLD);
+                countryText.setTypeface(null, Typeface.BOLD);
 
-// Balık sayısı
+                // Balık sayısı
                 TextView fishText = new TextView(new ContextThemeWrapper(context, R.style.TextviewBodyWhite));
                 fishText.setText(fishCount + " Fishes");
 
-// Canlı sayısı
+                // Canlı sayısı
                 TextView creatureText = new TextView(new ContextThemeWrapper(context, R.style.TextviewBodyWhite));
                 creatureText.setText(creatureCount + " Creatures");
 
-// Diğer Canlı sayısı
+                // Diğer canlı sayısı
                 TextView othersText = new TextView(new ContextThemeWrapper(context, R.style.TextviewBodyWhite));
                 othersText.setText(otherAnimalsCount + " Sponges, Plants, Corals");
 
-// Ayırıcı çizgi
-                /*
-                View divider = new View(context);
-                LinearLayout.LayoutParams dividerParams = new LinearLayout.LayoutParams(
-                        LinearLayout.LayoutParams.MATCH_PARENT, 2);
-                dividerParams.setMargins(0, 10, 0, 0);
-                divider.setLayoutParams(dividerParams);
-                divider.setBackgroundColor(0xFF000000);
-                */
-// Bilgileri ekle
+                // Bilgileri ekle
                 infoLayout.addView(countryText);
                 infoLayout.addView(fishText);
                 infoLayout.addView(creatureText);
                 infoLayout.addView(othersText);
 
-                //infoLayout.addView(divider);
-
-// Ana satıra ekle
+                // Ana satıra ekle
                 countryRow.addView(flagImage);
                 countryRow.addView(infoLayout);
 
-// Ana satırı yuvarlak karta ekle
+                // Ana satırı yuvarlak karta ekle
                 outerCard.addView(countryRow);
 
-// Parent'e ekle
+                // Parent’e ekle
                 parentLayout.addView(outerCard);
-
 
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -268,10 +271,6 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         return null;
-    }
-    private int dpToPx(int dp) {
-        float density = getResources().getDisplayMetrics().density;
-        return Math.round(dp * density);
     }
 
     public void loadAllSeasToPage() {

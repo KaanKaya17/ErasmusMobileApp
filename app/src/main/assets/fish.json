@@ -1,6 +1,7 @@
 [
   {
     "country": "Türkiye",
+    "country_image" : "turkey",
     "animals": [
       {
         "id": 0,
@@ -247,6 +248,7 @@
   },
   {
     "country": "Bulgaria",
+    "country_image" : "bulgaria",
     "animals": [
       {
         "id": 4,
@@ -456,6 +458,7 @@
   },
   {
     "country": "Greece",
+    "country_image" : "greece",
     "animals": [
       {
         "id": 7,
@@ -646,6 +649,7 @@
   },
   {
     "country": "Portugal",
+    "country_image" : "portugal",
     "animals": [
       {
         "id": 10,

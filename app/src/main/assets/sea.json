@@ -1,6 +1,7 @@
 [
   {
     "id": 0,
+    "sea_image" : "mediterranean_image",
     "sea_name": "Mediterranean Sea (Turkish Coast)",
     "area": "2,500,000 km² (total Mediterranean Sea)",
     "max_depth": 5267,
@@ -39,6 +40,7 @@
   },
   {
     "id": 1,
+    "sea_image" : "agean_image",
     "sea_name": "Aegean Sea (Turkey, Greece Coast)",
     "area": "214,000 km²",
     "max_depth": 3543,
@@ -77,6 +79,7 @@
   },
   {
     "id": 2,
+    "sea_image" : "black_sea_image",
     "sea_name": "Black Sea (Turkey, Bulgaria Coast)",
     "area": "436,000 km²",
     "max_depth": 2212,
@@ -116,6 +119,7 @@
   {
     "id": 3,
     "sea_name": "Atlantic Ocean (Portugal Coast)",
+    "sea_image" : "atlantic_image",
     "area": "Open Atlantic off western Portugal",
     "max_depth": 8486,
     "location": "The entire western and southern coast of Portugal, bordering the North Atlantic Ocean",
