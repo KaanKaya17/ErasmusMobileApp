@@ -210,6 +210,7 @@
                 <TextView
                     android:id="@+id/question"
                     style="@style/TextViewBody"
+                    android:textSize="22dp"
                     android:layout_width="match_parent"
                     android:text="Lorem Ipsum like a huge thing in our live but i dont know what to say bla bla like a question ?"
                     android:layout_height="wrap_content"/>

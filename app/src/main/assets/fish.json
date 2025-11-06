@@ -4,8 +4,9 @@
     "animals": [
       {
         "id": 0,
+        "3d_model": "https://sketchfab.com/models/723309708e9e403c8808617386594851/embed",
         "type": "fish",
-        "animal_name": "Hamsi (Anchovy)",
+        "animal_name": "Anchovy",
         "max_size": 20,
         "max_weight": 0.2,
         "max_depth": 200,
@@ -28,8 +29,9 @@
       },
       {
         "id": 1,
+        "3d_model": "https://sketchfab.com/models/e59ba168962348acaa739a000249b534/embed",
         "type": "fish",
-        "animal_name": "Levrek (European Sea Bass)",
+        "animal_name": "European Sea Bass",
         "max_size": 100,
         "max_weight": 12,
         "max_depth": 100,
@@ -52,8 +54,9 @@
       },
       {
         "id": 3,
+        "3d_model": "https://sketchfab.com/models/9597628972c144f4a166a53c142cd9ca/embed",
         "type": "fish",
-        "animal_name": "Palamut (Bonito)",
+        "animal_name": "Bonito",
         "max_size": 90,
         "max_weight": 6,
         "max_depth": 300,
@@ -77,6 +80,7 @@
 
       {
         "id": 13,
+        "3d_model" : "https://sketchfab.com/models/3cfe9d4021b14a5fad8372bcb490956b/embed",
         "type": "creature",
         "animal_name": "Jellyfish",
         "max_size": 30,
@@ -100,6 +104,7 @@
       },
       {
         "id": 14,
+        "3d_model" : "https://sketchfab.com/3d-models/corals-d521ba70ae54457faea69294757b75b5",
         "type": "other",
         "animal_name": "Coral",
         "max_size": 15,
@@ -123,6 +128,7 @@
       },
       {
         "id": 16,
+        "3d_model": "https://sketchfab.com/models/caeca42dbdaf4895aa69a88a2a1bbb72/embed",
         "type": "fish",
         "animal_name": "Horse Mackerel",
         "max_size": 35,
@@ -147,6 +153,7 @@
 
       {
         "id": 17,
+        "3d_model": "https://sketchfab.com/models/3c007d219b704a8abd5a8f3bd302642e/embed",
         "type": "fish",
         "animal_name": "Bluefish",
         "max_size": 110,
@@ -170,6 +177,7 @@
       },
       {
         "id": 18,
+        "3d_model" : "https://sketchfab.com/3d-models/starfish-645b4a2217ef452581428e0510d7e607",
         "type": "creature",
         "animal_name": "Starfish",
         "max_size": 25,
@@ -193,6 +201,7 @@
       },
       {
         "id": 28,
+        "3d_model" : "https://sketchfab.com/3d-models/cartoon-seaweed-10-00d670cf071d498b9f20e6fe3e4fc347",
         "type": "other",
         "animal_name": "Seaweed",
         "max_size": 50,
@@ -214,6 +223,7 @@
       },
       {
         "id": 29,
+        "3d_model" : "https://sketchfab.com/3d-models/corals-d521ba70ae54457faea69294757b75b5",
         "type": "other",
         "animal_name": "Coral",
         "max_size": 20,
@@ -240,6 +250,7 @@
     "animals": [
       {
         "id": 4,
+        "3d_model": "https://sketchfab.com/models/ef0c406d4ca84242a0464abecb7d7037/embed",
         "type": "fish",
         "animal_name": "Common Carp (Cyprinus carpio)",
         "max_size": 120,
@@ -264,6 +275,7 @@
       },
       {
         "id": 5,
+        "3d_model": "https://sketchfab.com/models/caeca42dbdaf4895aa69a88a2a1bbb72/embed",
         "type": "fish",
         "animal_name": "Mackerel (Scomber scombrus)",
         "max_size": 60,
@@ -288,6 +300,7 @@
       },
       {
         "id": 6,
+        "3d_model" : "https://sketchfab.com/3d-models/american-shad-df09d2c1e3f34ebeb7dc957b3",
         "type": "fish",
         "animal_name": "Black Sea Turbot (Psetta maxima maeotica)",
         "max_size": 70,
@@ -309,6 +322,7 @@
       },
       {
         "id": 15,
+        "3d_model" : "https://sketchfab.com/3d-models/red-sea-urchin-small-2adc33a3a8c74a3c8759745c46c612ff",
         "type": "creature",
         "animal_name": "Sea Urchin",
         "max_size": 10,
@@ -330,6 +344,7 @@
       },
       {
         "id": 19,
+        "3d_model": "https://sketchfab.com/models/8974457120d143029d44bac83ffb273b/embed",
         "type": "fish",
         "animal_name": "Pike (Northern Pike)",
         "max_size": 150,
@@ -351,6 +366,7 @@
       },
       {
         "id": 20,
+        "3d_model": "https://sketchfab.com/models/21fd636ec9a94092b0a39c9f4f0428b5/embed",
         "type": "fish",
         "animal_name": "Perch (European Perch)",
         "max_size": 60,
@@ -372,8 +388,9 @@
       },
       {
         "id": 21,
+        "3d_model" : "https://sketchfab.com/3d-models/black-mussel-surface-macro-c710d5a183a547d8a999c721a2d906cf",
         "type": "creature",
-        "animal_name": "Freshwater Mussel (Tatlı su midyesi)",
+        "animal_name": "Freshwater Mussel",
         "max_size": 10,
         "max_weight": 0.1,
         "max_depth": 5,
@@ -393,8 +410,9 @@
       },
       {
         "id": 30,
+        "3d_model" : "https://sketchfab.com/3d-models/deep-sea-sponge-4cd0e97040c9404e90d9645fc0f69aab",
         "type": "other",
-        "animal_name": "Sea Sponge (Deniz süngeri)",
+        "animal_name": "Sea Sponge",
         "max_size": 40,
         "max_weight": 0.8,
         "max_depth": 50,
@@ -414,8 +432,9 @@
       },
       {
         "id": 31,
+        "3d_model" : "https://sketchfab.com/3d-models/corals-d521ba70ae54457faea69294757b75b5",
         "type": "other",
-        "animal_name": "Seagrass (Deniz bitkisi)",
+        "animal_name": "Seagrass",
         "max_size": 60,
         "max_weight": 1.5,
         "max_depth": 10,
@@ -440,6 +459,7 @@
     "animals": [
       {
         "id": 7,
+        "3d_model": "https://sketchfab.com/models/a3d0e1a597794a9bb74739a13cfc8b77/embed",
         "type": "fish",
         "animal_name": "Gilthead Bream (Sparus aurata)",
         "max_size": 70,
@@ -464,6 +484,7 @@
       },
       {
         "id": 8,
+        "3d_model": "https://sketchfab.com/models/fc781bee9c0e4378a109acc8b728a86b/embed",
         "type": "fish",
         "animal_name": "European Sea Bass (Dicentrarchus labrax)",
         "max_size": 100,
@@ -488,6 +509,7 @@
       },
       {
         "id": 9,
+        "3d_model": "https://sketchfab.com/models/1ea0e1c187d743039463aa1477acb71e/embed",
         "type": "fish",
         "animal_name": "Mediterranean Parrotfish (Sparisoma cretense)",
         "max_size": 50,
@@ -512,6 +534,7 @@
       },
       {
         "id": 22,
+        "3d_model": "https://sketchfab.com/models/59f8a232fd794318bfff79bfe4e01213/embed",
         "type": "fish",
         "animal_name": "Red Mullet (Barbouni)",
         "max_size": 40,
@@ -533,8 +556,9 @@
       },
       {
         "id": 23,
+        "3d_model": "https://sketchfab.com/models/2e7c02b1826a407dafc65be285fb3684/embed",
         "type": "fish",
-        "animal_name": "Swordfish (Kılıçbalığı)",
+        "animal_name": "Swordfish",
         "max_size": 450,
         "max_weight": 600,
         "max_depth": 800,
@@ -554,8 +578,9 @@
       },
       {
         "id": 24,
+        "3d_model" : "https://sketchfab.com/3d-models/sea-snail-shell-6515f625857041ad87bb6e2e5e5f6206",
         "type": "creature",
-        "animal_name": "Sea Snail (Deniz salyangozu)",
+        "animal_name": "Sea Snail",
         "max_size": 8,
         "max_weight": 0.1,
         "max_depth": 30,
@@ -575,8 +600,9 @@
       },
       {
         "id": 32,
+        "3d_model" : "https://sketchfab.com/3d-models/corals-d521ba70ae54457faea69294757b75b5",
         "type": "other",
-        "animal_name": "Coral (Mercan)",
+        "animal_name": "Coral",
         "max_size": 25,
         "max_weight": 1,
         "max_depth": 20,
@@ -596,8 +622,9 @@
       },
       {
         "id": 33,
+        "3d_model" : "https://sketchfab.com/3d-models/cartoon-seaweed-10-00d670cf071d498b9f20e6fe3e4fc347",
         "type": "other",
-        "animal_name": "Seaweed (Deniz yosunu)",
+        "animal_name": "Seaweed",
         "max_size": 45,
         "max_weight": 1.2,
         "max_depth": 25,
@@ -622,8 +649,9 @@
     "animals": [
       {
         "id": 10,
+        "3d_model": "https://sketchfab.com/models/d7a2d0bd2a524d35b01e0d898b026479/embed",
         "type": "fish",
-        "animal_name": "Sardine (Sardinha)",
+        "animal_name": "Sardine",
         "max_size": 30,
         "max_weight": 0.3,
         "max_depth": 100,
@@ -643,6 +671,7 @@
       },
       {
         "id": 11,
+        "3d_model": "https://sketchfab.com/models/a3d0e1a597794a9bb74739a13cfc8b77/embed",
         "type": "fish",
         "animal_name": "Gilthead Bream (Dourada / Gilthead Bream)",
         "max_size": 60,
@@ -663,9 +692,11 @@
         "image_paths": [
           "https://drive.google.com/uc?export=view&id=1yIXZXGjKKIsXpRLADY00k9G8OyASw6jA",
           "https://drive.google.com/uc?export=view&id=1_AkVeoIi2nt68BYwAPvlBj7Ym0NUEkVi"
-        ]      },
+        ]
+      },
       {
         "id": 12,
+        "3d_model": "https://sketchfab.com/models/fc781bee9c0e4378a109acc8b728a86b/embed",
         "type": "fish",
         "animal_name": "European Seabass (Robalo)",
         "max_size": 100,
@@ -689,6 +720,7 @@
         ]      },
       {
         "id": 25,
+        "3d_model": "https://sketchfab.com/models/e3860feecc4f4247826a2542f1770e92/embed",
         "type": "fish",
         "animal_name": "Atlantic Cod (Bacalhau)",
         "max_size": 150,
@@ -710,6 +742,7 @@
       },
       {
         "id": 26,
+        "3d_model": "https://sketchfab.com/models/6dbfc4b0a1dd4f20b628475383cc11bc/embed",
         "type": "fish",
         "animal_name": "John Dory (Peixe-galo)",
         "max_size": 70,
@@ -731,8 +764,9 @@
       },
       {
         "id": 27,
+        "3d_model" : "https://sketchfab.com/3d-models/deep-sea-sponge-4cd0e97040c9404e90d9645fc0f69aab",
         "type": "creature",
-        "animal_name": "Sea Sponge (Deniz süngeri)",
+        "animal_name": "Sea Sponge",
         "max_size": 50,
         "max_weight": 1,
         "max_depth": 100,
@@ -752,8 +786,9 @@
       },
       {
         "id": 35,
+        "3d_model" : "https://sketchfab.com/3d-models/cartoon-seaweed-10-00d670cf071d498b9f20e6fe3e4fc347",
         "type": "other",
-        "animal_name": "Seagrass (Deniz bitkisi)",
+        "animal_name": "Seagrass",
         "max_size": 60,
         "max_weight": 1.5,
         "max_depth": 15,

@@ -334,7 +334,9 @@ public class EducationSeas extends AppCompatActivity {
     }
 
     public void goToEducation(View view){
-        Nav.goToEducation(view);
+        if(this.getClass() != EducationSeas.class){
+            Nav.goToEducation(view);
+        }
     }
     public void navHomePage(View view){
         Nav.goToHomePage(view);

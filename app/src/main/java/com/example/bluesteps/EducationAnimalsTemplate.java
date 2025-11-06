@@ -26,6 +26,8 @@ import java.util.List;
 
 public class EducationAnimalsTemplate extends AppCompatActivity {
 
+    public String fishName = "Fish";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -97,6 +99,7 @@ public class EducationAnimalsTemplate extends AppCompatActivity {
         if (fish != null) {
             try {
                 textViewFishName.setText(fish.getString("animal_name"));
+                fishName = fish.getString("animal_name");
                 textViewFishMaxWeight.setText(String.valueOf(fish.getDouble("max_weight")) + " kg");
                 textViewFishMaxSize.setText(String.valueOf(fish.getInt("max_size")) + " cm");
                 textViewFishMaxDepth.setText(String.valueOf(fish.getInt("max_depth")) + " m");
@@ -251,6 +254,13 @@ public class EducationAnimalsTemplate extends AppCompatActivity {
     }
     public void navHomePage(View view){
         Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+    public void btnView3d(View view){
+        int intentFishData = getIntent().getIntExtra("fish_id", 0);
+        Intent intent = new Intent(this, fishModelView.class);
+        intent.putExtra("fish_id_3d",intentFishData);
+        intent.putExtra("fish_name_3d",fishName);
         startActivity(intent);
     }
 }

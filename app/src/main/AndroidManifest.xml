@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BlueSteps">
         <activity
+            android:name=".fishModelView"
+            android:exported="false" />
+        <activity
             android:name=".AllSeas"
             android:exported="false" />
         <activity

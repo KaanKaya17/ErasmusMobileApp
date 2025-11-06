@@ -16,6 +16,13 @@ public class Nav {
         }
     }
 
+    public static void goTo3D(View view){
+        if (view != null && view.getContext() != null) {
+            Intent intent = new Intent(view.getContext(), fishModelView.class);
+            view.getContext().startActivity(intent);
+        }
+    }
+
     public static void goToHomePage(View view){
         if(view != null && view.getContext() != null){
             Intent intent = new Intent(view.getContext(), MainActivity.class);
@@ -49,6 +56,10 @@ public class Nav {
     }
     public static void goToEducation(Context context){
         startActivitySafely(context, EducationSeas.class);
+    }
+    public void goTo3D(Context context){
+        startActivitySafely(context, EducationSeas.class);
+
     }
     public static void goToMainPage(Context context){
         startActivitySafely(context, EducationMainPage.class);
