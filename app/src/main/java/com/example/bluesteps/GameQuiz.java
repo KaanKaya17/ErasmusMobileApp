@@ -35,7 +35,7 @@ public class GameQuiz extends AppCompatActivity {
     int correctAnswerIndex = 0;
 
     String randomQuestionCorrectAnswer = "";
-    String randomQuestionExplanation = ""; // EKLENEN SINIF DEĞİŞKENİ
+    String randomQuestionExplanation = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

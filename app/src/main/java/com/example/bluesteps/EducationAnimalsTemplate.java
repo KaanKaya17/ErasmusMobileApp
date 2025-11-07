@@ -74,10 +74,6 @@ public class EducationAnimalsTemplate extends AppCompatActivity {
         return null;
     }
 
-    private int dpToPx(int dp) {
-        return (int) (dp * getResources().getDisplayMetrics().density + 0.5f);
-    }
-
     public boolean loadJSONDataToPage() {
         TextView textViewFishName = findViewById(R.id.fish_name);
         TextView textViewFishMaxWeight = findViewById(R.id.max_weight);
@@ -127,11 +123,11 @@ public class EducationAnimalsTemplate extends AppCompatActivity {
                     textviewOtherNames.setText(namesBuilder.toString());
                 }
 
-// 🔸 Renk toplarını göstereceğimiz LinearLayout
+                //Renk toplarını göstereceğimiz LinearLayout
                 LinearLayout colorsLayout = findViewById(R.id.fish_colors_container);
                 colorsLayout.removeAllViews(); // Önceki topları temizle
 
-// 🔸 JSON'daki her renk için döngü
+                //JSON'daki her renk için döngü
                 for (int i = 0; i < colorsArray.length(); i++) {
                     String colorValue = colorsArray.getString(i).trim();
                     int circleColor;
@@ -144,15 +140,15 @@ public class EducationAnimalsTemplate extends AppCompatActivity {
                         circleColor = android.graphics.Color.GRAY;
                     }
 
-                    // 🔹 Yeni bir View oluştur (yuvarlak top)
+                    //Yeni bir View oluştur (yuvarlak top)
                     View colorCircle = new View(this);
 
                     // Boyut ve margin ayarları
-                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(dpToPx(28), dpToPx(28));
-                    params.setMargins(dpToPx(4), dpToPx(4), dpToPx(4), dpToPx(4));
+                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(dpToPx.convertDpToPx(this,28), dpToPx.convertDpToPx(this,28));
+                    params.setMargins(dpToPx.convertDpToPx(this,4), dpToPx.convertDpToPx(this,4), dpToPx.convertDpToPx(this,4), dpToPx.convertDpToPx(this,4));
                     colorCircle.setLayoutParams(params);
 
-                    // 🔹 Yuvarlak görünüm için arka plan tanımla
+                    //Yuvarlak görünüm için arka plan tanımla
                     colorCircle.setBackgroundResource(R.drawable.color_circle_shape);
 
                     // Arka planın rengini JSON’daki renkle değiştir
@@ -163,7 +159,7 @@ public class EducationAnimalsTemplate extends AppCompatActivity {
                         android.widget.Toast.makeText(this, "Color: " + colorValue, android.widget.Toast.LENGTH_SHORT).show();
                     });
 
-                    // 🔹 Oluşturulan topu layout’a ekle
+                    //Oluşturulan topu layout’a ekle
                     colorsLayout.addView(colorCircle);
                 }
 
@@ -183,10 +179,10 @@ public class EducationAnimalsTemplate extends AppCompatActivity {
                                 LinearLayout.LayoutParams.MATCH_PARENT,
                                 LinearLayout.LayoutParams.WRAP_CONTENT
                         );
-                        layoutParams.setMargins(dpToPx(0), dpToPx(5), dpToPx(0), dpToPx(5));
+                        layoutParams.setMargins(0, dpToPx.convertDpToPx(this,5),0, dpToPx.convertDpToPx(this,5));
                         locationLayout.setLayoutParams(layoutParams);
                         locationLayout.setOrientation(LinearLayout.VERTICAL);
-                        locationLayout.setPadding(dpToPx(5) , dpToPx(5), dpToPx(5), dpToPx(5));
+                        locationLayout.setPadding(dpToPx.convertDpToPx(this,5) , dpToPx.convertDpToPx(this,5), dpToPx.convertDpToPx(this,5), dpToPx.convertDpToPx(this,5));
                         locationLayout.setBackgroundResource(R.drawable.rounded_box);
 
                         // İç beyaz container
@@ -197,7 +193,7 @@ public class EducationAnimalsTemplate extends AppCompatActivity {
                                 1.0f
                         ));
                         textContainer.setOrientation(LinearLayout.VERTICAL);
-                        textContainer.setPadding(dpToPx(10) , dpToPx(10), dpToPx(10), dpToPx(10));
+                        textContainer.setPadding(dpToPx.convertDpToPx(this,10) , dpToPx.convertDpToPx(this,10), dpToPx.convertDpToPx(this,10), dpToPx.convertDpToPx(this,10));
                         textContainer.setBackgroundResource(R.drawable.roundex_box_white);
 
                         TextView locationTextView = new TextView(new ContextThemeWrapper(this, R.style.TextViewBody));
@@ -243,8 +239,7 @@ public class EducationAnimalsTemplate extends AppCompatActivity {
     }
 
     public void btnEducation(View view){
-        Intent intent = new Intent(this, EducationMainPage.class);
-        startActivity(intent);
+        Nav.goToEducation(view);
     }
     public void navQuiz(View view){
         Nav.goToQuizPage(view);
@@ -253,14 +248,14 @@ public class EducationAnimalsTemplate extends AppCompatActivity {
         Nav.goToAboutUs(view);
     }
     public void navHomePage(View view){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+        Nav.goToHomePage(view);
     }
     public void btnView3d(View view){
         int intentFishData = getIntent().getIntExtra("fish_id", 0);
         Intent intent = new Intent(this, fishModelView.class);
         intent.putExtra("fish_id_3d",intentFishData);
         intent.putExtra("fish_name_3d",fishName);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
 }

@@ -40,7 +40,6 @@ public class EducationSeasTemplate extends AppCompatActivity {
                 seaNameTextView.setText(sea.optString("sea_name", "Not Found"));
 
                 // Burada diğer bilgileri de aynı şekilde çekebilirsin
-                // örn: area, max_depth, main_fishes vs.
             }
         } else {
             Toast.makeText(this, "Sea Not Found!", Toast.LENGTH_SHORT).show();
@@ -111,10 +110,7 @@ public class EducationSeasTemplate extends AppCompatActivity {
         }
         return null;
     }
-    private int dpToPx(int dp) {
-        float density = getResources().getDisplayMetrics().density;
-        return Math.round(dp * density);
-    }
+
     public void loadJSONToPage(int seaId) {
         JSONArray seaArray = loadSeaJson();
         JSONObject sea = null;
@@ -180,13 +176,13 @@ public class EducationSeasTemplate extends AppCompatActivity {
                             LinearLayout.LayoutParams.MATCH_PARENT,
                             LinearLayout.LayoutParams.WRAP_CONTENT
                     );
-                    params.setMargins(0, dpToPx(8), 0, dpToPx(8)); // Üst ve alt margin
+                    params.setMargins(0, dpToPx.convertDpToPx(this,8), 0, dpToPx.convertDpToPx(this,8)); // Üst ve alt margin
                     fishContainer.setLayoutParams(params);
 
                     fishContainer.setOrientation(LinearLayout.VERTICAL);
-                    fishContainer.setPadding(dpToPx(3), dpToPx(3), dpToPx(3), dpToPx(3));
+                    fishContainer.setPadding(dpToPx.convertDpToPx(this,3), dpToPx.convertDpToPx(this,3), dpToPx.convertDpToPx(this,3), dpToPx.convertDpToPx(this,3));
                     fishContainer.setBackground(getDrawable(R.drawable.roundex_box_white));
-// XML’deki arkaplan
+                    // XML’deki arkaplan
 
                     // TextView oluştur
                     TextView fishTextView = new TextView(new ContextThemeWrapper(this, R.style.TextViewBody));
@@ -194,7 +190,7 @@ public class EducationSeasTemplate extends AppCompatActivity {
                             LinearLayout.LayoutParams.MATCH_PARENT,
                             LinearLayout.LayoutParams.WRAP_CONTENT
                     ));
-                    fishTextView.setPadding(dpToPx(6), dpToPx(6), dpToPx(6), dpToPx(6));
+                    fishTextView.setPadding(dpToPx.convertDpToPx(this,6), dpToPx.convertDpToPx(this,6), dpToPx.convertDpToPx(this,6), dpToPx.convertDpToPx(this,6));
                     fishTextView.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_START);
                     fishTextView.setText(fishName);
 
@@ -213,7 +209,7 @@ public class EducationSeasTemplate extends AppCompatActivity {
                 for (int k = 0; k < imagePaths.length(); k++) {
                     images.add(imagePaths.getString(k));
                 }
-                //ImageAdapterSea adapter = new ImageAdapterSea(this, ImageAdapterSea); // Senin adapter’in
+                //ImageAdapterSea adapter = new ImageAdapterSea(this, ImageAdapterSea);
                 //viewPager.setAdapter(adapter);
             }
 

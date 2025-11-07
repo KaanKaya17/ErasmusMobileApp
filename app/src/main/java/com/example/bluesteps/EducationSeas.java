@@ -72,15 +72,8 @@ public class EducationSeas extends AppCompatActivity {
 
     public void generateAllAnimalCardsByType(String type) {
         LinearLayout parentLayout = findViewById(R.id.parentLayout);
-
         TextView textviewCategory = findViewById(R.id.textviewCategory);
-        LinearLayout allFishesByCountryName = findViewById(R.id.allFishesByCountryName);
-        LinearLayout allOthersByCountryName = findViewById(R.id.allOthersByCountryName);
-        LinearLayout allCreaturesByCountryName = findViewById(R.id.allCreaturesByCountryName);
-        //allFishesByCountryName.setVisibility(View.GONE);
         textviewCategory.setVisibility(View.GONE);
-        //allOthersByCountryName.setVisibility(View.GONE);
-        //allCreaturesByCountryName.setVisibility(View.GONE);
 
         TextView textviewTitle = findViewById(R.id.title);
         if (type != null) {
@@ -96,7 +89,7 @@ public class EducationSeas extends AppCompatActivity {
                     break;
             }
         } else {
-            textviewTitle.setText(""); // null ise boş bırak
+            textviewTitle.setText("");
         }
 
         JSONArray countryArray = fishJson.loadFishJson(this);
@@ -144,7 +137,7 @@ public class EducationSeas extends AppCompatActivity {
                     break;
             }
         } else {
-            textviewType.setText(""); // null ise boş bırak
+            textviewType.setText("");
         }
 
 
@@ -157,7 +150,6 @@ public class EducationSeas extends AppCompatActivity {
                     JSONObject animal = animalArray.getJSONObject(i);
                     String type = animal.optString("type", "unknown");
 
-                    // Tür eşleşiyorsa (örneğin "fish", "sponge" vs.)
                     if (type.equalsIgnoreCase(selectedType)) {
                         View cardView = createFishCard(context, animal);
                         parentLayout.addView(cardView);
@@ -282,7 +274,7 @@ public class EducationSeas extends AppCompatActivity {
         dividerParams.setMargins(0, 8, 0, 8);
         divider.setLayoutParams(dividerParams);
         divider.setBackgroundColor(Color.BLACK);
-         */
+        */
 
         rowLayout.addView(card);
         //rowLayout.addView(divider);
@@ -311,6 +303,7 @@ public class EducationSeas extends AppCompatActivity {
     public void openFishDetail(int fishId){
         Intent intent = new Intent(this,EducationAnimalsTemplate.class);
         intent.putExtra("fish_id",fishId);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
 
@@ -361,6 +354,7 @@ public class EducationSeas extends AppCompatActivity {
         Intent intent = new Intent(this, EducationSeas.class);
         intent.putExtra("type", type);
         intent.putExtra("countryName", country);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
 
@@ -370,9 +364,7 @@ public class EducationSeas extends AppCompatActivity {
         String type = getIntent().getStringExtra("type");
         if (countryName == null && type != null){
             if(!selectedType.equalsIgnoreCase(type)){
-                Intent intent = new Intent(this, EducationSeas.class);
-                intent.putExtra("type","fish");
-                startActivity(intent);
+                Nav.getPagesByAnimalType(view,"creature");
             }
         }
         else{
@@ -387,9 +379,7 @@ public class EducationSeas extends AppCompatActivity {
         String type = getIntent().getStringExtra("type");
         if (countryName == null && type != null){
             if(!selectedType.equalsIgnoreCase(type)){
-                Intent intent = new Intent(this, EducationSeas.class);
-                intent.putExtra("type","creature");
-                startActivity(intent);
+                Nav.getPagesByAnimalType(view,"creature");
             }
         }
         else{
@@ -403,9 +393,7 @@ public class EducationSeas extends AppCompatActivity {
         String type = getIntent().getStringExtra("type");
         if (countryName == null && type != null){
             if(!selectedType.equalsIgnoreCase(type)){
-                Intent intent = new Intent(this, EducationSeas.class);
-                intent.putExtra("type","other");
-                startActivity(intent);
+                Nav.getPagesByAnimalType(view,"other");
             }
         }
         else{

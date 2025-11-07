@@ -42,9 +42,6 @@ public class LocationsCountryAnimals extends AppCompatActivity {
         });
     }
 
-    private int dpToPx(int dp) {
-        return (int) (dp * getResources().getDisplayMetrics().density + 0.5f);
-    }
     private void loadCountriesFromJson(Context context, JSONArray countriesArray) {
         LinearLayout parentLayout = findViewById(R.id.root_layout);
 
@@ -77,8 +74,8 @@ public class LocationsCountryAnimals extends AppCompatActivity {
                         LinearLayout.LayoutParams.MATCH_PARENT,
                         LinearLayout.LayoutParams.WRAP_CONTENT
                 );
-                cardParams.setMargins(dpToPx(0), dpToPx(10), dpToPx(0), dpToPx(10));
-                countryCard.setPadding(dpToPx(10), dpToPx(10), dpToPx(10), dpToPx(10));
+                cardParams.setMargins(0, dpToPx.convertDpToPx(this,10),0, dpToPx.convertDpToPx(this,10));
+                countryCard.setPadding(dpToPx.convertDpToPx(this,10), dpToPx.convertDpToPx(this,10), dpToPx.convertDpToPx(this,10), dpToPx.convertDpToPx(this,10));
                 countryCard.setLayoutParams(cardParams);
 
                 // İçteki clickable horizontal layout
@@ -86,6 +83,7 @@ public class LocationsCountryAnimals extends AppCompatActivity {
                 innerLayout.setOnClickListener(v -> {
                     Intent intent = new Intent(getApplicationContext(), EducationSeas.class);
                     intent.putExtra("countryName", countryName);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(intent);
                 });
                 innerLayout.setOrientation(LinearLayout.HORIZONTAL);
@@ -110,8 +108,6 @@ public class LocationsCountryAnimals extends AppCompatActivity {
                 TextView fishCountText = new TextView(new ContextThemeWrapper(context, R.style.TextviewBodyWhite));
                 fishCountText.setText(String.valueOf(fishCount));
 
-                // Tıklama olayı
-
 
                 // Alt çizgi
                 /*
@@ -124,13 +120,6 @@ public class LocationsCountryAnimals extends AppCompatActivity {
                 divider.setLayoutParams(dividerParams);
                 divider.setBackgroundColor(R.layout.horizantal_line);
                 */
-                // Hiyerarşi:
-                // rootLayout
-                // ├── countryCard
-                // │   └── innerLayout
-                // │       ├── countryText
-                // │       └── fishCountText
-                // └── divider
 
                 innerLayout.addView(countryText);
                 innerLayout.addView(fishCountText);

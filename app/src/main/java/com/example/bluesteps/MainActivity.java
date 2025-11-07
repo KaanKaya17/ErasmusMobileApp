@@ -43,9 +43,6 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        //Intent intent = new Intent(this, GameMatching.class);
-        //startActivity(intent);
-
         JSONArray jsonArray = fishJson.loadFishJson(this);
         JSONArray jsonSeaArray = loadSeaJson();
         if(jsonSeaArray != null){
@@ -62,21 +59,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private int dpToPx(int dp) {
-        float density = getResources().getDisplayMetrics().density;
-        return Math.round(dp * density);
-    }
-
     private void loadCountriesFromJson(Context context, JSONArray countriesArray) {
         LinearLayout parentLayout = findViewById(R.id.parentLayout);
-        //parentLayout.removeAllViews();
 
         for (int i = 0; i < countriesArray.length(); i++) {
             try {
                 JSONObject countryObj = countriesArray.getJSONObject(i);
                 String countryName = countryObj.getString("country");
 
-                // 🔹 JSON'dan country_image alanını oku
                 String imageName = countryObj.optString("country_image", "country"); // Varsayılan görsel ismi: "country"
                 int imageResId = context.getResources().getIdentifier(imageName, "drawable", context.getPackageName());
 
@@ -108,33 +98,31 @@ public class MainActivity extends AppCompatActivity {
                         LinearLayout.LayoutParams.MATCH_PARENT,
                         LinearLayout.LayoutParams.WRAP_CONTENT
                 );
-                outerParams.setMargins(dpToPx(10), dpToPx(10), dpToPx(10), dpToPx(10));
+                outerParams.setMargins(dpToPx.convertDpToPx(this,10), dpToPx.convertDpToPx(this,10), dpToPx.convertDpToPx(this,10), dpToPx.convertDpToPx(this,10));
                 outerCard.setLayoutParams(outerParams);
-                outerCard.setPadding(dpToPx(14), dpToPx(14), dpToPx(14), dpToPx(14));
+                outerCard.setPadding(dpToPx.convertDpToPx(this,14), dpToPx.convertDpToPx(this,14), dpToPx.convertDpToPx(this,14), dpToPx.convertDpToPx(this,14));
                 outerCard.setBackgroundResource(R.drawable.roundex_box_white);
                 outerCard.setElevation(12f);
                 outerCard.setOutlineProvider(ViewOutlineProvider.BACKGROUND);
-                //outerCard.getBackground().setAlpha(90); // 0=şeffaf, 255=opaks
-
 
                 // Ana satır layout
                 LinearLayout countryRow = new LinearLayout(context);
                 countryRow.setOrientation(LinearLayout.HORIZONTAL);
-                countryRow.setGravity(Gravity.CENTER_VERTICAL); // 🔹 Dikey ortalama eklendi
+                countryRow.setGravity(Gravity.CENTER_VERTICAL); //Dikey ortalama eklendi
                 countryRow.setId(i);
                 countryRow.setTag("sea_" + i);
                 countryRow.setOnClickListener(v -> {
                     Intent intent = new Intent(getApplicationContext(), EducationSeas.class);
                     intent.putExtra("countryName", countryName);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(intent);
                 });
                 countryRow.setPadding(0, 14, 0, 14);
 
-
-                // 🔹 Ülke resmi (JSON’dan gelen drawable)
+                //ülke resmi
                 ImageView flagImage = new ImageView(context);
                 LinearLayout.LayoutParams flagParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-                flagParams.setMargins(0, 0, dpToPx(20), 0);
+                flagParams.setMargins(0, 0, dpToPx.convertDpToPx(this,20), 0);
                 flagImage.setScaleType(ImageView.ScaleType.CENTER_CROP);
                 flagImage.setLayoutParams(flagParams);
 
@@ -216,22 +204,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btnEducationAnimalsCreatures(View view){
-        Intent intent = new Intent(this, EducationSeas.class);
-        intent.putExtra("type","creature");
-        startActivity(intent);
+        Nav.getPagesByAnimalType(view,"creature");
+
     }
 
     public void btnEducationSeas(View view){
-        Intent intent = new Intent(this, EducationSeas.class);
-        //intent.putExtra("categories",false);
-        intent.putExtra("type","fish");
-        startActivity(intent);
+        Nav.getPagesByAnimalType(view,"fish");
     }
 
     public void btnEducationAnimalsOther(View view){
-        Intent intent = new Intent(this, EducationSeas.class);
-        intent.putExtra("type","other");
-        startActivity(intent);
+        Nav.getPagesByAnimalType(view,"other");
+
     }
 
     public void btnAnimalCountryLocations(View view){
@@ -285,26 +268,26 @@ public class MainActivity extends AppCompatActivity {
             for (int i = 0; i < seaArray.length(); i++) {
                 JSONObject sea = seaArray.getJSONObject(i);
 
-                // 🔹 Dış kapsayıcı (yuvarlak beyaz kutu)
+                //Dış kapsayıcı
                 LinearLayout outerCard = new LinearLayout(this);
                 outerCard.setOrientation(LinearLayout.VERTICAL);
                 LinearLayout.LayoutParams outerParams = new LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.MATCH_PARENT,
                         LinearLayout.LayoutParams.WRAP_CONTENT
                 );
-                outerParams.setMargins(dpToPx(10), dpToPx(10), dpToPx(10), dpToPx(10)); // Kartlar arası boşluk
+                outerParams.setMargins(dpToPx.convertDpToPx(this,10), dpToPx.convertDpToPx(this,10), dpToPx.convertDpToPx(this,10), dpToPx.convertDpToPx(this,10)); // Kartlar arası boşluk
                 outerCard.setLayoutParams(outerParams);
-                outerCard.setPadding(dpToPx(14), dpToPx(14), dpToPx(14), dpToPx(14));
+                outerCard.setPadding(dpToPx.convertDpToPx(this,14), dpToPx.convertDpToPx(this,14), dpToPx.convertDpToPx(this,14), dpToPx.convertDpToPx(this,14));
                 outerCard.setBackgroundResource(R.drawable.roundex_box_white); // yuvarlak köşeli stil
                 outerCard.setElevation(12f);
                 outerCard.setOutlineProvider(ViewOutlineProvider.BACKGROUND);
 
-// 🔹 Ana satır (mevcut seaRow kodun)
+                //Ana satır
                 LinearLayout seaRow = new LinearLayout(this);
                 seaRow.setOrientation(LinearLayout.HORIZONTAL);
                 seaRow.setId(i);
                 seaRow.setTag("sea_" + i);
-                seaRow.setPadding(0, dpToPx(14), 0, dpToPx(14));
+                seaRow.setPadding(0, dpToPx.convertDpToPx(this,14), 0, dpToPx.convertDpToPx(this,14));
                 seaRow.setGravity(Gravity.CENTER_VERTICAL);
                 seaRow.setOnClickListener(v -> {
                     Intent intent = new Intent(getApplicationContext(), EducationSeasTemplate.class);
@@ -312,15 +295,15 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                 });
 
-// 🔹 Deniz resmi
+                //Deniz resmi
                 ImageView seaImage = new ImageView(this);
-                LinearLayout.LayoutParams imageParams = new LinearLayout.LayoutParams(dpToPx(75), dpToPx(75));
-                imageParams.setMargins(0, 0, dpToPx(20), 0);
+                LinearLayout.LayoutParams imageParams = new LinearLayout.LayoutParams(dpToPx.convertDpToPx(this,75), dpToPx.convertDpToPx(this,75));
+                imageParams.setMargins(0, 0, dpToPx.convertDpToPx(this,20), 0);
                 seaImage.setScaleType(ImageView.ScaleType.CENTER_CROP);
                 seaImage.setLayoutParams(imageParams);
                 seaImage.setImageResource(R.drawable.sea);
 
-// 🔹 Bilgi kısmı
+                //Bilgi kısmı
                 LinearLayout infoLayout = new LinearLayout(this);
                 infoLayout.setOrientation(LinearLayout.VERTICAL);
                 infoLayout.setLayoutParams(new LinearLayout.LayoutParams(
@@ -328,20 +311,20 @@ public class MainActivity extends AppCompatActivity {
                         LinearLayout.LayoutParams.WRAP_CONTENT
                 ));
 
-// Deniz adı
+                // Deniz adı
                 TextView seaName = new TextView(new ContextThemeWrapper(this, R.style.TextviewBodySubtitleWhite));
                 seaName.setText(sea.optString("sea_name", "Sea Name"));
                 seaName.setTypeface(null, Typeface.BOLD);
 
-// Alan
+                // Alan
                 TextView area = new TextView(new ContextThemeWrapper(this, R.style.TextviewBodyWhite));
                 area.setText("Area: " + sea.optString("area", "N/A"));
 
-// Konum
+                // Konum
                 TextView location = new TextView(new ContextThemeWrapper(this, R.style.TextviewBodyWhite));
                 location.setText("Location: " + sea.optString("location", "N/A"));
 
-// Ayırıcı çizgi
+                // Ayırıcı çizgi
                 /*
                 View divider = new View(this);
                 LinearLayout.LayoutParams dividerParams = new LinearLayout.LayoutParams(
@@ -350,21 +333,20 @@ public class MainActivity extends AppCompatActivity {
                 divider.setLayoutParams(dividerParams);
                 divider.setBackgroundColor(R.layout.horizantal_line);
                 */
-// Bilgileri ekle
                 infoLayout.addView(seaName);
                 infoLayout.addView(area);
                 infoLayout.addView(location);
 
                 //infoLayout.addView(divider);
 
-// Ana satıra ekle
+                // Ana satıra ekle
                 seaRow.addView(seaImage);
                 seaRow.addView(infoLayout);
 
-// 🔹 Ana satırı dış kapsayıcıya ekle
+                //Ana satırı dış kapsayıcıya ekle
                 outerCard.addView(seaRow);
 
-// 🔹 Dış kapsayıcıyı parent’e ekle
+                //Dış kapsayıcıyı parent’e ekle
                 mainLayout.addView(outerCard);
 
             }
