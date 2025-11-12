@@ -19,7 +19,7 @@
             android:id="@+id/textviewFishName"
             style="@style/TextViewSubtitle"
             android:layout_width="wrap_content"
-            android:text="Fish Name"
+            android:text=""
             android:layout_height="wrap_content"/>
 
         <View
@@ -37,6 +37,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/parentLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

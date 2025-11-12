@@ -2,6 +2,8 @@ package com.example.bluesteps;
 
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -79,16 +81,20 @@ public class GameQuiz extends AppCompatActivity {
         TextView answerStatusQuestionText = findViewById(R.id.answerStatusQuestionText);
         TextView questionDescription = findViewById(R.id.questionDescription);
 
+        LinearLayout correctAnswerCard = findViewById(R.id.correctAnswerCard);
+
         if(status == true){
+            correctAnswerCard.setBackgroundResource(R.drawable.quiz_correct_answer_card);
             answerStatusText.setText(trueStatusText);
             answerStatusImage.setImageResource(R.drawable.correct);
             answerStatusImage2.setImageResource(R.drawable.correct);
             questionDescription.setText(questionDescriptionText);
         }
         else {
+            correctAnswerCard.setBackgroundResource(R.drawable.quiz_correct_answer_card);
             answerStatusText.setText(falseStatusText);
             answerStatusImage.setImageResource(R.drawable.wrong);
-            answerStatusImage2.setImageResource(R.drawable.wrong);
+            answerStatusImage2.setImageResource(R.drawable.correct);
             questionDescription.setText(questionDescriptionText);
         }
         answerStatusQuestionText.setText(randomQuestionCorrectAnswer);

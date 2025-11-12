@@ -14,6 +14,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.tbuonomo.viewpagerdotsindicator.DotsIndicator;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -233,10 +235,15 @@ public class EducationAnimalsTemplate extends AppCompatActivity {
             RemoteImageAdapter adapter = new RemoteImageAdapter(this, imageUrls);
             viewPager.setAdapter(adapter);
 
+            // dotsIndicator bağlantısı
+            DotsIndicator dotsIndicator = findViewById(R.id.dotsIndicator);
+            dotsIndicator.attachTo(viewPager);
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
     }
+
 
     public void btnEducation(View view){
         Nav.goToEducation(view);

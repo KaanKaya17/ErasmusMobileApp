@@ -1,10 +1,13 @@
 package com.example.bluesteps;
 
 import android.os.Bundle;
+import android.view.ContextThemeWrapper;
+import android.view.Gravity;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,28 +33,48 @@ public class fishModelView extends AppCompatActivity {
 
         int intentFishData = getIntent().getIntExtra("fish_id_3d", 0);
         JSONObject fish = searchFishById(intentFishData);
+        if(checkInternetConnection.isInternetAvailable(this)){
+            if (fish != null) {
+                try {
+                    String modelUrl = fish.optString("3d_model", "");
 
-        if (fish != null) {
-            try {
-                String modelUrl = fish.optString("3d_model", "");
-
-                if (!modelUrl.isEmpty()) {
-                    //webView.loadUrl(modelUrl);
-                    get3dModelPage(modelUrl);
-                } else {
-                    Toast.makeText(this, "3D model bulunamadı", Toast.LENGTH_SHORT).show();
+                    if (!modelUrl.isEmpty()) {
+                        //webView.loadUrl(modelUrl);
+                        get3dModelPage(modelUrl);
+                    } else {
+                        modelLoadError("No 3D Model found");                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
-            } catch (Exception e) {
-                e.printStackTrace();
+            } else {
+                modelLoadError("No fish found");
             }
-        } else {
-            Toast.makeText(this, "Balık bulunamadı", Toast.LENGTH_SHORT).show();
+            ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+                Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+                v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+                return insets;
+            });
         }
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+        else{
+            modelLoadError("You need internet connection for see the 3D model");
+        }
+
+    }
+
+    public void modelLoadError(String errorDetail){
+        LinearLayout parent = findViewById(R.id.parentLayout);
+        parent.removeAllViews();
+        parent.setOrientation(LinearLayout.VERTICAL);
+        parent.setGravity(Gravity.CENTER);
+        TextView textviewWarning = new TextView(new ContextThemeWrapper(this, R.style.TextViewTitle));
+        textviewWarning.setText(errorDetail);
+        textviewWarning.setLayoutParams(new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+        ));
+        textviewWarning.setGravity(Gravity.CENTER);
+        textviewWarning.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+        parent.addView(textviewWarning);
     }
 
     public JSONObject searchFishById(int id) {
@@ -100,7 +123,15 @@ public class fishModelView extends AppCompatActivity {
         if (fishName == null) {
             fishName = "Fish"; // varsayılan değer
         }
-        textviewFishName.setText(fishName);    }
+
+        if(checkInternetConnection.isInternetAvailable(this)){
+            textviewFishName.setText(fishName);
+        }
+        else{
+            textviewFishName.setText("Connection Error");
+        }
+
+    }
 
     @Override
     protected void onPause() {

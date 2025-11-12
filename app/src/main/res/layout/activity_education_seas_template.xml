@@ -20,12 +20,35 @@
             android:layout_height="wrap_content"
             tools:ignore="MissingConstraints">
 
-            <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/viewPager"
-                android:scaleType="fitCenter"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                tools:ignore="MissingConstraints" />
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="8dp">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPager"
+                    android:scaleType="fitCenter"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    tools:ignore="MissingConstraints" />
+
+                <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                    android:id="@+id/dotsIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginTop="7dp"
+                    app:dotsColor="#96C9DB"
+                    app:selectedDotColor="#96C9DB"
+                    app:dotsSize="8dp"
+                    app:dotsSpacing="4dp" />
+
+            </LinearLayout>
+
+
 
 
             <LinearLayout

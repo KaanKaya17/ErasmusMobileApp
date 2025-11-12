@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         JSONArray jsonArray = fishJson.loadFishJson(this);
-        JSONArray jsonSeaArray = loadSeaJson();
+        JSONArray jsonSeaArray = seaJson.loadSeaJson(this);
         if(jsonSeaArray != null){
             loadAllSeasToPage();
         }
@@ -221,27 +221,10 @@ public class MainActivity extends AppCompatActivity {
         Nav.locationsAnimalsCountry(view);
     }
 
-
-
-
-
-    public JSONArray loadSeaJson() {
-        try {
-            InputStream is = getAssets().open("sea.json");
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
-            String json = new String(buffer, StandardCharsets.UTF_8);
-            return new JSONArray(json);
-        } catch (IOException | JSONException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
+    /*
     public JSONObject searchSeaById(int id) {
         try {
-            JSONArray seas = loadSeaJson();
+            JSONArray seas = seaJson.loadSeaJson(this);
             if (seas != null) {
                 for (int i = 0; i < seas.length(); i++) {
                     JSONObject sea = seas.getJSONObject(i);
@@ -255,9 +238,10 @@ public class MainActivity extends AppCompatActivity {
         }
         return null;
     }
+    */
 
     public void loadAllSeasToPage() {
-        JSONArray seaArray = loadSeaJson();
+        JSONArray seaArray = seaJson.loadSeaJson(this);
         if (seaArray == null) return;
 
         try {

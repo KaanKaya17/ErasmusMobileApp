@@ -36,7 +36,7 @@ public class AllSeas extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_all_seas);
 
-        JSONArray jsonSeaArray = loadSeaJson();
+        JSONArray jsonSeaArray = seaJson.loadSeaJson(this);
         if(jsonSeaArray != null){
             loadAllSeasToPage(this);
         }
@@ -48,23 +48,9 @@ public class AllSeas extends AppCompatActivity {
         });
     }
 
-    public JSONArray loadSeaJson() {
-        try {
-            InputStream is = getAssets().open("sea.json");
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
-            String json = new String(buffer, StandardCharsets.UTF_8);
-            return new JSONArray(json);
-        } catch (IOException | JSONException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
     public JSONObject searchSeaById(int id) {
         try {
-            JSONArray seas = loadSeaJson();
+            JSONArray seas = seaJson.loadSeaJson(this);
             if (seas != null) {
                 for (int i = 0; i < seas.length(); i++) {
                     JSONObject sea = seas.getJSONObject(i);
@@ -80,7 +66,7 @@ public class AllSeas extends AppCompatActivity {
     }
 
     public void loadAllSeasToPage(Context context) {
-        JSONArray seaArray = loadSeaJson();
+        JSONArray seaArray = seaJson.loadSeaJson(this);
         if (seaArray == null) return;
 
         try {

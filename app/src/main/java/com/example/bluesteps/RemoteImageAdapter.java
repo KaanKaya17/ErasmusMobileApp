@@ -10,6 +10,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
+
 import java.util.List;
 
 public class RemoteImageAdapter extends RecyclerView.Adapter<RemoteImageAdapter.ViewHolder> {
@@ -31,9 +34,30 @@ public class RemoteImageAdapter extends RecyclerView.Adapter<RemoteImageAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Glide.with(context)
-                .load(imageUrls.get(position))
-                .into(holder.imageView);
+        String imageUrl = imageUrls.get(position);
+
+        // İnternet var mı kontrol et
+        boolean hasInternet = checkInternetConnection.isInternetAvailable(context);
+
+        RequestOptions requestOptions = new RequestOptions()
+                .placeholder(R.drawable.fish) // Yüklenirken gösterilecek
+                .error(R.drawable.fish)             // Hata olursa gösterilecek
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .centerCrop();
+
+        if (hasInternet) {
+            // İnternet varsa normal yükle
+            Glide.with(context)
+                    .load(imageUrl)
+                    .apply(requestOptions)
+                    .into(holder.imageView);
+        } else {
+            // İnternet yoksa sadece cache’den al, yoksa default göster
+            Glide.with(context)
+                    .load(imageUrl)
+                    .apply(requestOptions.onlyRetrieveFromCache(true))
+                    .into(holder.imageView);
+        }
     }
 
     @Override
@@ -43,7 +67,8 @@ public class RemoteImageAdapter extends RecyclerView.Adapter<RemoteImageAdapter.
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
-        public ViewHolder(View itemView) {
+
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.imageView);
         }

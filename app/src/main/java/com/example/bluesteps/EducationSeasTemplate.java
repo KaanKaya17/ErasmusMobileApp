@@ -14,6 +14,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.tbuonomo.viewpagerdotsindicator.DotsIndicator;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -75,28 +77,17 @@ public class EducationSeasTemplate extends AppCompatActivity {
             RemoteImageAdapter adapter = new RemoteImageAdapter(this, imageUrls);
             viewPager.setAdapter(adapter);
 
+            DotsIndicator dotsIndicator = findViewById(R.id.dotsIndicator);
+            dotsIndicator.attachTo(viewPager);
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
     }
 
-    public JSONArray loadSeaJson() {
-        try {
-            InputStream is = getAssets().open("sea.json");
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
-            String json = new String(buffer, StandardCharsets.UTF_8);
-            return new JSONArray(json);
-        } catch (IOException | JSONException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
     public JSONObject searchSeaById(int id) {
         try {
-            JSONArray seas = loadSeaJson();
+            JSONArray seas = seaJson.loadSeaJson(this);
             if (seas != null) {
                 for (int i = 0; i < seas.length(); i++) {
                     JSONObject sea = seas.getJSONObject(i);
@@ -112,7 +103,7 @@ public class EducationSeasTemplate extends AppCompatActivity {
     }
 
     public void loadJSONToPage(int seaId) {
-        JSONArray seaArray = loadSeaJson();
+        JSONArray seaArray = seaJson.loadSeaJson(this);
         JSONObject sea = null;
 
         try {
