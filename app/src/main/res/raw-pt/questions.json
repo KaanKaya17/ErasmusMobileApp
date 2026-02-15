@@ -1,0 +1,197 @@
+[
+  {
+    "id": 0,
+    "question_type": "Test",
+    "question": "Qual é o maior animal da Terra?",
+    "answers": [
+      "Elefante Africano",
+      "Lula Colossal",
+      "Baleia Azul",
+      "Tubarão-Baleia"
+    ],
+    "correct_answer_index": 2,
+    "explanation": "A **Baleia Azul** é o maior animal conhecido que já existiu, atingindo comprimentos de até 30 metros e pesos superiores a 180 toneladas. É um mamífero marinho, não um peixe."
+  },
+  {
+    "id": 1,
+    "question_type": "Test",
+    "question": "Qual é o maior peixe do oceano?",
+    "answers": [
+      "Tubarão-Branco",
+      "Tubarão-Baleia",
+      "Manta Gigante Oceânica",
+      "Peixe-Lua Curto"
+    ],
+    "correct_answer_index": 1,
+    "explanation": "O **Tubarão-Baleia** (Rhincodon typus) é o maior vertebrado não mamífero conhecido, atingindo comprimentos de até 18 metros. É um filtrador."
+  },
+  {
+    "id": 2,
+    "question_type": "Test",
+    "question": "Qual peixe é conhecido por sua capacidade de inflar como um balão?",
+    "answers": [
+      "Peixe-Pescador",
+      "Baiacu",
+      "Peixe-Leão",
+      "Peixe-Palhaço"
+    ],
+    "correct_answer_index": 1,
+    "explanation": "O **Baiacu** (ou Peixe-Balão) infla seu estômago elástico com água ou ar para se transformar em uma bola virtualmente não comestível várias vezes seu tamanho normal para dissuadir predadores."
+  },
+  {
+    "id": 3,
+    "question_type": "Test",
+    "question": "Qual peixe tem espinhos venenosos e é comumente encontrado no Mar Vermelho?",
+    "answers": [
+      "Atum",
+      "Salmão",
+      "Baiacu",
+      "Peixe-Leão"
+    ],
+    "correct_answer_index": 3,
+    "explanation": "O **Peixe-Leão** (espécies Pterois) possui longos espinhos dorsais venenosos. São nativos do Indo-Pacífico, mas agora são uma espécie invasora no Caribe e no Atlântico."
+  },
+  {
+    "id": 4,
+    "question_type": "Test",
+    "question": "Qual é o peixe mais rápido do oceano?",
+    "answers": [
+      "Marlim",
+      "Barracuda",
+      "Peixe-Vela",
+      "Atum"
+    ],
+    "correct_answer_index": 2,
+    "explanation": "O **Peixe-Vela** (Istiophorus) é amplamente considerado o peixe mais rápido do oceano, capaz de atingir velocidades de até 110 km/h em rajadas curtas."
+  },
+  {
+    "id": 5,
+    "question_type": "Test",
+    "question": "Qual peixe é famoso por sua bioluminescência nas profundezas do mar?",
+    "answers": [
+      "Peixe-Espada",
+      "Peixe-Pescador",
+      "Peixe-Palhaço",
+      "Salmão"
+    ],
+    "correct_answer_index": 1,
+    "explanation": "O **Peixe-Pescador** fêmea usa uma isca brilhante (esca) na ponta de um espinho modificado da barbatana dorsal para atrair presas nas profundezas escuras do oceano."
+  },
+  {
+    "id": 6,
+    "question_type": "Test",
+    "question": "Qual peixe é principalmente conhecido por seu papel em pratos de sushi?",
+    "answers": [
+      "Truta",
+      "Peixe-Gato",
+      "Salmão",
+      "Lúcio"
+    ],
+    "correct_answer_index": 2,
+    "explanation": "O **Salmão** (Sake) é um dos peixes mais populares usados em preparações modernas de sushi e sashimi globalmente, renomado por sua cor e sabor rico."
+  },
+  {
+    "id": 7,
+    "question_type": "Test",
+    "question": "Qual peixe pode viver tanto em água doce quanto em água salgada?",
+    "answers": [
+      "Peixe-Dourado",
+      "Salmão",
+      "Peixe-Palhaço",
+      "Bacalhau"
+    ],
+    "correct_answer_index": 1,
+    "explanation": "Os **Salmões** são anádromos, o que significa que nascem em água doce, migram para o oceano para amadurecer e retornam à água doce para desovar."
+  },
+  {
+    "id": 8,
+    "question_type": "Test",
+    "question": "Qual peixe é conhecido por formar grandes cardumes de caça?",
+    "answers": [
+      "Manta Gigante",
+      "Barracuda",
+      "Peixe-Espada",
+      "Tubarão-Branco"
+    ],
+    "correct_answer_index": 1,
+    "explanation": "As **Barracudas** são notórias por seu comportamento de cardume, frequentemente formando grandes grupos para encurralar e atacar cardumes de peixes menores."
+  },
+  {
+    "id": 9,
+    "question_type": "Test",
+    "question": "Qual espécie é conhecida como o 'fóssil vivo'?",
+    "answers": [
+      "Celacanto",
+      "Tubarão",
+      "Peixe-Palhaço",
+      "Salmão"
+    ],
+    "correct_answer_index": 0,
+    "explanation": "O **Celacanto** era considerado extinto até 1938. Sua linhagem remonta a mais de 400 milhões de anos, ganhando o título de 'fóssil vivo'."
+  },
+  {
+    "id": 10,
+    "question_type": "Test",
+    "question": "Qual peixe é famoso por seu focinho longo e pontiagudo usado para capturar presas?",
+    "answers": [
+      "Lúcio",
+      "Atum",
+      "Peixe-Espada",
+      "Marlim"
+    ],
+    "correct_answer_index": 2,
+    "explanation": "O **Peixe-Espada** usa seu longo e achatado bico em forma de espada (rostro) para golpear e atordoar suas presas, em vez de perfurá-las."
+  },
+  {
+    "id": 11,
+    "question_type": "Test",
+    "question": "Qual peixe de água doce é comumente mantido como animal de estimação em aquários?",
+    "answers": [
+      "Salmão",
+      "Peixe-Dourado",
+      "Atum",
+      "Tubarão"
+    ],
+    "correct_answer_index": 1,
+    "explanation": "Os **Peixes-Dourados** foram um dos primeiros peixes a serem domesticados e estão entre os peixes de aquário mais comumente mantidos em todo o mundo."
+  },
+  {
+    "id": 12,
+    "question_type": "Test",
+    "question": "Qual peixe tem a capacidade de regenerar partes do corpo perdidas?",
+    "answers": [
+      "Peixe-Palhaço",
+      "Salmão",
+      "Peixe-Zebra",
+      "Atum"
+    ],
+    "correct_answer_index": 2,
+    "explanation": "O **Peixe-Zebra** é um organismo modelo amplamente utilizado na ciência devido à sua notável capacidade de regenerar tecidos complexos, incluindo barbatanas, coração e células cerebrais."
+  },
+  {
+    "id": 13,
+    "question_type": "Test",
+    "question": "Qual peixe é bem conhecido por sua capacidade de camuflagem e mudança rápida de cores?",
+    "answers": [
+      "Peixe-Leão",
+      "Baiacu",
+      "Peixe-Palhaço",
+      "Choco"
+    ],
+    "correct_answer_index": 3,
+    "explanation": "O **Choco** não é um peixe (é um cefalópode), mas é famoso por ter uma das habilidades de mudança de cor mais sofisticadas do reino animal, usada para camuflagem e comunicação."
+  },
+  {
+    "id": 14,
+    "question_type": "Test",
+    "question": "Qual peixe migra milhares de quilômetros para desovar?",
+    "answers": [
+      "Peixe-Palhaço",
+      "Peixe-Pescador",
+      "Lúcio",
+      "Salmão"
+    ],
+    "correct_answer_index": 3,
+    "explanation": "Os **Salmões** empreendem migrações épicas do oceano de volta ao exato riacho de água doce onde nasceram para se reproduzir (desovar), viajando milhares de quilômetros."
+  }
+]

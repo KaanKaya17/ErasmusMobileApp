@@ -1,0 +1,197 @@
+[
+  {
+    "id": 0,
+    "question_type": "Test",
+    "question": "What is the largest animal on Earth?",
+    "answers": [
+      "African Elephant",
+      "Colossal Squid",
+      "Blue Whale",
+      "Whale Shark"
+    ],
+    "correct_answer_index": 2,
+    "explanation": "The **Blue Whale** is the largest known animal to have ever existed, reaching lengths of up to 30 meters and weights of over 180 tonnes. It is a marine mammal, not a fish."
+  },
+  {
+    "id": 1,
+    "question_type": "Test",
+    "question": "What is the largest fish in the ocean?",
+    "answers": [
+      "Great White Shark",
+      "Whale Shark",
+      "Giant Oceanic Manta Ray",
+      "Short Sunfish"
+    ],
+    "correct_answer_index": 1,
+    "explanation": "The **Whale Shark** (Rhincodon typus) is the largest known non-mammalian vertebrate, reaching lengths of up to 18 meters. It is a filter-feeder."
+  },
+  {
+    "id": 2,
+    "question_type": "Test",
+    "question": "Which fish is known for its ability to inflate like a balloon?",
+    "answers": [
+      "Anglerfish",
+      "Blowfish",
+      "Lionfish",
+      "Clownfish"
+    ],
+    "correct_answer_index": 1,
+    "explanation": "The **Blowfish** (or Pufferfish) inflates its elastic stomach with water or air to turn itself into a virtually inedible ball several times its normal size to deter predators."
+  },
+  {
+    "id": 3,
+    "question_type": "Test",
+    "question": "Which fish has venomous spines and is commonly found in the Red Sea?",
+    "answers": [
+      "Tuna",
+      "Salmon",
+      "Pufferfish",
+      "Lionfish"
+    ],
+    "correct_answer_index": 3,
+    "explanation": "The **Lionfish** (Pterois species) has long, venomous dorsal spines. They are native to the Indo-Pacific but are now an invasive species in the Caribbean and Atlantic."
+  },
+  {
+    "id": 4,
+    "question_type": "Test",
+    "question": "What is the fastest fish in the ocean?",
+    "answers": [
+      "Marlin",
+      "Barracuda",
+      "Sailfish",
+      "Tuna"
+    ],
+    "correct_answer_index": 2,
+    "explanation": "The **Sailfish** (Istiophorus) is widely considered the fastest fish in the ocean, capable of reaching speeds up to 110 km/h (68 mph) in short bursts."
+  },
+  {
+    "id": 5,
+    "question_type": "Test",
+    "question": "Which fish is famous for its bioluminescence in the deep sea?",
+    "answers": [
+      "Swordfish",
+      "Anglerfish",
+      "Clownfish",
+      "Salmon"
+    ],
+    "correct_answer_index": 1,
+    "explanation": "The female **Anglerfish** uses a glowing lure (esca) at the tip of a modified dorsal fin spine to attract prey in the dark depths of the ocean."
+  },
+  {
+    "id": 6,
+    "question_type": "Test",
+    "question": "Which fish is primarily known for its role in sushi dishes?",
+    "answers": [
+      "Trout",
+      "Catfish",
+      "Salmon",
+      "Pike"
+    ],
+    "correct_answer_index": 2,
+    "explanation": "**Salmon** (Sake) is one of the most popular fish used in modern sushi and sashimi preparations globally, renowned for its color and rich flavor."
+  },
+  {
+    "id": 7,
+    "question_type": "Test",
+    "question": "Which fish can live both in freshwater and saltwater?",
+    "answers": [
+      "Goldfish",
+      "Salmon",
+      "Clownfish",
+      "Cod"
+    ],
+    "correct_answer_index": 1,
+    "explanation": "**Salmon** are anadromous, meaning they hatch in freshwater, migrate to the ocean to mature, and return to freshwater to spawn."
+  },
+  {
+    "id": 8,
+    "question_type": "Test",
+    "question": "Which fish is known for forming large hunting packs?",
+    "answers": [
+      "Giant Manta Ray",
+      "Barracuda",
+      "Swordfish",
+      "Great White Shark"
+    ],
+    "correct_answer_index": 1,
+    "explanation": "**Barracuda** are notorious for their schooling behavior, often forming large packs to corral and attack schools of smaller prey fish."
+  },
+  {
+    "id": 9,
+    "question_type": "Test",
+    "question": "Which species is known as the 'living fossil'?",
+    "answers": [
+      "Coelacanth",
+      "Shark",
+      "Clownfish",
+      "Salmon"
+    ],
+    "correct_answer_index": 0,
+    "explanation": "The **Coelacanth** was believed to be extinct until 1938. Its lineage dates back over 400 million years, earning it the title 'living fossil'."
+  },
+  {
+    "id": 10,
+    "question_type": "Test",
+    "question": "Which fish is famous for its long, pointed snout used to catch prey?",
+    "answers": [
+      "Pike",
+      "Tuna",
+      "Swordfish",
+      "Marlin"
+    ],
+    "correct_answer_index": 2,
+    "explanation": "The **Swordfish** uses its long, flat, sword-like bill (rostrum) to slash and stun its prey, rather than spearing it."
+  },
+  {
+    "id": 11,
+    "question_type": "Test",
+    "question": "Which freshwater fish is commonly kept as a pet in aquariums?",
+    "answers": [
+      "Salmon",
+      "Goldfish",
+      "Tuna",
+      "Shark"
+    ],
+    "correct_answer_index": 1,
+    "explanation": "**Goldfish** were one of the first fish to be domesticated and are among the most commonly kept aquarium fish worldwide."
+  },
+  {
+    "id": 12,
+    "question_type": "Test",
+    "question": "Which fish has the ability to regenerate lost body parts?",
+    "answers": [
+      "Clownfish",
+      "Salmon",
+      "Zebrafish",
+      "Tuna"
+    ],
+    "correct_answer_index": 2,
+    "explanation": "The **Zebrafish** is a widely used model organism in science due to its remarkable ability to regenerate complex tissues, including fins, heart, and brain cells."
+  },
+  {
+    "id": 13,
+    "question_type": "Test",
+    "question": "Which fish is well-known for its ability to camouflage and change colors rapidly?",
+    "answers": [
+      "Lionfish",
+      "Pufferfish",
+      "Clownfish",
+      "Cuttlefish"
+    ],
+    "correct_answer_index": 3,
+    "explanation": "The **Cuttlefish** is not a fish (it's a cephalopod) but is famous for having one of the most sophisticated color-changing abilities in the animal kingdom, used for camouflage and communication."
+  },
+  {
+    "id": 14,
+    "question_type": "Test",
+    "question": "Which fish migrates thousands of kilometers to spawn?",
+    "answers": [
+      "Clownfish",
+      "Anglerfish",
+      "Pike",
+      "Salmon"
+    ],
+    "correct_answer_index": 3,
+    "explanation": "**Salmon** undertake epic migrations from the ocean back to the exact freshwater stream where they were born to reproduce (spawn), traveling thousands of kilometers."
+  }
+]

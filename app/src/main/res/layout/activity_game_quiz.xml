@@ -5,400 +5,275 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E0F7FF"
+    android:background="#F9FAFB"
     tools:context=".GameQuiz">
+
+    <View
+        android:id="@+id/headerGradient"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/gradient_header_bg"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintBottom_toTopOf="@id/nav_bar_include"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/quiz_game_label"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!--
+            <TextView
+                android:id="@+id/quizTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Level 1"
+                android:textColor="#E0E7FF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:background="@drawable/rounded_box"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp"/>
+             -->
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:id="@+id/question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Which sea creature is known for having three hearts?"
+                    android:textColor="#1F2937"
+                    android:textSize="20sp"
+                    android:lineSpacingExtra="4dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/quizGameAnswer1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/category_card_bg"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="quizGameAnswer1"
+                    android:gravity="center_vertical"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/fish"
+                        android:layout_marginRight="15dp" />
+
+                    <TextView
+                        android:id="@+id/answer1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Octopus"
+                        android:textColor="#374151"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/quizGameAnswer2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/category_card_bg"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="quizGameAnswer2"
+                    android:gravity="center_vertical"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/fish"
+                        android:layout_marginRight="15dp" />
+
+                    <TextView
+                        android:id="@+id/answer2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Shark"
+                        android:textColor="#374151"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/quizGameAnswer3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/category_card_bg"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="quizGameAnswer3"
+                    android:gravity="center_vertical"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/fish"
+                        android:layout_marginRight="15dp" />
+
+                    <TextView
+                        android:id="@+id/answer3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Whale"
+                        android:textColor="#374151"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/quizGameAnswer4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/category_card_bg"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="quizGameAnswer4"
+                    android:gravity="center_vertical"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/fish"
+                        android:layout_marginRight="15dp" />
+
+                    <TextView
+                        android:id="@+id/answer4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dolphin"
+                        android:textColor="#374151"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
 
     <FrameLayout
         android:id="@+id/root_layout"
-        android:padding="20dp"
-        android:layout_marginBottom="60dp"
-        android:visibility="invisible"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#80000000">>
+        android:background="#B3000000"
+        android:padding="30dp"
+        android:visibility="invisible"
+        android:elevation="30dp"
+        android:translationZ="30dp">
 
         <LinearLayout
             android:id="@+id/answer_card"
             android:layout_width="match_parent"
-            android:padding="16dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:orientation="vertical"
+            android:background="@drawable/category_card_bg"
             android:gravity="center"
-            android:background="@drawable/roundex_box_white"
-            android:layout_height="wrap_content">
+            android:orientation="vertical"
+            android:padding="24dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/answerStatusImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/logo"
+                android:layout_marginBottom="16dp"/>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_marginBottom="30dp"
-                    app:cardCornerRadius="37dp"
-                    app:cardElevation="8dp"
-                    app:cardBackgroundColor="@android:color/white"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent">
-
-                    <ImageView
-                        android:id="@+id/answerStatusImage"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/logo"
-                        android:scaleType="fitCenter"
-                        android:contentDescription="Merkez Logo"/>
-
-                </androidx.cardview.widget.CardView>
-            </LinearLayout>
             <TextView
                 android:id="@+id/answerStatusText"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Correct Answer!"
                 android:textAlignment="center"
-                style="@style/TextViewTitle"
-                android:layout_marginBottom="30dp"
-                android:text="Right answer - you're on a rool"
-                android:layout_height="wrap_content"/>
-
-            <LinearLayout
-                android:id="@+id/correctAnswerCard"
-                android:layout_width="match_parent"
-                android:background="@drawable/card"
-                android:layout_marginBottom="10dp"
-                android:padding="7dp"
-                android:orientation="horizontal"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:src="@drawable/fish"
-                    android:layout_marginRight="15dp"
-                    android:layout_height="match_parent"/>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="start"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/answerStatusQuestionText"
-                        android:layout_width="wrap_content"
-                        android:text="Test Test"
-                        style="@style/TextViewSubtitle"
-                        android:layout_height="wrap_content"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:text=""
-                        android:layout_marginTop="10dp"
-                        android:layout_height="wrap_content"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:gravity="end"
-                    android:layout_height="match_parent">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        app:cardCornerRadius="37dp"
-                        app:cardElevation="8dp"      app:cardBackgroundColor="@android:color/white" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent">
-
-                        <ImageView
-                            android:id="@+id/answerStatusImage2"
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/logo" android:scaleType="fitCenter"
-                            android:contentDescription="Merkez Logo"/>
-
-                    </androidx.cardview.widget.CardView>
-
-                </LinearLayout>
-
-
-            </LinearLayout>
+                android:textColor="#10B981"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="20dp"/>
 
             <TextView
                 android:id="@+id/questionDescription"
                 android:layout_width="match_parent"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                style="@style/TextViewBody"
+                android:layout_height="wrap_content"
+                android:text="The octopus has three hearts: two pump blood to the gills, while the third pumps it to the rest of the body."
                 android:textAlignment="center"
-                android:text="Description"
-                android:layout_height="wrap_content"/>
+                android:textColor="#4B5563"
+                android:textSize="15sp"
+                android:layout_marginBottom="24dp"/>
 
-            <LinearLayout
+            <Button
                 android:id="@+id/nextQuestionBtn"
                 android:layout_width="match_parent"
-                android:clickable="true"
+                android:layout_height="56dp"
+                android:text="@string/quiz_next_question"
+                android:textAllCaps="false"
+                android:backgroundTint="#4F46E5"
+                android:textColor="@android:color/white"
                 android:onClick="showNextQuestion"
-                android:background="@drawable/rounded_box"
-                android:layout_marginTop="15dp"
-                android:padding="6dp"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:text="Next Question"
-                    android:textAlignment="center"
-                    style="@style/TextViewTitle"
-                    android:layout_height="wrap_content">
-
-                </TextView>
-
-            </LinearLayout>
+                app:cornerRadius="12dp" />
 
         </LinearLayout>
     </FrameLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:padding="7dp"
-        android:layout_height="wrap_content">
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:text="Quiz Game"
-                    android:layout_weight="1"
-                    style="@style/TextViewSubtitle"
-                    android:gravity="start"
-                    android:layout_height="wrap_content"/>
-                <!--
-                <TextView
-                    android:layout_width="match_parent"
-                    android:text="%0"
-                    android:layout_weight="1"
-                    style="@style/TextViewSubtitle"
-                    android:gravity="end"
-                    android:layout_height="wrap_content"/>
-                -->
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_marginTop="5dp"
-                android:layout_height="wrap_content">
-
-                <include
-                    layout="@layout/horizantal_line"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_marginTop="25dp"
-                android:orientation="vertical"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/question"
-                    style="@style/TextViewBody"
-                    android:textSize="22dp"
-                    android:layout_width="match_parent"
-                    android:text="Lorem Ipsum like a huge thing in our live but i dont know what to say bla bla like a question ?"
-                    android:layout_height="wrap_content"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:orientation="vertical"
-                    android:layout_marginTop="10dp"
-                    android:layout_height="wrap_content">
-
-                    <LinearLayout
-                        android:id="@+id/quizGameAnswer1"
-                        android:layout_width="match_parent"
-                        android:background="@drawable/card"
-                        android:layout_marginBottom="10dp"
-                        android:clickable="true"
-                        android:onClick="quizGameAnswer1"
-                        android:padding="7dp"
-                        android:orientation="horizontal"
-                        android:layout_height="wrap_content">
-
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:src="@drawable/fish"
-                            android:layout_marginRight="15dp"
-                            android:layout_height="match_parent"/>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:orientation="vertical"
-                            android:gravity="start"
-                            android:layout_height="wrap_content">
-
-                            <TextView
-                                android:id="@+id/answer1"
-                                android:layout_width="wrap_content"
-                                style="@style/TextViewSubtitle"
-                                android:text="Test Test"
-                                android:layout_height="wrap_content"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:text=""
-                                android:layout_marginTop="10dp"
-                                android:layout_height="wrap_content"/>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/quizGameAnswer2"
-                        android:layout_width="match_parent"
-                        android:background="@drawable/card"
-                        android:layout_marginBottom="10dp"
-                        android:clickable="true"
-                        android:onClick="quizGameAnswer2"
-                        android:padding="7dp"
-                        android:orientation="horizontal"
-                        android:layout_height="wrap_content">
-
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:src="@drawable/fish"
-                            android:layout_marginRight="15dp"
-                            android:layout_height="match_parent"/>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:orientation="vertical"
-                            android:gravity="start"
-                            android:layout_height="wrap_content">
-
-                            <TextView
-                                android:id="@+id/answer2"
-                                android:layout_width="wrap_content"
-                                android:text="Test Test"
-                                style="@style/TextViewSubtitle"
-                                android:layout_height="wrap_content"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:text=""
-                                android:layout_marginTop="10dp"
-                                android:layout_height="wrap_content"/>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/quizGameAnswer3"
-                        android:layout_width="match_parent"
-                        android:background="@drawable/card"
-                        android:clickable="true"
-                        android:onClick="quizGameAnswer3"
-                        android:padding="7dp"
-                        android:layout_marginBottom="10dp"
-                        android:orientation="horizontal"
-                        android:layout_height="wrap_content">
-
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:src="@drawable/fish"
-                            android:layout_marginRight="15dp"
-                            android:layout_height="match_parent"/>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:orientation="vertical"
-                            android:gravity="start"
-                            android:layout_height="wrap_content">
-
-                            <TextView
-                                android:id="@+id/answer3"
-                                android:layout_width="wrap_content"
-                                android:text="Test Test"
-                                style="@style/TextViewSubtitle"
-                                android:layout_height="wrap_content"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:text=""
-                                android:layout_marginTop="10dp"
-                                android:layout_height="wrap_content"/>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/quizGameAnswer4"
-                        android:layout_width="match_parent"
-                        android:background="@drawable/card"
-                        android:clickable="true"
-                        android:onClick="quizGameAnswer4"
-                        android:layout_marginBottom="10dp"
-                        android:padding="7dp"
-                        android:orientation="horizontal"
-                        android:layout_height="wrap_content">
-
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:src="@drawable/fish"
-                            android:layout_marginRight="15dp"
-                            android:layout_height="match_parent"/>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:orientation="vertical"
-                            android:gravity="start"
-                            android:layout_height="wrap_content">
-
-                            <TextView
-                                android:id="@+id/answer4"
-                                android:layout_width="wrap_content"
-                                style="@style/TextViewSubtitle"
-                                android:text="Test Test"
-                                android:layout_height="wrap_content"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:text=""
-                                android:layout_marginTop="10dp"
-                                android:layout_height="wrap_content"/>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-
     <include
+        android:id="@+id/nav_bar_include"
         layout="@layout/nav_bar"
-        android:elevation="20dp"
-        android:translationZ="20dp" />
-
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

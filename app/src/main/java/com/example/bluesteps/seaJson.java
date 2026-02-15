@@ -3,12 +3,10 @@ package com.example.bluesteps;
 import android.content.Context;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 
-import java.io.IOException;
 import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
 
+/*
 public class seaJson {
     public static JSONArray loadSeaJson(Context context) {
         try {
@@ -20,6 +18,28 @@ public class seaJson {
             String json = new String(buffer, StandardCharsets.UTF_8);
             return new JSONArray(json);
         } catch (IOException | JSONException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+}
+*/
+import java.util.Scanner;
+
+public class seaJson {
+    public static JSONArray loadSeaJson(Context context) {
+        try {
+            // R.raw.seas_data diyerek Android'in cihaz diline göre
+            // doğru klasörü (raw, raw-tr, raw-pt) seçmesini sağlıyoruz.
+            InputStream is = context.getResources().openRawResource(R.raw.sea_data);
+
+            // Veriyi okumak için Scanner en pratik yoldur
+            Scanner s = new Scanner(is).useDelimiter("\\A");
+            String json = s.hasNext() ? s.next() : "";
+
+            is.close();
+            return new JSONArray(json);
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
         }

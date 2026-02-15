@@ -1,0 +1,158 @@
+[
+  {
+    "id": 0,
+    "sea_image" : "mediterranean_image",
+    "sea_name": "Mar Mediterrâneo (Costa da Turquia)",
+    "area": "2.500.000 km² (total do Mar Mediterrâneo)",
+    "max_depth": 5267,
+    "location": "A costa sul e sudoeste da Turquia, estendendo-se de Muğla a Hatay",
+    "main_fishes": [
+      "Anchova Europeia (Engraulis encrasicolus)",
+      "Anchova (Pomatomus saltatrix)",
+      "Salmonete Vermelho (Mullus surmuletus)",
+      "Dourada (Sparus aurata)"
+    ],
+    "main_species": [
+      "Polvo Comum (Octopus vulgaris)",
+      "Lula Europeia (Loligo vulgaris)",
+      "Choco Comum (Sepia officinalis)",
+      "Ouriço-do-mar Comestível (Paracentrotus lividus)"
+    ],
+    "temperature_range": "13°C - 29°C",
+    "salinity": "37 PSU",
+    "currents": "Dominado pela Corrente do Mediterrâneo Oriental e vórtices de Chipre persistentes em grande escala na Bacia Levantina",
+    "ecosystem": "Um rico ecossistema marinho temperado quente caracterizado por lagoas costeiras vitais, densos prados de ervas marinhas Posidonia oceanica e recifes rochosos complexos que suportam alta biodiversidade",
+    "coastline_features": "Falésias rochosas dramáticas e íngremes, amplas extensões de praias arenosas, numerosos estuários de rios e baías protegidas (por exemplo, Golfo de Antália)",
+    "important_ports": [
+      "Izmir (Grande centro comercial)",
+      "Mersin (Maior porto da região)",
+      "Antália (Principal porto turístico e comercial)"
+    ],
+    "economic_activities": [
+      "Pesca comercial e recreativa (principalmente para espécies pelágicas)",
+      "Turismo internacional e costeiro (vital para a economia regional)",
+      "Navegação e transporte marítimo internacional"
+    ],
+    "description": "A costa mediterrânea turca é um ponto quente de biodiversidade global, constantemente enfrentando pressões da sobrepesca e do desenvolvimento costeiro. Seus habitats únicos, como os prados de ervas marinhas Posidonia e comunidades de corais de águas profundas, são cruciais para numerosas espécies endêmicas e comerciais, apoiando uma complexa cadeia alimentar marinha. A região também é propensa à chegada de espécies invasoras lesepsianas do Mar Vermelho.",
+    "image_paths": [
+      "https://drive.usercontent.google.com/download?id=1IuQP92XbL-EO0iAjmKF9n3WidvW7TK_D&export=view&authuser=0"
+    ]
+  },
+  {
+    "id": 1,
+    "sea_image" : "black_sea_image",
+    "sea_name": "Mar Egeu (Costa da Turquia e Grécia)",
+    "area": "214.000 km²",
+    "max_depth": 3543,
+    "location": "Localizado entre o continente turco e a península grega, pontilhado com milhares de ilhas",
+    "main_fishes": [
+      "Sardinha (Sardina pilchardus)",
+      "Pescada Europeia (Merluccius merluccius)",
+      "Dourada (Sparus aurata)",
+      "Salmonete Vermelho (Mullus surmuletus)"
+    ],
+    "main_species": [
+      "Polvo Comum (Octopus vulgaris)",
+      "Choco Comum (Sepia officinalis)",
+      "Estrela-do-mar (espécies Echinodermata)",
+      "Lagosta Espinhosa (espécies Palinurus)"
+    ],
+    "temperature_range": "12°C - 27°C",
+    "salinity": "36-38 PSU",
+    "currents": "Caracterizado pelo padrão de circulação ciclônica do Egeu e correntes superficiais sazonais fortes impulsionadas pelo vento que influenciam a distribuição de nutrientes",
+    "ecosystem": "Um ecossistema marinho temperado altamente diverso apresentando uma multitude de ilhas, recifes rochosos extensos e prados críticos de ervas marinhas (Posidonia)",
+    "coastline_features": "Costas rochosas irregulares, numerosas ilhas grandes e pequenas (estrutura de arquipélago), baías profundas abrigadas e estuários de rios (por exemplo, Meandro)",
+    "important_ports": [
+      "Izmir (Grande terminal de exportação/importação para a Turquia)",
+      "Tessalônica (Porto de entrada do norte da Grécia)",
+      "Atenas (Pireu) (Maior porto de passageiros e carga no Egeu)"
+    ],
+    "economic_activities": [
+      "Pesca comercial (especialmente pequenas espécies pelágicas como sardinhas)",
+      "Turismo costeiro e insular intenso (crucial para as economias locais)",
+      "Navegação e transporte de ferry entre as ilhas e o continente"
+    ],
+    "description": "A batimetria complexa do Mar Egeu e o alto número de ilhas criam microecossistemas distintos. Suporta estoques críticos de pequenos peixes pelágicos e é uma área significativa para pescas artesanais e de pequena escala. Sua beleza icônica impulsiona um turismo costeiro substancial, levando a desafios de conservação.",
+    "image_paths": [
+      "https://drive.usercontent.google.com/download?id=1rjfxsGj7Jm15a-BvHEgJzjagCqex_Xod&export=view&authuser=0"
+    ]
+  },
+  {
+    "id": 2,
+    "sea_image" : "black_sea_image",
+    "sea_name": "Mar Negro (Costa da Turquia e Bulgária)",
+    "area": "436.000 km²",
+    "max_depth": 2212,
+    "location": "A costa norte da Turquia, limitada pela Bulgária, Romênia, Ucrânia, Rússia e Geórgia",
+    "main_fishes": [
+      "Anchova (Engraulis encrasicolus)",
+      "Espadilha (Sprattus sprattus)",
+      "Tainha (espécies Mugilidae)",
+      "Pregado (Psetta maxima)"
+    ],
+    "main_species": [
+      "Polvo Comum (espécies Octopus, menos comum devido à salinidade)",
+      "Lula (espécies Loligo, menos abundante)",
+      "Pepino-do-mar (espécies Holothuroidea)",
+      "Esturjão (espécies Acipenser, criticamente em perigo)"
+    ],
+    "temperature_range": "7°C - 27°C",
+    "salinity": "17-18 PSU",
+    "currents": "Dominado pela vigorosa Corrente de Borda no sentido anti-horário em toda a bacia, fluindo ao longo das costas, isolando os giros centrais",
+    "ecosystem": "Um mar semi-fechado definido unicamente por uma haloclina permanente, criando uma camada profunda anóxica (sem oxigênio) abaixo de 150-200m. Águas superficiais biologicamente produtivas suportam grandes pescarias comerciais.",
+    "coastline_features": "Longos trechos de praias arenosas, deltas de rios significativos (por exemplo, Danúbio) e falésias costeiras variadas (por exemplo, costa turca)",
+    "important_ports": [
+      "Varna (Principal porto marítimo da Bulgária)",
+      "Burgas (Porto de petróleo e industrial chave)",
+      "Istambul (via Estreito de Bósforo, conectando ao Mar de Mármara)"
+    ],
+    "economic_activities": [
+      "Pesca comercial em massa (A pesca de anchova é a atividade regional mais importante)",
+      "Navegação internacional e transporte de energia",
+      "Turismo costeiro (popular na Bulgária, Romênia e Turquia)"
+    ],
+    "description": "O Mar Negro é ecologicamente sensível devido à sua salinidade única e baixa, águas profundas anóxicas e forte influência de grandes rios europeus. As pescarias de anchova são economicamente primordiais, mas sujeitas a alta variabilidade. A poluição e a degradação do habitat do escoamento fluvial e da navegação representam grandes ameaças ambientais.",
+    "image_paths": [
+      "https://drive.usercontent.google.com/download?id=1H5yw63uKr0lomlEqY-oU2BEU2ehvJhA5&export=view&authuser=0"
+    ]
+  },
+  {
+    "id": 3,
+    "sea_name": "Oceano Atlântico (Costa de Portugal)",
+    "sea_image" : "atlantic_image",
+    "area": "Atlântico aberto ao largo da costa oeste de Portugal",
+    "max_depth": 8486,
+    "location": "Toda a costa oeste e sul de Portugal, limitando com o Oceano Atlântico Norte",
+    "main_fishes": [
+      "Bacalhau do Atlântico (Gadus morhua - historicamente importante)",
+      "Sardinha (Sardina pilchardus - pedra angular da culinária local)",
+      "Cavala (Scomber scombrus)",
+      "Atum-rabilho (Thunnus thynnus - altamente migratório e valioso)"
+    ],
+    "main_species": [
+      "Polvo Comum (Octopus vulgaris)",
+      "Lula Europeia (Loligo vulgaris)",
+      "Ouriço-do-mar Comestível (Paracentrotus lividus)",
+      "Lagosta Europeia (Homarus gammarus)"
+    ],
+    "temperature_range": "12°C - 22°C",
+    "salinity": "35 PSU",
+    "currents": "Influenciado pela fria Corrente de Portugal fluindo para o sul e a mais quente Deriva do Atlântico Norte, criando condições dinâmicas",
+    "ecosystem": "Um ecossistema de plataforma temperada altamente produtivo, caracterizado por extensos recifes rochosos, fundos arenosos variados e zonas de afloramento costeiro sazonais que trazem água fria e rica em nutrientes à superfície, suportando enormes estoques de peixes",
+    "coastline_features": "Falésias rochosas dramáticas e varridas pelo vento (por exemplo, Cabo da Roca), extensas praias arenosas e importantes estuários de rios (por exemplo, Tejo e Douro)",
+    "important_ports": [
+      "Lisboa (O maior e mais importante porto para comércio e cruzeiros)",
+      "Porto (Centro industrial e de navegação chave no norte)",
+      "Setúbal (Importante para pesca e construção naval)"
+    ],
+    "economic_activities": [
+      "Pesca intensiva (especialmente para espécies pelágicas como sardinha e atum)",
+      "Navegação internacional e serviços marítimos (devido à localização estratégica no Atlântico)",
+      "Turismo costeiro e de surf (ao longo de toda a costa)"
+    ],
+    "description": "A costa atlântica de Portugal é conhecida por seu ambiente marinho altamente produtivo impulsionado pelo afloramento sazonal, tornando-a uma das zonas de pesca mais ricas da Europa. A longa tradição de consumo de bacalhau (Bacalhau), apesar de o bacalhau ser capturado principalmente no Atlântico Norte, é um elemento cultural definidor. A gestão sustentável dos estoques locais de sardinha e atum é uma prioridade constante.",
+    "image_paths": [
+      "https://drive.usercontent.google.com/download?id=1wD-UGo_hVK3Jc2XUmw9GIll11CJuv5CU&export=view&authuser=0"
+    ]
+  }
+]

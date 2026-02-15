@@ -103,13 +103,19 @@ public class EducationAnimalsTemplate extends AppCompatActivity {
                 textViewFishMaxDepth.setText(String.valueOf(fish.getInt("max_depth")) + " m");
                 textViewFishFamily.setText(fish.getString("family"));
                 textViewFishHabitat.setText(fish.getString("habitat"));
-                textViewFishEdible.setText(fish.getBoolean("edible") ? "Yes" : "No");
+                //textViewFishEdible.setText(fish.getBoolean("edible") ? "Yes" : "No");
+                boolean isEdible = fish.getBoolean("edible");
+                textViewFishEdible.setText(isEdible ? getString(R.string.animal_yes) : getString(R.string.animal_no));
                 textViewFishDescription.setText(fish.getString("description"));
                 textViewFishDistributionHabitat.setText(fish.getString("distribution_habitat"));
                 textViewFishLocationDescription.setText(fish.getString("locations_description"));
                 textViewFishSocialBehaviour.setText(fish.getString("social_behaviour"));
-                textViewFishPoisonous.setText(fish.getBoolean("poisonous") ? "Yes" : "No");
-                textViewFishDanger.setText(fish.getBoolean("danger_to_human") ? "Dangerous" : "Not dangerous");
+                //textViewFishPoisonous.setText(fish.getBoolean("poisonous") ? "Yes" : "No");
+                boolean isPoisonous = fish.getBoolean("edible");
+                textViewFishPoisonous.setText(isPoisonous ? getString(R.string.animal_poisonous_yes) : getString(R.string.animal_not_poisonous));
+                //textViewFishDanger.setText(fish.getBoolean("danger_to_human") ? "Dangerous" : "Not dangerous");
+                boolean isDangerous = fish.getBoolean("danger_to_human");
+                textViewFishDanger.setText(isDangerous ? getString(R.string.animal_dangerous) : getString(R.string.animal_not_dangerous));
 
                 JSONArray colorsArray = fish.getJSONArray("colors");
 
@@ -169,47 +175,56 @@ public class EducationAnimalsTemplate extends AppCompatActivity {
 
                 JSONArray locationsArray = fish.optJSONArray("locations");
                 if (locationsArray != null) {
-                    LinearLayout locationsLayout = findViewById(R.id.fish_locations); // veya uygun container id
-                    locationsLayout.removeAllViews(); // önceki içerikleri temizle
+                    LinearLayout locationsLayout = findViewById(R.id.fish_locations);
+                    locationsLayout.removeAllViews(); // Önceki içerikleri temizle
 
                     for (int i = 0; i < locationsArray.length(); i++) {
                         String locationName = locationsArray.optString(i, "");
 
-                        // Ana siyah LinearLayout
-                        LinearLayout locationLayout = new LinearLayout(this);
-                        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
+                        // Yatay Kart Satırı (Row)
+                        LinearLayout row = new LinearLayout(this);
+                        LinearLayout.LayoutParams rowParams = new LinearLayout.LayoutParams(
                                 LinearLayout.LayoutParams.MATCH_PARENT,
                                 LinearLayout.LayoutParams.WRAP_CONTENT
                         );
-                        layoutParams.setMargins(0, dpToPx.convertDpToPx(this,5),0, dpToPx.convertDpToPx(this,5));
-                        locationLayout.setLayoutParams(layoutParams);
-                        locationLayout.setOrientation(LinearLayout.VERTICAL);
-                        locationLayout.setPadding(dpToPx.convertDpToPx(this,5) , dpToPx.convertDpToPx(this,5), dpToPx.convertDpToPx(this,5), dpToPx.convertDpToPx(this,5));
-                        locationLayout.setBackgroundResource(R.drawable.rounded_box);
+                        // Kartlar arası boşluk (8dp)
+                        rowParams.setMargins(0, 0, 0, dpToPx.convertDpToPx(this, 8));
+                        row.setLayoutParams(rowParams);
+                        row.setOrientation(LinearLayout.HORIZONTAL);
+                        row.setGravity(android.view.Gravity.CENTER_VERTICAL);
+                        row.setPadding(dpToPx.convertDpToPx(this, 12), dpToPx.convertDpToPx(this, 12),
+                                dpToPx.convertDpToPx(this, 12), dpToPx.convertDpToPx(this, 12));
 
-                        // İç beyaz container
-                        LinearLayout textContainer = new LinearLayout(this);
-                        textContainer.setLayoutParams(new LinearLayout.LayoutParams(
-                                LinearLayout.LayoutParams.MATCH_PARENT,
+                        // Sizin belirttiğiniz kategori arka planı
+                        row.setBackground(androidx.core.content.ContextCompat.getDrawable(this, R.drawable.category_card_bg));
+
+                        // Lokasyon/Pin İkonu
+                        android.widget.ImageView icon = new android.widget.ImageView(this);
+                        icon.setLayoutParams(new LinearLayout.LayoutParams(
+                                dpToPx.convertDpToPx(this, 20),
+                                dpToPx.convertDpToPx(this, 20)
+                        ));
+                        // Eğer elinizde lokasyon ikonu varsa onu koyabilirsiniz, yoksa fish ikonuyla devam:
+                        icon.setImageResource(R.drawable.fish);
+                        icon.setColorFilter(android.graphics.Color.parseColor("#3B82F6")); // Uygulama ana mavisi
+
+                        // Lokasyon İsmi
+                        TextView locationText = new TextView(this);
+                        LinearLayout.LayoutParams textParams = new LinearLayout.LayoutParams(
                                 LinearLayout.LayoutParams.WRAP_CONTENT,
-                                1.0f
-                        ));
-                        textContainer.setOrientation(LinearLayout.VERTICAL);
-                        textContainer.setPadding(dpToPx.convertDpToPx(this,10) , dpToPx.convertDpToPx(this,10), dpToPx.convertDpToPx(this,10), dpToPx.convertDpToPx(this,10));
-                        textContainer.setBackgroundResource(R.drawable.roundex_box_white);
-
-                        TextView locationTextView = new TextView(new ContextThemeWrapper(this, R.style.TextViewBody));
-                        locationTextView.setLayoutParams(new LinearLayout.LayoutParams(
-                                LinearLayout.LayoutParams.MATCH_PARENT,
                                 LinearLayout.LayoutParams.WRAP_CONTENT
-                        ));
-                        locationTextView.setPadding(6, 6, 6, 6);
-                        locationTextView.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_START);
-                        locationTextView.setText(locationName);
+                        );
+                        textParams.setMarginStart(dpToPx.convertDpToPx(this, 12));
+                        locationText.setLayoutParams(textParams);
+                        locationText.setText(locationName);
+                        locationText.setTextColor(android.graphics.Color.parseColor("#1F2937")); // Koyu gri/siyah
+                        locationText.setTextSize(14);
+                        locationText.setTypeface(null, android.graphics.Typeface.BOLD);
 
-                        textContainer.addView(locationTextView);
-                        locationLayout.addView(textContainer);
-                        locationsLayout.addView(locationLayout);
+                        // Hiyerarşiyi oluştur
+                        row.addView(icon);
+                        row.addView(locationText);
+                        locationsLayout.addView(row);
                     }
                 }
 

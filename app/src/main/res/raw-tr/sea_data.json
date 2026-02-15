@@ -1,0 +1,158 @@
+[
+  {
+    "id": 0,
+    "sea_image" : "mediterranean_image",
+    "sea_name": "Akdeniz (Türkiye Kıyısı)",
+    "area": "2.500.000 km² (toplam Akdeniz)",
+    "max_depth": 5267,
+    "location": "Türkiye'nin Güney ve Güneybatı kıyısı, Muğla'dan Hatay'a kadar uzanan bölge",
+    "main_fishes": [
+      "Avrupa Hamsisi (Engraulis encrasicolus)",
+      "Lüfer (Pomatomus saltatrix)",
+      "Barbunya (Mullus surmuletus)",
+      "Çipura (Sparus aurata)"
+    ],
+    "main_species": [
+      "Ahtapot (Octopus vulgaris)",
+      "Avrupa Kalamarı (Loligo vulgaris)",
+      "Mürekkep Balığı (Sepia officinalis)",
+      "Yenilebilir Deniz Kestanesi (Paracentrotus lividus)"
+    ],
+    "temperature_range": "13°C - 29°C",
+    "salinity": "37 PSU",
+    "currents": "Doğu Akdeniz Akıntısı ve Levant Havzası'ndaki büyük ölçekli, kalıcı Kıbrıs Girdapları tarafından yönetilir",
+    "ecosystem": "Hayati önem taşıyan kıyı lagünleri, yoğun Posidonia oceanica deniz çayırı çayırları ve yüksek biyoçeşitliliği destekleyen karmaşık kayalık resiflerle karakterize edilen zengin, ılık ılıman bir deniz ekosistemi",
+    "coastline_features": "Dramatik, dik kayalık uçurumlar, geniş kumlu plaj uzantıları, çok sayıda nehir ağzı ve korunaklı koylar (örn. Antalya Körfezi)",
+    "important_ports": [
+      "İzmir (Büyük ticaret merkezi)",
+      "Mersin (Bölgedeki en büyük liman)",
+      "Antalya (Önde gelen turizm ve ticaret limanı)"
+    ],
+    "economic_activities": [
+      "Ticari ve sportif balıkçılık (öncelikle pelajik türler için)",
+      "Uluslararası ve kıyı turizmi (bölge ekonomisi için hayati önem taşır)",
+      "Denizcilik ve uluslararası deniz taşımacılığı"
+    ],
+    "description": "Türkiye'nin Akdeniz kıyısı, aşırı avcılık ve kıyı gelişiminden kaynaklanan baskılarla sürekli karşı karşıya kalan küresel bir biyoçeşitlilik sıcak noktasıdır. Posidonia deniz çayırı yatakları ve derin su mercan toplulukları gibi benzersiz habitatları, çok sayıda endemik ve ticari tür için hayati öneme sahiptir ve karmaşık bir deniz besin ağını destekler. Bölge ayrıca Kızıldeniz'den gelen istilacı Lessepsiyen türlerin gelişine açıktır.",
+    "image_paths": [
+      "https://drive.usercontent.google.com/download?id=1IuQP92XbL-EO0iAjmKF9n3WidvW7TK_D&export=view&authuser=0"
+    ]
+  },
+  {
+    "id": 1,
+    "sea_image" : "black_sea_image",
+    "sea_name": "Ege Denizi (Türkiye, Yunanistan Kıyısı)",
+    "area": "214.000 km²",
+    "max_depth": 3543,
+    "location": "Türkiye anakarası ile Yunan yarımadası arasında yer alır ve binlerce adayla serpiştirilmiştir",
+    "main_fishes": [
+      "Sardalya (Sardina pilchardus)",
+      "Avrupa Berlam Balığı (Merluccius merluccius)",
+      "Çipura (Sparus aurata)",
+      "Barbunya (Mullus surmuletus)"
+    ],
+    "main_species": [
+      "Ahtapot (Octopus vulgaris)",
+      "Mürekkep Balığı (Sepia officinalis)",
+      "Deniz Yıldızı (Echinodermata türleri)",
+      "Dikenli İstakoz (Palinurus türleri)"
+    ],
+    "temperature_range": "12°C - 27°C",
+    "salinity": "36-38 PSU",
+    "currents": "Siklonik Ege dolaşım modeli ve besin dağılımını etkileyen güçlü, mevsimsel, rüzgar kaynaklı yüzey akımları ile karakterize edilir",
+    "ecosystem": "Çok sayıda ada, geniş kayalık resifler ve kritik deniz çayırı yataklarını (Posidonia) içeren oldukça çeşitli, ılıman bir deniz ekosistemi",
+    "coastline_features": "Girintili çıkıntılı kayalık kıyılar, çok sayıda büyük ve küçük ada (takımada yapısı), derin korunaklı koylar ve nehir ağızları (örn. Menderes)",
+    "important_ports": [
+      "İzmir (Türkiye için büyük ihracat/ithalat terminali)",
+      "Selanik (Kuzey Yunanistan giriş limanı)",
+      "Atina (Pire) (Ege'deki en büyük yolcu ve kargo limanı)"
+    ],
+    "economic_activities": [
+      "Ticari balıkçılık (özellikle sardalya gibi küçük pelajik türler)",
+      "Yoğun kıyı ve ada turizmi (yerel ekonomiler için hayati önem taşır)",
+      "Adalar ve anakara arasında denizcilik ve feribot taşımacılığı"
+    ],
+    "description": "Ege Denizi'nin karmaşık batimetrisi ve yüksek ada sayısı farklı mikro-ekosistemler oluşturur. Kritik küçük pelajik balık stoklarını destekler ve geleneksel ve küçük ölçekli balıkçılık için önemli bir alandır. İkonik güzelliği önemli kıyı turizmini tetikler ve koruma zorluklarına yol açar.",
+    "image_paths": [
+      "https://drive.usercontent.google.com/download?id=1rjfxsGj7Jm15a-BvHEgJzjagCqex_Xod&export=view&authuser=0"
+    ]
+  },
+  {
+    "id": 2,
+    "sea_image" : "black_sea_image",
+    "sea_name": "Karadeniz (Türkiye, Bulgaristan Kıyısı)",
+    "area": "436.000 km²",
+    "max_depth": 2212,
+    "location": "Türkiye'nin Kuzey kıyısı, Bulgaristan, Romanya, Ukrayna, Rusya ve Gürcistan ile çevrilidir",
+    "main_fishes": [
+      "Hamsi (Engraulis encrasicolus)",
+      "Çaça (Sprattus sprattus)",
+      "Kefal (Mugilidae türleri)",
+      "Kalkan (Psetta maxima)"
+    ],
+    "main_species": [
+      "Ahtapot (Octopus türleri, tuzluluk nedeniyle daha az yaygın)",
+      "Kalamar (Loligo türleri, daha az bol)",
+      "Deniz Hıyarı (Holothuroidea türleri)",
+      "Mersin Balığı (Acipenser türleri, kritik düzeyde tehlike altında)"
+    ],
+    "temperature_range": "7°C - 27°C",
+    "salinity": "17-18 PSU",
+    "currents": "Kıyı şeritleri boyunca akan, merkezi girdapları izole eden güçlü, havza çapında saat yönünün tersine Kenar Akıntısı tarafından yönetilir",
+    "ecosystem": "Kalıcı bir haloklin ile benzersiz şekilde tanımlanan, 150-200m'nin altında anoksik (oksijensiz) derin bir tabaka oluşturan yarı kapalı bir deniz. Biyolojik olarak üretken yüzey suları önemli ticari balıkçılığı destekler.",
+    "coastline_features": "Uzun kumlu plaj uzantıları, önemli nehir deltaları (örn. Tuna) ve değişen kıyı uçurumları (örn. Türkiye kıyısı)",
+    "important_ports": [
+      "Varna (Bulgaristan'ın büyük deniz limanı)",
+      "Burgaz (Önemli petrol ve sanayi limanı)",
+      "İstanbul (Boğaziçi Boğazı üzerinden Marmara Denizi'ne bağlanır)"
+    ],
+    "economic_activities": [
+      "Toplu ticari balıkçılık (Hamsi balıkçılığı en önemli bölgesel faaliyettir)",
+      "Uluslararası denizcilik ve enerji taşımacılığı",
+      "Kıyı turizmi (Bulgaristan, Romanya ve Türkiye'de popülerdir)"
+    ],
+    "description": "Karadeniz, benzersiz düşük tuzluluğu, anoksik derin suyu ve büyük Avrupa nehirlerinin yoğun etkisi nedeniyle ekolojik olarak hassastır. Hamsi balıkçılığı ekonomik olarak son derece önemlidir ancak yüksek değişkenliğe tabidir. Nehir akışı ve deniz taşımacılığından kaynaklanan kirlilik ve habitat bozulması büyük çevre tehditleri oluşturur.",
+    "image_paths": [
+      "https://drive.usercontent.google.com/download?id=1H5yw63uKr0lomlEqY-oU2BEU2ehvJhA5&export=view&authuser=0"
+    ]
+  },
+  {
+    "id": 3,
+    "sea_name": "Atlas Okyanusu (Portekiz Kıyısı)",
+    "sea_image" : "atlantic_image",
+    "area": "Batı Portekiz açıklarında açık Atlas",
+    "max_depth": 8486,
+    "location": "Portekiz'in tüm batı ve güney kıyısı, Kuzey Atlantik Okyanusu ile sınırlanır",
+    "main_fishes": [
+      "Atlantik Morinası (Gadus morhua - tarihsel olarak önemli)",
+      "Sardalya (Sardina pilchardus - yerel mutfağın temel taşı)",
+      "Uskumru (Scomber scombrus)",
+      "Mavi Yüzgeçli Orkinos (Thunnus thynnus - yüksek göçmen ve değerli)"
+    ],
+    "main_species": [
+      "Ahtapot (Octopus vulgaris)",
+      "Avrupa Kalamarı (Loligo vulgaris)",
+      "Yenilebilir Deniz Kestanesi (Paracentrotus lividus)",
+      "Avrupa Istakoz (Homarus gammarus)"
+    ],
+    "temperature_range": "12°C - 22°C",
+    "salinity": "35 PSU",
+    "currents": "Güneye doğru akan soğuk Portekiz Akıntısı ve daha sıcak Kuzey Atlantik Sürüklenmesi tarafından etkilenir ve dinamik koşullar yaratır",
+    "ecosystem": "Geniş kayalık resifler, çeşitli kumlu tabanlar ve yüzeye soğuk, besin açısından zengin su getiren mevsimsel kıyı yükselme bölgeleri ile karakterize edilen, büyük balık stoklarını destekleyen oldukça üretken ılıman bir raf ekosistemi",
+    "coastline_features": "Dramatik, rüzgarlı kayalık uçurumlar (örn. Cabo da Roca), geniş kumlu plajlar ve önemli nehir ağızları (örn. Tejo ve Douro)",
+    "important_ports": [
+      "Lizbon (Ticaret ve kruvaziyer gemileri için en büyük ve en önemli liman)",
+      "Porto (Kuzeydeki önemli sanayi ve nakliye merkezi)",
+      "Setúbal (Balıkçılık ve gemi inşa için önemli)"
+    ],
+    "economic_activities": [
+      "Yoğun balıkçılık (özellikle sardalya ve orkinos gibi pelajik türler için)",
+      "Uluslararası denizcilik ve denizcilik hizmetleri (stratejik Atlantik konumu nedeniyle)",
+      "Kıyı ve sörf turizmi (tüm kıyı boyunca)"
+    ],
+    "description": "Portekiz'in Atlantik kıyısı, mevsimsel yükselme ile yönlendirilen oldukça üretken deniz çevresi ile bilinir ve bu da onu Avrupa'daki en zengin balıkçılık alanlarından biri yapar. Morina (Bacalhau) tüketiminin uzun geleneği, morina öncelikle Kuzey Atlantik'te yakalanmasına rağmen, tanımlayıcı bir kültürel unsurdur. Yerel sardalya ve orkinos stoklarının sürdürülebilir yönetimi sürekli bir önceliktir.",
+    "image_paths": [
+      "https://drive.usercontent.google.com/download?id=1wD-UGo_hVK3Jc2XUmw9GIll11CJuv5CU&export=view&authuser=0"
+    ]
+  }
+]

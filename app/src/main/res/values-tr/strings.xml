@@ -1,0 +1,85 @@
+<resources>
+    <string-array name="languages_array">
+        <item>Select Language</item>
+        <item>İngilizce</item>
+        <item>Türkçe</item>
+        <item>Portekizce</item>
+        <item>Yunanca</item>
+        <item>Bulgarca</item>
+    </string-array>
+
+    <string name="app_name">Blue Steps</string>
+    <!-- Navigation  -->
+    <string name="nav_home_btn">Ana Sayfa</string>
+    <string name="nav_education_btn">Eğitim</string>
+    <string name="nav_quiz_btn">Testler</string>
+    <string name="nav_about_btn">Hakkında</string>
+
+    <!-- Main Page  -->
+    <string name="main_explore">Keşfet</string>
+    <string name="main_explore_subtitle">Okyanusun derinliklerini keşfedin</string>
+    <string name="main_categories">Kategoriler</string>
+    <string name="main_categories_fish">Balıklar</string>
+    <string name="main_categories_creatures">Canlılar</string>
+    <string name="main_categories_corals">Mercanlar</string>
+    <string name="main_quizzes">Testler</string>
+    <string name="main_quizzes_subtitle">Yeni şeyler öğrenin ve ilerlemenizi takip edin!</string>
+    <string name="main_start_quiz_button">Yeni Bir Test Başlat</string>
+    <string name="main_locations">Konumlar</string>
+    <string name="main_locations_see_all">Tümünü Gör</string>
+    <string name="main_seas">Denizler</string>
+    <string name="main_seas_see_all">Tümünü Gör</string>
+    <string name="main_all_other_animals">Süngerler, Bitkiler, Mercanlar</string>
+    <string name="main_species">Türler</string>
+
+    <!-- About -->
+    <string name="about_us">Hakkımızda</string>
+    <string name="about_project">Projemiz Hakkında</string>
+    <string name="about_project_text">BlueSteps mobil uygulaması, We BLUE Erasmus+ projesi kapsamında geliştirilmiştir. Uygulama, projeye katılan Türkiye,
+        Portekiz, Yunanistan ve Bulgaristan da denizler ve deniz yaşamı hakkında bilgi sağlamayı amaçlamaktadır.</string>
+    <string name="about_benefits_we_provide_to_users">Kullanıcılara Sunduğumuz Faydalar</string>
+    <string name="about_benefits_we_provide_to_users_text">Uygulamada gezinirken deniz yaşamı ve denizler hakkında bilgi edinebilirsiniz. Onları tehdit eden
+        unsurlar ve nasıl koruyabileceğimiz gibi konularda bilgiler sunuyoruz. Bu bilgileri insanların günlük yaşamlarına uygulamalarını hedefliyoruz.
+        Günümüzde denizlerimiz giderek daha fazla kirlenmekte, bu durum deniz canlıları için ciddi bir tehdit oluşturmakta ve nesillerinin tükenmesine
+        yol açmaktadır. İnsanlar olarak denizlerimizi ve bu canlıları koruyarak doğamızı korumalıyız.</string>
+
+    <!-- Seas Template -->
+    <string name="sea_about">Hakkında</string>
+    <string name="sea_ecosystem">Ekosistem</string>
+    <string name="sea_inhabitants">Nüfus</string>
+    <string name="sea_economy">Ekonomi</string>
+    <string name="sea_max_depth">En Fazla Derinlik</string>
+    <string name="sea_salinity">Tuzluluk</string>
+    <string name="sea_temp">Sıcaklık</string>
+    <string name="sea_surface_area">Yüzey Alanı</string>
+
+    <!-- Animal Template -->
+    <string name="animal_poisonous_yes">Evet</string>
+    <string name="animal_not_poisonous">Hayır</string>
+    <string name="animal_dangerous">Evet</string>
+    <string name="animal_not_dangerous">Hayır</string>
+    <string name="animal_yes">Evet</string>
+    <string name="animal_no">Hayır</string>
+    <string name="animal_name">Animal Name</string>
+    <string name="animal_max_size">En Fazla Büyüklüğü</string>
+    <string name="animal_max_weight">En Fazla Ağırlığı</string>
+    <string name="animal_max_depth">En Fazla Derinlik</string>
+    <string name="animal_colors">Renkler</string>
+    <string name="animal_family">Irk</string>
+    <string name="animal_habitat">Doğal Yaşam Alanı</string>
+    <string name="animal_poisonous">Zehirli mi?</string>
+    <string name="animal_edible">Yenilebilir mi?</string>
+    <string name="animal_danger">Tehlike Durumu</string>
+    <string name="animal_social">Sosyal Yaşam</string>
+    <string name="animal_description">Açıklama</string>
+    <string name="animal_locations">Konumlar</string>
+    <string name="animal_distribution_and_habitat">Yayılım ve Yaşam Alanı</string>
+
+    <!-- Quiz -->
+    <string name="quiz_next_question">Sonraki Soru</string>
+    <string name="quiz_right_answer">Doğru Cevap - Harika!</string>
+    <string name="quiz_wrong_answer">Yanlış Cevap - İyi Deneme</string>
+    <string name="quiz_correct_answer_label">Doğru Cevap: </string>
+    <string name="quiz_finished">Quiz Bitti! </string>
+    <string name="quiz_game_label">Quiz Oyunu</string>
+</resources>

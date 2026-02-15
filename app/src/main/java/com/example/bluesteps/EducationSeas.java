@@ -39,6 +39,8 @@ public class EducationSeas extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_education_seas);
 
+        NavigationHelper.updateNavigationBar(this, "education");
+        NavigationHelper.setCenterLogoVisibility(this, true); // Logo'yu gizle
 
         JSONArray allData = fishJson.loadFishJson(this);
         String countryName = getIntent().getStringExtra("countryName");
@@ -189,97 +191,70 @@ public class EducationSeas extends AppCompatActivity {
     }
 
 
+    // EducationSeas.java içindeki createFishCard metodunu bu şekilde değiştir:
     private View createFishCard(Context context, JSONObject obj) throws JSONException {
-        String animalName = obj.getString("animal_name"); // artık hepsi için tek alan
+        final int id = obj.getInt("id"); // Final yaparak güvenli hale getiriyoruz
+        String animalName = obj.optString("animal_name", "Unknown");
         String type = obj.optString("type", "unknown");
         String maxSizeStr = obj.optString("max_size", "N/A");
         String maxDepthStr = obj.optString("max_depth", "N/A");
-        int id = obj.getInt("id");
-
-        LinearLayout rowLayout = new LinearLayout(context);
-        rowLayout.setOrientation(LinearLayout.VERTICAL);
-        rowLayout.setLayoutParams(new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
-        ));
 
         LinearLayout card = new LinearLayout(context);
         card.setOrientation(LinearLayout.HORIZONTAL);
         card.setGravity(Gravity.CENTER_VERTICAL);
         card.setClickable(true);
-        card.setPadding(12, 12, 12, 12);
-        card.setBackgroundResource(R.drawable.card);
-        card.setId(View.generateViewId());
-        card.setTag("card_" + id);
+        card.setFocusable(true);
 
-        card.setOnClickListener(v -> {
-            int convertedId = Integer.parseInt(((String)v.getTag()).split("_")[1]);
-            openFishDetail(convertedId);
-        });
+        // Tasarıma uygun padding
+        int p = dpToPx.convertDpToPx(context, 16);
+        card.setPadding(p, p, p, p);
 
-        LinearLayout.LayoutParams cardParams = new LinearLayout.LayoutParams(
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT
         );
-        cardParams.setMargins(16, 16, 16, 16);
-        card.setElevation(12f);
-        card.setOutlineProvider(ViewOutlineProvider.BACKGROUND);
-        card.setLayoutParams(cardParams);
+        params.setMargins(0, 0, 0, dpToPx.convertDpToPx(context, 12));
+        card.setLayoutParams(params);
+        card.setBackgroundResource(R.drawable.category_card_bg);
+        card.setElevation(4f);
 
-        ImageView imageView = new ImageView(context);
-        LinearLayout.LayoutParams imageParams = new LinearLayout.LayoutParams(200, 200);
-        imageParams.setMargins(0, 0, 25, 0);
-        imageView.setLayoutParams(imageParams);
-        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        if (type.equalsIgnoreCase("fish")) {
-            imageView.setImageResource(R.drawable.fish);
-        } else if (type.equalsIgnoreCase("other")) {
-            imageView.setImageResource(R.drawable.coral);
-        } else{
-            imageView.setImageResource(R.drawable.creature);
-        }
+        // TAG VE TIKLAMA (Crash Önleyici)
+        card.setTag(String.valueOf(id)); // String olarak sakla
+        card.setOnClickListener(v -> {
+            String tagValue = (String) v.getTag();
+            openFishDetail(Integer.parseInt(tagValue));
+        });
 
+        // İkon
+        ImageView img = new ImageView(context);
+        int size = dpToPx.convertDpToPx(context, 50);
+        img.setLayoutParams(new LinearLayout.LayoutParams(size, size));
+        if (type.equalsIgnoreCase("fish")) img.setImageResource(R.drawable.fish);
+        else if (type.equalsIgnoreCase("other")) img.setImageResource(R.drawable.coral);
+        else img.setImageResource(R.drawable.creature);
+        img.setPadding(0, 0, dpToPx.convertDpToPx(context, 12), 0);
 
-        LinearLayout textLayout = new LinearLayout(context);
-        textLayout.setOrientation(LinearLayout.VERTICAL);
-        textLayout.setLayoutParams(new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.WRAP_CONTENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
-        ));
+        // Metinler
+        LinearLayout textContainer = new LinearLayout(context);
+        textContainer.setOrientation(LinearLayout.VERTICAL);
 
-        TextView tvName = new TextView(new ContextThemeWrapper(context, R.style.TextviewBodySubtitleWhite));
-        tvName.setText(animalName);
-        tvName.setPadding(0, 0, 0, 2);
-        textLayout.addView(tvName);
+        TextView name = new TextView(context);
+        name.setText(animalName);
+        name.setTextColor(Color.parseColor("#1F2937"));
+        name.setTextSize(16);
+        name.setTypeface(null, android.graphics.Typeface.BOLD);
 
-        if (!maxSizeStr.equals("N/A")) {
-            TextView tvSize = new TextView(new ContextThemeWrapper(context, R.style.TextviewBodyWhite));
-            tvSize.setText(maxSizeStr + " cm");
-            textLayout.addView(tvSize);
-        }
+        TextView details = new TextView(context);
+        details.setText("Size: " + maxSizeStr + "cm | Depth: " + maxDepthStr + "m");
+        details.setTextColor(Color.parseColor("#6B7280"));
+        details.setTextSize(12);
 
-        if (!maxDepthStr.equals("N/A")) {
-            TextView tvDepth = new TextView(new ContextThemeWrapper(context, R.style.TextviewBodyWhite));
-            tvDepth.setText(maxDepthStr + " m depth");
-            textLayout.addView(tvDepth);
-        }
+        textContainer.addView(name);
+        textContainer.addView(details);
+        card.addView(img);
+        card.addView(textContainer);
 
-        card.addView(imageView);
-        card.addView(textLayout);
-
-        /*
-        View divider = new View(context);
-        LinearLayout.LayoutParams dividerParams = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT, 2);
-        dividerParams.setMargins(0, 8, 0, 8);
-        divider.setLayoutParams(dividerParams);
-        divider.setBackgroundColor(Color.BLACK);
-        */
-
-        rowLayout.addView(card);
-        //rowLayout.addView(divider);
-
-        return rowLayout;
+        return card;
     }
 
 
@@ -359,30 +334,23 @@ public class EducationSeas extends AppCompatActivity {
     }
 
     public void countryAllFishes(View view){
-        String selectedType = "fish";
         String countryName = getIntent().getStringExtra("countryName");
-        String type = getIntent().getStringExtra("type");
-        if (countryName == null && type != null){
-            if(!selectedType.equalsIgnoreCase(type)){
-                Nav.getPagesByAnimalType(view,"creature");
-            }
-        }
-        else{
+
+        // Eğer ülke ismi yoksa (Genel liste), Nav üzerinden doğru tipi gönder
+        if (countryName == null || countryName.isEmpty()){
+            Nav.getPagesByAnimalType(view, "fish"); // "creature" değil "fish" gönderiyoruz
+        } else {
+            // Eğer ülke ismi varsa, zaten yazdığımız filtreli geçişi yap
             goToEducationSeas("fish", countryName);
         }
-
     }
 
     public void countryAllCreatures(View view){
-        String selectedType = "creature";
         String countryName = getIntent().getStringExtra("countryName");
-        String type = getIntent().getStringExtra("type");
-        if (countryName == null && type != null){
-            if(!selectedType.equalsIgnoreCase(type)){
-                Nav.getPagesByAnimalType(view,"creature");
-            }
-        }
-        else{
+
+        if (countryName == null || countryName.isEmpty()){
+            Nav.getPagesByAnimalType(view, "creature");
+        } else {
             goToEducationSeas("creature", countryName);
         }
     }

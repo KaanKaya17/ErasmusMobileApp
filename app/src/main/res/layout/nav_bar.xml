@@ -7,10 +7,12 @@
     <LinearLayout
         android:id="@+id/bottom_bar_container"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="70dp"
         android:orientation="horizontal"
-        android:background="#2EA6D1"
+        android:background="@drawable/nav_bar_bg"
         android:weightSum="5"
+        android:elevation="12dp"
+        android:paddingVertical="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -18,44 +20,65 @@
         <LinearLayout
             android:layout_width="0dp"
             android:clickable="true"
+            android:focusable="true"
             android:onClick="navHomePage"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:gravity="center">
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/mainpage"
-                android:contentDescription="Anasayfa"/>
+            android:gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="#E0F2FE">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:padding="6dp"
+                    android:src="@drawable/mainpage"
+                    android:contentDescription="Home Page"/>
+            </androidx.cardview.widget.CardView>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Home Page"
-                android:textSize="12sp"
+                android:layout_marginTop="4dp"
+                android:text="@string/nav_home_btn"
+                android:textSize="11sp"
+                android:textStyle="bold"
                 android:textAlignment="center"
-                android:textColor="@android:color/black"/>
+                android:textColor="#0369A1"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:clickable="true"
+            android:focusable="true"
             android:onClick="navQuiz"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless">
+
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
                 android:src="@drawable/quiz"
-                android:contentDescription="Rozetler"/>
+                android:alpha="0.6"
+                android:contentDescription="Quiz"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Quiz"
-                android:textSize="12sp"
-                android:textColor="@android:color/black"/>
+                android:layout_marginTop="4dp"
+                android:text="@string/nav_quiz_btn"
+                android:textSize="11sp"
+                android:textColor="#64748B"/>
         </LinearLayout>
 
         <View
@@ -69,19 +92,25 @@
             android:layout_weight="1"
             android:orientation="vertical"
             android:clickable="true"
+            android:focusable="true"
             android:onClick="goToEducation"
-            android:gravity="center">
+            android:gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless">
+
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
                 android:src="@drawable/education"
-                android:contentDescription="Eğitimler"/>
+                android:alpha="0.6"
+                android:contentDescription="Education"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Education"
-                android:textSize="12sp"
-                android:textColor="@android:color/black"/>
+                android:layout_marginTop="4dp"
+                android:text="@string/nav_education_btn"
+                android:textSize="11sp"
+                android:textColor="#64748B"/>
         </LinearLayout>
 
         <LinearLayout
@@ -90,44 +119,62 @@
             android:layout_weight="1"
             android:orientation="vertical"
             android:clickable="true"
+            android:focusable="true"
             android:onClick="btnAboutUs"
-            android:gravity="center">
+            android:gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless">
+
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
                 android:src="@drawable/aboutus"
-                android:contentDescription="Hakkımızda"/>
+                android:alpha="0.6"
+                android:contentDescription="About Us"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="About Us"
+                android:layout_marginTop="4dp"
+                android:text="@string/nav_about_btn"
                 android:textAlignment="center"
-                android:textSize="12sp"
-                android:textColor="@android:color/black"/>
+                android:textSize="11sp"
+                android:textColor="#64748B"/>
         </LinearLayout>
 
     </LinearLayout>
 
-
+    <!-- Center Floating Action Button -->
     <androidx.cardview.widget.CardView
-        android:layout_width="74dp"
-        android:layout_height="74dp"
-        android:layout_marginBottom="20dp"
-        app:cardCornerRadius="37dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="28dp"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="16dp"
         app:cardBackgroundColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <ImageView
-            android:id="@+id/center_logo"
-            android:clickable="true"
-            android:onClick="navHomePage"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+        <androidx.cardview.widget.CardView
+            android:layout_width="72dp"
+            android:layout_height="72dp"
             android:layout_gravity="center"
-            android:src="@drawable/logo" android:scaleType="fitCenter"
-            android:contentDescription="Merkez Logo"/>
+            app:cardCornerRadius="36dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#0EA5E9">
+
+            <ImageView
+                android:id="@+id/center_logo"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="navHomePage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/logo"
+                android:scaleType="centerCrop"
+                android:contentDescription="Center Logo"/>
+
+        </androidx.cardview.widget.CardView>
 
     </androidx.cardview.widget.CardView>
 

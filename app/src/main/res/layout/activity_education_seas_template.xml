@@ -5,316 +5,400 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E0F7FF"
+    android:background="#F9FAFB"
     tools:context=".EducationSeasTemplate">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_marginBottom="60dp"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toTopOf="@id/bottom_bar_container"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:paddingBottom="30dp"
             android:layout_height="wrap_content"
-            tools:ignore="MissingConstraints">
+            android:orientation="vertical"
+            android:paddingBottom="40dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="0dp"
+                android:layout_margin="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/viewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="240dp"
+                        android:background="#E2E8F0" />
+
+                    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                        android:id="@+id/dotsIndicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="-20dp"
+                        android:layout_marginBottom="10dp"
+                        android:padding="6dp"
+                        android:background="@drawable/shape_indicator_bg"
+                        app:dotsColor="#CBD5E1"
+                        app:selectedDotColor="#3B82F6"
+                        app:dotsSize="8dp"
+                        app:dotsSpacing="4dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:gravity="center"
-                android:layout_marginTop="8dp">
-
-                <androidx.viewpager2.widget.ViewPager2
-                    android:id="@+id/viewPager"
-                    android:scaleType="fitCenter"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    tools:ignore="MissingConstraints" />
-
-                <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
-                    android:id="@+id/dotsIndicator"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center_horizontal"
-                    android:layout_marginBottom="7dp"
-                    android:layout_marginTop="7dp"
-                    app:dotsColor="#96C9DB"
-                    app:selectedDotColor="#96C9DB"
-                    app:dotsSize="8dp"
-                    app:dotsSpacing="4dp" />
-
-            </LinearLayout>
-
-
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="vertical"
-                android:padding="12dp"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/sea_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
-                    style="@style/TextViewTitle"
-                    android:text="Sea Name"/>
+                android:paddingHorizontal="20dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:elevation="12px"
-                    android:outlineProvider="background"
-                    android:gravity="center"
-                    android:padding="10dp"
-                    android:background="@drawable/rounded_box">
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:padding="3dp"
-                        android:orientation="vertical"
-                        android:background="@drawable/card">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:textAlignment="center"
-                            style="@style/TextviewBodyWhite"
-                            android:layout_height="wrap_content"
-                            android:text="Max Depth" />
-
-                        <TextView
-                            android:id="@+id/sea_max_depth"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            style="@style/TextviewBodyWhite"
-                            android:textAlignment="center"
-                            android:text="40 cm" />
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:background="#ffffff"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginEnd="5dp"/>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:padding="3dp"
-                        android:orientation="vertical"
-                        android:layout_marginHorizontal="10dp"
-                        android:background="@drawable/card">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textAlignment="center"
-                            style="@style/TextviewBodyWhite"
-                            android:text="Salinity" />
-
-                        <TextView
-                            android:id="@+id/sea_salinity"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textAlignment="center"
-                            style="@style/TextviewBodyWhite"
-                            android:text="40 cm" />
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:background="#ffffff"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginEnd="5dp"/>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:padding="3dp"
-                        android:orientation="vertical"
-                        android:background="@drawable/card">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            style="@style/TextviewBodyWhite"
-                            android:textAlignment="center"
-                            android:text="Tempature" />
-
-                        <TextView
-                            android:id="@+id/sea_tempature_range"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textAlignment="center"
-                            style="@style/TextviewBodyWhite"
-                            android:text="40 cm" />
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:orientation="vertical"
-                    android:layout_height="wrap_content">
-
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="9dp"
-                        android:layout_marginBottom="9dp"
-                        android:gravity="center_vertical"
-                        android:layout_height="wrap_content">
-
-                        <!-- Soldaki TextView sadece yazı kadar -->
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:text="Area"
-                            style="@style/TextViewBody"
-                            android:gravity="start"
-                            android:layout_height="wrap_content"/>
-
-                        <!-- Ortadaki çizgi, TextView’ler arasındaki boşluğu dolduruyor -->
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="1dp"
-                            android:layout_weight="1"
-                            android:background="#000000"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginEnd="8dp"/>
-
-                        <!-- Sağdaki TextView -->
-                        <TextView
-                            android:id="@+id/sea_area"
-                            android:layout_width="150dp"
-                            android:text="Value"
-                            style="@style/TextViewBody"
-                            android:textAlignment="textStart"
-                            android:layout_height="wrap_content"/>
-                    </LinearLayout>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:orientation="vertical"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="15dp"
-                    android:layout_height="wrap_content">
+                    android:gravity="top"
+                    android:layout_marginBottom="24dp">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:text="Main Fishes"
-                        style="@style/TextViewSubtitle"
-                        android:textColor="#000000"
-                        android:layout_height="wrap_content"/>
+                        android:id="@+id/sea_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.65"
+                        android:text="Mediterranean Sea\n(Turkish Coast)"
+                        android:textColor="#111827"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        android:lineSpacingMultiplier="1.1" />
 
                     <LinearLayout
-                        android:id="@+id/main_fishes_layout"
-                        android:layout_width="match_parent"
-                        android:elevation="12px"
-                        android:outlineProvider="background"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_weight="0.35"
                         android:orientation="vertical"
-                        android:gravity="center"
-                        android:layout_marginTop="5dp"
-                        android:padding="10dp"
-                        android:background="@drawable/rounded_box">
+                        android:gravity="end"
+                        android:layout_marginTop="6dp">
 
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sea_surface_area"
+                            android:textSize="12sp"
+                            android:textColor="#6B7280"/>
+
+                        <TextView
+                            android:id="@+id/sea_area"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2,500,000 km²"
+                            android:textColor="#3B82F6"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            android:textAlignment="viewEnd" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gradient_header_bg"
+                        android:orientation="horizontal"
+                        android:paddingVertical="20dp"
+                        android:paddingHorizontal="10dp"
+                        android:baselineAligned="false"
+                        android:weightSum="3">
 
                         <LinearLayout
-                            android:id="@+id/main_fishes_container"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:layout_width="match_parent"
-                            android:clickable="true"
-                            android:padding="3dp"
                             android:orientation="vertical"
-                            android:background="@drawable/roundex_box_white">
+                            android:gravity="center">
 
                             <TextView
-                                android:layout_width="match_parent"
-                                android:padding="6dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textAlignment="textStart"
-                                android:text="İstavrit" />
+                                android:text="@string/sea_max_depth"
+                                android:textAlignment="center"
+                                android:textColor="#E0E7FF"
+                                android:textSize="12sp"
+                                android:layout_marginBottom="4dp"/>
 
+                            <TextView
+                                android:id="@+id/sea_max_depth"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2200m"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold"
+                                android:textSize="16sp"/>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="#80FFFFFF"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/sea_salinity"
+                                android:textAlignment="center"
+                                android:textColor="#E0E7FF"
+                                android:textSize="12sp"
+                                android:layout_marginBottom="4dp"/>
+
+                            <TextView
+                                android:id="@+id/sea_salinity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="3.5%"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold"
+                                android:textSize="16sp"/>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="#80FFFFFF"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/sea_temp"
+                                android:textAlignment="center"
+                                android:textColor="#E0E7FF"
+                                android:textSize="12sp"
+                                android:layout_marginBottom="4dp"/>
+
+                            <TextView
+                                android:id="@+id/sea_tempature_range"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="15-25°C"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold"
+                                android:textSize="16sp"/>
                         </LinearLayout>
 
                     </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                    <TextView
-                        android:id="@+id/sea_main_fishes_description"
-                        android:layout_width="match_parent"
-                        android:layout_marginTop="15dp"
-                        style="@style/TextViewBody"
-                        android:layout_height="wrap_content"
-                        android:text="Lorem Ipsum is a big huge light weight test some little testing idk what to say but im doing hey!!!"/>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="@android:color/white">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
-                        style="@style/TextViewSubtitle"
-                        android:layout_marginBottom="15dp"
-                        android:text="Description"/>
-
-                    <TextView
-                        android:id="@+id/sea_description"
-                        android:layout_width="match_parent"
-                        style="@style/TextViewBody"
-                        android:layout_height="wrap_content"
-                        android:text="Lorem Ipsum is a big huge light weight test some little testing idk what to say but im doing hey!!!This is a description test part idk what to say in here butit's just a test rn"/>
-
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
-                        style="@style/TextViewSubtitle"
-                        android:layout_marginBottom="15dp"
-                        android:text="Ecosystem"/>
+                        android:orientation="vertical"
+                        android:padding="20dp">
 
-                    <TextView
-                        android:id="@+id/sea_ecosystem"
-                        android:layout_width="match_parent"
-                        style="@style/TextViewBody"
-                        android:layout_height="wrap_content"
-                        android:text="Lorem Ipsum is a big huge light weight test some little testing idk what to say but im doing hey!!!This is a description test part idk what to say in here butit's just a test rn"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sea_about"
+                            android:textColor="#1F2937"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="12dp"/>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
-                        style="@style/TextViewSubtitle"
-                        android:layout_marginBottom="15dp"
-                        android:text="Economic Activities"/>
+                        <TextView
+                            android:id="@+id/sea_description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Description text goes here..."
+                            android:textColor="#4B5563"
+                            android:lineSpacingExtra="4dp"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                    <TextView
-                        android:id="@+id/sea_economic_activities"
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="@android:color/white">
+
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        style="@style/TextViewBody"
                         android:layout_height="wrap_content"
-                        android:text="Lorem Ipsum is a big huge light weight test some little testing idk what to say but im doing hey!!!This is a description test part idk what to say in here butit's just a test rn"/>
-                </LinearLayout>
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sea_ecosystem"
+                            android:textColor="#1F2937"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="12dp"/>
+
+                        <TextView
+                            android:id="@+id/sea_ecosystem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ecosystem text..."
+                            android:textColor="#4B5563"
+                            android:lineSpacingExtra="4dp"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sea_inhabitants"
+                    android:textColor="#1F2937"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginStart="4dp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="@android:color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <LinearLayout
+                            android:id="@+id/main_fishes_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/main_fishes_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/category_card_bg"
+                                android:padding="12dp"
+                                android:layout_marginBottom="8dp"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/fish"
+                                    app:tint="#3B82F6"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="12dp"
+                                    android:text="Sample Fish Name"
+                                    android:textColor="#1F2937"
+                                    android:textStyle="bold"
+                                    android:textSize="14sp"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/sea_main_fishes_description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Details about fishes..."
+                            android:textColor="#6B7280"
+                            android:textSize="13sp"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="@android:color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sea_economy"
+                            android:textColor="#1F2937"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="12dp"/>
+
+                        <TextView
+                            android:id="@+id/sea_economic_activities"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Economy text..."
+                            android:textColor="#4B5563"
+                            android:lineSpacingExtra="4dp"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
             </LinearLayout>
-
         </LinearLayout>
     </ScrollView>
 
     <include
-        layout="@layout/nav_bar"/>
-
+        android:id="@+id/bottom_bar_container"
+        layout="@layout/nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

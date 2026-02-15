@@ -4,372 +4,399 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:background="#E0F7FF"
     android:layout_height="match_parent"
+    android:background="#F9FAFB"
     tools:context=".MainActivity">
+
+    <!-- Gradient Header Background -->
+    <View
+        android:id="@+id/headerGradient"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:background="@drawable/gradient_header_bg"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_marginBottom="60dp"
-        android:padding="12dp"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toTopOf="@id/bottom_bar_container"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingBottom="30dp"
-            android:layout_height="match_parent">
+            android:paddingHorizontal="20dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:text="Explore"
-                style="@style/TextViewTitle"
-                android:layout_marginBottom="25dp"
-                android:layout_height="wrap_content"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:text="Categories"
-                style="@style/TextViewSubtitle"
-                android:layout_marginBottom="15dp"
-                android:layout_height="wrap_content"/>
-
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_height="wrap_content">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="20dp"
-                        android:clickable="true"
-                        android:onClick="btnEducationSeas"
-                        android:orientation="vertical"
-                        android:background="@drawable/card">
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:src="@drawable/fish"
-                            android:layout_marginBottom="10dp"
-                            android:layout_height="match_parent"/>
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:gravity="center"
-                            android:layout_height="wrap_content">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                style="@style/boldNormal"
-                                android:text="Fish\n\n" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="15dp"
-                        android:layout_marginLeft="15dp"
-                        android:clickable="true"
-                        android:onClick="btnEducationAnimalsCreatures"
-                        android:padding="20dp"
-                        android:orientation="vertical"
-                        android:background="@drawable/card">
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:src="@drawable/creature"
-                            android:layout_marginBottom="10dp"
-                            android:layout_height="match_parent"/>
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:gravity="center"
-                            android:layout_height="wrap_content">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                style="@style/boldNormal"
-                                android:text="Creatures\n\n" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="20dp"
-                        android:clickable="true"
-                        android:onClick="btnEducationAnimalsOther"
-                        android:orientation="vertical"
-                        android:background="@drawable/card">
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:src="@drawable/coral"
-                            android:layout_marginBottom="10dp"
-                            android:layout_height="match_parent"/>
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:gravity="center"
-                            android:layout_height="wrap_content">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Corals,\nSponges,\nPlants"
-                                style="@style/boldNormal"/>
-                        </LinearLayout>
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </HorizontalScrollView>
-
-
-
-
+            <!-- Header Section -->
             <LinearLayout
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_height="wrap_content">
+                android:paddingBottom="32dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="15dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/main_explore"
+                    android:textColor="@android:color/white"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium"
+                    android:letterSpacing="-0.02" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Quizzes"
-                        style="@style/TextViewSubtitle"
-                        android:layout_gravity="start"
-                        android:layout_weight="1"
-                        android:gravity="start"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/main_explore_subtitle"
+                    android:textColor="@android:color/white"
+                    android:alpha="0.9"
+                    android:textSize="15sp" />
 
-                    <!--
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="More"
-                        android:gravity="end"
-                        style="@style/TextViewSubtitle"
-                        android:layout_gravity="end" />
-                    -->
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_marginTop="15dp"
-                    android:padding="15dp"
-                    android:background="@drawable/rounded_box"
-                    android:orientation="vertical"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        style="@style/TextViewSubtitle"
-                        android:text="Learn New Things!!!"
-                        android:layout_height="wrap_content"/>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:padding="10dp"
-                        android:background="@drawable/roundex_box_white"
-                        android:layout_marginTop="10dp"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:text="Start A New Quiz"
-                            style="@style/TextviewBodyWhite"
-                            android:clickable="true"
-                            android:onClick="btnQuiz"
-                            android:textSize="18dp"
-                            android:layout_height="wrap_content"/>
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
+                <Spinner
+                    android:id="@+id/languageSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:padding="10dp"/>
             </LinearLayout>
 
-
+            <!-- Categories Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@android:color/white">
 
                 <LinearLayout
-                    android:id="@+id/parentLayout"
                     android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_marginTop="20dp"
-                    android:layout_height="wrap_content">
+                    android:padding="20dp">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/main_categories"
+                        android:textColor="#1A1A1A"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Categories Grid -->
                     <LinearLayout
                         android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:layout_marginBottom="15dp"
-                        android:layout_height="wrap_content">
+                        android:weightSum="3"
+                        android:baselineAligned="false">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            style="@style/TextViewSubtitle"
-                            android:layout_weight="1"
-                            android:text="Locations"
-                            android:gravity="start"
-                            android:layout_height="wrap_content"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:clickable="true"
-                            android:onClick="btnAnimalCountryLocations"
-                            style="@style/TextViewSubtitle"
-                            android:layout_weight="1"
-                            android:gravity="end"
-                            android:text="See All"
-                            android:layout_height="wrap_content"/>
-
-                    </LinearLayout>
-
-                    <include
-                        layout="@layout/horizantal_line"/>
-
-                    <!--
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_height="wrap_content">
-
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:src="@drawable/badges"
-                            android:layout_marginRight="20dp"
-                            android:layout_height="60dp"/>
-
+                        <!-- Fish Category -->
                         <LinearLayout
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="8dp"
+                            android:background="@drawable/category_card_bg"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:onClick="btnEducationSeas"
                             android:orientation="vertical"
-                            android:layout_height="wrap_content">
+                            android:padding="16dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="56dp"
+                                android:layout_height="56dp"
+                                android:src="@drawable/fish"
+                                android:scaleType="centerInside"
+                                android:layout_marginBottom="8dp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
-                                android:text="Bulgaristan"
-                                android:textColor="#000000"
+                                android:layout_height="wrap_content"
+                                android:text="@string/main_categories_fish"
+                                android:textColor="#2D3748"
+                                android:textSize="14sp"
                                 android:textStyle="bold"
-                                android:layout_height="wrap_content"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:text="X Fishes"
-                                android:textColor="#000000"
-                                android:layout_height="wrap_content"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:text="X Creatures"
-                                android:textColor="#000000"
-
-                                android:layout_height="wrap_content"/>
-
-                            <View
-                                android:layout_width="match_parent"
-                                android:background="#000000"
-                                android:layout_marginTop="6dp"
-                                android:layout_height="2dp"/>
-
-
+                                android:gravity="center" />
                         </LinearLayout>
 
+                        <!-- Creatures Category -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="4dp"
+                            android:background="@drawable/category_card_bg"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:onClick="btnEducationAnimalsCreatures"
+                            android:orientation="vertical"
+                            android:padding="16dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="56dp"
+                                android:layout_height="56dp"
+                                android:src="@drawable/creature"
+                                android:scaleType="centerInside"
+                                android:layout_marginBottom="8dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/main_categories_creatures"
+                                android:textColor="#2D3748"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:gravity="center" />
+                        </LinearLayout>
+
+                        <!-- Corals Category -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="8dp"
+                            android:background="@drawable/category_card_bg"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:onClick="btnEducationAnimalsOther"
+                            android:orientation="vertical"
+                            android:padding="16dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="56dp"
+                                android:layout_height="56dp"
+                                android:src="@drawable/coral"
+                                android:scaleType="centerInside"
+                                android:layout_marginBottom="8dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/main_categories_corals"
+                                android:textColor="#2D3748"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:maxLines="2"
+                                android:ellipsize="end" />
+                        </LinearLayout>
                     </LinearLayout>
-                    -->
-
-
                 </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-            <LinearLayout
+            <!-- Quiz Card -->
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:orientation="vertical"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="#6366F1">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="15dp"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
 
                     <TextView
                         android:layout_width="wrap_content"
-                        style="@style/TextViewSubtitle"
-                        android:layout_weight="1"
-                        android:text="Seas"
-                        android:gravity="start"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="@string/main_quizzes"
+                        android:textColor="@android:color/white"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/main_quizzes_subtitle"
+                        android:textColor="@android:color/white"
+                        android:alpha="0.9"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/quiz_button_bg"
                         android:clickable="true"
-                        android:onClick="btnAllSeas"
-                        style="@style/TextViewSubtitle"
+                        android:onClick="btnQuiz"
+                        android:focusable="true"
+                        android:paddingHorizontal="24dp"
+                        android:paddingVertical="12dp"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/main_start_quiz_button"
+                            android:textColor="#6366F1"
+                            android:textStyle="bold"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Locations Section -->
+            <LinearLayout
+                android:id="@+id/parentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:gravity="end"
-                        android:text="See All"
-                        android:layout_height="wrap_content"/>
+                        android:text="@string/main_locations"
+                        android:textColor="#1A1A1A"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/main_locations_see_all"
+                        android:textColor="#6366F1"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:clickable="true"
+                        android:onClick="btnAnimalCountryLocations"
+                        android:focusable="true"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="4dp" />
                 </LinearLayout>
 
-                <include
-                    layout="@layout/horizantal_line"/>
+                <!-- Location items will be added dynamically here -->
+            </LinearLayout>
 
+            <!-- Seas Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/main_seas"
+                        android:textColor="#1A1A1A"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/main_seas_see_all"
+                        android:textColor="#6366F1"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:clickable="true"
+                        android:onClick="btnAllSeas"
+                        android:focusable="true"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="4dp" />
+                </LinearLayout>
+
+                <!-- Seas List -->
                 <LinearLayout
                     android:id="@+id/main_seas_layout"
                     android:layout_width="match_parent"
-                    android:orientation="vertical"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-                    <LinearLayout
+                    <!-- Sea Item Card -->
+                    <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_height="wrap_content">
-
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:src="@drawable/badges"
-                            android:layout_marginRight="20dp"
-                            android:layout_height="60dp"/>
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="4dp"
+                        app:cardBackgroundColor="@android:color/white">
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:orientation="vertical"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="16dp">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:text="Sea Name"
-                                style="@style/TextViewSubtitle"
-                                android:layout_height="wrap_content"/>
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/badges"
+                                android:scaleType="centerCrop"
+                                android:layout_marginEnd="16dp" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:text="Area : X"
-                                style="@style/TextViewBody"
-                                android:layout_height="wrap_content"/>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_gravity="center_vertical">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:text="Max Depth : X"
-                                style="@style/TextViewBody"
-                                android:layout_height="wrap_content"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Sea Name"
+                                    android:textColor="#1A1A1A"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:layout_marginBottom="6dp" />
 
-                            <include
-                                layout="@layout/horizantal_line"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Area: X km²"
+                                    android:textColor="#6B7280"
+                                    android:textSize="14sp"
+                                    android:layout_marginBottom="4dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Max Depth: X m"
+                                    android:textColor="#6B7280"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
                         </LinearLayout>
-                    </LinearLayout>
-
+                    </androidx.cardview.widget.CardView>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
-    <include
-        layout="@layout/nav_bar"/>
+    <!-- Bottom Navigation Bar -->
+    <include layout="@layout/nav_bar"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

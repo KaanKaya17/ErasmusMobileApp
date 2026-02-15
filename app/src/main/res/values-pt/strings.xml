@@ -1,0 +1,94 @@
+<resources>
+    <string-array name="languages_array">
+        <item>Selecionar Idioma</item>
+        <item>Inglês</item>
+        <item>Turco</item>
+        <item>Português</item>
+        <item>grego</item>
+        <item>búlgaro</item>
+    </string-array>
+
+    <string name="app_name">Blue Steps</string>
+
+    <!-- Navigation  -->
+    <string name="nav_home_btn">Início</string>
+    <string name="nav_education_btn">Educação</string>
+    <string name="nav_quiz_btn">Questionário</string>
+    <string name="nav_about_btn">Sobre</string>
+
+    <!-- Main Page  -->
+    <string name="main_explore">Explorar</string>
+    <string name="main_explore_subtitle">Descubra as profundezas do oceano</string>
+    <string name="main_categories">Categorias</string>
+    <string name="main_categories_fish">Peixes</string>
+    <string name="main_categories_creatures">Criaturas</string>
+    <string name="main_categories_corals">Corais</string>
+    <string name="main_quizzes">Questionários</string>
+    <string name="main_quizzes_subtitle">Aprenda coisas novas e acompanhe o seu progresso!</string>
+    <string name="main_start_quiz_button">Iniciar Novo Questionário</string>
+    <string name="main_locations">Localizações</string>
+    <string name="main_locations_see_all">Ver Todos</string>
+    <string name="main_seas">Mares</string>
+    <string name="main_seas_see_all">Ver Todos</string>
+    <string name="main_all_other_animals">Esponjas, plantas, corais</string>
+    <string name="main_species">espécies</string>
+
+    <!-- About -->
+    <string name="about_us">Sobre Nós</string>
+    <string name="about_project">Sobre o Nosso Projeto</string>
+    <string name="about_project_text">
+        A aplicação móvel BlueSteps foi desenvolvida no âmbito do projeto We BLUE Erasmus+.
+        A aplicação tem como objetivo fornecer informações sobre a vida marinha e os mares da
+        Turquia, Portugal, Grécia e Bulgária, que participam no projeto.
+    </string>
+
+    <string name="about_benefits_we_provide_to_users">Benefícios que Oferecemos aos Utilizadores</string>
+    <string name="about_benefits_we_provide_to_users_text">
+        Ao navegar na aplicação, pode aprender sobre a vida marinha e o mar. Fornecemos informações
+        sobre temas como as ameaças que enfrentam e como podemos protegê-los. O nosso objetivo é
+        aplicar estas informações ao dia a dia das pessoas. Atualmente, os nossos mares estão a
+        tornar-se cada vez mais poluídos, representando uma séria ameaça à vida marinha e levando
+        à extinção. Como seres humanos, devemos proteger a nossa natureza protegendo os nossos mares
+        e estas criaturas.
+    </string>
+
+    <!-- Seas Template -->
+    <string name="sea_about">Sobre</string>
+    <string name="sea_ecosystem">Ecossistema</string>
+    <string name="sea_inhabitants">Habitantes</string>
+    <string name="sea_economy">Economia</string>
+    <string name="sea_max_depth">Profundidade Máxima</string>
+    <string name="sea_salinity">Salinidade</string>
+    <string name="sea_temp">Temperatura</string>
+    <string name="sea_surface_area">Área da superfície</string>
+
+    <!-- Animals Template -->
+    <string name="animal_poisonous_yes">Sim</string>
+    <string name="animal_not_poisonous">Não</string>
+    <string name="animal_dangerous">Sim</string>
+    <string name="animal_not_dangerous">Não</string>
+    <string name="animal_yes">Sim</string>
+    <string name="animal_no">Não</string>
+    <string name="animal_name">Animal Name</string>
+    <string name="animal_max_size">Tamanho Máximo</string>
+    <string name="animal_max_weight">Peso Máximo</string>
+    <string name="animal_max_depth">Profundidade Máxima</string>
+    <string name="animal_colors">Cores</string>
+    <string name="animal_habitat">Habitat</string>
+    <string name="animal_family">Família</string>
+    <string name="animal_poisonous">Venenoso</string>
+    <string name="animal_edible">Comestível</string>
+    <string name="animal_danger">Perigo</string>
+    <string name="animal_social">Social</string>
+    <string name="animal_description">Descrição</string>
+    <string name="animal_locations">Localizações</string>
+    <string name="animal_distribution_and_habitat">Distribuição e Habitat</string>
+
+    <!-- Quiz -->
+    <string name="quiz_next_question">Próxima pergunta</string>
+    <string name="quiz_right_answer">Resposta Correta - Ótimo!</string>
+    <string name="quiz_wrong_answer">Resposta Errada - Boa Tentativa</string>
+    <string name="quiz_correct_answer_label">Resposta Correta: </string>
+    <string name="quiz_finished">Quiz Concluído! </string>
+    <string name="quiz_game_label">Jogo de Quiz</string>
+</resources>

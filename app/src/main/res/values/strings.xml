@@ -1,3 +1,85 @@
 <resources>
-    <string name="app_name">BlueSteps</string>
+    <string-array name="languages_array">
+        <item>Select Language</item>
+        <item>English</item>
+        <item>Türkçe</item>
+        <item>Portuguese</item>
+        <item>Greek</item>
+        <item>Bulgarian</item>
+    </string-array>
+
+    <string name="app_name">Blue Steps</string>
+    <!-- Navigation  -->
+    <string name="nav_home_btn">Home</string>
+    <string name="nav_education_btn">Education</string>
+    <string name="nav_quiz_btn">Quiz</string>
+    <string name="nav_about_btn">About</string>
+
+    <!-- Main Page  -->
+    <string name="main_explore">Explore</string>
+    <string name="main_explore_subtitle">Discover the depths of the ocean</string>
+    <string name="main_categories">Categories</string>
+    <string name="main_categories_fish">Fish</string>
+    <string name="main_categories_creatures">Creatures</string>
+    <string name="main_categories_corals">Corals</string>
+    <string name="main_quizzes">Quizzes</string>
+    <string name="main_quizzes_subtitle">Learn new things and track your progress!</string>
+    <string name="main_start_quiz_button">Start A New Quiz</string>
+    <string name="main_locations">Locations</string>
+    <string name="main_locations_see_all">See All</string>
+    <string name="main_seas">Seas</string>
+    <string name="main_seas_see_all">See All</string>
+    <string name="main_all_other_animals">Sponges, Plants, Corals</string>
+    <string name="main_species">Species</string>
+
+    <!-- About -->
+    <string name="about_us">About Us</string>
+    <string name="about_project">About Our Project</string>
+    <string name="about_project_text">The BlueSteps mobile app was developed as part of the We BLUE Erasmus+ project. The app aims to provide information about
+        marine life and the seas in Turkey, Portugal, Greece, and Bulgaria, which are participating in the project.</string>
+    <string name="about_benefits_we_provide_to_users">Benefits We Provide To Users</string>
+    <string name="about_benefits_we_provide_to_users_text">As you navigate the app, you can learn about marine life and the sea. We provide information on
+        topics such as what threatens them and how we can protect them. We aim to apply this information to people\'s daily lives. Today, our seas are becoming
+        increasingly polluted, posing a serious threat to marine life and leading to extinction. As humans, we must protect our nature by protecting our seas
+        and these creatures.</string>
+
+    <!-- Seas Template -->
+    <string name="sea_about">About</string>
+    <string name="sea_ecosystem">Ecosystem</string>
+    <string name="sea_inhabitants">Inhabitants</string>
+    <string name="sea_economy">Economy</string>
+    <string name="sea_max_depth">Max Depth</string>
+    <string name="sea_salinity">Salinity</string>
+    <string name="sea_temp">Temp</string>
+    <string name="sea_surface_area">Surface Area</string>
+
+    <!-- Animals Template -->
+    <string name="animal_poisonous_yes">Yes</string>
+    <string name="animal_not_poisonous">No</string>
+    <string name="animal_dangerous">Yes</string>
+    <string name="animal_not_dangerous">No</string>
+    <string name="animal_yes">Yes</string>
+    <string name="animal_no">No</string>
+    <string name="animal_name">Animal Name</string>
+    <string name="animal_max_size">Max Size</string>
+    <string name="animal_max_weight">Max Weight</string>
+    <string name="animal_max_depth">Max Depth</string>
+    <string name="animal_colors">Colors</string>
+    <string name="animal_habitat">Habitat</string>
+    <string name="animal_family">Family</string>
+    <string name="animal_poisonous">Poisonous</string>
+    <string name="animal_edible">Edible</string>
+    <string name="animal_danger">Danger</string>
+    <string name="animal_social">Social</string>
+    <string name="animal_description">Description</string>
+    <string name="animal_locations">Locations</string>
+    <string name="animal_distribution_and_habitat">Distribution And Habitat</string>
+
+    <!-- Quiz -->
+    <string name="quiz_next_question">Next Question</string>
+    <string name="quiz_right_answer">Correct Answer - Great!</string>
+    <string name="quiz_wrong_answer">Wrong Answer - Good Try</string>
+    <string name="quiz_correct_answer_label">Correct Answer: </string>
+    <string name="quiz_finished">Quiz Finished! </string>
+    <string name="quiz_game_label">Quiz Game</string>
 </resources>

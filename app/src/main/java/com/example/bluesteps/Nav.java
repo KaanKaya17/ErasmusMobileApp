@@ -54,7 +54,7 @@ public class Nav {
     public static void goToEducation(View view){
         if (view != null && view.getContext() != null) {
             Intent intent = new Intent(view.getContext(), EducationSeas.class);
-            intent.putExtra("type","creature");
+            // intent.putExtra("type","creature");  <-- BU SATIRI SİL VEYA YORUMA AL
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
             view.getContext().startActivity(intent);
         }

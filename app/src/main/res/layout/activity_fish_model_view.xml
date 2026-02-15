@@ -11,9 +11,10 @@
         android:layout_width="match_parent"
         android:padding="7dp"
         android:gravity="center_vertical"
-        android:background="#2EA6D1"
+        android:background="#FFFFFF"
         android:translationZ="99dp"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
 
         <TextView
             android:id="@+id/textviewFishName"

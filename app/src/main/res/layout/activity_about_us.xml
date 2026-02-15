@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E0F7FF"
+    android:background="#F9FAFB"
     tools:context=".AboutUs">
 
     <ScrollView
@@ -23,38 +23,84 @@
             <TextView
                 android:layout_width="wrap_content"
                 style="@style/TextViewTitle"
-                android:text="About Us"
+                android:layout_marginBottom="15dp"
+                android:text="@string/about_us"
                 android:layout_height="wrap_content"/>
 
             <include
                 layout="@layout/horizantal_line"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:text="About Our Project"
-                style="@style/TextViewSubtitle"
-                android:layout_marginBottom="15dp"
-                android:layout_height="wrap_content"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                style="@style/TextViewBody"
-                android:text="The BlueSteps mobile app was developed as part of the We BLUE Erasmus+ project. The app aims to provide information about marine life and the seas in Turkey, Portugal, Greece, and Bulgaria, which are participating in the project."
-                android:layout_height="wrap_content"/>
 
-            <TextView
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:text="Benefits We Provide to Users"
-                style="@style/TextViewSubtitle"
-                android:layout_marginBottom="15dp"
-                android:layout_marginTop="25dp"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@android:color/white">
 
-            <TextView
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="@string/about_project"
+                        style="@style/TextViewSubtitle"
+                        android:layout_marginBottom="15dp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        style="@style/TextViewBody"
+                        android:text="@string/about_project_text"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                style="@style/TextViewBody"
-                android:text="As you navigate the app, you can learn about marine life and the sea. We provide information on topics such as what threatens them and how we can protect them. We aim to apply this information to people's daily lives. Today, our seas are becoming increasingly polluted, posing a serious threat to marine life and leading to extinction. As humans, we must protect our nature by protecting our seas and these creatures."
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@android:color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="@string/about_benefits_we_provide_to_users"
+                        style="@style/TextViewSubtitle"
+                        android:layout_marginBottom="15dp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        style="@style/TextViewBody"
+                        android:text="@string/about_benefits_we_provide_to_users_text"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
 
         </LinearLayout>
 

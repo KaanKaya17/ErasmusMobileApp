@@ -1,0 +1,197 @@
+[
+  {
+    "id": 0,
+    "question_type": "Test",
+    "question": "Dünyadaki en büyük hayvan hangisidir?",
+    "answers": [
+      "Afrika Fili",
+      "Dev Kalamar",
+      "Mavi Balina",
+      "Balina Köpekbalığı"
+    ],
+    "correct_answer_index": 2,
+    "explanation": "**Mavi Balina**, şimdiye kadar var olduğu bilinen en büyük hayvandır; 30 metreye kadar uzunluğa ve 180 tonun üzerinde ağırlığa ulaşabilir. Bir balık değil, deniz memelisidir."
+  },
+  {
+    "id": 1,
+    "question_type": "Test",
+    "question": "Okyanustaki en büyük balık hangisidir?",
+    "answers": [
+      "Büyük Beyaz Köpekbalığı",
+      "Balina Köpekbalığı",
+      "Dev Okyanus Manta Vatozu",
+      "Kısa Güneş Balığı"
+    ],
+    "correct_answer_index": 1,
+    "explanation": "**Balina Köpekbalığı** (Rhincodon typus), bilinen en büyük memeli olmayan omurgalıdır ve 18 metreye kadar uzunluğa ulaşabilir. Filtre yoluyla beslenir."
+  },
+  {
+    "id": 2,
+    "question_type": "Test",
+    "question": "Hangi balık balon gibi şişme yeteneğiyle bilinir?",
+    "answers": [
+      "Fener Balığı",
+      "Kirpi Balığı",
+      "Aslan Balığı",
+      "Palyaço Balığı"
+    ],
+    "correct_answer_index": 1,
+    "explanation": "**Kirpi Balığı** (veya Balon Balığı), elastik midesini su veya havayla şişirerek kendini yırtıcıları caydırmak için normal boyutunun birkaç katı büyüklüğünde, neredeyse yenilemez bir top haline getirir."
+  },
+  {
+    "id": 3,
+    "question_type": "Test",
+    "question": "Hangi balık zehirli dikenlerine sahiptir ve genellikle Kızıldeniz'de bulunur?",
+    "answers": [
+      "Ton Balığı",
+      "Somon Balığı",
+      "Kirpi Balığı",
+      "Aslan Balığı"
+    ],
+    "correct_answer_index": 3,
+    "explanation": "**Aslan Balığı** (Pterois türleri), uzun, zehirli sırt dikenlerine sahiptir. Hint-Pasifik bölgesine özgüdürler ancak şimdi Karayipler ve Atlas Okyanusu'nda istilacı bir tür olmuşlardır."
+  },
+  {
+    "id": 4,
+    "question_type": "Test",
+    "question": "Okyanustaki en hızlı balık hangisidir?",
+    "answers": [
+      "Marlin",
+      "Barakuda",
+      "Yelken Balığı",
+      "Ton Balığı"
+    ],
+    "correct_answer_index": 2,
+    "explanation": "**Yelken Balığı** (Istiophorus), okyanustaki en hızlı balık olarak kabul edilir; kısa patlamalarda saatte 110 km'ye (68 mil) kadar hıza ulaşabilir."
+  },
+  {
+    "id": 5,
+    "question_type": "Test",
+    "question": "Hangi balık derin denizlerde biyolüminesansıyla ünlüdür?",
+    "answers": [
+      "Kılıç Balığı",
+      "Fener Balığı",
+      "Palyaço Balığı",
+      "Somon Balığı"
+    ],
+    "correct_answer_index": 1,
+    "explanation": "Dişi **Fener Balığı**, okyanusun karanlık derinliklerinde avlarını çekmek için modifiye edilmiş sırt yüzgeci dikeni ucundaki parlayan bir yem (esca) kullanır."
+  },
+  {
+    "id": 6,
+    "question_type": "Test",
+    "question": "Hangi balık öncelikle suşi yemeklerindeki rolüyle bilinir?",
+    "answers": [
+      "Alabalık",
+      "Yayın Balığı",
+      "Somon Balığı",
+      "Turna Balığı"
+    ],
+    "correct_answer_index": 2,
+    "explanation": "**Somon Balığı** (Sake), rengi ve zengin lezzetiyle dünya çapında modern suşi ve saşimi preparatlarında kullanılan en popüler balıklardan biridir."
+  },
+  {
+    "id": 7,
+    "question_type": "Test",
+    "question": "Hangi balık hem tatlı suda hem de tuzlu suda yaşayabilir?",
+    "answers": [
+      "Japon Balığı",
+      "Somon Balığı",
+      "Palyaço Balığı",
+      "Morina Balığı"
+    ],
+    "correct_answer_index": 1,
+    "explanation": "**Somon Balığı** anadromdur, yani tatlı suda yumurtadan çıkar, olgunlaşmak için okyanusa göç eder ve yumurtlamak için tatlı suya geri döner."
+  },
+  {
+    "id": 8,
+    "question_type": "Test",
+    "question": "Hangi balık büyük avcı sürüleri oluşturmasıyla bilinir?",
+    "answers": [
+      "Dev Manta Vatozu",
+      "Barakuda",
+      "Kılıç Balığı",
+      "Büyük Beyaz Köpekbalığı"
+    ],
+    "correct_answer_index": 1,
+    "explanation": "**Barakuda**, sürü davranışıyla ünlüdür; genellikle daha küçük av balığı sürülerini köşeye sıkıştırmak ve saldırmak için büyük sürüler oluşturur."
+  },
+  {
+    "id": 9,
+    "question_type": "Test",
+    "question": "Hangi tür 'yaşayan fosil' olarak bilinir?",
+    "answers": [
+      "Coelacanth",
+      "Köpekbalığı",
+      "Palyaço Balığı",
+      "Somon Balığı"
+    ],
+    "correct_answer_index": 0,
+    "explanation": "**Coelacanth**, 1938 yılına kadar nesli tükenmiş olduğuna inanılıyordu. Soyu 400 milyon yıldan fazla geriye gider ve bu ona 'yaşayan fosil' unvanını kazandırmıştır."
+  },
+  {
+    "id": 10,
+    "question_type": "Test",
+    "question": "Hangi balık avını yakalamak için kullandığı uzun, sivri burnu ile ünlüdür?",
+    "answers": [
+      "Turna Balığı",
+      "Ton Balığı",
+      "Kılıç Balığı",
+      "Marlin"
+    ],
+    "correct_answer_index": 2,
+    "explanation": "**Kılıç Balığı**, uzun, düz, kılıç benzeri gagasını (rostrum) avını delip geçirmek yerine kesmek ve sersemletmek için kullanır."
+  },
+  {
+    "id": 11,
+    "question_type": "Test",
+    "question": "Hangi tatlı su balığı akvaryumlarda genellikle evcil hayvan olarak beslenir?",
+    "answers": [
+      "Somon Balığı",
+      "Japon Balığı",
+      "Ton Balığı",
+      "Köpekbalığı"
+    ],
+    "correct_answer_index": 1,
+    "explanation": "**Japon Balığı**, evcilleştirilen ilk balıklardan biridir ve dünya çapında en yaygın beslenen akvaryum balıkları arasındadır."
+  },
+  {
+    "id": 12,
+    "question_type": "Test",
+    "question": "Hangi balık kaybettiği vücut parçalarını yenileme yeteneğine sahiptir?",
+    "answers": [
+      "Palyaço Balığı",
+      "Somon Balığı",
+      "Zebra Balığı",
+      "Ton Balığı"
+    ],
+    "correct_answer_index": 2,
+    "explanation": "**Zebra Balığı**, yüzgeçler, kalp ve beyin hücreleri dahil olmak üzere karmaşık dokuları yenileme konusundaki olağanüstü yeteneği nedeniyle bilimde yaygın olarak kullanılan bir model organizmadır."
+  },
+  {
+    "id": 13,
+    "question_type": "Test",
+    "question": "Hangi balık kamuflaj yeteneği ve hızlı renk değiştirmesiyle iyi bilinir?",
+    "answers": [
+      "Aslan Balığı",
+      "Kirpi Balığı",
+      "Palyaço Balığı",
+      "Mürekkep Balığı"
+    ],
+    "correct_answer_index": 3,
+    "explanation": "**Mürekkep Balığı** bir balık değildir (bir kafadan bacaklıdır) ancak hayvanlar alemindeki en gelişmiş renk değiştirme yeteneklerinden birine sahip olmasıyla ünlüdür; kamuflaj ve iletişim için kullanılır."
+  },
+  {
+    "id": 14,
+    "question_type": "Test",
+    "question": "Hangi balık yumurtlamak için binlerce kilometre göç eder?",
+    "answers": [
+      "Palyaço Balığı",
+      "Fener Balığı",
+      "Turna Balığı",
+      "Somon Balığı"
+    ],
+    "correct_answer_index": 3,
+    "explanation": "**Somon Balığı**, üremek (yumurtlamak) için okyanustan doğduğu tatlı su deresine geri dönmek üzere destansı göçler yapar ve binlerce kilometre yol alır."
+  }
+]

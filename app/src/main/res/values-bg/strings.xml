@@ -1,0 +1,94 @@
+<resources>
+    <string-array name="languages_array">
+        <item>Избор на език</item>
+        <item>Английски</item>
+        <item>Турски</item>
+        <item>Португалски</item>
+        <item>Гръцки</item>
+        <item>Български</item>
+    </string-array>
+
+    <string name="app_name">Blue Steps</string>
+
+    <!-- Navigation  -->
+    <string name="nav_home_btn">Начало</string>
+    <string name="nav_education_btn">Образование</string>
+    <string name="nav_quiz_btn">Тест</string>
+    <string name="nav_about_btn">За нас</string>
+
+    <!-- Main Page  -->
+    <string name="main_explore">Изследвай</string>
+    <string name="main_explore_subtitle">Открийте дълбините на океана</string>
+    <string name="main_categories">Категории</string>
+    <string name="main_categories_fish">Риби</string>
+    <string name="main_categories_creatures">Морски създания</string>
+    <string name="main_categories_corals">Корали</string>
+    <string name="main_quizzes">Тестове</string>
+    <string name="main_quizzes_subtitle">Научете нови неща и следете напредъка си!</string>
+    <string name="main_start_quiz_button">Започнете нов тест</string>
+    <string name="main_locations">Локации</string>
+    <string name="main_locations_see_all">Виж всички</string>
+    <string name="main_seas">Морета</string>
+    <string name="main_seas_see_all">Виж всички</string>
+    <string name="main_all_other_animals">Гъби, Растения, Корали</string>
+    <string name="main_species">видове</string>
+
+    <!-- About -->
+    <string name="about_us">За нас</string>
+    <string name="about_project">За нашия проект</string>
+    <string name="about_project_text">
+        Мобилното приложение BlueSteps беше разработено като част от проекта We BLUE Erasmus+.
+        Приложението има за цел да предоставя информация за морския живот и моретата на
+        Турция, Португалия, Гърция и България, които участват в проекта.
+    </string>
+
+    <string name="about_benefits_we_provide_to_users">Ползи, които предоставяме на потребителите</string>
+    <string name="about_benefits_we_provide_to_users_text">
+        Докато разглеждате приложението, можете да научите за морския живот и морето.
+        Предоставяме информация по теми като заплахите, пред които са изправени,
+        и как можем да ги защитим. Нашата цел е да приложим тази информация в
+        ежедневието на хората. Днес нашите морета стават все по-замърсени,
+        което представлява сериозна заплаха за морския живот и води до изчезване на видове.
+        Като хора трябва да защитим природата си, като пазим нашите морета и тези създания.
+    </string>
+
+    <!-- Seas Template -->
+    <string name="sea_about">За</string>
+    <string name="sea_ecosystem">Екосистема</string>
+    <string name="sea_inhabitants">Обитатели</string>
+    <string name="sea_economy">Икономика</string>
+    <string name="sea_max_depth">Максимална дълбочина</string>
+    <string name="sea_salinity">Соленост</string>
+    <string name="sea_temp">Температура</string>
+    <string name="sea_surface_area">Площ на повърхността</string>
+
+    <!-- Animals Template -->
+    <string name="animal_poisonous_yes">Да</string>
+    <string name="animal_not_poisonous">Не</string>
+    <string name="animal_dangerous">Да</string>
+    <string name="animal_not_dangerous">Не</string>
+    <string name="animal_yes">Да</string>
+    <string name="animal_no">Не</string>
+    <string name="animal_name">Animal Name</string>
+    <string name="animal_max_size">Максимален размер</string>
+    <string name="animal_max_weight">Максимално тегло</string>
+    <string name="animal_max_depth">Максимална дълбочина</string>
+    <string name="animal_colors">Цветове</string>
+    <string name="animal_habitat">Местообитание</string>
+    <string name="animal_family">Семейство</string>
+    <string name="animal_poisonous">Отровен</string>
+    <string name="animal_edible">Ядивен</string>
+    <string name="animal_danger">Опасност</string>
+    <string name="animal_social">Социален</string>
+    <string name="animal_description">Описание</string>
+    <string name="animal_locations">Локации</string>
+    <string name="animal_distribution_and_habitat">Разпространение и местообитание</string>
+
+    <!-- Quiz -->
+    <string name="quiz_next_question">Следващ въпрос</string>
+    <string name="quiz_right_answer">Верен Отговор - Чудесно!</string>
+    <string name="quiz_wrong_answer">Грешен Отговор - Добър Опит</string>
+    <string name="quiz_correct_answer_label">Верен Отговор: </string>
+    <string name="quiz_finished">Тестът Приключи! </string>
+    <string name="quiz_game_label">Тест Игра</string>
+</resources>

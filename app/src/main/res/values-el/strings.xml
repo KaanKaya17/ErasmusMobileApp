@@ -1,0 +1,95 @@
+<resources>
+    <string-array name="languages_array">
+        <item>Επιλογή Γλώσσας</item>
+        <item>Αγγλικά</item>
+        <item>Τουρκικά</item>
+        <item>Πορτογαλικά</item>
+        <item>Ελληνικά</item>
+        <item>Βουλγαρικά</item>
+    </string-array>
+
+    <string name="app_name">Blue Steps</string>
+
+    <!-- Navigation  -->
+    <string name="nav_home_btn">Αρχική</string>
+    <string name="nav_education_btn">Εκπαίδευση</string>
+    <string name="nav_quiz_btn">Κουίζ</string>
+    <string name="nav_about_btn">Σχετικά</string>
+
+    <!-- Main Page  -->
+    <string name="main_explore">Εξερεύνηση</string>
+    <string name="main_explore_subtitle">Ανακαλύψτε τα βάθη του ωκεανού</string>
+    <string name="main_categories">Κατηγορίες</string>
+    <string name="main_categories_fish">Ψάρια</string>
+    <string name="main_categories_creatures">Θαλάσσια Πλάσματα</string>
+    <string name="main_categories_corals">Κοράλλια</string>
+    <string name="main_quizzes">Κουίζ</string>
+    <string name="main_quizzes_subtitle">Μάθετε νέα πράγματα και παρακολουθήστε την πρόοδό σας!</string>
+    <string name="main_start_quiz_button">Έναρξη Νέου Κουίζ</string>
+    <string name="main_locations">Τοποθεσίες</string>
+    <string name="main_locations_see_all">Δείτε Όλα</string>
+    <string name="main_seas">Θάλασσες</string>
+    <string name="main_seas_see_all">Δείτε Όλα</string>
+    <string name="main_all_other_animals">Σφουγγάρια, Φυτά, Κοράλλια</string>
+    <string name="main_species">είδος</string>
+
+    <!-- About -->
+    <string name="about_us">Σχετικά με Εμάς</string>
+    <string name="about_project">Σχετικά με το Έργο μας</string>
+    <string name="about_project_text">
+        Η εφαρμογή BlueSteps αναπτύχθηκε στο πλαίσιο του έργου We BLUE Erasmus+.
+        Στόχος της εφαρμογής είναι η παροχή πληροφοριών σχετικά με τη θαλάσσια ζωή
+        και τις θάλασσες της Τουρκίας, της Πορτογαλίας, της Ελλάδας και της Βουλγαρίας,
+        που συμμετέχουν στο έργο.
+    </string>
+
+    <string name="about_benefits_we_provide_to_users">Οφέλη που Παρέχουμε στους Χρήστες</string>
+    <string name="about_benefits_we_provide_to_users_text">
+        Καθώς περιηγείστε στην εφαρμογή, μπορείτε να μάθετε για τη θαλάσσια ζωή και τη θάλασσα.
+        Παρέχουμε πληροφορίες σχετικά με τις απειλές που αντιμετωπίζουν και πώς μπορούμε να τις προστατεύσουμε.
+        Στόχος μας είναι να εφαρμόσουμε αυτές τις πληροφορίες στην καθημερινή ζωή των ανθρώπων.
+        Σήμερα, οι θάλασσές μας γίνονται όλο και πιο μολυσμένες, αποτελώντας σοβαρή απειλή για τη θαλάσσια ζωή
+        και οδηγώντας στην εξαφάνιση ειδών. Ως άνθρωποι, πρέπει να προστατεύσουμε τη φύση μας προστατεύοντας
+        τις θάλασσές μας και αυτά τα πλάσματα.
+    </string>
+
+    <!-- Seas Template -->
+    <string name="sea_about">Σχετικά</string>
+    <string name="sea_ecosystem">Οικοσύστημα</string>
+    <string name="sea_inhabitants">Κάτοικοι</string>
+    <string name="sea_economy">Οικονομία</string>
+    <string name="sea_max_depth">Μέγιστο Βάθος</string>
+    <string name="sea_salinity">Αλατότητα</string>
+    <string name="sea_temp">Θερμοκρασία</string>
+    <string name="sea_surface_area">Επιφάνεια</string>
+
+    <!-- Animals Template -->
+    <string name="animal_poisonous_yes">Ναί</string>
+    <string name="animal_not_poisonous">Οχι</string>
+    <string name="animal_dangerous">Ναί</string>
+    <string name="animal_not_dangerous">Οχι</string>
+    <string name="animal_yes">Ναί</string>
+    <string name="animal_no">Οχι</string>
+    <string name="animal_name">Animal Name</string>
+    <string name="animal_max_size">Μέγιστο Μέγεθος</string>
+    <string name="animal_max_weight">Μέγιστο Βάρος</string>
+    <string name="animal_max_depth">Μέγιστο Βάθος</string>
+    <string name="animal_colors">Χρώματα</string>
+    <string name="animal_habitat">Βιότοπος</string>
+    <string name="animal_family">Οικογένεια</string>
+    <string name="animal_poisonous">Δηλητηριώδες</string>
+    <string name="animal_edible">Βρώσιμο</string>
+    <string name="animal_danger">Κίνδυνος</string>
+    <string name="animal_social">Κοινωνικό</string>
+    <string name="animal_description">Περιγραφή</string>
+    <string name="animal_locations">Τοποθεσίες</string>
+    <string name="animal_distribution_and_habitat">Κατανομή και Βιότοπος</string>
+
+    <!-- Quiz -->
+    <string name="quiz_next_question">Επόμενη ερώτηση</string>
+    <string name="quiz_right_answer">Σωστή Απάντηση - Υπέροχα!</string>
+    <string name="quiz_wrong_answer">Λάθος Απάντηση - Καλή Προσπάθεια</string>
+    <string name="quiz_correct_answer_label">Σωστή Απάντηση: </string>
+    <string name="quiz_finished">Το Quiz Τελείωσε! </string>
+    <string name="quiz_game_label">Παιχνίδι Quiz</string>
+</resources>
