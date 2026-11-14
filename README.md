@@ -44,6 +44,7 @@ Metinler ve quiz soruları uygulamanın kaynaklarında yer alır. Çevrimiçi g�
 - **Doğrudan APK:** [BlueSteps.apk](https://github.com/KaanKaya17/ErasmusMobileApp/releases/latest/download/BlueSteps.apk)
 - **İlk paylaşılan APK:** 1.0 (`versionCode: 1`), yaklaşık 25 MiB.
 - **Paket adı:** `com.example.bluesteps`
+- **Dosya doğrulaması:** Sürümdeki `SHA256SUMS.txt` değerini APK’nın özetiyle karşılaştır. Windows PowerShell’de `Get-FileHash .\BlueSteps.apk -Algorithm SHA256` komutunu kullanabilirsin.
 
 Paylaşılan 1.0 APK, Android debug sertifikasıyla imzalanmış ve hata ayıklama açık bir derlemedir. Dosya, sağlanan APK'nin adı düzenlenmiş birebir kopyasıdır. Dosya özeti sürüm açıklamasında ve `SHA256SUMS.txt` ekinde bulunur.
 
@@ -67,7 +68,7 @@ macOS / Linux üzerinde:
 ./gradlew assembleDebug
 ```
 
-Çıktı: `app/build/outputs/apk/debug/app-debug.apk`. Yerel derlemenin imzası paylaşılan APK'den farklı olabilir.
+Derleme, `app/build/outputs/apk/debug/app-debug.apk` dosyasını oluşturur. Eğitim ve quiz içeriğini düzenlemek için [çeviri ve içerik kılavuzuna](docs/content.md) bak.
 
 Hata veya öneri bildirmek için [Issues](https://github.com/KaanKaya17/ErasmusMobileApp/issues) bölümüne cihaz modelini, Android sürümünü ve sorunun adımlarını ekleyebilirsin.
 
@@ -95,5 +96,7 @@ The shared 1.0 APK is a debuggable build signed with an Android debug certificat
 ### Development
 
 Open the project in Android Studio with **JDK 17** and **Android SDK Platform 36**, sync Gradle, and run on an Android 13+ device or emulator. The app uses Java, XML layouts, Gradle Kotlin DSL, Glide, ViewPager2 and WebView. Build a development APK using `gradlew.bat assembleDebug` on Windows or `./gradlew assembleDebug` on macOS/Linux.
+
+To edit educational material or quiz questions, see the [content and translation guide](docs/content.md). On Windows, use `Get-FileHash .\BlueSteps.apk -Algorithm SHA256` to compare the downloaded APK with `SHA256SUMS.txt`.
 
 For bugs and suggestions, use [GitHub Issues](https://github.com/KaanKaya17/ErasmusMobileApp/issues) and include your device, Android version and steps to reproduce.
